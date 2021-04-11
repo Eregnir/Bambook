@@ -10,7 +10,7 @@ class Intro extends CI_Controller{
         
     }
      public function index(){
-        $this->load->view('HomePage/index2');
+        $this->load->view('B_Views/index2');
         }
 
     }
