@@ -50,7 +50,7 @@
             <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
                 <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
                     <a id="ind" class="mdl-navigation__link is-active" href="">Portfolio</a>
-                    <a class="mdl-navigation__link" href="blog.html">Blog</a>
+                    <a id="blg" class="mdl-navigation__link" href="#">Blog</a>
                     <a class="mdl-navigation__link" href="about.html">About</a>
                     <a class="mdl-navigation__link" href="contact.html">Contact</a>
                 </nav>
@@ -58,8 +58,8 @@
         </header>
         <div class="mdl-layout__drawer mdl-layout--small-screen-only">
             <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                <a class="mdl-navigation__link is-active" href="index.html">Portfolio</a>
-                <a class="mdl-navigation__link" href="blog.html">Blog</a>
+                <a id="ind" class="mdl-navigation__link is-active" href="">Portfolio</a>
+                <a id="blg" class="mdl-navigation__link" href="#">Blog</a>
                 <a class="mdl-navigation__link" href="about.html">About</a>
                 <a class="mdl-navigation__link" href="contact.html">Contact</a>
             </nav>
@@ -212,6 +212,11 @@
         document.getElementById("ind").onclick=function()
             {
                 window.location.href="<?php echo site_url('');?>";   
+            };
+
+            document.getElementById("blg").onclick=function()
+            {
+                window.location.href="<?php echo site_url('Intro/blog');?>";   
             };
     </script>
 </body>
