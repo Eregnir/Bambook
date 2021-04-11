@@ -12,6 +12,11 @@ class Intro extends CI_Controller{
      public function index(){
         $this->load->view('B_Views/index2');
         }
+    
+        public function test(){
+            $data['email']=$this->Intro_model->test();
+            $this->load->view('B_Views/index2',$data);
+        }
 
     }
 
