@@ -40,7 +40,9 @@
                     <span class="mdl-layout__title">Simple portfolio website</span>
                     <span>
                         <?php 
-                        echo $email
+                        foreach ($email as $em):
+                            echo $em->email;
+                        endforeach;
                         ?>
                     </span>
                 </span>
