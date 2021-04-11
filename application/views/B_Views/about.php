@@ -36,6 +36,13 @@
                 <span class="mdl-layout__title">
                     <div class="portfolio-logo"></div>
                     <span class="mdl-layout__title">Simple portfolio website</span>
+                    <span>
+                        <?php 
+                        foreach ($email as $em):
+                            echo $em->email;
+                        endforeach;
+                        ?>
+                    </span>
                 </span>
             </div>
             <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
