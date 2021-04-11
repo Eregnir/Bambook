@@ -51,7 +51,7 @@
                 <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
                     <a id="ind" class="mdl-navigation__link is-active" href="">Portfolio</a>
                     <a id="blg" class="mdl-navigation__link" href="#">Blog</a>
-                    <a class="mdl-navigation__link" href="about.html">About</a>
+                    <a class="mdl-navigation__link" href="about.php">About</a>
                     <a class="mdl-navigation__link" href="contact.html">Contact</a>
                 </nav>
             </div>
@@ -60,7 +60,7 @@
             <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
                 <a id="ind" class="mdl-navigation__link is-active" href="">Portfolio</a>
                 <a id="blg" class="mdl-navigation__link" href="#">Blog</a>
-                <a class="mdl-navigation__link" href="about.html">About</a>
+                <a class="mdl-navigation__link" href="about.php">About</a>
                 <a class="mdl-navigation__link" href="contact.html">Contact</a>
             </nav>
         </div>
