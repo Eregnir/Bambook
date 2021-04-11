@@ -10,6 +10,7 @@ class Intro extends CI_Controller{
         
     }
      public function index(){
+        $this->load->view('templates/HeadB',$data);
         $data['email']=$this->intro_model->test();
         $this->load->view('B_Views/index2',$data);
         }
