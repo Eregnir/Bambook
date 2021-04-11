@@ -1,0 +1,137 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+body {
+    background-image:url(../Images/background.jpg);
+    background-attachment: fixed;
+    margin-bottom: 150px;
+    font-family: cursive;
+    }
+
+.aligncenter{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.add-topp{
+    margin-top: 25px;
+}
+
+.navbar {
+    margin-bottom: 10px;
+    
+}
+
+footer{
+    position: fixed;;
+    bottom: 0;
+    width:100%;
+    color: rgb(190, 109, 109);
+    padding: 20px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    max-height: 350px;
+}
+
+.center5{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.about {
+    background-color:rgba(254,254,254,0.8);
+    border-radius: 2vh;
+    padding: auto;   
+}
+
+.container2{
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    background-color:rgba(254, 254, 254, 0.9);
+    border-radius: 16px;
+}
+
+.container2_2{
+ 
+    border: 3px solid rgb(255, 238, 239);
+    border-radius: 16px;
+    background-color:rgba(144, 144, 144, 0.863);
+    margin-top: 25px;
+
+}
+
+.container3{
+    background-color:rgba(25,25,25,0.2);
+    border-radius: 16px;    
+}
+
+.container4{
+    margin-top: 5%;
+}
+
+.container5{
+    background-color:rgba(254, 254, 254, 0.9);
+}
+
+.container6{
+    background-color:rgba(89, 102, 143, 0.399);
+    border-radius: 16px;    
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+
+.container7:hover{
+    background-color: rgb(113, 224, 228);
+    border-color:cadetblue;
+}
+
+img{
+    max-width: 600px;
+}
+
+.img2{
+    max-width:220px;
+    min-width: 200px;
+}
+
+.gameframe{
+    display: inline-block;
+    
+}
+
+.game{
+    display:inline-block;
+    margin-top: 2%; 
+    font-family: cursive;
+    font-size: 20pt;
+}
+
+
+.new{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-height: 95%;
+}
+
+.audio{
+    width:95%;
+
+}
+
+.lolo{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    width:30%;
+    display: block;
+}
