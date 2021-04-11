@@ -9,28 +9,10 @@ class Intro extends CI_Controller{
         $this->load->library('session');
         
     }
-
      public function index(){
+        $this->load->view('HomePage/index2');
+        }
 
-        $user=$this->session->all_userdata();
-        
-        if ($user['loggedin']==null){
-             
-            redirect('Users/login');
-        }
-        else{
-            $this->load->view('templates/headG');
-            $this->load->view('HomePage/Homescreen');
-            $this->load->view('templates/footer');
-        }
-        
-
-        }
-    public function moveToGallery(){
-        $this->load->view('templates/headG');
-        $this->load->view('GameGallery/GameGallery');
-        $this->load->view('templates/footer');
-        }
     }
 
     
