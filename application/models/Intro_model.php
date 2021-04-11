@@ -8,7 +8,7 @@ class intro_model extends CI_Model {
 
     
     public function test(){
-        $query=$this->db->query('SELECT email FROM users WHERE username="Eregnir"');
+        $query=$this->db->query('SELECT email FROM users');
         return $query->result();
     }
     
