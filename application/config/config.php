@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'https://assafye.mtacloud.co.il/Serverside_Programming/APEGaming/';
+$config['base_url'] = 'https://assafye.mtacloud.co.il/Bambook/';
 
 /*
 |--------------------------------------------------------------------------
