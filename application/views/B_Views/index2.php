@@ -211,7 +211,7 @@
     <script>
         document.getElementById("ind").onclick=function()
             {
-                window.location.href="<?php echo site_url('Intro/index');?>";   
+                window.location.href="<?php echo site_url('');?>";   
             };
     </script>
 </body>
