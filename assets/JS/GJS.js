@@ -9,7 +9,7 @@ function blog()
 
 function about()
     {
-        window.location.replace='https://assafye.mtacloud.co.il/Bambook/index.php/Intro/about';   
+        window.location.assign='https://assafye.mtacloud.co.il/Bambook/index.php/Intro/about';   
     };
 
 function contact()
