@@ -15,13 +15,17 @@ class Intro extends CI_Controller{
         }
 
     public function blog(){
-        $this->load->view('B_Views/blog.html');
+        $this->load->view('B_Views/blog');
         }
 
     public function about(){
         $data['email']=$this->intro_model->test();
         $this->load->view('B_Views/about',$data);
         }
+
+        public function contact(){
+            $this->load->view('B_Views/contact');
+            }
     }
 
     

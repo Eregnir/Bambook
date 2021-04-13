@@ -33,10 +33,10 @@
             </div>
             <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
                 <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                    <a id="ind" class="mdl-navigation__link is-active" href="">Portfolio</a>
-                    <a id="blg" class="mdl-navigation__link" href="#">Blog</a>
-                    <a id="abt" class="mdl-navigation__link" href="#">About</a>
-                    <a class="mdl-navigation__link" href="contact.html">Contact</a>
+                    <a onclick="homepage()" class="mdl-navigation__link is-active" href="">Portfolio</a>
+                    <a onclick="blog()" class="mdl-navigation__link" href="#">Blog</a>
+                    <a onclick="about()" class="mdl-navigation__link" href="#">About</a>
+                    <a onclick="contact()" class="mdl-navigation__link" href="#">Contact</a>
                 </nav>
             </div>
         </header>
@@ -191,23 +191,8 @@
         </main>
     </div>
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/JS/GJS.js');?>"></script>
 
-    <script>
-        document.getElementById("ind").onclick=function()
-            {
-                window.location.href="<?php echo site_url('');?>";   
-            };
-
-            document.getElementById("blg").onclick=function()
-            {
-                window.location.href="blog.php";   
-            };
-
-            document.getElementById("abt").onclick=function()
-            {
-                window.location.href="<?php echo site_url('Intro/about');?>";   
-            };
-    </script>
 </body>
 
 </html>

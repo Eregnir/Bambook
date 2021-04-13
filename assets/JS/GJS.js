@@ -1,3 +1,24 @@
+
+function homepage(){
+        window.location.href="<?php echo site_url('');?>";   
+    };
+
+function blog()
+    {
+        window.location.href="<?php echo site_url('Intro/blog');?>";   
+    };
+
+function about()
+    {
+        window.location.href="<?php echo site_url('Intro/about');?>";   
+    };
+
+function contact()
+    {
+        window.location.href="<?php echo site_url('Intro/contact');?>";   
+    };
+
+
 //Change Background Images
 // function changebg1(){
 //     $('body').css('background-image', 'url("../Images/background.jpg)');
