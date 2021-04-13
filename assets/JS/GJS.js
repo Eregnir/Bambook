@@ -1,11 +1,10 @@
-
 function homepage(){
         window.location.href="";   
     };
 
 function blog()
     {
-        window.location.hostname="index.php/Intro/blog";   
+        window.location.href="index.php/Intro/blog";   
     };
 
 function about()
