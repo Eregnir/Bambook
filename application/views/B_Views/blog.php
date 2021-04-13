@@ -59,7 +59,7 @@
             <div class="mdl-grid portfolio-max-width">
                 <div class="mdl-grid mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp">
                     <div class="mdl-card__media mdl-cell mdl-cell--12-col-tablet">
-                        <img class="article-image" src=" images/example-blog01.jpg" border="0" alt="">
+                        <img class="article-image" src="<?php echo base_url('images/example-blog01.jpg');?>" border="0" alt="">
                     </div>
                     <div class="mdl-cell mdl-cell--8-col">
                         <h2 class="mdl-card__title-text">Velit anim eiusmod labore sit amet</h2>
@@ -171,13 +171,6 @@
         </main>
     </div>
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-
-    <script>
-        document.getElementById("ind").onclick=function()
-            {
-                window.location.href="<?php echo site_url('Intro/index');?>";   
-            };
-    </script>
 
 <script type="text/javascript" src="<?php echo base_url('assets/JS/GJS.js');?>"></script>
 

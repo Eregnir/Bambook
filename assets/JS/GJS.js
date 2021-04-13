@@ -1,6 +1,6 @@
 
 function homepage(){
-        window.location.hostname="";   
+        window.location.href="";   
     };
 
 function blog()
