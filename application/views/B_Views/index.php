@@ -66,7 +66,7 @@
                 </div>
                 <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
                     <div class="mdl-card__media">
-                        <img class="article-image" src="images/example-work07.jpg" border="0" alt="">
+                        <img class="article-image" src="<?php echo base_url('images/example-work07.jpg');?>" border="0" alt="">
                     </div>
                     <div class="mdl-card__title">
                         <h2 class="mdl-card__title-text">Sunt nulla</h2>
@@ -80,7 +80,7 @@
                 </div>
                 <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
                     <div class="mdl-card__media">
-                        <img class="article-image" src=" images/example-work02.jpg" border="0" alt="">
+                        <img class="article-image" src="<?php echo base_url('images/example-work02.jpg');?>" border="0" alt="">
                     </div>
                     <div class="mdl-card__title">
                         <h2 class="mdl-card__title-text">Android.com website</h2>
@@ -94,7 +94,7 @@
                 </div>
                 <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
                     <div class="mdl-card__media">
-                        <img class="article-image" src=" images/example-work03.jpg" border="0" alt="">
+                        <img class="article-image" src="<?php echo base_url('images/example-work03.jpg');?>" border="0" alt="">
                     </div>
                     <div class="mdl-card__title">
                         <h2 class="mdl-card__title-text">Dashboard template</h2>
@@ -108,7 +108,7 @@
                 </div>
                 <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
                     <div class="mdl-card__media">
-                        <img class="article-image" src=" images/example-work04.jpg" border="0" alt="">
+                        <img class="article-image" src="<?php echo base_url('images/example-work03.jpg');?>" border="0" alt="">
                     </div>
                     <div class="mdl-card__title">
                         <h2 class="mdl-card__title-text">Text-heavy website</h2>
@@ -122,7 +122,7 @@
                 </div>
                 <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
                     <div class="mdl-card__media">
-                        <img class="article-image" src=" images/example-work08.jpg" border="0" alt="">
+                        <img class="article-image" src="<?php echo base_url('images/example-work08.jpg');?>" border="0" alt="">
                     </div>
                     <div class="mdl-card__title">
                         <h2 class="mdl-card__title-text">Ex officia laborum</h2>
@@ -136,7 +136,7 @@
                 </div>
                 <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
                     <div class="mdl-card__media">
-                        <img class="article-image" src=" images/example-work05.jpg" border="0" alt="">
+                        <img class="article-image" src="<?php echo base_url('images/example-work05.jpg');?>" border="0" alt="">
                     </div>
                     <div class="mdl-card__title">
                         <h2 class="mdl-card__title-text">Stand-alone article</h2>
@@ -150,7 +150,7 @@
                 </div>
                 <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
                     <div class="mdl-card__media">
-                        <img class="article-image" src=" images/example-work06.jpg" border="0" alt="">
+                        <img class="article-image" src="<?php echo base_url('images/example-work06.jpg');?>" border="0" alt="">
                     </div>
                     <div class="mdl-card__title">
                         <h2 class="mdl-card__title-text">MDL website</h2>
@@ -164,7 +164,7 @@
                 </div>
                 <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
                     <div class="mdl-card__media">
-                        <img class="article-image" src=" images/example-work09.jpg" border="0" alt="">
+                        <img class="article-image" src="<?php echo base_url('images/example-work09.jpg');?>" border="0" alt="">
                     </div>
                     <div class="mdl-card__title">
                         <h2 class="mdl-card__title-text">Consequat ut quis</h2>
