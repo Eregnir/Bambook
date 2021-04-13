@@ -179,6 +179,8 @@
             };
     </script>
 
+<script type="text/javascript" src="<?php echo base_url('assets/JS/GJS.js');?>"></script>
+
 </body>
 
 </html>
