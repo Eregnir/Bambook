@@ -42,10 +42,10 @@
         </header>
         <div class="mdl-layout__drawer mdl-layout--small-screen-only">
             <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                <a id="ind" class="mdl-navigation__link is-active" href="">Portfolio</a>
-                <a id="blg" class="mdl-navigation__link" href="#">Blog</a>
-                <a id="abt" class="mdl-navigation__link" href="#">About</a>
-                <a class="mdl-navigation__link" href="contact.html">Contact</a>
+                    <a onclick="homepage()" class="mdl-navigation__link is-active" href="">Portfolio</a>
+                    <a onclick="blog()" class="mdl-navigation__link" href="#">Blog</a>
+                    <a onclick="about()" class="mdl-navigation__link" href="#">About</a>
+                    <a onclick="contact()" class="mdl-navigation__link" href="#">Contact</a>
             </nav>
         </div>
         <main class="mdl-layout__content">
