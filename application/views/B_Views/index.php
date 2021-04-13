@@ -43,9 +43,9 @@
         <div class="mdl-layout__drawer mdl-layout--small-screen-only">
             <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
                     <a id="ind" class="mdl-navigation__link is-active" href="">Portfolio</a>
-                    <a id="blg" class="mdl-navigation__link" href="#">Blog</a>
-                    <a id="abt" class="mdl-navigation__link" href="#">About</a>
-                    <a id="cnt" class="mdl-navigation__link" href="#">Contact</a>
+                    <a id="blg" class="mdl-navigation__link" href="">Blog</a>
+                    <a id="abt" class="mdl-navigation__link" href="">About</a>
+                    <a id="cnt" class="mdl-navigation__link" href="">Contact</a>
             </nav>
         </div>
         <main class="mdl-layout__content">
