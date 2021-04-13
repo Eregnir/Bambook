@@ -5,17 +5,17 @@ function homepage(){
 
 function blog()
     {
-        window.location.href="Intro/blog";   
+        window.location.href="index.php/Intro/blog";   
     };
 
 function about()
     {
-        window.location.href='Intro/about';   
+        window.location.href='index.php/Intro/about';   
     };
 
 function contact()
     {
-        window.location.href='Intro/contact';   
+        window.location.href='index.php/Intro/contact';   
     };
 
 
