@@ -1,21 +1,21 @@
 
 function homepage(){
-        window.location.href="<?php echo site_url('');?>";   
+        window.location.href="";   
     };
 
 function blog()
     {
-        window.location.href="<?php echo site_url('Intro/blog');?>";   
+        window.location.href="Intro/blog";   
     };
 
 function about()
     {
-        window.location.href="<?php echo site_url('Intro/about');?>";   
+        window.location.href='Intro/about';   
     };
 
 function contact()
     {
-        window.location.href="<?php echo site_url('Intro/contact');?>";   
+        window.location.href='Intro/contact';   
     };
 
 
