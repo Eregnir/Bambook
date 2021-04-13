@@ -1,16 +1,16 @@
 
 function homepage(){
-        window.location.href="";   
+        window.location.hostname="";   
     };
 
 function blog()
     {
-        window.location.href="index.php/Intro/blog";   
+        window.location.hostname="index.php/Intro/blog";   
     };
 
 function about()
     {
-        window.location.href='index.php/Intro/about';   
+        window.location.replace='https://assafye.mtacloud.co.il/Bambook/index.php/Intro/about';   
     };
 
 function contact()
