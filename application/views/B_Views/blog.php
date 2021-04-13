@@ -40,19 +40,19 @@
             </div>
             <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
                 <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                    <a onclick="homepage()" class="mdl-navigation__link" href="">Portfolio</a>
-                    <a onclick="blog()" class="mdl-navigation__link is-active" href="#">Blog</a>
-                    <a onclick="about()" class="mdl-navigation__link" href="#">About</a>
-                    <a onclick="contact()" class="mdl-navigation__link" href="#">Contact</a>
+                    <a id="ind" class="mdl-navigation__link" href="">Portfolio</a>
+                    <a id="blg" class="mdl-navigation__link is-active" href="">Blog</a>
+                    <a id="abt" class="mdl-navigation__link" href="">About</a>
+                    <a id="cnt" class="mdl-navigation__link" href="">Contact</a>
                 </nav>
             </div>
         </header>
         <div class="mdl-layout__drawer mdl-layout--small-screen-only">
             <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                <a onclick="homepage()" class="mdl-navigation__link" href="">Portfolio</a>
-                <a onclick="blog()" class="mdl-navigation__link is-active" href="#">Blog</a>
-                <a onclick="about()" class="mdl-navigation__link" href="#">About</a>
-                <a onclick="contact()" class="mdl-navigation__link" href="#">Contact</a>
+                <a id="ind" class="mdl-navigation__link" href="">Portfolio</a>
+                    <a id="blg" class="mdl-navigation__link is-active" href="">Blog</a>
+                    <a id="abt" class="mdl-navigation__link" href="">About</a>
+                    <a id="cnt" class="mdl-navigation__link" href="">Contact</a>
             </nav>
         </div>
         <main class="mdl-layout__content">
@@ -173,7 +173,27 @@
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
 <script type="text/javascript" src="<?php echo base_url('assets/JS/GJS.js');?>"></script>
+<script>
+    document.getElementById("ind").onclick=function()
+    {
+        window.location.href="<?php echo site_url('Intro/index');?>";   
+    };
 
+    document.getElementById("blg").onclick=function()
+    {
+        window.location.href="<?php echo site_url('Intro/blog');?>";   
+    };
+
+    document.getElementById("abt").onclick=function()
+    {
+        window.location.href="<?php echo site_url('Intro/about');?>";   
+    };
+
+    document.getElementById("cnt").onclick=function()
+    {
+        window.location.href="<?php echo site_url('Intro/contact');?>";   
+    };
+</script>
 </body>
 
 </html>
