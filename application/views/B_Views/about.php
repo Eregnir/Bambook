@@ -25,7 +25,7 @@
     <title>MDL-Static Website</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-pink.min.css" />
-    <link rel="stylesheet" href="<?php echo base_url('/assets/css/style.css');?> " />
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css');?> ">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
