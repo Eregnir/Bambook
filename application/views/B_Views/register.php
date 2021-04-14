@@ -59,7 +59,7 @@
                         </p>
                         <!-- Registration Form -->
 
-                        <form method="post" action="<?php echo site_url('Intro/new_user');?>" class="">
+                        <form method="post" action="<?php echo site_url('Intro/new_user');?>" class="form-group">
                         <!-- First Name -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                 <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="firstName">
