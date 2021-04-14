@@ -85,7 +85,7 @@
                             </div>
                             <!-- Need to add password validation -->
                             <p>
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit"><br><br>
                                     Submit
                                 </button>
                             </p>
