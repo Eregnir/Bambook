@@ -23,9 +23,13 @@ class Intro extends CI_Controller{
         $this->load->view('B_Views/about',$data);
         }
 
-        public function contact(){
-            $this->load->view('B_Views/contact');
-            }
+    public function contact(){
+        $this->load->view('B_Views/contact');
+        }
+
+    public function register(){
+        $this->load->view('B_Views/register');
+        }
     }
 
     

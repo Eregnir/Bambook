@@ -9,7 +9,7 @@
     <title>Bambook</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-pink.min.css" />
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/styles.css');?> ">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/styles.css');?> " />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
@@ -19,22 +19,16 @@
             <div class="mdl-layout__header-row portfolio-logo-row">
                 <span class="mdl-layout__title">
                     <div class="portfolio-logo"></div>
-                    <span class="mdl-layout__title">Bambook - Book Swap</span>
-                    <span>
-                        <?php 
-                        foreach ($email as $em):
-                            echo $em->email;
-                        endforeach;
-                        ?>
-                    </span>
+                <span class="mdl-layout__title">Bambook - Book Swap</span>
                 </span>
             </div>
             <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
                 <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
                     <a id="ind" class="mdl-navigation__link" href="#">Homepage</a>
                     <a id="blg" class="mdl-navigation__link" href="#">Blog</a>
-                    <a id="abt" class="mdl-navigation__link is-active" href="">About</a>
-                    <a id="cnt" class="mdl-navigation__link" href="#">Contact</a>
+                    <a id="abt" class="mdl-navigation__link" href="#">About</a>
+                    <a id="cnt" class="mdl-navigation__link" href="">Contact</a>
+                    <a class="mdl-navigation__link is-active" href="<?php echo site_url('Intro/register');?>">Register</a>
                 </nav>
             </div>
         </header>
@@ -42,43 +36,49 @@
             <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
                 <a class="mdl-navigation__link" href="<?php echo site_url('Intro/index');?>">Homepage</a>
                 <a class="mdl-navigation__link" href="<?php echo site_url('Intro/blog');?>">Blog</a>
-                <a class="mdl-navigation__link is-active" href="<?php echo site_url('Intro/about');?>">About</a>
+                <a class="mdl-navigation__link" href="<?php echo site_url('Intro/about');?>">About</a>
                 <a class="mdl-navigation__link" href="<?php echo site_url('Intro/contact');?>">Contact</a>
+                <a class="mdl-navigation__link is-active" href="<?php echo site_url('Intro/register');?>">Register</a>
             </nav>
         </div>
         <main class="mdl-layout__content">
-            <div class="mdl-grid portfolio-max-width">
-
+            <div class="mdl-grid portfolio-max-width portfolio-contact">
                 <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
                     <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">About</h2>
+                        <h2 class="mdl-card__title-text">Contact</h2>
                     </div>
                     <div class="mdl-card__media">
-                        <img class="article-image" src="<?php echo base_url('images/about-header.jpg');?>" border="0" alt="">
+                        <img class="article-image" src="<?php echo base_url('images/contact-image.jpg');?>" border="0" alt="">
                     </div>
-
-                    <div class="mdl-grid portfolio-copy">
-                        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Introduction</h3>
-                        <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+                    <div class="mdl-card__supporting-text">
+                        <p>
+                            Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
+                        </p>
+                        <p>
+                            Excepteur reprehenderit sint exercitation ipsum consequat qui sit id velit elit. Velit anim eiusmod labore sit amet.
+                        </p>
+                        <form action="#" class="">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name">
+                                <label class="mdl-textfield__label" for="Name">Name...</label>
+                                <span class="mdl-textfield__error">Letters and spaces only</span>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="Email">
+                                <label class="mdl-textfield__label" for="Email">Email...</label>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <textarea class="mdl-textfield__input" type="text" rows="5" id="note"></textarea>
+                                <label class="mdl-textfield__label" for="note">Enter note</label>
+                            </div>
                             <p>
-                                Excepteur reprehenderit sint exercitation ipsum consequat qui sit id velit elit. Velit anim eiusmod labore sit amet. Voluptate voluptate irure occaecat deserunt incididunt esse in. Sunt velit aliquip sunt elit ex nulla reprehenderit qui ut eiusmod ipsum do. Duis veniam reprehenderit laborum occaecat id proident nulla veniam. Duis enim deserunt voluptate aute veniam sint pariatur exercitation. Irure mollit est sit labore est deserunt pariatur duis aute laboris cupidatat. Consectetur consequat esse est sit veniam adipisicing ipsum enim irure.
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
+                                    Submit
+                                </button>
                             </p>
-                        </div>
-
-
-
-
-                        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Irure mollit est sit labore</h3>
-
-                        <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
-                            <p>
-                                Excepteur reprehenderit sint exercitation ipsum consequat qui sit id velit elit. Velit anim eiusmod labore sit amet. Voluptate voluptate irure occaecat deserunt incididunt esse in. Sunt velit aliquip sunt elit ex nulla reprehenderit qui ut eiusmod ipsum do. Duis veniam reprehenderit laborum occaecat id proident nulla veniam. Duis enim deserunt voluptate aute veniam sint pariatur exercitation. Irure mollit est sit labore est deserunt pariatur duis aute laboris cupidatat. Consectetur consequat esse est sit veniam adipisicing ipsum enim irure.
-                            </p>
-                        </div>
+                        </form>
                     </div>
                 </div>
-
-
             </div>
             <footer class="mdl-mini-footer">
                 <div class="mdl-mini-footer__left-section">
@@ -95,7 +95,7 @@
     </div>
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
-    <script>
+<script>
     document.getElementById("ind").onclick=function()
     {
         window.location.href="<?php echo site_url('Intro/index');?>";   
