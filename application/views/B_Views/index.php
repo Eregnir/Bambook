@@ -140,16 +140,14 @@
             </footer>
         </main>
     </div>
-    <script src="https://code.getmdl.io/1.3.0/material.min.js"></scrip>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/JS/GJS.js');?>"></script>
+
     <script>
-    function makeIsActive() {
-        var navis = document.querySelectorAll('.blg');
-        for(var i = 0; i < elements.length; i++){
-            var str = elements[i].innerHTML;
-            navis[i].classList.add('is-active');
+    window.onload = function(){
+        var active = document.getElementById("ind");
+        active.classList.add("is-active");
         }
-    };
 </script>
 
 <script>
