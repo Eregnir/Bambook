@@ -33,8 +33,8 @@
             </div>
             <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
                 <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                    <a id="ind" class="mdl-navigation__link ind" href="">Homepage</a>
-                    <a id="blg" class="mdl-navigation__link blg" href="#">Blog</a>
+                    <a id="ind" class="mdl-navigation__link" href="#">Homepage</a>
+                    <a id="blg" class="mdl-navigation__link" href="#">Blog</a>
                     <a id="abt" class="mdl-navigation__link" href="#">About</a>
                     <a id="cnt" class="mdl-navigation__link" href="#">Contact</a>
                     <a id="rgs" class="mdl-navigation__link" href="<?php echo site_url('Intro/register');?>">Register</a>

@@ -12,7 +12,8 @@ class Intro extends CI_Controller{
      public function index(){
         $data['email']=$this->intro_model->test();
         $this->load->view('templates/HeadB',$data);
-        $this->load->view('B_Views/index',$data);
+        $this->load->view('B_Views/index');
+        $this->load->view('templates/FootB');
         }
 
     public function blog(){
