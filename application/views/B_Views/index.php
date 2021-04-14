@@ -200,12 +200,12 @@
 
     document.getElementById("blg").onclick=function()
     {
-        $("#ind").hide();   
+        window.alert("This works.");  
     };
 
     document.getElementById("blg2").onclick=function()
     {
-        $("#ind").hide();   
+        window.alert("I doubt this works.");   
     };
 
     document.getElementById("abt").onclick=function()
