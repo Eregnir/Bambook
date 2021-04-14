@@ -143,11 +143,14 @@
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></scrip>
     <script type="text/javascript" src="<?php echo base_url('assets/JS/GJS.js');?>"></script>
     <script>
-        function myFunction() {
-            var element = document.getElementById("blg");
-            element.classList.remove("is-active");
-            }
-    </script>
+    function makeIsActive() {
+        var navis = document.querySelectorAll('.blg');
+        for(var i = 0; i < elements.length; i++){
+            var str = elements[i].innerHTML;
+            navis[i].classList.add('is-active');
+        }
+    };
+</script>
 
 <script>
     document.getElementById("ind").onclick=function()

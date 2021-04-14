@@ -118,18 +118,12 @@
 <script type="text/javascript" src="<?php echo base_url('assets/JS/GJS.js');?>"></script>
 
 <script>
-    function removeIsActive() {
-        var elems = document.querySelectorAll(".is-active");
-        [].forEach.call(elems, function(el) {
-        el.classList.remove("is-active");
-    });
-    };
-
     function makeIsActive() {
-        var elens = document.getElementById("blg");
-        []forEach.call(elens, functon(ele) {
-            ele.classList.add("is-active");
-        });
+        var navis = document.querySelectorAll('.blg');
+        for(var i = 0; i < elements.length; i++){
+            var str = elements[i].innerHTML;
+            navis[i].classList.add('is-active');
+        }
     };
 </script>
 
