@@ -118,14 +118,11 @@
 <script type="text/javascript" src="<?php echo base_url('assets/JS/GJS.js');?>"></script>
 
 <script>
-    $(document).ready(function(){
-        var navis = document.querySelectorAll('.blg');
-        for(var i = 0; i < elements.length; i++){
-            var str = elements[i].innerHTML;
-            navis[i].classList.add('is-active');
+    window.onload = function(){
+        var active = document.getElementById("blg");
+        active.classList.add("is-active");
         }
-    };
-</script>
+    </script>
 
 <script>
     document.getElementById("ind").onclick=function()

@@ -148,7 +148,7 @@
         var active = document.getElementById("ind");
         active.classList.add("is-active");
         }
-</script>
+    </script>
 
 <script>
     document.getElementById("ind").onclick=function()

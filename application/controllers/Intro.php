@@ -22,14 +22,17 @@ class Intro extends CI_Controller{
 
     public function about(){
         $data['email']=$this->intro_model->test();
+        $this->load->view('templates/HeadB', $data);
         $this->load->view('B_Views/about',$data);
         }
 
     public function contact(){
+        $this->load->view('templates/HeadB');
         $this->load->view('B_Views/contact');
         }
 
     public function register(){
+        $this->load->view('templates/HeadB');
         $this->load->view('B_Views/register');
         }
 
