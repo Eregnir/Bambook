@@ -7,7 +7,7 @@ class intro_model extends CI_Model {
     }
     
     public function test(){
-        $query=$this->db->query('SELECT username FROM `users` ORDER BY `users`.`date_registered` DESC LIMIT 1');
+        $query=$this->db->query('SELECT username FROM users ORDER BY date_registered DESC LIMIT 1');
         return $query->result();
     }
     

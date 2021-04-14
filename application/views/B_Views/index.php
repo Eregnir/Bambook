@@ -25,7 +25,7 @@
                     <span>
                         <?php 
                         foreach ($email as $em):
-                            echo 'the latest user registered is:'. $em->email;
+                            echo 'the latest user registered is:' . $em->email;
                         endforeach;
                         ?>
                     </span>
