@@ -6,38 +6,42 @@ class Intro extends CI_Controller{
         $this->load->helper('url');
         $this->load->helper('form');
         $this->load->library('form_validation');
-        $this->load->library('session');
-        
+        $this->load->library('session');     
     }
+//Load the Homescreen view  
      public function index(){
         $data['email']=$this->intro_model->test();
         $this->load->view('templates/HeadB',$data);
         $this->load->view('B_Views/index');
         $this->load->view('templates/FootB');
         }
-
+//Load the blog view
     public function blog(){
         $this->load->view('templates/HeadB');
         $this->load->view('B_Views/blog');
         $this->load->view('templates/FootB');
         }
-
+//Load the about view
     public function about(){
         $data['email']=$this->intro_model->test();
         $this->load->view('templates/HeadB', $data);
         $this->load->view('B_Views/about',$data);
+        $this->load->view('templates/FootB');
         }
-
+//Load the contact view
     public function contact(){
         $this->load->view('templates/HeadB');
         $this->load->view('B_Views/contact');
+        $this->load->view('templates/FootB');
         }
-
+//Load the register view
     public function register(){
         $this->load->view('templates/HeadB');
         $this->load->view('B_Views/register');
+        $this->load->view('templates/FootB');
         }
 
+// Function that saves the posted data and transfers it to the model in order to insert to DB
     public function new_user(){
         $data = array(
             'f_name' => $this->input->post('firstName'),
