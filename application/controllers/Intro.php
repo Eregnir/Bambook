@@ -33,8 +33,8 @@ class Intro extends CI_Controller{
 
     public function new_user(){
         $data = array(
-            'fName' => $this->input->post('firstName'),
-            'lName' => $this->input->post('lastName'),
+            'f_name' => $this->input->post('firstName'),
+            'l_name' => $this->input->post('lastName'),
             'email' => $this->input->post('email'), 
             'username' => $this->input->post('username'),
             'password' => $this->input->post('password ')
