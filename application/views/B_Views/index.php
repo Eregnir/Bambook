@@ -202,12 +202,7 @@
 
     document.getElementById("blg").onclick=function()
     {
-        window.alert("This works.");  
-    };
-
-    document.getElementById("blg2").onclick=function()
-    {
-        window.alert("I doubt this works.");   
+        window.location.href="<?php echo site_url('Intro/blog');?>";   
     };
 
     document.getElementById("abt").onclick=function()
