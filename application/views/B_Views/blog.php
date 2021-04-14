@@ -118,7 +118,7 @@
 <script type="text/javascript" src="<?php echo base_url('assets/JS/GJS.js');?>"></script>
 
 <script>
-    function makeIsActive() {
+    $(document).ready(function(){
         var navis = document.querySelectorAll('.blg');
         for(var i = 0; i < elements.length; i++){
             var str = elements[i].innerHTML;
