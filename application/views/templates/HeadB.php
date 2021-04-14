@@ -37,7 +37,7 @@
                     <a id="blg" class="mdl-navigation__link" href="#">Blog</a>
                     <a id="abt" class="mdl-navigation__link" href="#">About</a>
                     <a id="cnt" class="mdl-navigation__link" href="#">Contact</a>
-                    <a class="mdl-navigation__link" href="<?php echo site_url('Intro/register');?>">Register</a>
+                    <a id="rgs" class="mdl-navigation__link" href="<?php echo site_url('Intro/register');?>">Register</a>
                 </nav>
             </div>
         </header>

@@ -142,6 +142,12 @@
     </div>
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></scrip>
     <script type="text/javascript" src="<?php echo base_url('assets/JS/GJS.js');?>"></script>
+    <script>
+        function myFunction() {
+            var element = document.getElementById("blg");
+            element.classList.remove("is-active");
+            }
+    </script>
 
 <script>
     document.getElementById("ind").onclick=function()

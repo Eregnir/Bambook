@@ -16,6 +16,7 @@ class Intro extends CI_Controller{
         }
 
     public function blog(){
+        $this->load->view('templates/HeadB');
         $this->load->view('B_Views/blog');
         }
 
