@@ -83,9 +83,10 @@
                                 <label class="mdl-textfield__label" for="username">Password...</label>
                                 <span class="mdl-textfield__error">Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</span>
                             </div>
+                            <br><br>
                             <!-- Need to add password validation -->
                             <p>
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit"><br><br>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
                                     Submit
                                 </button>
                             </p>
