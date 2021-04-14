@@ -205,7 +205,7 @@
 
     document.getElementById("blg2").onclick=function()
     {
-        window.location.href="<?php echo site_url('Intro/blog');?>";   
+        $("#ind").hide();   
     };
 
     document.getElementById("abt").onclick=function()
