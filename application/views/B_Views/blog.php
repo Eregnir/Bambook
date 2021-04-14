@@ -116,6 +116,23 @@
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
 <script type="text/javascript" src="<?php echo base_url('assets/JS/GJS.js');?>"></script>
+
+<script>
+    function removeIsActive() {
+        var elems = document.querySelectorAll(".is-active");
+        [].forEach.call(elems, function(el) {
+        el.classList.remove("is-active");
+    });
+    };
+
+    function makeIsActive() {
+        var elens = document.getElementById("blg");
+        []forEach.call(elens, functon(ele) {
+            ele.classList.add("is-active");
+        });
+    };
+</script>
+
 <script>
     document.getElementById("ind").onclick=function()
     {
