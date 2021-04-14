@@ -48,7 +48,7 @@
                         <h2 class="mdl-card__title-text">Register to Bambook</h2>
                     </div>
                     <div class="mdl-card__media">
-                        <img class="article-image" src="<?php echo base_url('images/contact-image.jpg');?>" border="0" alt="">
+                        <img class="article-image" src="<?php echo base_url('images/children-reading.png');?>" border="0" alt="">
                     </div>
                     <div class="mdl-card__supporting-text">
                         <p>
@@ -80,7 +80,7 @@
                             </div>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                 <input class="mdl-textfield__input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="text" id="Name">
-                                <label class="mdl-textfield__label" for="username">Username...</label>
+                                <label class="mdl-textfield__label" for="username">Password...</label>
                                 <span class="mdl-textfield__error">Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</span>
                             </div>
                             <!-- Need to add password validation -->
