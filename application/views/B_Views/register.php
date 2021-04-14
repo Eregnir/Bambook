@@ -58,39 +58,46 @@
                             And this text as well.
                         </p>
                         <!-- Registration Form -->
-                        <form action="#" class="">
+
+                        <form method="post" action="<?php echo site_url('Intro/new_user');?>" class="">
+                        <!-- First Name -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name">
+                                <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="firstName">
                                 <label class="mdl-textfield__label" for="firstName">First Name...</label>
-                                <span class="mdl-textfield__error">Letters and spaces only</span>
+                                <span class="mdl-textfield__error">Must contain letters and spaces only</span>
                             </div>
+                        <!-- Last Name -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name">
+                                <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="lastName">
                                 <label class="mdl-textfield__label" for="lastName">Last Name...</label>
-                                <span class="mdl-textfield__error">Letters and spaces only</span>
+                                <span class="mdl-textfield__error">Must contain letters and spaces only</span>
                             </div>
+                        <!-- Username -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{2,15}$" type="text" id="Name">
+                                <input class="mdl-textfield__input" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{2,15}$" type="text" id="username">
                                 <label class="mdl-textfield__label" for="username">Username...</label>
-                                <span class="mdl-textfield__error">Username must contain 3-20 characters</span>
+                                <span class="mdl-textfield__error">Must contain 3-20 characters</span>
                             </div>
+                        <!-- email address -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="Email">
-                                <label class="mdl-textfield__label" for="Email">Email...</label>
+                                <input class="mdl-textfield__input" type="text" id="email">
+                                <label class="mdl-textfield__label" for="email">Email...</label>
                             </div>
+                        <!-- Password -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="text" id="Name">
-                                <label class="mdl-textfield__label" for="username">Password...</label>
+                                <input class="mdl-textfield__input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="text" id="password">
+                                <label class="mdl-textfield__label" for="password">Password...</label>
                                 <span class="mdl-textfield__error">Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</span>
                             </div>
                             <br><br>
                             <!-- Need to add password validation -->
                             <p>
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" name="submit ">
                                     Submit
                                 </button>
                             </p>
                         </form>
+
                     </div>
                 </div>
             </div>

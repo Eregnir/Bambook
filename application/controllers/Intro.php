@@ -30,6 +30,17 @@ class Intro extends CI_Controller{
     public function register(){
         $this->load->view('B_Views/register');
         }
+
+    public function new_user(){
+        $data = array(
+            'firstName' => $this->input->post('fname'),
+            'lastName' => $this->input->post('lname'),
+            'email' => $this->input->post('email'), 
+            'username' => $this->input->post('username'),
+            'password' => $this->input->post('password ')
+         );
+         $this->intro_model->save_register($data);
+    }
     }
 
     

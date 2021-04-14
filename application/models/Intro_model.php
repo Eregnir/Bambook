@@ -11,4 +11,7 @@ class intro_model extends CI_Model {
         return $query->result();
     }
     
+    public function save_register($data){
+        $this->db->insert('users'.$data);
+    }
 }
