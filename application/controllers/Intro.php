@@ -37,7 +37,7 @@ class Intro extends CI_Controller{
             'l_name' => $this->input->post('lastName'),
             'email' => $this->input->post('email'), 
             'username' => $this->input->post('username'),
-            'password' => $this->input->post('password ')
+            'password' => $this->input->post('password')
          );
          $this->intro_model->save_register($data);
          $this->load->view('B_Views/blog');
