@@ -40,6 +40,12 @@ class Intro extends CI_Controller{
         $this->load->view('B_Views/register');
         $this->load->view('templates/FootB');
         }
+//Load the login view
+public function login(){
+    $this->load->view('templates/HeadB');
+    $this->load->view('B_Views/login');
+    $this->load->view('templates/FootB');
+    }
 
 // Function that saves the posted data and transfers it to the model in order to insert to DB
     public function new_user(){
