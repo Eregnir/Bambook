@@ -10,6 +10,11 @@ class Intro extends CI_Controller{
     }
 //Load the Homescreen view  
      public function index(){
+        $user=$this->session->all_userdata();
+        if ($user['loggedin']!=null){
+             
+            $data['test']=$user['username'];
+        }
         $data['email']=$this->intro_model->test();
         $this->load->view('templates/HeadB',$data);
         $this->load->view('B_Views/index');

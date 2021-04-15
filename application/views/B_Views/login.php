@@ -10,17 +10,19 @@
                     <div class="mdl-card__supporting-text">
                         <p>
                             Just some text about logging in to Bambook!
+                            <?php if ($error != null){echo $error;}?>
                         </p>
                         <p>
                             And this text as well.
                         </p>
                         <!-- Login Form -->
 
-                        <form method="post" action="<?php echo site_url('Intro/new_user');?>" class="">
-                        <!-- email address -->
-                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="email" name="email">
-                                <label class="mdl-textfield__label" for="email">Email...</label>
+                        <form method="post" action="<?php echo site_url('Users/auth');?>" class="">
+                        <!-- Username -->
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{2,15}$" type="text" id="username" name="username">
+                                <label class="mdl-textfield__label" for="username">Username...</label>
+                                <span class="mdl-textfield__error">Must contain 3-20 characters</span>
                             </div>
                         <!-- Password -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">

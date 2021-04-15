@@ -60,10 +60,10 @@ class Users extends CI_Controller{
         }
     }
     public function login($error=null){
-        $this->load->view('templates/HeadL');
+        $this->load->view('templates/HeadB');
         $data['error']=$error;
-        $this->load->view('users/login',$data);
-        $this->load->view('templates/footer');
+        $this->load->view('B_Views/login',$data);
+        $this->load->view('templates/FootB');
 
     }
       public function logout()
