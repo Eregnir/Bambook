@@ -11,10 +11,10 @@
                         <p>
                             Just some text about logging in to Bambook!
                             <?php if ($error != null){
-                                echo $error;
+                                echo 'error is not null';
                                 }
                                 else{
-                                    echo $error;
+                                    echo 'error is null';
                                 }
                                     ?>
                         </p>
