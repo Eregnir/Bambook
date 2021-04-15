@@ -8,7 +8,6 @@
                         <h2 class="mdl-card__title-text">Blog template</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <?php if($test!=null){echo $test;} ?>
                         Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
                     </div>
                     <div class="mdl-card__actions mdl-card--border">

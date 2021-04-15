@@ -27,7 +27,11 @@
                         foreach ($email as $em):
                             echo 'The latest user who registered is: '. $em->email;
                         endforeach;
-                        ?>
+                        ?><br>
+                        <?php 
+                            if($test!=null){
+                                echo 'A user is logged in!: '. $test;
+                                } ?>
                     </span>
                 </span>
             </div>
