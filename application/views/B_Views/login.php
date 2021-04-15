@@ -10,7 +10,13 @@
                     <div class="mdl-card__supporting-text">
                         <p>
                             Just some text about logging in to Bambook!
-                            <?php if ($error != null){echo $error;}?>
+                            <?php if ($error != null){
+                                echo $error;
+                                }
+                                else{
+                                    echo $error;
+                                }
+                                    ?>
                         </p>
                         <p>
                             And this text as well.
