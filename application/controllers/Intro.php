@@ -14,6 +14,7 @@ class Intro extends CI_Controller{
         if ($user['loggedin']!=null){
              
             $data['test']=$user['username'];
+            $data['user']=$user;
         }
         $data['email']=$this->intro_model->test();
         $this->load->view('templates/HeadB',$data);
