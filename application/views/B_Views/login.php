@@ -11,12 +11,8 @@
                         <p>
                             Just some text about logging in to Bambook!
                             <?php if ($error != null){
-                                echo 'error is not null';
-                                }
-                                else{
-                                    echo 'error is null';
-                                }
-                                    ?>
+                                echo 'There was an error on login:' .$error;
+                                }?>
                         </p>
                         <p>
                             And this text as well.

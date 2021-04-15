@@ -31,7 +31,14 @@
                         <?php 
                             if($test!=null){
                                 echo 'A user is logged in!: '. $test;
-                                } ?>
+                                } 
+                            
+                            if($user['username']!=null){
+                                echo '<br> the $user session thingy works! the logged in user is: '. $user['username']; 
+                            }
+                                
+                                
+                        ?>
                     </span>
                 </span>
             </div>
