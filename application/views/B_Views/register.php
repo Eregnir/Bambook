@@ -42,7 +42,7 @@
                             </div>
                         <!-- Password -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="text" id="password" name="password">
+                                <input class="mdl-textfield__input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" id="password" name="password">
                                 <label class="mdl-textfield__label" for="password">Password...</label>
                                 <span class="mdl-textfield__error">Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</span>
                             </div>
