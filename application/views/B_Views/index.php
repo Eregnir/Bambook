@@ -5,7 +5,7 @@
                         <img class="article-image" src="<?php echo base_url('images/example-work01.jpg');?>" border="0" alt="">
                     </div>
                     <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Blog template</h2>
+                        <h2 class="mdl-card__title-text">Blog template2</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
                         Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
