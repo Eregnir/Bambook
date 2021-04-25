@@ -43,7 +43,7 @@
                  <!-- Box 3--> 
                 <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
                     <div class="mdl-card__media">
-                        <a href="portfolio-example03.html">
+                        <a href="<?php echo site_url('Intro/publish_book');?>">
                             <img class="article-image" src="<?php echo base_url('images/add_books.jpg');?>" border="0" alt="my_requests">
                         </a>
                     </div>

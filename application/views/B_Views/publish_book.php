@@ -9,7 +9,7 @@
                         data-fv-icon-validating="glyphicon glyphicon-refresh">
 
                         <div class="form-group">
-                            <label class="col-xs-3 control-label">Full name</label>
+                            <label class="col-xs-3 control-label">First name</label>
                             <div class="col-xs-4">
                                 <input type="text" class="form-control" name="firstName" placeholder="First name"
                                     data-fv-row=".col-xs-4"
@@ -18,6 +18,7 @@
                             </div>
 
                             <div class="col-xs-4">
+                            <label class="col-xs-3 control-label">Last name</label>
                                 <input type="text" class="form-control" name="lastName" placeholder="Last name"
                                     data-fv-row=".col-xs-4"
                                     data-fv-notempty="true"
