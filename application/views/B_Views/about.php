@@ -10,16 +10,16 @@
                     </div>
 
                     <div class="mdl-grid portfolio-copy">
-                        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Your Profile</h3>
+                        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">My Profile</h3>
                         <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
                             <p>
                             <?php foreach ($profile as $prof){echo '<center><img style="max-height:250px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $prof->avatar).'"/> </center>';}?>
-                                <h4>
+                                <h5>
                                     <br>Hello, <span> <?php foreach ($profile as $prof){echo $prof->username;}?>! </span>
                                     <br><br><b>Name:</b> <?php foreach ($profile as $prof){echo $prof->f_name." ". $prof->l_name;}?>
                                     <br><br><b>Email:</b> <?php foreach ($profile as $prof){echo $prof->email;}?>
                                     <br><br><b>Phone Number:</b> <?php foreach ($profile as $prof){echo $prof->phone_num;}?>
-                                </h4>
+                                </h5>
                                 
                             </p>
                         </div>
@@ -27,12 +27,14 @@
 
 
 
-                        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Bambook Preferences:</h3>
+                        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Book Swap Preferences:</h3>
 
                         <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
                             <p>
-                                Favorite Genres:
-                                <br>Location: <?php foreach ($profile as $prof){echo $prof->location;}?>
+                                <h5>
+                                    <b>Favorite Genres:</b> Fantasy, SciFi
+                                    <br><br><b>Location:</b> <?php foreach ($profile as $prof){echo $prof->location;}?>
+                                </h5>
                             </p>
                         </div>
                     </div>
