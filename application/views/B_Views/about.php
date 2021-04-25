@@ -14,7 +14,7 @@
                         <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
                             <p>
                                 Avatar:<br>
-                                <?php foreach ($profile as $prof){echo '<img style="max-height:250px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $prof->avatar).'"/>';}?>
+                                <?php foreach ($profile as $prof){echo '<center><img style="max-height:250px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $prof->avatar).'"/> </center>';}?>
                                 <br>User Name: <span> <?php foreach ($profile as $prof){echo $prof->username;}?> </span>
                                 <br>Name: <?php foreach ($profile as $prof){echo $prof->f_name. $prof->l_name;}?>
                                 <br>Email: <?php foreach ($profile as $prof){echo $prof->email;}?>
