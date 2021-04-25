@@ -69,6 +69,9 @@
                                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" name="submit ">
                                         Submit Changes
                                     </button>
+                                    <button id="cancel" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="button" name="cancel">
+                                        Cancel
+                                    </button>
                                 </p>
                             </form>
 
@@ -93,6 +96,12 @@
     {
         document.getElementById("bspe").style.display = ""; 
         document.getElementById('bsp').style.display = "none";
+    };
+
+    document.getElementById("cancel").onclick=function()
+    {
+        document.getElementById("bsp").style.display = ""; 
+        document.getElementById('bspe').style.display = "none";
     };
     </script>
 
