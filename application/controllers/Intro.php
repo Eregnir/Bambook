@@ -29,10 +29,15 @@ class Intro extends CI_Controller{
         }
 //Load the about view
     public function about(){
-        $data['email']=$this->intro_model->test();
-        $this->load->view('templates/HeadB', $data);
-        $this->load->view('B_Views/about',$data);
-        $this->load->view('templates/FootB');
+        $user=$this->session->all_userdata();
+        if ($user['loggedin']!=null){
+            $data['profile']=$this->intro_model->get_profile_info();
+            $data['user']=$user;
+            $this->load->view('templates/HeadB',$data);
+            $this->load->view('B_Views/about',$data);
+            $this->load->view('templates/FootB');
+            }
+        
         }
 //Load the contact view
     public function contact(){
