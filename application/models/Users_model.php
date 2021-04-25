@@ -41,6 +41,8 @@ class users_model extends CI_Model {
      public function update_profile($pref){
         $this->db->db_debug = FALSE;  
         $user=$this->session->all_userdata();
-        $query = $db->query(' UPDATE users SET "location" = "'.$pref['location'].'", "genre1" = "'.$pref['genre1'].'", "genre2" = "'.$pref['genre2'].'", "genre3" = "'.$pref['genre3'].'" WHERE `users`.`username` = "'.$user['username'].'" ');
+        $this->db->where('username', $user['username']);
+        $this->db->update('users', $pref);
+        //$query = $db->query(' UPDATE users SET "location" = "'.$pref['location'].'", "genre1" = "'.$pref['genre1'].'", "genre2" = "'.$pref['genre2'].'", "genre3" = "'.$pref['genre3'].'" WHERE `users`.`username` = "'.$user['username'].'" ');
      }
 }
