@@ -23,7 +23,7 @@ class intro_model extends CI_Model {
 
     //Get Books from the DB in order to present it in the books library. currently limit is 50, we need pagination or something to deal with large mass of books.
     public function get_books(){
-        $query=$this->db->query('SELECT * from "books" LIMIT 50');
+        $query=$this->db->query('SELECT * from "books"');
         return $query->result();
     }
 }
