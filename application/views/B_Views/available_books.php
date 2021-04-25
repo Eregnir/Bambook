@@ -11,19 +11,18 @@
                                 <th scope="col">Title</th>
                                 <th scope="col">Author</th>
                                 <th scope="col">Rating</th>
+                                <th scope="col">More Details</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr id="row-1">
-                                <div class="clickable_div">
-                                    <a href="<?php echo site_url('Intro/books_description');?>"></a>
-                                    <td class="w-25">
-                                        <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/921.jpg');?>" alt=""></img>
-                                    </td>
-                                    <td>The Lovely Bones</td>
-                                </div>
+                                <td class="w-25">
+                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/921.jpg');?>" alt=""></img>
+                                </td>
+                                <td>The Lovely Bones</td>
                                 <td>Alice Sebold</td>
                                 <td>3.82</td>
+                                <td onClick="<?php echo site_url('Intro/book_description');?>">Read More</td>
                             </tr>
                             <tr id="row-2">
                                 <td class="w-25">
@@ -112,8 +111,4 @@
         var active = document.getElementById("ind");
         active.classList.add("is-active");
         }
-
-        $(document).delegate("clickable_div", "click", function() {
-            window.location = $(this).find("a").attr("href");
-        });
     </script>

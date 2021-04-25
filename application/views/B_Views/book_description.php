@@ -38,8 +38,4 @@
         var active = document.getElementById("ind");
         active.classList.add("is-active");
         }
-
-        $(document).delegate("clickable_div", "click", function() {
-            window.location = $(this).find("a").attr("href");
-        });
     </script>
