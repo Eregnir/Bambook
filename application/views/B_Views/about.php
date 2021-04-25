@@ -17,9 +17,9 @@
                                 User Name: <span> <?php foreach ($profile as $prof){echo $prof->username;}?> </span>
                                 <br>Name: <?php foreach ($profile as $prof){echo $prof->f_name. $prof->l_name;}?>
                                 <br>Email: <?php foreach ($profile as $prof){echo $prof->email;}?>
-                                <br>Phone Number: <?php echo $profile->phone_num;?>
+                                <br>Phone Number: <?php foreach ($profile as $prof){echo $prof->phone_num;}?>
                                 <br>Favorite Genres: 
-                                <br>Location: <?php echo $profile->location;?>
+                                <br>Location: <?php foreach ($profile as $prof){echo $prof->location;}?>
                             </p>
                         </div>
 
