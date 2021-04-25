@@ -14,9 +14,9 @@
                         <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
                             <p>
                                 
-                                User Name: <?php echo $user['username'];?>
-                                <br>Name: <?php echo $profile['f_name'];?>
-                                <br>Email: <?php echo $profile['email']?>
+                                User Name: <?php foreach ($user as $prof){echo $prof->username;}?>
+                                <br>Name: <?php foreach ($user as $prof){echo $prof->name;}?>
+                                <br>Email: <?php foreach ($user as $prof){echo $prof->email;}?>
                                 <br>Phone Number: 
                                 <br>Favorite Genres:
                                 <br>Location:
