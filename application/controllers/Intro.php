@@ -69,9 +69,13 @@ public function login(){
 //function to get the profile details from the DB in order to show it for the profile page:
     public function user_details(){
         $user=$this->session->all_userdata();
+        $data['profile']=$this->intro_model->get_profile_info($data);
+        
         if ($user['loggedin']!=null){
-            $data['user']=$user;
-            
+            $data['profile']=$this->intro_model->get_profile_info($data);
+            $this->load->view('templates/HeadB',$data);
+            $this->load->view('B_Views/about',$data);
+            $this->load->view('templates/FootB');
         }
 
     }

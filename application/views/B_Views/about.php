@@ -14,14 +14,14 @@
                         <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
                             <p>
                                 
-                                User Name: <?php ?>
-                                <br>Name:
+                                User Name: <?php echo $profile['username'];?>
+                                <br>Name: <?php echo $profile['f_name']. $profile['l_name'];?>
                                 <br>Email:
                                 <br>Phone Number: 
                                 <br>Favorite Genres:
                                 <br>Location:
 
-                            </?>
+                            </p>
                         </div>
 
 
