@@ -46,17 +46,17 @@
                             <form method="post" action="<?php echo site_url('Users/update_pref');?>" class="">
                             <!-- Favorite Genre 1 -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input value="Fantasy" class="mdl-textfield__input" type="text" id="genre1" name="genre1">
+                                    <input value="<?php foreach ($profile as $prof){if($prof->genre1!=null){echo $prof->genre1;}}?>" class="mdl-textfield__input" type="text" id="genre1" name="genre1">
                                     <label class="mdl-textfield__label" for="genre1">Genre 1</label>
                                 </div>
-                            <!-- Favorite Genre 1 -->
+                            <!-- Favorite Genre 2 -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input value="<?php foreach ($profile as $prof){echo $prof->genre1;}?>" class="mdl-textfield__input" type="text" id="genre2" name="genre2">
+                                    <input value="<?php foreach ($profile as $prof){if($prof->genre2!=null){echo $prof->genre2;}}?>" class="mdl-textfield__input" type="text" id="genre2" name="genre2">
                                     <label class="mdl-textfield__label" for="genre2">Genre 2</label>
                                 </div>
-                            <!-- Favorite Genre 1 -->
+                            <!-- Favorite Genre 3 -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input value="<?php foreach ($profile as $prof){echo $prof->genre2;}?>" class="mdl-textfield__input" type="text" id="genre3" name="genre3">
+                                    <input value="<?php foreach ($profile as $prof){if($prof->genre3!=null){echo $prof->genre3;}}?>" class="mdl-textfield__input" type="text" id="genre3" name="genre3">
                                     <label class="mdl-textfield__label" for="genre3">Genre 3</label>
                                 </div>
                             <!-- User Location -->
