@@ -20,7 +20,7 @@
                                         <br><br><b>Email:</b> <?php foreach ($profile as $prof){echo $prof->email;}?>
                                         <br><br><b>Phone Number:</b> <?php foreach ($profile as $prof){echo $prof->phone_num;}?>
                                     </h5>
-                                    <br><h6>We will never share your number without your concent.</h6>
+                                    <h6>We will never share your number without your concent.</h6>
 
                             </p>
                         </div>
@@ -28,8 +28,8 @@
 
                         <hr style="width:95%;">
 
-                        <br><u><br><h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Book Swap Preferences:</h3><br></u>   
-                        <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+                        <br><u><br><h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Book Swap Preferences:</h3></u>   
+                        <div id="bsp" class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
                             <p>
                                 <h5>
                                     <b>Favorite Genres:</b> Fantasy, SciFi
@@ -37,6 +37,44 @@
                                 </h5>
                             </p>
                         </div>
+
+                        <div id="bspe" class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+                        
+                            <!-- Edit info Form -->
+
+                            <form method="post" action="<?php echo site_url('Users/update');?>" class="">
+                            <!-- Favorite Genre 1 -->
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="fav_gen1" name="fav_gen1">
+                                    <label class="mdl-textfield__label" for="fav_gen1">Genre 1</label>
+                                </div>
+                            <!-- Favorite Genre 1 -->
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="fav_gen2" name="fav_gen2">
+                                    <label class="mdl-textfield__label" for="fav_gen2">Genre 2</label>
+                                </div>
+                            <!-- Favorite Genre 1 -->
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="fav_gen3" name="fav_gen3">
+                                    <label class="mdl-textfield__label" for="fav_gen3">Genre 3</label>
+                                </div>
+                            <!-- User Location -->
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" id="location" name="location">
+                                    <label class="mdl-textfield__label" for="location">Location</label>
+                                </div>
+                                <br><br>
+                                <p>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" name="submit ">
+                                        Submit Changes
+                                    </button>
+                                </p>
+                            </form>
+
+
+                        </div>
+
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Edit Info</button>
                     </div>
                 </div>
 
