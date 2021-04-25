@@ -90,7 +90,15 @@ public function login(){
         $this->load->view('templates/FootB');
         }
 
-
+        // Function to load the available books from the index page
+    public function book_description(){
+        $this->load->view('templates/HeadB');
+        $this->load->view('B_Views/book_description');
+        $this->load->view('templates/FootB');
+        }
     }
+
+
+
 
     

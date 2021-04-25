@@ -2,7 +2,7 @@
             <div class="mdl-grid portfolio-max-width">
                 <!-- Books table Start -->
                     <h2 class="pad5">Available Books</h2>
-                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for the book name..." title="Type in a name">
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for the book or author name..." title="Type in a name">
                     <br>
                     <table class="table table-image" id="myTable">
                         <thead>
@@ -14,15 +14,18 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="w-25">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/921.jpg');?>" alt=""></img>
-                                </td>
-                                <td>The Lovely Bones</td>
+                            <tr id="row-1">
+                                <div class="clickable_div">
+                                    <a href="<?php echo site_url('Intro/books_description');?>"></a>
+                                    <td class="w-25">
+                                        <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/921.jpg');?>" alt=""></img>
+                                    </td>
+                                    <td>The Lovely Bones</td>
+                                </div>
                                 <td>Alice Sebold</td>
                                 <td>3.82</td>
                             </tr>
-                            <tr>
+                            <tr id="row-2">
                                 <td class="w-25">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/922.jpg');?>" alt=""></img>
                                 </td>
@@ -30,7 +33,7 @@
                                 <td>Paula Hawkins</td>
                                 <td>3.93</td>
                             </tr>
-                            <tr>
+                            <tr id="row-3">
                                 <td class="w-25">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/923.jpg');?>" alt=""></img>
                                 </td>
@@ -38,7 +41,7 @@
                                 <td>Jessica Rubinkowski</td>
                                 <td>3.80</td>
                             </tr>
-                            <tr>
+                            <tr id="row-4">
                                 <td class="w-25">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/924.jpg');?>" alt=""></img>
                                 </td>
@@ -46,7 +49,7 @@
                                 <td>Jessica S. Olson</td>
                                 <td>4.06</td>
                             </tr>
-                            <tr>
+                            <tr id="row-5">
                                 <td class="w-25">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/924.jpg');?>" alt=""></img>
                                 </td>
@@ -54,7 +57,7 @@
                                 <td>J.K. Rowling</td>
                                 <td>4.48</td>
                             </tr>
-                            <tr>
+                            <tr id="row-6">
                                 <td class="w-25">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/924.jpg');?>" alt=""></img>
                                 </td>
@@ -62,7 +65,7 @@
                                 <td>Paula Hawkins</td>
                                 <td>3.93</td>
                             </tr>
-                            <tr>
+                            <tr id="row-7">
                                 <td class="w-25">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/924.jpg');?>" alt=""></img>
                                 </td>
@@ -70,7 +73,7 @@
                                 <td>Paula Hawkins</td>
                                 <td>3.93</td>
                             </tr>
-                            <tr>
+                            <tr id="row-8">
                                 <td class="w-25">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/928.jpg');?>" alt=""></img>
                                 </td> 
@@ -78,7 +81,7 @@
                                 <td>Kathryn Stockett</td>
                                 <td>4.46</td> <!--To get with API? Goodreads / Google books-->
                             </tr>
-                            <tr>
+                            <tr id="row-9">
                                 <td class="w-25">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/929.jpg');?>" alt=""></img>
                                 </td>
@@ -109,4 +112,8 @@
         var active = document.getElementById("ind");
         active.classList.add("is-active");
         }
+
+        $(document).delegate("clickable_div", "click", function() {
+            window.location = $(this).find("a").attr("href");
+        });
     </script>
