@@ -3,7 +3,7 @@
                 <!-- Box 1--> 
                 <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
                     <div class="mdl-card__media">
-                        <a href="available_books.php">
+                        <a href="<?php echo site_url('Intro/available_books');?>">
                             <img class="article-image" src="<?php echo base_url('images/available_books.jpg');?>" border="0" alt="">
                         </a>
                     </div>
@@ -16,7 +16,7 @@
                         <!-- Text here if needed -->
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="available_books.php">Read more</a>
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="<?php echo site_url('Intro/available_books');?>">Read more</a>
                     </div>
                 </div>
                 <!-- End Box 1--> 
