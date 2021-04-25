@@ -46,18 +46,18 @@
                             <form method="post" action="<?php echo site_url('Users/update_pref');?>" class="">
                             <!-- Favorite Genre 1 -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input value="Fantasy" class="mdl-textfield__input" type="text" id="fav_gen1" name="fav_gen1">
-                                    <label class="mdl-textfield__label" for="fav_gen1">Genre 1</label>
+                                    <input value="Fantasy" class="mdl-textfield__input" type="text" id="genre1" name="genre1">
+                                    <label class="mdl-textfield__label" for="genre1">Genre 1</label>
                                 </div>
                             <!-- Favorite Genre 1 -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input value="Sci-Fi" class="mdl-textfield__input" type="text" id="fav_gen2" name="fav_gen2">
-                                    <label class="mdl-textfield__label" for="fav_gen2">Genre 2</label>
+                                    <input value="Sci-Fi" class="mdl-textfield__input" type="text" id="genre2" name="genre2">
+                                    <label class="mdl-textfield__label" for="genre2">Genre 2</label>
                                 </div>
                             <!-- Favorite Genre 1 -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input value="Horror" class="mdl-textfield__input" type="text" id="fav_gen3" name="fav_gen3">
-                                    <label class="mdl-textfield__label" for="fav_gen3">Genre 3</label>
+                                    <input value="Horror" class="mdl-textfield__input" type="text" id="genre3" name="genre3">
+                                    <label class="mdl-textfield__label" for="genre3">Genre 3</label>
                                 </div>
                             <!-- User Location -->
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
