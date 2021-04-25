@@ -12,13 +12,12 @@
                             Welcome Back to Bambook!
                         </p>
                         <p>
-                            Not a member yet? come read with us!<br>
-                            
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset">
-                                <button id="register" class="mdl-button mdl-js-button mdl-button--primary" type="button" name="register"><br>Register Now</button>
-                            </div>
-                                
-
+                            Not a member yet? come read with us!
+                            <center>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" name="register">
+                                        Register
+                                    </button>
+                            </center>
                         </p>
                         <!-- Login Form -->
 
@@ -52,9 +51,4 @@
         var active = document.getElementById("log");
         active.classList.add("is-active");
         }
-
-    document.getElementById("register").onclick=function()
-    {
-        window.location.href="<?php echo site_url('Intro/register');?>";  
-    };
     </script>
