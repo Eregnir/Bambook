@@ -85,7 +85,7 @@ public function login(){
     }
 // Function to load the available books from the index page
     public function available_books(){
-        $this->load->view('templates/HeadB');
+        $this->load->view('templates/HeadB',);
         $this->load->view('B_Views/available_books');
         $this->load->view('templates/FootB');
         }
