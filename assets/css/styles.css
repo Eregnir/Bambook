@@ -166,10 +166,6 @@ img.article-image {
 footer {
   background-image: url(../../images/footer-background.png);
   background-size: cover;
-  clear: both;
-  position: relative;
-  height: 200px;
-  margin-top: -200px;
 }
 
 /************ available_books CSS *************/

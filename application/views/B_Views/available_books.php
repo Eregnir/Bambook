@@ -7,10 +7,34 @@
 
                     <table id="myTable">
                     <tr class="header">
-                        <th style="width:35%;">Image</th>
-                        <th style="width:35%;">Title</th>
+                        <th style="width:55%;">Image</th>
+                        <th style="width:15%;">Title</th>
                         <th style="width:15%;">Author</th>
                         <th style="width:15%;">Rating</th>
+                    <tr>
+                        <td><img  src="<?php echo base_url('images/books_images/928.jpg');?>" alt="" height=100 width=100></img></td> 
+                        <td>The Help</td>
+                        <td>Kathryn Stockett</td>
+                        <td>4.46</td> <!--To get with API? Goodreads / Google books-->
+                    </tr>
+                    <tr>
+                        <td><img  src="<?php echo base_url('images/books_images/921.jpg');?>" alt="" height=100 width=100></img></td>
+                        <td>The Lovely Bones</td>
+                        <td>Alice Sebold</td>
+                        <td>3.82</td>
+                    </tr>
+                    <tr>
+                        <td><img  src="<?php echo base_url('images/books_images/922.jpg');?>" alt="" height=100 width=100></img></td>
+                        <td>The Girl on the Train</td>
+                        <td>Paula Hawkins</td>
+                        <td>3.93</td>
+                    </tr>
+                    <tr>
+                        <td><img  src="<?php echo base_url('images/books_images/929.jpg');?>" alt="" height=100 width=100></img></td>
+                        <td>Memoirs of a Geisha</td>
+                        <td>Kathryn Stockett</td>
+                        <td>4.12</td>
+                    </tr>
                     <tr>
                         <td><img  src="<?php echo base_url('images/books_images/928.jpg');?>" alt="" height=100 width=100></img></td> 
                         <td>The Help</td>
