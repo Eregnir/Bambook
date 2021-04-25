@@ -46,8 +46,8 @@ class Intro extends CI_Controller{
         }
 //Load the login view
 public function login(){
-    $this->load->view('templates/HeadB');
-    $this->load->view('B_Views/login');
+    $this->load->view('templates/HeadB',$error=null);
+    $this->load->view('B_Views/login',$error=null);
     $this->load->view('templates/FootB');
     }
 
