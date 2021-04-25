@@ -85,7 +85,7 @@ public function login(){
         $this->load->view('templates/FootB');
         }
 
-    }
+}
 
 
 

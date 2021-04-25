@@ -13,12 +13,13 @@
                                 <th scope="col">Rating</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <form method="post" action="<?php echo site_url('Books/single_book');?>">
-                            <?php 
+                        <?php 
                             $book=$books[0];
                             echo $book->UID;
                             ?>
+                        <tbody>
+                            <form id="<?php echo $book->UID?>" name="<?php echo $book->UID?>" method="post" action="<?php echo site_url('Books/single_book');?>">
+                            
                                 <tr id="row-1" class="table-row">
                                     <td class="w-25">
                                         <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/921.jpg');?>" alt=""></img>
@@ -121,5 +122,11 @@
                 window.document.location = $(this).data("href");
             });
         });
+    
+    document.getElementById("<?php echo $book->UID?>").onclick=function()
+    {
+        document.<?php echo $book->UID?>.submit();  
+    };
+
     </script>
 
