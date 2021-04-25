@@ -13,8 +13,9 @@
                         <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Personal Details</h3>
                         <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
                             <p>
-                                
-                                User Name: <span> <?php foreach ($profile as $prof){echo $prof->username;}?> </span>
+                                Avatar:<br>
+                                <?php foreach ($profile as $prof){echo '<img style="max-height:250px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $prof->avatar).'"/>';}?>
+                                <br>User Name: <span> <?php foreach ($profile as $prof){echo $prof->username;}?> </span>
                                 <br>Name: <?php foreach ($profile as $prof){echo $prof->f_name. $prof->l_name;}?>
                                 <br>Email: <?php foreach ($profile as $prof){echo $prof->email;}?>
                                 <br>Phone Number: <?php foreach ($profile as $prof){echo $prof->phone_num;}?>
