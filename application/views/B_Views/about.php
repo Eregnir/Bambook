@@ -69,7 +69,7 @@
                                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" name="submit ">
                                         Submit Changes
                                     </button>
-                                    <button style="position:fixed; right:0px;" id="cancel" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="button" name="cancel">
+                                    <button style="margin-left:10px;" id="cancel" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="button" name="cancel">
                                         Cancel
                                     </button>
                                 </p>
