@@ -9,10 +9,7 @@
                     </div>
                     <div class="mdl-card__supporting-text">
                         <p>
-                            Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
-                        </p>
-                        <p>
-                            Excepteur reprehenderit sint exercitation ipsum consequat qui sit id velit elit. Velit anim eiusmod labore sit amet.
+                            Hi there Bambook User! thanks for contacting us. Let us know what's on your mind:
                         </p>
                         <form action="#" class="">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">

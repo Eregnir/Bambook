@@ -20,13 +20,8 @@ class Intro extends CI_Controller{
         $this->load->view('B_Views/index');
         $this->load->view('templates/FootB');
         }
-//Load the blog view
-    public function blog(){
-        $this->load->view('templates/HeadB');
-        $this->load->view('B_Views/blog');
-        $this->load->view('templates/FootB');
-        }
-//Load the about view
+
+//Load the profile view
     public function about(){
         $user=$this->session->all_userdata();
         if ($user['loggedin']!=null){

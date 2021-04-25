@@ -20,7 +20,7 @@
 
     document.getElementById("blg").onclick=function()
     {
-        window.location.href="<?php echo site_url('Intro/blog');?>";   
+        window.location.href="<?php echo site_url('Intro/available_books');?>";   
     };
 
     document.getElementById("abt").onclick=function()

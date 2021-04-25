@@ -13,8 +13,8 @@
                         <u><h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">My Profile:</h3></u>
                         <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
                             <p>
-                            <?php foreach ($profile as $prof){echo '<center><img style="max-height:250px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $prof->avatar).'"/> </center>';}?>
-                                    <h4><br>Hello, <span> <?php foreach ($profile as $prof){echo $prof->username;}?>! </span></h4>
+                            <h4><br>Hello, <span> <?php foreach ($profile as $prof){echo $prof->username;}?>! </span></h4><br>
+                            <?php foreach ($profile as $prof){echo '<center><img style="max-height:250px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $prof->avatar).'"/> </center>';}?>   
                                     <h5>
                                         <br><br><b>Name:</b> <?php foreach ($profile as $prof){echo $prof->f_name." ". $prof->l_name;}?>
                                         <br><br><b>Email:</b> <?php foreach ($profile as $prof){echo $prof->email;}?>
