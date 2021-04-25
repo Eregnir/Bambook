@@ -13,8 +13,8 @@
                         </p>
                         <p>
                             Not a member yet? come read with us!<br>
-                            <button class="mdl-button mdl-js-button mdl-button--primary" type="button" name="register">
-                                    Register Now
+                            <button class="mdl-button mdl-js-button mdl-button--primary" type="button" name="register"><br>
+                                    <center>Register Now</center>
                                 </button>
                         </p>
                         <!-- Login Form -->
@@ -50,7 +50,8 @@
         active.classList.add("is-active");
         }
 
-    window.onclick = function(){
-        window.location.href="<?php echo site_url('Intro/register');?>";
-    }
+    document.getElementById("register").onclick=function()
+    {
+        window.location.href="<?php echo site_url('Intro/register');?>";  
+    };
     </script>
