@@ -36,7 +36,7 @@
                                     <br><br><b>Location:</b> <?php foreach ($profile as $prof){echo $prof->location;}?>
                                 </h5>
                             </p>
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Edit Info</button>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Edit Info</button>
                         </div>
 
                         <div style="display:none;" id="bspe" class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
@@ -66,7 +66,7 @@
                                 </div>
                                 <br><br>
                                 <p>
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit" name="submit ">
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" name="submit ">
                                         Submit Changes
                                     </button>
                                 </p>
