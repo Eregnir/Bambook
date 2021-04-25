@@ -9,13 +9,13 @@
                     </div>
                     <div class="mdl-card__supporting-text">
                         <p>
-                            Just some text about logging in to Bambook!
-                            <?php if ($error != null){
-                                echo 'There was an error on login:' .$error;
-                                }?>
+                            Welcome Back to Bambook!
                         </p>
                         <p>
-                            And this text as well.
+                            Not a member yet? come read with us!
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" name="register">
+                                    Register Now
+                                </button>
                         </p>
                         <!-- Login Form -->
 
@@ -49,4 +49,8 @@
         var active = document.getElementById("log");
         active.classList.add("is-active");
         }
+
+    window.onclick = function(){
+        window.location.href="<?php echo site_url('Intro/register');?>";
+    }
     </script>
