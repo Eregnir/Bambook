@@ -213,5 +213,9 @@ background-color: #f1f1f1;
 
 /******************** CSS Page - book_description ********************/
 
+.table-row {
+  cursor:pointer;
+}
+  
 
 /******************** END CSS Page - book_description ********************/

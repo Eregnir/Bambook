@@ -11,20 +11,18 @@
                                 <th scope="col">Title</th>
                                 <th scope="col">Author</th>
                                 <th scope="col">Rating</th>
-                                <th scope="col">More Details</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr id="row-1">
+                            <tr id="row-1" class="table-row" data-href="<?php echo site_url('Intro/book_description');?>">
                                 <td class="w-25">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/921.jpg');?>" alt=""></img>
                                 </td>
                                 <td>The Lovely Bones</td>
                                 <td>Alice Sebold</td>
                                 <td>3.82</td>
-                                <td onClick="<?php echo site_url('Intro/book_description');?>">Read More</td>
                             </tr>
-                            <tr id="row-2">
+                            <tr id="row-2" class="table-row" data-href="<?php echo site_url('Intro/book_description');?>">
                                 <td class="w-25">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/922.jpg');?>" alt=""></img>
                                 </td>
@@ -32,7 +30,7 @@
                                 <td>Paula Hawkins</td>
                                 <td>3.93</td>
                             </tr>
-                            <tr id="row-3">
+                            <tr id="row-3" class="table-row" data-href="<?php echo site_url('Intro/book_description');?>">
                                 <td class="w-25">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/923.jpg');?>" alt=""></img>
                                 </td>
@@ -40,7 +38,7 @@
                                 <td>Jessica Rubinkowski</td>
                                 <td>3.80</td>
                             </tr>
-                            <tr id="row-4">
+                            <tr id="row-4" class="table-row" data-href="<?php echo site_url('Intro/book_description');?>">
                                 <td class="w-25">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/924.jpg');?>" alt=""></img>
                                 </td>
@@ -48,7 +46,7 @@
                                 <td>Jessica S. Olson</td>
                                 <td>4.06</td>
                             </tr>
-                            <tr id="row-5">
+                            <tr id="row-5" class="table-row" data-href="<?php echo site_url('Intro/book_description');?>">
                                 <td class="w-25">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/924.jpg');?>" alt=""></img>
                                 </td>
@@ -56,7 +54,7 @@
                                 <td>J.K. Rowling</td>
                                 <td>4.48</td>
                             </tr>
-                            <tr id="row-6">
+                            <tr id="row-6" class="table-row" data-href="<?php echo site_url('Intro/book_description');?>">
                                 <td class="w-25">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/924.jpg');?>" alt=""></img>
                                 </td>
@@ -64,7 +62,7 @@
                                 <td>Paula Hawkins</td>
                                 <td>3.93</td>
                             </tr>
-                            <tr id="row-7">
+                            <tr id="row-7" class="table-row" data-href="<?php echo site_url('Intro/book_description');?>">
                                 <td class="w-25">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/924.jpg');?>" alt=""></img>
                                 </td>
@@ -72,7 +70,7 @@
                                 <td>Paula Hawkins</td>
                                 <td>3.93</td>
                             </tr>
-                            <tr id="row-8">
+                            <tr id="row-8" class="table-row" data-href="<?php echo site_url('Intro/book_description');?>">
                                 <td class="w-25">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/928.jpg');?>" alt=""></img>
                                 </td> 
@@ -80,7 +78,7 @@
                                 <td>Kathryn Stockett</td>
                                 <td>4.46</td> <!--To get with API? Goodreads / Google books-->
                             </tr>
-                            <tr id="row-9">
+                            <tr id="row-9" class="table-row" data-href="<?php echo site_url('Intro/book_description');?>">
                                 <td class="w-25">
                                     <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/929.jpg');?>" alt=""></img>
                                 </td>
@@ -111,4 +109,11 @@
         var active = document.getElementById("ind");
         active.classList.add("is-active");
         }
+
+        $(document).ready(function($) {
+            $(".table-row").click(function() {
+                window.document.location = $(this).data("href");
+            });
+        });
     </script>
+
