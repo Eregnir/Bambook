@@ -14,13 +14,12 @@
                         <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
                             <p>
                                 
-                                User Name: <?php foreach ($profile as $prof){echo $prof->username;}?>
+                                User Name: <span> <?php foreach ($profile as $prof){echo $prof->username;}?> </span>
                                 <br>Name: <?php foreach ($profile as $prof){echo $prof->f_name. $prof->l_name;}?>
                                 <br>Email: <?php foreach ($profile as $prof){echo $prof->email;}?>
-                                <br>Phone Number: 
-                                <br>Favorite Genres:
-                                <br>Location:
-
+                                <br>Phone Number: <?php echo $profile->phone_num;?>
+                                <br>Favorite Genres: 
+                                <br>Location: <?php echo $profile->location;?>
                             </p>
                         </div>
 
