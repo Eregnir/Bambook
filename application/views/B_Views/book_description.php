@@ -1,6 +1,6 @@
         <main class="mdl-layout__content">
             <div class="mdl-grid portfolio-max-width">
-                <div class="mdl-typography--text-center">
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset">
                     <div class="card" style="width: 25rem">
                         <img
                             src="<?php echo base_url('images/books_images/921.jpg');?>"
