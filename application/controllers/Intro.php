@@ -71,6 +71,7 @@ public function login(){
         $user=$this->session->all_userdata();
         if ($user['loggedin']!=null){
             $data['profile']=$this->intro_model->get_profile_info();
+            $data['user']=$user;
             $this->load->view('templates/HeadB',$data);
             $this->load->view('B_Views/about',$data);
             $this->load->view('templates/FootB');

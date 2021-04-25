@@ -14,7 +14,7 @@
                         <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
                             <p>
                                 
-                                User Name: <?php echo $profile['username'];?>
+                                User Name: <?php echo $user['username'];?>
                                 <br>Name: <?php echo $profile['f_name'];?>
                                 <br>Email: <?php echo $profile['email']?>
                                 <br>Phone Number: 
