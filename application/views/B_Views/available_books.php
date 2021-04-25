@@ -22,7 +22,8 @@
                         <td>English</td>
                         <td>4.46</td> <!--To get with API? Goodreads / Google books-->
                         <td>Like new</td>
-                        <td><img src="images/books_images/928.jpg" alt="" height=100 width=100></img></td>
+                        <td><img  src="<?php echo base_url('images/books_images/928.jpg');?>" alt="" height=100 width=100></img></td>
+                       
                     </tr>
                     <tr>
                         <td>The Lovely Bones</td>
@@ -31,7 +32,7 @@
                         <td>English</td>
                         <td>3.82</td>
                         <td>Used</td>
-                        <td><img src="images/books_images/921.jpg" alt="" height=100 width=100></img></td>
+                        <td><img  src="<?php echo base_url('images/books_images/921.jpg');?>" alt="" height=100 width=100></img></td>
                     </tr>
                     <tr>
                         <td>The Girl on the Train</td>
@@ -40,7 +41,7 @@
                         <td>English</td>
                         <td>3.93</td>
                         <td>Like new</td>
-                        <td><img src="images/books_images/922.jpg" alt="" height=100 width=100></img></td>
+                        <td><img  src="<?php echo base_url('images/books_images/922.jpg');?>" alt="" height=100 width=100></img></td>
                     </tr>
                     <tr>
                         <td>Memoirs of a Geisha</td>
@@ -49,7 +50,7 @@
                         <td>English</td>
                         <td>4.12</td>
                         <td>Like new</td>
-                        <td><img src="images/books_images/929.jpg" alt="" height=100 width=100></img></td>
+                        <td><img  src="<?php echo base_url('images/books_images/929.jpg');?>" alt="" height=100 width=100></img></td>
                     </tr>
                     <tr>
                         <td>The Help</td>
