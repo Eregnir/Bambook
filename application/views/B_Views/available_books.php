@@ -17,7 +17,7 @@
                             <form method="post" action="<?php echo site_url('Books/single_book');?>">
                             <?php 
                             $book=$books[0];
-                            echo $book['UID'];
+                            echo $book->UID;
                             ?>
                                 <tr id="row-1" class="table-row">
                                     <td class="w-25">
