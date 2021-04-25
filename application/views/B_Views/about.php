@@ -36,6 +36,7 @@
                                     <br><br><b>Location:</b> <?php foreach ($profile as $prof){echo $prof->location;}?>
                                 </h5>
                             </p>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Edit Info</button>
                         </div>
 
                         <div id="bspe" class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
@@ -45,12 +46,12 @@
                             <form method="post" action="<?php echo site_url('Users/update');?>" class="">
                             <!-- Favorite Genre 1 -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="fav_gen1" name="fav_gen1">
+                                    <input value="fantasy" class="mdl-textfield__input" type="text" id="fav_gen1" name="fav_gen1">
                                     <label class="mdl-textfield__label" for="fav_gen1">Genre 1</label>
                                 </div>
                             <!-- Favorite Genre 1 -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input class="mdl-textfield__input" type="text" id="fav_gen2" name="fav_gen2">
+                                    <input placeholder="scifi" class="mdl-textfield__input" type="text" id="fav_gen2" name="fav_gen2">
                                     <label class="mdl-textfield__label" for="fav_gen2">Genre 2</label>
                                 </div>
                             <!-- Favorite Genre 1 -->
@@ -74,7 +75,7 @@
 
                         </div>
 
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Edit Info</button>
+                        
                     </div>
                 </div>
 
