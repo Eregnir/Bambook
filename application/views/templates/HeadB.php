@@ -28,16 +28,10 @@
                             echo 'The latest user who registered is: '. $em->email;
                         endforeach;
                         ?><br>
-                        <?php 
-                            if($test!=null){
-                                echo 'A user is logged in!: '. $test;
-                                } 
-                            
+                        <?php                           
                             if($user['username']!=null){
-                                echo '<br> the $user session thingy works! the logged in user is: '. $user['username']; 
-                            }
-                                
-                                
+                                echo '<br> logged in as: '. $user['username']; 
+                            }   
                         ?>
                     </span>
                 </span>

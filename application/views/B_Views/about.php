@@ -15,8 +15,8 @@
                             <p>
                                 
                                 User Name: <?php echo $profile['username'];?>
-                                <br>Name: <?php echo $profile['f_name']. $profile['l_name'];?>
-                                <br>Email:
+                                <br>Name: <?php echo $profile['f_name'];?>
+                                <br>Email: <?php echo $profile['email']?>
                                 <br>Phone Number: 
                                 <br>Favorite Genres:
                                 <br>Location:
