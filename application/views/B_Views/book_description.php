@@ -1,6 +1,6 @@
         <main class="mdl-layout__content">
             <div class="mdl-grid portfolio-max-width">
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset">
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> <!-- centered div -->
                     <div class="card" style="width: 25rem">
                         <img
                             src="<?php echo base_url('images/books_images/921.jpg');?>"
@@ -26,7 +26,10 @@
                         </ul>
                         <div class="card-body">
                             <a href="javascript:history.back()" class="card-link alignleft">Go Back</a>
-                            <a href="#" class="card-link alignright">Request Swap</a>
+                            <button onclick="location.href='#'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent card-link alignright" type="button">
+                                Request Swap
+                            </button>
+                            <!-- <a href="#" class="card-link alignright">Request Swap</a> -->
                         </div>
                         <div style="clear: both;"></div>
                     </div> 
