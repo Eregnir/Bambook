@@ -14,11 +14,15 @@ class Intro extends CI_Controller{
         if ($user['loggedin']!=null){
             $data['test']=$user['username'];
             $data['user']=$user;
+            $data['email']=$this->intro_model->test();
+            $this->load->view('templates/HeadB',$data);
+            $this->load->view('B_Views/index');
+            $this->load->view('templates/FootB');
         }
-        $data['email']=$this->intro_model->test();
-        $this->load->view('templates/HeadB',$data);
-        $this->load->view('B_Views/index');
-        $this->load->view('templates/FootB');
+        else{
+            $this->load->login();
+        }
+        
         }
 
 //Load the profile view
