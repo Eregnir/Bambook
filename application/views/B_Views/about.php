@@ -2,12 +2,12 @@
             <div class="mdl-grid portfolio-max-width">
 
                 <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
-                    <div class="mdl-card__title">
+                    <!-- <div class="mdl-card__title">
                         <h2 class="mdl-card__title-text">Profile</h2>
                     </div>
                     <div class="mdl-card__media">
                         <img class="article-image" src="<?php echo base_url('images/about-header.jpg');?>" border="0" alt="">
-                    </div>
+                    </div> -->
 
                     <div class="mdl-grid portfolio-copy">
                         <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">My Profile</h3>
