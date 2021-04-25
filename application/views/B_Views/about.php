@@ -29,7 +29,7 @@
                         <hr style="width:95%;">
 
                         <br><u><br><h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Book Swap Preferences:</h3></u>   
-                        <div id="bsp" class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+                        <div style="display:'';" id="bsp" class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
                             <p>
                                 <h5>
                                     <b>Favorite Genres:</b> Fantasy, SciFi
@@ -39,7 +39,7 @@
                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Edit Info</button>
                         </div>
 
-                        <div id="bspe" class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
+                        <div style="display:none;" id="bspe" class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
                         
                             <!-- Edit info Form -->
 
@@ -66,7 +66,7 @@
                                 </div>
                                 <br><br>
                                 <p>
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" name="submit ">
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit" name="submit ">
                                         Submit Changes
                                     </button>
                                 </p>
@@ -88,5 +88,11 @@
         var active = document.getElementById("abt");
         active.classList.add("is-active");
         }
+    
+    document.getElementById("bsp").onclick=function()
+    {
+        document.getElementById("bspe").style.display = ""; 
+        document.getElementById('bsp').style.display = "none";
+    };
     </script>
 
