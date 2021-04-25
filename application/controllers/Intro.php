@@ -85,6 +85,13 @@ public function login(){
         $this->load->view('templates/FootB');
         }
 
+        // Function to load the publish book page from the index page
+    public function publish_book(){
+        $this->load->view('templates/HeadB');
+        $this->load->view('B_Views/publish_book');
+        $this->load->view('templates/FootB');
+        }
+
 }
 
 
