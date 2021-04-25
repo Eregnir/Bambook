@@ -5,7 +5,7 @@
 
                     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for the book name..." title="Type in a name">
 
-                    <table class="table table-image">
+                    <table class="table table-image" id="myTable">
                         <thead>
                             <tr>
                                 <th scope="col">Image</th>
