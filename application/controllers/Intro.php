@@ -65,7 +65,17 @@ public function login(){
          $this->intro_model->save_register($data);
          $this->load->view('B_Views/blog');
 
+        }
+//function to get the profile details from the DB in order to show it for the profile page:
+    public function user_details(){
+        $user=$this->session->all_userdata();
+        if ($user['loggedin']!=null){
+            $data['user']=$user;
+            
+        }
+
     }
+
     }
 
     
