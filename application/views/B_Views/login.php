@@ -14,7 +14,7 @@
                         <p>
                             Not a member yet? come read with us!
                             <center>
-                                <button id="register" class="mdl-button mdl-js-button" type="button" name="register">
+                                <button id="register" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="button" name="register">
                                         Register
                                     </button>
                             </center>
