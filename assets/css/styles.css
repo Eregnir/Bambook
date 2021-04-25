@@ -172,11 +172,9 @@ footer {
 
 /* Books table */
 
-/* * {
-  box-sizing: border-box;
+.pad5 {
+  padding: 5px;
 }
-
-*/
 
 #myInput {
 background-image: url('/images/searchicon.png');
