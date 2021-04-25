@@ -1,5 +1,5 @@
         <main class="mdl-layout__content">
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> <!-- centered div -->
+                <!-- <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> centered div -->
                 <!-- Form publish a book -->
                     <div class="container">
                         <div class="row">
@@ -117,8 +117,8 @@
                                 </form>
                             </div>
                         </div>  
-                    </div>
-            </div>
+                    <!-- </div> -->
+        </main>
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/JS/GJS.js');?>"></script>
 
