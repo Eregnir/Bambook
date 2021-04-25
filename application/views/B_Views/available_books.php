@@ -125,7 +125,7 @@
     
     document.getElementById("<?php echo $book->UID?>").onclick=function()
     {
-        document.<?php echo $book->UID?>.submit();  
+        document.getElementById("<?php echo $book->UID?>").submit();  
     };
 
     </script>
