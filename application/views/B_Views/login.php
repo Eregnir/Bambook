@@ -14,7 +14,7 @@
                         <p>
                             Not a member yet? come read with us!
                             <center>
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" name="register">
+                                <button id="register" class="mdl-button mdl-js-button" type="button" name="register">
                                         Register
                                     </button>
                             </center>
@@ -51,4 +51,9 @@
         var active = document.getElementById("log");
         active.classList.add("is-active");
         }
+
+        document.getElementById("register").onclick=function()
+    {
+        window.location.href="<?php echo site_url('Intro/register');?>";   
+    };
     </script>
