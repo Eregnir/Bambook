@@ -23,11 +23,6 @@
                     <div class="portfolio-logo"></div>
                     <span class="mdl-layout__title">Bambook - Book Swap</span>
                     <span>
-                        <?php 
-                        foreach ($email as $em):
-                            echo 'The latest user who registered is: '. $em->email;
-                        endforeach;
-                        ?><br>
                         <?php                           
                             if($user['username']!=null){
                                 echo '<br> logged in as: '. $user['username']; 

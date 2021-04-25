@@ -12,7 +12,6 @@ class Intro extends CI_Controller{
      public function index(){
         $user=$this->session->all_userdata();
         if ($user['loggedin']!=null){
-             
             $data['test']=$user['username'];
             $data['user']=$user;
         }
