@@ -106,7 +106,7 @@
 
     <script>
     window.onload = function(){
-        var active = document.getElementById("ind");
+        var active = document.getElementById("blg");
         active.classList.add("is-active");
         }
 
