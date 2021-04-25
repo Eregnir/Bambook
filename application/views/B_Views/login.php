@@ -13,10 +13,11 @@
                         </p>
                         <p>
                             Not a member yet? come read with us!<br>
-
-                                <button class="mdl-button mdl-js-button mdl-button--primary" type="button" name="register"><br>
-                                        Register Now
-                                    </button>
+                            
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset">
+                                <button id="register" class="mdl-button mdl-js-button mdl-button--primary" type="button" name="register"><br>Register Now</button>
+                            </div>
+                                
 
                         </p>
                         <!-- Login Form -->
