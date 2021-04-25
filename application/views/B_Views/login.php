@@ -13,8 +13,8 @@
                         </p>
                         <p>
                             Not a member yet? come read with us!<br>
-                            <button class="mdl-button mdl-js-button mdl-button--primary" type="button" name="register"><br>
-                                    <center>Register Now</center>
+                            <button class="mdl-button mdl-js-button mdl-button--primary mdl-cell mdl-cell--4-col mdl-cell--4-offset" type="button" name="register"><br>
+                                    Register Now
                                 </button>
                         </p>
                         <!-- Login Form -->
