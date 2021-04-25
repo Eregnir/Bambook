@@ -12,8 +12,8 @@
                             Welcome Back to Bambook!
                         </p>
                         <p>
-                            Not a member yet? come read with us!
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" name="register">
+                            Not a member yet? come read with us!<br>
+                            <button class="mdl-button mdl-js-button mdl-button--primary" type="button" name="register">
                                     Register Now
                                 </button>
                         </p>
