@@ -10,26 +10,25 @@
                     </div> -->
 
                     <div class="mdl-grid portfolio-copy">
-                        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">My Profile:</h3>
+                        <u><h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">My Profile:</h3></u>
                         <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
                             <p>
                             <?php foreach ($profile as $prof){echo '<center><img style="max-height:250px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $prof->avatar).'"/> </center>';}?>
-                                <h5>
                                     <h4><br>Hello, <span> <?php foreach ($profile as $prof){echo $prof->username;}?>! </span></h4>
-                                    <br><br><b>Name:</b> <?php foreach ($profile as $prof){echo $prof->f_name." ". $prof->l_name;}?>
-                                    <br><br><b>Email:</b> <?php foreach ($profile as $prof){echo $prof->email;}?>
-                                    <br><br><b>Phone Number:</b> <?php foreach ($profile as $prof){echo $prof->phone_num;}?>
-                                    <br><h6>Your phone number is private and won't be displayed without your permission!</h6>
-                                </h5>
-                                
+                                    <h5>
+                                        <br><br><b>Name:</b> <?php foreach ($profile as $prof){echo $prof->f_name." ". $prof->l_name;}?>
+                                        <br><br><b>Email:</b> <?php foreach ($profile as $prof){echo $prof->email;}?>
+                                        <br><br><b>Phone Number:</b> <?php foreach ($profile as $prof){echo $prof->phone_num;}?>
+                                    </h5>
+                                    <br><h6>We will never share your number without your concent.</h6>
+
                             </p>
                         </div>
 
 
-                        <hr style="width:70%; margin: auto;">
+                        <hr style="width:95%;">
 
-                        <br><h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Book Swap Preferences:</h3>
-
+                        <br><u><br><h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Book Swap Preferences:</h3><br></u>   
                         <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
                             <p>
                                 <h5>
