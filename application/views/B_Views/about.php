@@ -26,7 +26,7 @@
                         </div>
 
 
-                        <center><hr style="width:70%"></center>
+                        <hr style="width:70%; margin: auto;">
 
                         <br><h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Book Swap Preferences:</h3>
 
