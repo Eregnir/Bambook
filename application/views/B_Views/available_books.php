@@ -7,86 +7,33 @@
 
                     <table id="myTable">
                     <tr class="header">
-                        <th style="width:25%;">Title</th>
-                        <th style="width:10%;">Author</th>
-                        <th style="width:10%;">Year</th>
-                        <th style="width:10%;">Language</th>
-                        <th style="width:10%;">Rating</th>
-                        <th style="width:10%;">Condition</th>
-                        <th style="width:25%;">Image</th>
-                    </tr>
+                        <th style="width:35%;">Image</th>
+                        <th style="width:35%;">Title</th>
+                        <th style="width:15%;">Author</th>
+                        <th style="width:15%;">Rating</th>
                     <tr>
+                        <td><img  src="<?php echo base_url('images/books_images/928.jpg');?>" alt="" height=100 width=100></img></td> 
                         <td>The Help</td>
                         <td>Kathryn Stockett</td>
-                        <td>2009</td>
-                        <td>English</td>
                         <td>4.46</td> <!--To get with API? Goodreads / Google books-->
-                        <td>Like new</td>
-                        <td><img  src="<?php echo base_url('images/books_images/928.jpg');?>" alt="" height=100 width=100></img></td>
-                       
                     </tr>
                     <tr>
+                        <td><img  src="<?php echo base_url('images/books_images/921.jpg');?>" alt="" height=100 width=100></img></td>
                         <td>The Lovely Bones</td>
                         <td>Alice Sebold</td>
-                        <td>2002</td>
-                        <td>English</td>
                         <td>3.82</td>
-                        <td>Used</td>
-                        <td><img  src="<?php echo base_url('images/books_images/921.jpg');?>" alt="" height=100 width=100></img></td>
                     </tr>
                     <tr>
+                        <td><img  src="<?php echo base_url('images/books_images/922.jpg');?>" alt="" height=100 width=100></img></td>
                         <td>The Girl on the Train</td>
                         <td>Paula Hawkins</td>
-                        <td>2015</td>
-                        <td>English</td>
                         <td>3.93</td>
-                        <td>Like new</td>
-                        <td><img  src="<?php echo base_url('images/books_images/922.jpg');?>" alt="" height=100 width=100></img></td>
                     </tr>
                     <tr>
+                        <td><img  src="<?php echo base_url('images/books_images/929.jpg');?>" alt="" height=100 width=100></img></td>
                         <td>Memoirs of a Geisha</td>
                         <td>Kathryn Stockett</td>
-                        <td>2005</td>
-                        <td>English</td>
                         <td>4.12</td>
-                        <td>Like new</td>
-                        <td><img  src="<?php echo base_url('images/books_images/929.jpg');?>" alt="" height=100 width=100></img></td>
-                    </tr>
-                    <tr>
-                        <td>The Help</td>
-                        <td>Kathryn Stockett</td>
-                        <td>2009</td>
-                        <td>English</td>
-                        <td>4.46</td>
-                        <td>Like new</td>
-                        <td><!--image here--></td>
-                    </tr>
-                    <tr>
-                        <td>The Help</td>
-                        <td>Kathryn Stockett</td>
-                        <td>2009</td>
-                        <td>English</td>
-                        <td>4.46</td>
-                        <td>Like new</td>
-                        <td><!--image here--></td>
-                    </tr>
-                    <tr>
-                        <td>The Help</td>
-                        <td>Kathryn Stockett</td>
-                        <td>2009</td>
-                        <td>English</td>
-                        <td>4.46</td>
-                        <td>Like new</td>
-                        <td><!--image here--></td>
-                    </tr>
-                    <tr>
-                        <td>The Help</td>
-                        <td>Kathryn Stockett</td>
-                        <td>2009</td>
-                        <td>English</td>
-                        <td>4.46</td>
-                        <td>Like new</td>
-                        <td><!--image here--></td>
                     </tr>
                     </table>
 

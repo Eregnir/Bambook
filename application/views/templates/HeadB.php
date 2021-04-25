@@ -22,13 +22,6 @@
                 <span class="mdl-layout__title">
                     <div class="portfolio-logo"></div>
                     <span class="mdl-layout__title">Bambook - Book Swap</span>
-                    <span>
-                        <?php                           
-                            if($user['username']!=null){
-                                echo '<br> logged in as: '. $user['username']; 
-                            }   
-                        ?>
-                    </span>
                 </span>
             </div>
             <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
