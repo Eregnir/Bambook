@@ -25,9 +25,10 @@
                             <li class="list-group-item">Condition: Like new</li>
                         </ul>
                         <div class="card-body">
-                            <a href="javascript:history.back()" class="card-link">Go Back</a>
-                            <a href="#" class="card-link">Request Swap</a>
+                            <a href="javascript:history.back()" class="card-link alignleft">Go Back</a>
+                            <a href="#" class="card-link alignright">Request Swap</a>
                         </div>
+                        <div style="clear: both;"></div>
                     </div> 
                 </div>
             </div>
