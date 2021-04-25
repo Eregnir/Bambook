@@ -217,5 +217,13 @@ background-color: #f1f1f1;
   cursor:pointer;
 }
   
+.alignleft {
+  float: left;
+}
+
+.alignright {
+  float: right;
+}
+
 
 /******************** END CSS Page - book_description ********************/
