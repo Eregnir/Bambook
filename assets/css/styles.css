@@ -227,3 +227,17 @@ background-color: #f1f1f1;
 
 
 /******************** END CSS Page - book_description ********************/
+
+
+
+/******************** CSS Page - PUBLISH_BOOK ********************/
+
+
+.custom-file-control::after {
+  content: "Choose file...";
+}
+.custom-file-control::before {
+  content: "Browse";
+}
+
+/******************** END CSS Page - PUBLISH_BOOK ********************/
