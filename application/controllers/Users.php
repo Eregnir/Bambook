@@ -201,5 +201,15 @@ class Users extends CI_Controller{
         $this->load->view('templates/footer');
     }
 
+    public function update_pref(){
+        $data = array(
+            'genre1'=>$this->input->post('genre1'),
+            'genre2'=>$this->input->post('genre2'),
+            'genre3'=>$this->input->post('genre3'),
+            'location'=>$this->input->post('location')
+        );
+        $this->users_model->update_profile($data);
+        header('Location: https://assafye.mtacloud.co.il/Bambook/index.php/Intro/about');
+    }
 
 }

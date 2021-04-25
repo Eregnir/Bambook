@@ -36,7 +36,6 @@ class Intro extends CI_Controller{
             $this->load->view('B_Views/about',$data);
             $this->load->view('templates/FootB');
             }
-        
         }
 //Load the contact view
     public function contact(){
