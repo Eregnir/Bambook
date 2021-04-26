@@ -24,15 +24,16 @@
                         <?php foreach ($books as $book):?>
                                 <tr id="<?php echo $book->UID?>" class="table-row">
                                     <td class="w-25">
-                                        <img class="" src="<?php echo '<img style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $book->img).'"/>';?>" alt=""></img>
+                                        <img class="img-fluid img-thumbnail" src="<?php echo '<img style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $book->img).'"/>';?>" alt=""></img>
                                     </td>
                                     <td> <?php echo $book->title ?> </td>
                                     <td> <?php echo $book->author ?> </td>
                                     <td> <?php echo $book->cond ?> </td>
                                 </tr>
+                        <?php endforeach; ?>
                         </tbody>
                     </table>
-                        <?php endforeach; ?>
+                       
                     <script>
                         $(document).ready(function(){
                             $("#myInput").on("keyup", function() {
