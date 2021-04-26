@@ -10,7 +10,7 @@
                     </div> -->
 
                     <div class="mdl-grid portfolio-copy">
-                        <u><h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">My Profile:</h3></u>
+                        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline"><u>My Profile:</u></h3>
                         <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
                             <p>
                             <h4><br>Hello, <?php foreach ($profile as $prof){echo $prof->username;}?>! </h4><br>
