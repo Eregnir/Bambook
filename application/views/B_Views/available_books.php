@@ -18,7 +18,7 @@
                         <?php foreach ($books as $book):
                         //Open a form that will send the book UID to the controller in order to show it's full details.
                             $attributes = array('id' => $book->UID);
-                            echo form_open('Intro/single_book', $attributes); ?>
+                            echo form_open('Books/single_book', $attributes); ?>
                             <input type="hidden" value="<?php echo $book->UID;?>" name="b_UID" id="<?php echo 'book_'.$book->UID?>"> 
                             <?php echo form_close(); ?>
                                 <tr id="<?php echo $book->UID?>" class="table-row" onclick=findBook(this.id)>
