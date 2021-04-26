@@ -16,7 +16,7 @@
                         
                         <tbody>
                         <?php foreach ($books as $book):?>
-                                <tr id="<?php echo $book->UID?>" class="table-row">
+                                <tr id="<?php echo $book->UID?>" class="table-row" onclick=findBook(this.id)>
                                     <td class="w-25">
                                         <span class="img-fluid"> <?php echo '<img style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $book->img).'"/>';?> </span>
                                     </td>
@@ -60,6 +60,10 @@
     {
         document.getElementById("<?php echo $book->UID?>").submit();  
     };
+
+    function findBook(id){
+        window.alert(id)
+    }
 
     </script>
 
