@@ -6,7 +6,7 @@
                     <br>
                     <?php
                     foreach($books as $book){
-                        echo '<center><img style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $book->img).'"/></center>';
+                        echo '<img style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $book->img).'"/>';
                     }
                     ?>
                     <table class="table table-image" id="myTable">
@@ -21,7 +21,6 @@
                         
                         <tbody>
                         <?php foreach ($books as $book):?>
-                            <form id="<?php echo $book->UID?>" name="<?php echo $book->UID?>" method="post" action="<?php echo site_url('Books/single_book');?>">
                                 <tr id="<?php echo $book->UID?>" class="table-row">
                                     <td class="w-25">
                                         <img class="img-fluid img-thumbnail" src="<?php echo '<center><img style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $book->img).'"/></center>';?>" alt=""></img>
@@ -30,7 +29,6 @@
                                     <td> <?php echo $book->author?> </td>
                                     <td> <?php echo $book->cond?> </td>
                                 </tr>
-                            </form>
                         </tbody>
                     </table>
                         <?php endforeach; ?>
