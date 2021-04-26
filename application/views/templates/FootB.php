@@ -1,5 +1,5 @@
             <footer class="mdl-mini-footer">
-                <div class="mdl-mini-footer__left-section">
+                <!-- <div class="mdl-mini-footer__left-section">
                     <div class="mdl-logo">Bambook - Book Swap</div>
                 </div>
                 <div class="mdl-mini-footer__right-section">
@@ -7,7 +7,7 @@
                         <li><a href="#">An MTA - Information Systems Project</a></li>
                         <li><a href="#">Privacy & Terms</a></li>
                     </ul>
-                </div>
+                </div> -->
             </footer>
         </main>
     </div>
