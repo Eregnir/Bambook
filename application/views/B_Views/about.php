@@ -14,7 +14,7 @@
                         <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
                             <p>
                             <h4><br>Hello, <span> <?php foreach ($profile as $prof){echo $prof->username;}?>! </span></h4><br>
-                            <?php foreach ($profile as $prof){echo '<center><img style="max-height:250px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $prof->avatar).'"/> </center>';}?>   
+                            <?php foreach ($profile as $prof){echo '<img style="max-height:250px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $prof->avatar).'"/>';}?>   
                                     <h5>
                                         <br><br><b>Name:</b> <?php foreach ($profile as $prof){echo $prof->f_name." ". $prof->l_name;}?>
                                         <br><br><b>Email:</b> <?php foreach ($profile as $prof){echo $prof->email;}?>
@@ -32,7 +32,12 @@
                         <div style="display:'';" id="bsp" class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
                             <p>
                                 <h5>
-                                    <b>Favorite Genres:</b> Fantasy, SciFi
+                                    <b>Favorite Genres:</b> 
+                                    <?php foreach ($profile as $prof){
+                                        if($prof->genre1!=null){echo $prof->genre1;}
+                                        if($prof->genre2!=null){echo ", ".$prof->genre2;}
+                                        if($prof->genre3!=null){echo ", ". $prof->genre3;}
+                                        }?>
                                     <br><br><b>Location:</b> <?php foreach ($profile as $prof){echo $prof->location;}?>
                                 </h5>
                             </p>
