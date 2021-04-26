@@ -4,6 +4,11 @@
                     <h2 class="pad5">Available Books</h2>
                     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for the book or author name..." title="Type in a name">
                     <br>
+                    <?php
+                    foreach($books as $book){
+                        echo $book->title."<br>";
+                    }
+                    ?>
                     <table class="table table-image" id="myTable">
                         <thead>
                             <tr>
