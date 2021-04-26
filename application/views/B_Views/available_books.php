@@ -21,78 +21,14 @@
                                     <td class="w-25">
                                         <img class="img-fluid img-thumbnail" src="<?php echo '<center><img style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $book->img).'"/></center>';?>" alt=""></img>
                                     </td>
-                                    <td><?php echo $book->title?></td>
-                                    <td><?php echo $book->author?></td>
-                                    <td><?php echo $book->cond?></td>
+                                    <td> <?php echo $book->title?> </td>
+                                    <td> <?php echo $book->author?> </td>
+                                    <td> <?php echo $book->cond?> </td>
                                 </tr>
                             </form>
-                            <tr id="row-2" class="table-row" data-href="<?php echo site_url('Books/book_description');?>">
-                                <td class="w-25">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/922.jpg');?>" alt=""></img>
-                                </td>
-                                <td>The Girl on the Train</td>
-                                <td>Paula Hawkins</td>
-                                <td>3.93</td>
-                            </tr>
-                            <tr id="row-3" class="table-row" data-href="<?php echo site_url('Books/book_description');?>">
-                                <td class="w-25">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/923.jpg');?>" alt=""></img>
-                                </td>
-                                <td>The Bright & the Pale</td>
-                                <td>Jessica Rubinkowski</td>
-                                <td>3.80</td>
-                            </tr>
-                            <tr id="row-4" class="table-row" data-href="<?php echo site_url('Books/book_description');?>">
-                                <td class="w-25">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/924.jpg');?>" alt=""></img>
-                                </td>
-                                <td>Sing Me Forgotten</td>
-                                <td>Jessica S. Olson</td>
-                                <td>4.06</td>
-                            </tr>
-                            <tr id="row-5" class="table-row" data-href="<?php echo site_url('Books/book_description');?>">
-                                <td class="w-25">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/924.jpg');?>" alt=""></img>
-                                </td>
-                                <td>Harry Potter and the Sorcerer's Stone</td>
-                                <td>J.K. Rowling</td>
-                                <td>4.48</td>
-                            </tr>
-                            <tr id="row-6" class="table-row" data-href="<?php echo site_url('Books/book_description');?>">
-                                <td class="w-25">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/924.jpg');?>" alt=""></img>
-                                </td>
-                                <td>The Girl on the Train</td>
-                                <td>Paula Hawkins</td>
-                                <td>3.93</td>
-                            </tr>
-                            <tr id="row-7" class="table-row" data-href="<?php echo site_url('Books/book_description');?>">
-                                <td class="w-25">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/924.jpg');?>" alt=""></img>
-                                </td>
-                                <td>The Girl on the Train</td>
-                                <td>Paula Hawkins</td>
-                                <td>3.93</td>
-                            </tr>
-                            <tr id="row-8" class="table-row" data-href="<?php echo site_url('Books/book_description');?>">
-                                <td class="w-25">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/928.jpg');?>" alt=""></img>
-                                </td> 
-                                <td>The Help</td>
-                                <td>Kathryn Stockett</td>
-                                <td>4.46</td> <!--To get with API? Goodreads / Google books-->
-                            </tr>
-                            <tr id="row-9" class="table-row" data-href="<?php echo site_url('Books/book_description');?>">
-                                <td class="w-25">
-                                    <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/929.jpg');?>" alt=""></img>
-                                </td>
-                                <td>Memoirs of a Geisha</td>
-                                <td>Kathryn Stockett</td>
-                                <td>4.12</td>
-                            </tr>
                         </tbody>
                     </table>
-                    <?php endforeach; ?>
+                        <?php endforeach; ?>
                     <script>
                         $(document).ready(function(){
                             $("#myInput").on("keyup", function() {
