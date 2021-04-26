@@ -20,14 +20,15 @@
                         </thead>
                         
                         <tbody>
+                            <!-- I can't get the table to show the images of the book for some reason. don't know why. -->
                         <?php foreach ($books as $book):?>
                                 <tr id="<?php echo $book->UID?>" class="table-row">
                                     <td class="w-25">
-                                        <img class="img-fluid img-thumbnail" src="<?php echo '<center><img style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $book->img).'"/></center>';?>" alt=""></img>
+                                        <img class="img-fluid img-thumbnail" src="<?php echo '<img style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $book->img).'"/>';?>" alt=""></img>
                                     </td>
-                                    <td> <?php echo $book->title?> </td>
-                                    <td> <?php echo $book->author?> </td>
-                                    <td> <?php echo $book->cond?> </td>
+                                    <td> <?php echo $book->title ?> </td>
+                                    <td> <?php echo $book->author ?> </td>
+                                    <td> <?php echo $book->cond ?> </td>
                                 </tr>
                         </tbody>
                     </table>
