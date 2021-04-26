@@ -8,7 +8,7 @@
                             alt="..."
                         />
                         <div class="card-body">
-                            <h2 class="card-title">The Lovely Bones</h2> <!--Book title-->
+                            <h2 class="card-title">The Lovely Bones <?php echo $b_UID; ?> </h2> <!--Book title-->
                             <h4 class="card-title">Alice Sebold</h4> <!--Book Author-->
                             <h5 class="card-text">3.82</h5> <!--Rating-->
                             <p class="card-text"><!-- Book description -->

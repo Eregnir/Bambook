@@ -12,7 +12,7 @@ class Books extends CI_Controller{
     // Function to load the available books from the index page
     public function single_book(){
         $data = array(
-            'UID' => $this->input->post('UID')
+            'b_UID' => $this->input->post('b_UID')
          );
         $this->load->view('templates/HeadB',$data);
         $this->load->view('B_Views/book_description',$data);
