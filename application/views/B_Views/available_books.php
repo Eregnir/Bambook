@@ -6,7 +6,7 @@
                     <br>
                     <?php
                     foreach($books as $book){
-                        echo $book->title."<br>";
+                        echo '<center><img style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $book->img).'"/></center>';
                     }
                     ?>
                     <table class="table table-image" id="myTable">
