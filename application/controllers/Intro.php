@@ -98,6 +98,16 @@ public function login(){
         $this->load->view('templates/FootB');
         }
 
+    // Function to load the available books from the index page
+    public function single_book(){
+        $data = array(
+            'b_UID' => $this->input->post('b_UID')
+         );
+        $this->load->view('templates/HeadB',$data);
+        $this->load->view('B_Views/book_description',$data);
+        $this->load->view('templates/FootB');
+        }
+
 }
 
 
