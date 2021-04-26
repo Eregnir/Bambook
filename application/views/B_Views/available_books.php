@@ -10,23 +10,20 @@
                                 <th scope="col">Image</th>
                                 <th scope="col">Title</th>
                                 <th scope="col">Author</th>
-                                <th scope="col">Rating</th>
+                                <th scope="col">Condition</th>
                             </tr>
                         </thead>
-                        <?php 
-                            $book=$books[0];
-                            echo $book->UID;
-                            ?>
+                        
                         <tbody>
+                        <?php foreach ($books as $book):?>
                             <form id="<?php echo $book->UID?>" name="<?php echo $book->UID?>" method="post" action="<?php echo site_url('Books/single_book');?>">
-                            
-                                <tr id="row-1" class="table-row">
+                                <tr id="<?php echo $book->UID?>" class="table-row">
                                     <td class="w-25">
-                                        <img class="img-fluid img-thumbnail" src="<?php echo base_url('images/books_images/921.jpg');?>" alt=""></img>
+                                        <img class="img-fluid img-thumbnail" src="<?php echo '<center><img style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $book->img).'"/></center>';?>" alt=""></img>
                                     </td>
-                                    <td>The Lovely Bones</td>
-                                    <td>Alice Sebold</td>
-                                    <td>3.82</td>
+                                    <td><?php echo $book->title?></td>
+                                    <td><?php echo $book->author?></td>
+                                    <td><?php echo $book->cond?></td>
                                 </tr>
                             </form>
                             <tr id="row-2" class="table-row" data-href="<?php echo site_url('Books/book_description');?>">
@@ -95,6 +92,7 @@
                             </tr>
                         </tbody>
                     </table>
+                    <?php endforeach; ?>
                     <script>
                         $(document).ready(function(){
                             $("#myInput").on("keyup", function() {
