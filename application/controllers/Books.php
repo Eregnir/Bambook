@@ -16,7 +16,7 @@ class Books extends CI_Controller{
             );
         $data['book_info'] = $this->books_model->get_book_info($data['b_UID']);
         $this->load->view('templates/HeadB',$data);
-        $this->load->view('B_Views/test',$data);
+        $this->load->view('B_Views/book_desc',$data);
         $this->load->view('templates/FootB');
         }
 
