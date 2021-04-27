@@ -56,6 +56,7 @@
         var active = document.getElementById("blg");
         active.classList.add("is-active");
         }
+    
 
     // $(document).ready(function($) {
     //     $(".table-row").click(function() {

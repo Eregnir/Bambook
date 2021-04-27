@@ -8,13 +8,7 @@
                             alt="..."
                         />
                         <div class="card-body">
-                            <h2 class="card-title">The Lovely Bones 
-                                <?php if ($b_UID =!null){
-                                    echo $b_UID;
-                                    }
-                                    else{
-                                        echo 'mierdaaaa';
-                                    }
+                            <h2 class="card-title">The Lovely Bones
                                     ; ?> </h2> <!--Book title-->
                             <h4 class="card-title">Alice Sebold</h4> <!--Book Author-->
                             <h5 class="card-text">3.82</h5> <!--Rating-->
@@ -47,8 +41,5 @@
     <script type="text/javascript" src="<?php echo base_url('assets/JS/GJS.js');?>"></script>
 
     <script>
-    window.onload = function(){
-        var active = document.getElementById("ind");
-        active.classList.add("is-active");
-        }
+    
     </script>

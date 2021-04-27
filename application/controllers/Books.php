@@ -13,16 +13,8 @@ class Books extends CI_Controller{
     public function single_book(){
         $data = array(
             'b_UID' => $this->input->post('b_UID')
-         );
-        $this->load->view('templates/HeadB',$data);
-        $this->load->view('B_Views/book_description',$data);
-        $this->load->view('templates/FootB');
-        }
-
-    public function single_book1(){
-        $data = array(
-            'b_UID' => $this->input->post('b_UID')
             );
+        $data['book_info'] = $this->books_model->get_book_info();
         $this->load->view('templates/HeadB',$data);
         $this->load->view('B_Views/test',$data);
         $this->load->view('templates/FootB');
