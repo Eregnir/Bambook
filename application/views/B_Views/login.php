@@ -26,7 +26,7 @@
                         </p>
                         </p>
                         <center>
-                            <p style="color:crimson;">
+                            <p>
                             <?php 
                                 if ($reg!=null){print_r($reg);};
                             ?>
