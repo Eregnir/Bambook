@@ -62,7 +62,7 @@
         });
 
     function findBook(id){
-        document.forms(id).submit();
+        document.getElementbyId(id).submit();
     }
     </script>
 
