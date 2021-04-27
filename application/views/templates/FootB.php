@@ -18,6 +18,11 @@
         window.location.href="<?php echo site_url('Intro/index');?>";   
     };
 
+    document.getElementById("aus").onclick=function()
+    {
+        window.location.href="<?php echo site_url('Intro/about_us');?>";   
+    };
+
     document.getElementById("blg").onclick=function()
     {
         window.location.href="<?php echo site_url('Intro/available_books');?>";   
@@ -32,6 +37,7 @@
     {
         window.location.href="<?php echo site_url('Intro/contact');?>";   
     };
+
 </script>
 
 </body>
