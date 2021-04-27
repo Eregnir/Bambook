@@ -17,6 +17,7 @@
                             <a href="#" class="btn btn-primary">List a book</a>
                         </div>
                     </div>
+                    <br><br><br>
                     <!-- Image card 2 -->
                     <div class="card text-center" style="width: 18rem;">
                         <img class="card-img-top" src='../../images/about_us_images/2.png' alt="search a book">
@@ -25,6 +26,7 @@
                             <a href="#" class="btn btn-primary">Search a book</a>
                         </div>
                     </div>
+                    <br><br><br>
                     <!-- Image card 3 -->
                     <div class="card text-center" style="width: 18rem;">
                         <img class="card-img-top" src='../../images/about_us_images/3.png' alt="request or get a book swap">
@@ -34,6 +36,7 @@
                             <a href="#" class="btn btn-primary">Request or get a swap</a>
                         </div>
                     </div>
+                    <br><br><br>
                     <!-- Image card 4 -->
                     <div class="card text-center" style="width: 18rem;">
                         <img class="card-img-top" src='../../images/about_us_images/4.png' alt="read a book">
@@ -42,6 +45,7 @@
                             <a href="#" class="btn btn-primary">Read</a>
                         </div>
                     </div>
+                    <br><br><br>
                 </div>
             </div>
 
