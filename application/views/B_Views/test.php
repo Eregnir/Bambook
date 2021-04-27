@@ -1,7 +1,12 @@
         <main class="mdl-layout__content">
             <div class="mdl-grid portfolio-max-width">
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> <!-- centered div -->
-                <div class="card" style="width: 25rem">
+                    <?php
+                        echo $b_UID;
+                        foreach ($book_info as $bi){echo $bi->author;}
+                    ?>
+
+<div class="card" style="width: 25rem">
                         <img
                             src="<?php echo base_url('images/books_images/921.jpg');?>"
                             class="card-img-top"
