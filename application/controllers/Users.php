@@ -224,8 +224,6 @@ class Users extends CI_Controller{
             'avatar_UID' => $this->input->post('avatar_UID')
         );
         $this->users_model->update_avatar($data);
-        $this->load->view('templates/HeadB',$data);
-        $this->load->view('B_Views/index',$data);
-        $this->load->view('templates/FootB');
+        header('Location: https://assafye.mtacloud.co.il/Bambook/index.php/Intro/about');
         }
 }
