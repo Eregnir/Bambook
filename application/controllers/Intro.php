@@ -33,9 +33,7 @@ class Intro extends CI_Controller{
             $this->load->view('templates/FootB');
             }
         else{
-            $this->load->view('templates/HeadB',$error=null);
-            $this->load->view('B_Views/login',$error=null);
-            $this->load->view('templates/FootB');
+            $this->login();
         }
         }
 //Load the contact view
