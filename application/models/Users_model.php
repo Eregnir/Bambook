@@ -47,7 +47,7 @@ class users_model extends CI_Model {
      }
 
      public function get_avatars(){
-      $query=$this->db->query('SELECT * FROM avatars');
+      $query=$this->db->query('SELECT * FROM avatars ORDER BY avatar_UID ASC');
       return $query->result();
      }
 
