@@ -50,4 +50,11 @@ class users_model extends CI_Model {
       $query=$this->db->query('SELECT * FROM avatars');
       return $query->result();
      }
+
+     public function update_avatar($avatar){
+      $this->db->db_debug = FALSE;  
+      $user=$this->session->all_userdata();
+      $this->db->where('username', $user['username']);
+      $this->db->update('users', $avatar);
+   }
 }

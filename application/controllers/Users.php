@@ -218,4 +218,14 @@ class Users extends CI_Controller{
         $this->load->view('B_Views/avatars');
         $this->load->view('templates/FootB');
     }
+
+    public function update_avatar(){
+        $data = array(
+            'avatar_UID' => $this->input->post('avatar_UID')
+        );
+        $this->users_model->update_avatar($data);
+        $this->load->view('templates/HeadB',$data);
+        $this->load->view('B_Views/book_description',$data);
+        $this->load->view('templates/FootB');
+        }
 }
