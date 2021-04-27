@@ -10,9 +10,12 @@
                             If a match is found, both users will be notified so they can arrange the book swap details.</p>
                     </div>
                     <!-- Image card 1 -->
-                    <div class="card transition">
-                        <div class="cta-container transition"><a href="#" class="cta">List a book</a></div>
-                        <div class="card_circle transition"></div>
+                    <div class="card text-center" style="width: 18rem;">
+                        <img class="card-img-top" src='../../images/about_us_images/1.png' alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
                     </div>
                 </div>
             </div>
