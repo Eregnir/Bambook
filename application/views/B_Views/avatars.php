@@ -10,19 +10,22 @@
                             $attributes = array('id' => $avatar->avatar_UID);
                             echo form_open('Users/update_avatar', $attributes); ?>
                             <input type="hidden" value="<?php echo $avatar->avatar_UID;?>" name="avatar_UID" id="<?php echo 'avatar_'.$avatar->avatar_UID?>"> 
-                            <?php echo form_close(); ?>
-                        <div id="<?php echo $avatar->avatar_UID?>" class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding " onclick=selectAvatar(this.id) href="#">
+                        <div id="<?php echo $avatar->avatar_UID?>" class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding">
                             <?php echo '<img style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $avatar->img).'"/>'; ?>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" name="submit ">
+                                    Select
+                                </button>
                         </div>
                         <hr style="width:90%;">
+                        <?php echo form_close(); ?>
                         <?php endforeach; ?>
                 </div>
             </div>
 
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script>
-    function selectAvatar(id){
-            document.forms(id).submit();
-        }
+        function selectAvatar(id){
+                document.getElementById(id).submit();
+            }
     </script>
 
