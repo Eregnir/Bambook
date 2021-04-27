@@ -10,21 +10,9 @@
                             If a match is found, both users will be notified so they can arrange the book swap details.</p>
                     </div>
                     <!-- Image card 1 -->
-                    <div class="mdl-card">
-                    <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Auckland Sky Tower<br>Auckland, New Zealand</h2>
-                    </div>
-                    <div class="mdl-card__media">
-                        <img src="..assets/images/about_us_images/1.png" width="400" height="400" border="0" alt=""
-                        style="padding:10px;">
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                    The Sky Tower is an observation and telecommunications tower located in Auckland,
-                    New Zealand. It is 328 metres (1,076 ft) tall, making it the tallest man-made structure
-                    in the Southern Hemisphere.
-                    </div>
-                    <div class="mdl-card__actions">
-                        <a href="http://en.wikipedia.org/wiki/Sky_Tower_%28Auckland%29">Wikipedia entry</a>
+                    <div class="card transition">
+                        <div class="cta-container transition"><a href="#" class="cta">List a book</a></div>
+                        <div class="card_circle transition"></div>
                     </div>
                 </div>
             </div>
