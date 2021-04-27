@@ -49,7 +49,7 @@ class Intro extends CI_Controller{
         $this->load->view('templates/FootB');
         }
 //Load the login view
-public function login($reg='null'){
+public function login($reg=null){
     $data['error']=null;
     $data['reg']=$reg;
     $this->load->view('templates/HeadB',$data);
