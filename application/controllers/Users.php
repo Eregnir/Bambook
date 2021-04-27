@@ -214,8 +214,8 @@ class Users extends CI_Controller{
 
     public function show_avatars(){
         $data['avatars'] = $this->users_model->get_avatars();
-        $this->load->view('templates/headG',$data);
+        $this->load->view('templates/HeadB',$data);
         $this->load->view('B_Views/avatars');
-        $this->load->view('templates/footer');
+        $this->load->view('templates/FootB');
     }
 }
