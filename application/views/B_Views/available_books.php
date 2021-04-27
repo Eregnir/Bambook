@@ -24,8 +24,8 @@
                                 <tr id="<?php echo $book->UID?>" class="table-row">
                                     <td class="w-25">
                                         <span class="img-fluid"> <?php echo '<img style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $book->img).'"/>';?> <br></span>
-                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" name="submit ">
-                                    Show me!
+                                        <button class="mdl-button mdl-js-button mdl-button--primary" type="submit" name="submit ">
+                                    <center>Show me!</center>
                                 </button>
                                     </td>
                                     <td> <?php echo $book->title ?> </td>
