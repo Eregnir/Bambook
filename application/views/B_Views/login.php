@@ -19,6 +19,11 @@
                                     </button>
                             </center>
                         </p>
+                        <p style="color:crimson;">
+                        <?php 
+                        if ($error!=null){echo $error;};
+                        ?>
+                        </p>
                         <!-- Login Form -->
 
                         <form method="post" action="<?php echo site_url('Users/auth');?>" class="">
