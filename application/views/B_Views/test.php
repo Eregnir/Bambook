@@ -12,7 +12,7 @@
                             <!--Book Author-->
                             <h4 class="card-title"><?php echo $bi->author ?></h4> 
                             <!-- Book description -->
-                            <p class="card-text"><
+                            <p class="card-text">
                                 "My name was Salmon, like the fish; first name, Susie. I was fourteen when I was murdered on December 6, 1973."
                                 So begins the story of Susie Salmon, who is adjusting to her new home in heaven, a place that is not at all what she expected,
                                 even as she is watching life on earth continue without her -- her friends trading rumors about her disappearance,
@@ -23,9 +23,9 @@
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">Genre: Fiction</li><!-- to add these details from the DB -->
                             <!-- Book Language -->
-                            <li class="list-group-item"><?php echo $bi->lang?></li>
+                            <li class="list-group-item">Language: <?php echo $bi->lang?></li>
                             <!-- Book Condition -->
-                            <li class="list-group-item"><?php echo $bi->cond ?></li>
+                            <li class="list-group-item">Condition: <?php echo $bi->cond ?></li>
                         </ul>
                         <div class="card-body">
                             <a href="javascript:history.back()" class="card-link alignleft">Go Back</a>
