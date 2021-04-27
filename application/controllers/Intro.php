@@ -49,8 +49,9 @@ class Intro extends CI_Controller{
         $this->load->view('templates/FootB');
         }
 //Load the login view
-public function login(){
+public function login($reg='null'){
     $data['error']=null;
+    $data['reg']=$reg;
     $this->load->view('templates/HeadB',$data);
     $this->load->view('B_Views/login',$data);
     $this->load->view('templates/FootB');
@@ -67,7 +68,8 @@ public function login(){
             'password' => $this->input->post('password')
          );
          $this->intro_model->save_register($data);
-         $this->index();
+         $reg = 'Registered Successfully! Please Log In to complete the process.';
+         $this->login($reg);
         }
 //function to get the profile details from the DB in order to show it for the profile page:
     public function user_details(){
