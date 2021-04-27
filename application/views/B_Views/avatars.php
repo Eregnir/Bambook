@@ -11,8 +11,8 @@
                             echo form_open('Users/update_avatar', $attributes); ?>
                             <input type="hidden" value="<?php echo $avatar->avatar_UID;?>" name="avatar_UID" id="<?php echo 'avatar_'.$avatar->avatar_UID?>"> 
                             <?php echo form_close(); ?>
-                        <div id="<?php echo $avatar->avatar_UID?>" class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
-                            <?php echo '<center><img onclick=selectAvatar(this.id) href="" style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $avatar->img).'"/></center>'; ?>
+                        <div id="<?php echo $avatar->avatar_UID?>" class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding " onclick=selectAvatar(this.id) href="#">
+                            <?php echo '<img style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $avatar->img).'"/>'; ?>
                         </div>
                         <hr style="width:90%;">
                         <?php endforeach; ?>
