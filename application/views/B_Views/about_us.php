@@ -11,10 +11,35 @@
                     </div>
                     <!-- Image card 1 -->
                     <div class="card text-center" style="width: 18rem;">
-                        <img class="card-img-top" src='../../images/about_us_images/1.png' alt="Card image cap">
+                        <img class="card-img-top" src='../../images/about_us_images/1.png' alt="upload a book">
                         <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <p class="card-text">Upload a book you no longer desire, you can either manually enter the information or scan the book's ISBN number.</p>
+                            <a href="#" class="btn btn-primary">List a book</a>
+                        </div>
+                    </div>
+                    <!-- Image card 2 -->
+                    <div class="card text-center" style="width: 18rem;">
+                        <img class="card-img-top" src='../../images/about_us_images/2.png' alt="search a book">
+                        <div class="card-body">
+                            <p class="card-text">Search a book from the available Bambook's library which is growing every single day!</p>
+                            <a href="#" class="btn btn-primary">Search a book</a>
+                        </div>
+                    </div>
+                    <!-- Image card 3 -->
+                    <div class="card text-center" style="width: 18rem;">
+                        <img class="card-img-top" src='../../images/about_us_images/3.png' alt="request or get a book swap">
+                        <div class="card-body">
+                            <p class="card-text">Found a book that interest you? Request a swap from the person who listed the book and offer a book instead.<br>
+                            Received a request? Accept or decline the swap, if both sides agree (yay!), arrange the book swap details!</p>
+                            <a href="#" class="btn btn-primary">Request or get a swap</a>
+                        </div>
+                    </div>
+                    <!-- Image card 4 -->
+                    <div class="card text-center" style="width: 18rem;">
+                        <img class="card-img-top" src='../../images/about_us_images/4.png' alt="read a book">
+                        <div class="card-body">
+                            <p class="card-text">Finished your Bambook Swap? Start reading your new book! Happy reading 😊</p>
+                            <a href="#" class="btn btn-primary">Read</a>
                         </div>
                     </div>
                 </div>
