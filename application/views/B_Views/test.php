@@ -3,15 +3,10 @@
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> <!-- centered div -->
                     <?php
                         echo $b_UID;
-                        foreach ($book_info as $bi){echo $bi->author;}
-                    ?>
+                        foreach ($book_info as $bi):?>
 
-<div class="card" style="width: 25rem">
-                        <img
-                            src="<?php echo base_url('images/books_images/921.jpg');?>"
-                            class="card-img-top"
-                            alt="..."
-                        />
+                    <div class="card" style="width: 25rem">
+                        <span class="card-img-top"><?php echo '<img style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $bi->img).'"/>';?></span>
                         <div class="card-body">
                             <h2 class="card-title">The Lovely Bones
                                     ; ?> </h2> <!--Book title-->
