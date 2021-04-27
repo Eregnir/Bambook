@@ -32,7 +32,7 @@
                         <img class="card-img-top" src='../../images/about_us_images/3.png' alt="request or get a book swap">
                         <div class="card-body">
                             <p class="card-text">Found a book that interest you? Request a swap from the person who listed the book and offer a book instead.<br>
-                            Received a request? Accept or decline the swap, if both sides agree (yay!), arrange the book swap details!</p>
+                            <br>Received a request? Accept or decline the swap, if both sides agree (yay!), arrange the book swap details!</p>
                             <a href="#" class="btn btn-primary">Request or get a swap</a>
                         </div>
                     </div>
