@@ -250,7 +250,7 @@ background-color: #f1f1f1;
 
 /******************** CSS Page - ABOUT_US ********************/
 
-.card {
+/* .card {
   background-color: #fff;
   height: 400px;
   width: 300px;
@@ -309,7 +309,7 @@ card:hover .card_circle {
 .card:hover .cta-container {
   margin-top: 320px;
 
-}
+} */
 
 /******************** END CSS Page - ABOUT_US ********************/
 
