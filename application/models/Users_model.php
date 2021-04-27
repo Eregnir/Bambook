@@ -45,4 +45,9 @@ class users_model extends CI_Model {
         $this->db->update('users', $pref);
         //$query = $db->query(' UPDATE users SET "location" = "'.$pref['location'].'", "genre1" = "'.$pref['genre1'].'", "genre2" = "'.$pref['genre2'].'", "genre3" = "'.$pref['genre3'].'" WHERE `users`.`username` = "'.$user['username'].'" ');
      }
+
+     public function get_avatars(){
+      $query=$this->db->query('SELECT * FROM avatars');
+      return $query->result();
+     }
 }

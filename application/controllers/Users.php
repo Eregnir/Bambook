@@ -65,7 +65,7 @@ class Users extends CI_Controller{
         $this->load->view('B_Views/login',$data);
         $this->load->view('templates/FootB');
     }
-    
+
       public function logout()
        {
             $data = array(
@@ -212,4 +212,10 @@ class Users extends CI_Controller{
         header('Location: https://assafye.mtacloud.co.il/Bambook/index.php/Intro/about');
     }
 
+    public function show_avatars(){
+        $data['avatars'] = $this->users_model->get_avatars();
+        $this->load->view('templates/headG',$data);
+        $this->load->view('B_Views/avatars');
+        $this->load->view('templates/footer');
+    }
 }
