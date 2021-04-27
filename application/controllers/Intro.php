@@ -65,6 +65,7 @@ public function login(){
             'l_name' => $this->input->post('lastName'),
             'email' => $this->input->post('email'), 
             'username' => $this->input->post('username'),
+            'phone_num' => $this->input->post('phone_num'),
             'password' => $this->input->post('password')
          );
          $this->intro_model->save_register($data);

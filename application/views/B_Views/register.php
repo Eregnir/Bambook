@@ -41,6 +41,12 @@
                                 <label class="mdl-textfield__label" for="email">Email...</label>
                                 <span class="mdl-textfield__error">Must contain a valid email</span>
                             </div>
+                        <!-- Phone Number -->
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input required class="mdl-textfield__input" pattern=".{10,15}" type="tel" id="phone_num" name="phone_num">
+                                <label class="mdl-textfield__label" for="phone_num">Phone Number...</label>
+                                <span class="mdl-textfield__error">Must contain a valid phone number</span>
+                            </div>
                         <!-- Password -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                 <input required class="mdl-textfield__input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" id="password" name="password">
