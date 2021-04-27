@@ -2,12 +2,8 @@
             <div class="mdl-grid portfolio-max-width">
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> <!-- centered div -->
                     <?php
-                        foreach ($book_info as $bi){
-                            echo $bi->title;
-                            echo $bi->author;
-                            echo $bi->UID;
-                            echo $b_UID;
-                        };
+                        echo $b_UID;
+                        echo $book_info;
                     ?>
                 </div>
             </div>

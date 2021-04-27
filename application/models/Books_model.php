@@ -6,7 +6,7 @@ class books_model extends CI_Model {
         $this->load->database();
     }
 
-    public function get_book_info($uid=null){
+    public function get_book_info($uid){
         $query=$this->db->query('SELECT * FROM user_books WHERE UID = "'.$uid.'" ');
         return $query->result();
 
