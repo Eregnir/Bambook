@@ -64,8 +64,8 @@ class Users extends CI_Controller{
         $this->load->view('templates/HeadB',$data);
         $this->load->view('B_Views/login',$data);
         $this->load->view('templates/FootB');
-
     }
+    
       public function logout()
        {
             $data = array(

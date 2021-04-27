@@ -21,7 +21,7 @@
                         </p>
                         <p style="color:crimson;">
                         <?php 
-                        if ($error!=null){echo $error;};
+                        if ($error!=null){echo $error[0];};
                         ?>
                         </p>
                         <!-- Login Form -->
