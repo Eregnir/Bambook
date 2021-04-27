@@ -10,7 +10,7 @@
                         <div class="card-body">
                             <h2 class="card-title">The Lovely Bones 
                                 <?php if ($b_UID =!null){
-                                    echo 'ok... '.$b_UID;
+                                    echo $b_UID;
                                     }
                                     else{
                                         echo 'mierdaaaa';
