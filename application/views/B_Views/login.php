@@ -13,7 +13,7 @@
                         </p>
                         <p>
                             Not a member yet? come read with us!
-                            <center>
+                            <center><br>
                                 <button id="register" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="button" name="register">
                                         Register
                                     </button>
@@ -21,10 +21,18 @@
                         </p>
                         <p style="color:crimson;">
                         <?php 
-                        if ($error!=null){echo $error['error'];};
-                        if ($reg!=null){print_r($reg);};
+                            if ($error!=null){echo $error['error'];};
                         ?>
                         </p>
+                        </p>
+                        <center>
+                            <p style="color:crimson;">
+                            <?php 
+                                if ($reg!=null){print_r($reg);};
+                            ?>
+                            </p>
+                        </center>
+                        
                         <!-- Login Form -->
 
                         <form method="post" action="<?php echo site_url('Users/auth');?>" class="">
