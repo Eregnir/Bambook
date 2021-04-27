@@ -37,8 +37,9 @@
                             </div>
                         <!-- email address -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="email" name="email">
+                                <input class="mdl-textfield__input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="text" id="email" name="email">
                                 <label class="mdl-textfield__label" for="email">Email...</label>
+                                <span class="mdl-textfield__error">Must contain a valid email</span>
                             </div>
                         <!-- Password -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">

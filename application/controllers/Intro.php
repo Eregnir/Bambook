@@ -68,9 +68,7 @@ public function login(){
             'password' => $this->input->post('password')
          );
          $this->intro_model->save_register($data);
-         $this->load->view('templates/HeadB');
-         $this->load->view('B_Views/blog');
-         $this->load->view('templates/FootB');
+         $this->index();
         }
 //function to get the profile details from the DB in order to show it for the profile page:
     public function user_details(){
