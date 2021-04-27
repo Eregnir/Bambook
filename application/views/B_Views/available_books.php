@@ -20,14 +20,18 @@
                             $attributes = array('id' => $book->UID, 'name' =>$book->UID);
                             echo form_open('Books/single_book', $attributes); ?>
                             <input type="hidden" value="<?php echo $book->UID;?>" name="b_UID" id="<?php echo 'book_'.$book->UID?>"> 
-                            <?php echo form_close(); ?>
-                                <tr id="<?php echo $book->UID?>" class="table-row" onclick=findBook(this.id)>
+                            
+                                <tr id="<?php echo $book->UID?>" class="table-row">
                                     <td class="w-25">
-                                        <span class="img-fluid"> <?php echo '<img style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $book->img).'"/>';?> </span>
+                                        <span class="img-fluid"> <?php echo '<img style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $book->img).'"/>';?> <br></span>
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" name="submit ">
+                                    Show me!
+                                </button>
                                     </td>
                                     <td> <?php echo $book->title ?> </td>
                                     <td> <?php echo $book->author ?> </td>
                                     <td> <?php echo $book->cond ?> </td>
+                            <?php echo form_close(); ?>
                                 </tr>
                         <?php endforeach; ?>
                         </tbody>
