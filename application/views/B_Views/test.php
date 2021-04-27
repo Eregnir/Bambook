@@ -3,7 +3,10 @@
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> <!-- centered div -->
                     <?php
                         echo $b_UID;
-                        echo $book_info;
+                        foreach ($book_info as $bi){
+                            echo $bi->author;
+
+                        }
                     ?>
                 </div>
             </div>
