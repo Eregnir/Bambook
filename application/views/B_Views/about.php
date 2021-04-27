@@ -14,7 +14,7 @@
                         <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
                             <p>
                             <h4><br>Hello, <?php foreach ($profile as $prof){echo $prof->username;}?>! </h4><br>
-                            <?php foreach ($profile as $prof){echo '<center><img style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $prof->avatar).'"/>';}?>
+                            <?php foreach ($profile as $prof){echo '<center><img style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $prof->img).'"/>';}?>
                                     <button style="margin-left:10px;" id="avatar" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="button" name="avatar">
                                         Change Avatar
                                     </button></center>

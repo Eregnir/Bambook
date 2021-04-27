@@ -17,7 +17,7 @@ class intro_model extends CI_Model {
 
     public function get_profile_info(){
         $user=$this->session->all_userdata();
-        $query=$this->db->query('SELECT * FROM `users` WHERE username="'.$user['username'].'" ');
+        $query=$this->db->query('SELECT * FROM `users` INNER JOIN avatars ON users.avatar_UID = avatars.avatar_UID WHERE username="'.$user['username'].'" ');
         return $query->result();
     }
 
