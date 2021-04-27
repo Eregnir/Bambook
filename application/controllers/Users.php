@@ -224,8 +224,16 @@ class Users extends CI_Controller{
             'avatar_UID' => $this->input->post('avatar_UID')
         );
         $this->users_model->update_avatar($data);
-        $this->load->view('templates/HeadB',$data);
-        $this->load->view('B_Views/book_description',$data);
-        $this->load->view('templates/FootB');
+        $user=$this->session->all_userdata();
+        if ($user['loggedin']!=null){
+            $data['profile']=$this->intro_model->get_profile_info();
+            $data['user']=$user;
+            $this->load->view('templates/HeadB',$data);
+            $this->load->view('B_Views/about',$data);
+            $this->load->view('templates/FootB');
+            }
+        else{
+            $this->login();
+        }
         }
 }
