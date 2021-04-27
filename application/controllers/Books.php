@@ -14,7 +14,7 @@ class Books extends CI_Controller{
         $data = array(
             'b_UID' => $this->input->post('b_UID')
             );
-        $data['book_info'] = $this->books_model->get_book_info($data);
+        $data['book_info'] = $this->books_model->get_book_info($data['b_UID']);
         $this->load->view('templates/HeadB',$data);
         $this->load->view('B_Views/test',$data);
         $this->load->view('templates/FootB');
