@@ -7,9 +7,7 @@
                 if ($user['username']!=null){
                     echo 'Welcome, '.$user['username'].'!'.'<br>';?></h4>
                     <?php foreach ($profile as $prof){echo '<center><img style="max-height:80px; max-width: 100%; margin:auto; display:block;" src="data:image/jpeg;base64,'.base64_encode( $prof->img).'"/>';};?>
-                    <br>
-                    <button style="margin-left:10px;" id="logout" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" type="button" name="logout">Log Out</button>
-                
+                                
                 <?php
                 }
                 ?>
@@ -88,8 +86,4 @@
         active.classList.add("is-active");
         }
 
-    document.getElementById("logout").onclick=function()
-    {
-        window.location.href="<?php echo site_url('Users/logout');?>";
-    };
     </script>
