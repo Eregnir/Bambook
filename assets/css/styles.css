@@ -260,16 +260,17 @@ background-color: #f1f1f1;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
 }
 
-@media screen and ( max-width: 500px ) {
-  .card {
-    width: 18em;
-  }
-}
 
 /******************** END CSS Page - ABOUT_US ********************/
 
 
 /************ Padding changes ***********/
+
+@media only screen and (min-width: 500px) {
+  .card {
+    width: 18em;
+  }
+}
 
 
 .mdl-layout__header-row .mdl-navigation__link {
