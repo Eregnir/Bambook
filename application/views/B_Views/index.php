@@ -5,6 +5,9 @@
                 if ($user['username']!=null){
                     echo 'Welcome, '.$user['username'].'!';
                 }
+                else{
+                    echo "You are not logged in.";
+                }
                 ?>
                 <!-- Box 1--> 
                 <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
