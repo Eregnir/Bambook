@@ -10,6 +10,7 @@ class Intro extends CI_Controller{
     }
 //Load the Homescreen view  
      public function index(){
+        $user['loggedin']=null;    
         $user=$this->session->all_userdata();
         if ($user['loggedin']!=null){
             $data['profile']=$this->intro_model->get_profile_info();
