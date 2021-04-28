@@ -10,7 +10,7 @@
                             If a match is found, both users will be notified so they can arrange the book swap details.</p>
                         <p>
                             Not a member yet? come read with us!
-                            <div class="mdl-grid center-items"><br>
+                            <div class="center-align"><br>
                                 <div class="mdl-cell mdl-cell--4-col">
                                     <button id="register" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="button" name="register">
                                             Register
