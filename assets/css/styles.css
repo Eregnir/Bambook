@@ -266,11 +266,6 @@ background-color: #f1f1f1;
 
 /************ Padding changes ***********/
 
-@media only screen and (min-width: 500px) {
-  .card {
-    width: 18em;
-  }
-}
 
 
 .mdl-layout__header-row .mdl-navigation__link {
