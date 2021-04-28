@@ -66,7 +66,7 @@
         active.classList.add("is-active");
         }
 
-        document.getElementById("register").onclick=function()
+    document.getElementById("register").onclick=function()
     {
         window.location.href="<?php echo site_url('Intro/register');?>";   
     };

@@ -8,6 +8,14 @@
                         <p>After you register to Bambook, you can list the books you own and wish to exchange, and search for books you would like to read.</p>
                         <p>You can request a book swap from the available books that Bambook's users have uploaded and suggest the book you would like to trade.
                             If a match is found, both users will be notified so they can arrange the book swap details.</p>
+                        <p>
+                            Not a member yet? come read with us!
+                            <center><br>
+                                <button id="register" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="button" name="register">
+                                        Register
+                                    </button>
+                            </center>
+                        </p>
                     </div>
                     <!-- Image card 1 -->
                     <div class="card text-center" style="width: 18rem;">
@@ -57,4 +65,9 @@
         var active = document.getElementById("ind");
         active.classList.add("is-active");
         }
+        
+    document.getElementById("register").onclick=function()
+    {
+        window.location.href="<?php echo site_url('Intro/register');?>";   
+    };
     </script>

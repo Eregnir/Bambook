@@ -31,7 +31,6 @@
                     <a id="blg" class="mdl-navigation__link" href="#">Public Library</a>
                     <a id="abt" class="mdl-navigation__link" href="#">Profile</a>
                     <a id="cnt" class="mdl-navigation__link" href="#">Contact</a>
-                    <a id="rgs" class="mdl-navigation__link" href="<?php echo site_url('Intro/register');?>">Register</a>
                     <a id="log" class="mdl-navigation__link" href="<?php echo site_url('Intro/login');?>">Login / Logout</a>
 
                 </nav>
@@ -44,7 +43,6 @@
                     <a class="mdl-navigation__link" href="<?php echo site_url('Intro/available_books');?>">Public Library</a>
                     <a class="mdl-navigation__link" href="<?php echo site_url('Intro/about');?>">Profile</a>
                     <a class="mdl-navigation__link" href="<?php echo site_url('Intro/contact');?>">Contact</a>
-                    <a class="mdl-navigation__link" href="<?php echo site_url('Intro/register');?>">Register</a>
                     <a class="mdl-navigation__link" href="<?php echo site_url('Intro/login');?>">Login / Logout</a>
             </nav>
         </div>
