@@ -53,12 +53,18 @@ class Intro extends CI_Controller{
         $this->load->view('templates/FootB');
         }
 //Load the login view
-public function login($reg=null){
-    $data['error']=null;
-    $data['reg']=$reg;
-    $this->load->view('templates/HeadB',$data);
-    $this->load->view('B_Views/login');
-    $this->load->view('templates/FootB');
+    public function login($reg=null){
+        $user=$this->session->all_userdata();
+        if ($user['loggedin']==null){
+            $data['error']=null;
+            $data['reg']=$reg;
+            $this->load->view('templates/HeadB',$data);
+            $this->load->view('B_Views/login');
+            $this->load->view('templates/FootB');
+        }
+        else{
+            header('Location: https://assafye.mtacloud.co.il/Bambook/index.php/Users/logout');
+        }
     }
 
 // Function that saves the posted data and transfers it to the model in order to insert to DB

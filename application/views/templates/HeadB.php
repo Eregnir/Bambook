@@ -32,7 +32,7 @@
                     <a id="abt" class="mdl-navigation__link" href="#">Profile</a>
                     <a id="cnt" class="mdl-navigation__link" href="#">Contact</a>
                     <a id="rgs" class="mdl-navigation__link" href="<?php echo site_url('Intro/register');?>">Register</a>
-                    <a id="log" class="mdl-navigation__link" href="<?php echo site_url('Intro/login');?>">Login</a>
+                    <a id="log" class="mdl-navigation__link" href="<?php echo site_url('Intro/login');?>">Login / Logout</a>
 
                 </nav>
             </div>
@@ -45,7 +45,7 @@
                     <a class="mdl-navigation__link" href="<?php echo site_url('Intro/about');?>">Profile</a>
                     <a class="mdl-navigation__link" href="<?php echo site_url('Intro/contact');?>">Contact</a>
                     <a class="mdl-navigation__link" href="<?php echo site_url('Intro/register');?>">Register</a>
-                    <a class="mdl-navigation__link" href="<?php echo site_url('Intro/login');?>">Login</a>
+                    <a class="mdl-navigation__link" href="<?php echo site_url('Intro/login');?>">Login / Logout</a>
             </nav>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
