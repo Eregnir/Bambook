@@ -107,7 +107,7 @@ public function login($reg=null){
         $user=$this->session->all_userdata();
         if ($user['loggedin']!=null){
             $data['user']=$user;
-            $data['books']=$this->intro_model->get_library();
+            $data['books']=$this->intro_model->get_library($user);
             $this->load->view('templates/HeadB',$data);
             $this->load->view('B_Views/my_library');
             $this->load->view('templates/FootB');

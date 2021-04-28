@@ -21,15 +21,15 @@
                         </a>
                     </div>
                     <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Available Books</h2>
+                        <h2 class="mdl-card__title-text">My Library</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        Bambook's available books can be found here.<br>
-                        Start searching for a new book to read from our growing community!
+                        Your library contains all the books that you have listed on Bambook!<br>
+                        The library also includes books you swapped.
                         <!-- Text here if needed -->
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="<?php echo site_url('Intro/available_books');?>">Read more</a>
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="<?php echo site_url('Intro/my_library');?>">Read more</a>
                     </div>
                 </div>
                 <!-- End Box 1--> 
