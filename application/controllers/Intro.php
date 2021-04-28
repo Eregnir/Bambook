@@ -12,9 +12,8 @@ class Intro extends CI_Controller{
      public function index(){
         $user=$this->session->all_userdata();
         if ($user['loggedin']!=null){
-            $data['test']=$user['username'];
+            $data['profile']=$this->intro_model->get_profile_info();
             $data['user']=$user;
-            $data['email']=$this->intro_model->test();
             $this->load->view('templates/HeadB',$data);
             $this->load->view('B_Views/index');
             $this->load->view('templates/FootB');

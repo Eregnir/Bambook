@@ -1,14 +1,15 @@
         <main class="mdl-layout__content">
             <div class="mdl-grid portfolio-max-width">
+                <center>
                 <!-- Welcome, User: -->
+                <h4>
                 <?php
                 if ($user['username']!=null){
-                    echo 'Welcome, '.$user['username'].'!'.'<br>';
-                }
-                else{
-                    echo "You are not logged in.<br>";
+                    echo 'Welcome, '.$user['username'].'!'.'<br>';?></h4>
+                    <?php foreach ($profile as $prof){echo '<center><img style="max-height:80px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $prof->img).'"/>';};
                 }
                 ?>
+                </center>
             </div>
             <div class="mdl-grid portfolio-max-width">
                 <!-- Box 1--> 
