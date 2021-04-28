@@ -26,4 +26,10 @@ class intro_model extends CI_Model {
         $query=$this->db->query('SELECT * FROM `user_books` ORDER BY `date_added` DESC LIMIT 50;');
         return $query->result();
     }
+
+    //function to get my library books:
+    public function get_library($user){
+        $query=$this->db->query('SELECT * FROM `user_books` INNER JOIN users ON user_books.user_email=users.email WHERE users.username="'.$user['username'].'";');
+        return $query->result();
+    }
 }

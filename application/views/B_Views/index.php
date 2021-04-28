@@ -16,7 +16,7 @@
                 <br>
                 <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
                     <div class="mdl-card__media">
-                        <a href="<?php echo site_url('Intro/available_books');?>">
+                        <a href="<?php echo site_url('Intro/my_library');?>">
                             <img class="article-image" src="<?php echo base_url('images/available_books.jpg');?>" border="0" alt="">
                         </a>
                     </div>

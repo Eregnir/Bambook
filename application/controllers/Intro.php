@@ -57,7 +57,7 @@ public function login($reg=null){
     $data['error']=null;
     $data['reg']=$reg;
     $this->load->view('templates/HeadB',$data);
-    $this->load->view('B_Views/login',$data);
+    $this->load->view('B_Views/login');
     $this->load->view('templates/FootB');
     }
 
@@ -101,6 +101,21 @@ public function login($reg=null){
         $this->load->view('B_Views/publish_book');
         $this->load->view('templates/FootB');
         }
+
+        // Function to load my library from the index page
+    public function my_library(){
+        $user=$this->session->all_userdata();
+        if ($user['loggedin']!=null){
+            $data['user']=$user;
+            $data['books']=$this->intro_model->get_library();
+            $this->load->view('templates/HeadB',$data);
+            $this->load->view('B_Views/my_library');
+            $this->load->view('templates/FootB');
+        }
+        else{
+            $this->login();
+        }            
+    }
         
 
 }
