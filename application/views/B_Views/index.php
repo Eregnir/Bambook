@@ -1,5 +1,11 @@
         <main class="mdl-layout__content">
             <div class="mdl-grid portfolio-max-width">
+                <!-- Welcome, User: -->
+                <?php
+                if ($user['username']!=null){
+                    echo 'Welcome, '.$user['username'].'!';
+                }
+                ?>
                 <!-- Box 1--> 
                 <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
                     <div class="mdl-card__media">
