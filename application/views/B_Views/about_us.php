@@ -10,15 +10,15 @@
                             If a match is found, both users will be notified so they can arrange the book swap details.</p>
                         <p>
                             Not a member yet? come read with us!
-                            <center><br>
+                            <div class="text-center"><br>
                                 <button id="register" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="button" name="register">
                                         Register
-                                    </button>
-                            </center>
+                                </button>
+                            </div><br>
                         </p>
                     </div>
                     <!-- Image card 1 -->
-                    <div class="card text-center" style="width: 18rem;">
+                    <div class="card text-center" style="width: max-width;">
                         <img class="card-img-top" src='../../images/about_us_images/1.png' alt="upload a book">
                         <div class="card-body">
                             <p class="card-text">Upload a book you no longer desire, you can either manually enter the information or scan the book's ISBN number.</p>
@@ -27,7 +27,7 @@
                     </div>
                     <br><br><br>
                     <!-- Image card 2 -->
-                    <div class="card text-center" style="width: 18rem;">
+                    <div class="card text-center" style="width: max-width;">
                         <img class="card-img-top" src='../../images/about_us_images/2.png' alt="search a book">
                         <div class="card-body">
                             <p class="card-text">Search a book from the available Bambook's library which is growing every single day!</p>
@@ -36,7 +36,7 @@
                     </div>
                     <br><br><br>
                     <!-- Image card 3 -->
-                    <div class="card text-center" style="width: 18rem;">
+                    <div class="card text-center" style="width: max-width;">
                         <img class="card-img-top" src='../../images/about_us_images/3.png' alt="request or get a book swap">
                         <div class="card-body">
                             <p class="card-text">Found a book that interest you? Request a swap from the person who listed the book and offer a book instead.<br>
@@ -46,7 +46,7 @@
                     </div>
                     <br><br><br>
                     <!-- Image card 4 -->
-                    <div class="card text-center" style="width: 18rem;">
+                    <div class="card text-center" style="width: max-width;">
                         <img class="card-img-top" src='../../images/about_us_images/4.png' alt="read a book">
                         <div class="card-body">
                             <p class="card-text">Finished your Bambook Swap? Start reading your new book! Happy reading 😊</p>
