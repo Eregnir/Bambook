@@ -1,6 +1,6 @@
         <main class="mdl-layout__content">
             <div class="mdl-grid portfolio-max-width">
-                <center>
+                <span style="margin:auto; display:block;">
                 <!-- Welcome, User: -->
                 <h4>
                 <?php
@@ -9,7 +9,7 @@
                     <?php foreach ($profile as $prof){echo '<center><img style="max-height:80px; max-width: 100%; margin:auto; display:block;" src="data:image/jpeg;base64,'.base64_encode( $prof->img).'"/>';};
                 }
                 ?>
-                </center>
+                </span>
             </div>
             <div class="mdl-grid portfolio-max-width">
                 <!-- Box 1--> 
