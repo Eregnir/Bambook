@@ -29,6 +29,7 @@ class Intro extends CI_Controller{
 
 //Load the profile view
     public function about(){
+        $user['loggedin']=null; 
         $user=$this->session->all_userdata();
         if ($user['loggedin']!=null){
             $data['profile']=$this->intro_model->get_profile_info();
@@ -56,6 +57,7 @@ class Intro extends CI_Controller{
 //Load the login view
     public function login($reg=null){
         $user=$this->session->all_userdata();
+        $user['loggedin']=null; 
         if ($user['loggedin']==null){
             $data['error']=null;
             $data['reg']=$reg;
