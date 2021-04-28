@@ -9,7 +9,10 @@
                     echo "You are not logged in.<br>";
                 }
                 ?>
+            </div>
+            <div class="mdl-grid portfolio-max-width">
                 <!-- Box 1--> 
+                <br>
                 <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
                     <div class="mdl-card__media">
                         <a href="<?php echo site_url('Intro/available_books');?>">
