@@ -52,10 +52,10 @@
     <script type="text/javascript" src="<?php echo base_url('assets/JS/GJS.js');?>"></script>
 
     <script>
-    window.onload = function(){
-        var active = document.getElementById("blg");
-        active.classList.add("is-active");
-        }
+    // window.onload = function(){
+    //     var active = document.getElementById("blg");
+    //     active.classList.add("is-active");
+    //     }
     
 
     // $(document).ready(function($) {

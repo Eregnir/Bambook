@@ -74,8 +74,7 @@ class Users extends CI_Controller{
             'loggedin'  
             );
             $this->session->unset_userdata($data);
-            $this->login();   
-                         
+            header('Location: https://assafye.mtacloud.co.il/Bambook/index.php/Intro/index');               
        }
      public function auth(){
            $data = array(
