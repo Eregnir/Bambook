@@ -17,16 +17,16 @@
                         <!-- Images used to open the lightbox -->
                     <div class="row">
                         <div class="column">
-                            <img src="img1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                            <img src='../../images/about_us_images/1.png' onclick="openModal();currentSlide(1)" class="hover-shadow">
                         </div>
                         <div class="column">
-                            <img src="img2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                            <img src='../../images/about_us_images/1.png' onclick="openModal();currentSlide(2)" class="hover-shadow">
                         </div>
                         <div class="column">
-                            <img src="img3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+                            <img src='../../images/about_us_images/1.png' onclick="openModal();currentSlide(3)" class="hover-shadow">
                         </div>
                         <div class="column">
-                            <img src="img4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+                            <img src='../../images/about_us_images/1.png' onclick="openModal();currentSlide(4)" class="hover-shadow">
                         </div>
                         </div>
 
@@ -37,22 +37,22 @@
 
                             <div class="mySlides">
                             <div class="numbertext">1 / 4</div>
-                            <img src="img1_wide.jpg" style="width:100%">
+                            <img src='../../images/about_us_images/1.png' style="width:100%">
                             </div>
 
                             <div class="mySlides">
                             <div class="numbertext">2 / 4</div>
-                            <img src="img2_wide.jpg" style="width:100%">
+                            <img src='../../images/about_us_images/1.png' style="width:100%">
                             </div>
 
                             <div class="mySlides">
                             <div class="numbertext">3 / 4</div>
-                            <img src="img3_wide.jpg" style="width:100%">
+                            <img src='../../images/about_us_images/1.png' style="width:100%">
                             </div>
 
                             <div class="mySlides">
                             <div class="numbertext">4 / 4</div>
-                            <img src="img4_wide.jpg" style="width:100%">
+                            <img src='../../images/about_us_images/1.png' style="width:100%">
                             </div>
 
                             <!-- Next/previous controls -->
@@ -66,19 +66,19 @@
 
                             <!-- Thumbnail image controls -->
                             <div class="column">
-                            <img class="demo" src="img1.jpg" onclick="currentSlide(1)" alt="Nature">
+                            <img class="demo" src='../../images/about_us_images/1.png' onclick="currentSlide(1)" alt="Nature">
                             </div>
 
                             <div class="column">
-                            <img class="demo" src="img2.jpg" onclick="currentSlide(2)" alt="Snow">
+                            <img class="demo" src='../../images/about_us_images/1.png' onclick="currentSlide(2)" alt="Snow">
                             </div>
 
                             <div class="column">
-                            <img class="demo" src="img3.jpg" onclick="currentSlide(3)" alt="Mountains">
+                            <img class="demo" src='../../images/about_us_images/1.png' onclick="currentSlide(3)" alt="Mountains">
                             </div>
 
                             <div class="column">
-                            <img class="demo" src="img4.jpg" onclick="currentSlide(4)" alt="Lights">
+                            <img class="demo" src='../../images/about_us_images/1.png' onclick="currentSlide(4)" alt="Lights">
                             </div>
                         </div>
                     </div>
