@@ -38,10 +38,10 @@
                             <?php echo form_open('Books/send_swap_req'); ?>
                             <!-- send the book's UID -->
                                 <input type="hidden" value="<?php echo $bi->UID;?>" name="UID" id="UID">
-                            <!-- send the owner's email as I don't have his username yet -->
-                                <input type="hidden" value="<?php echo $bi->user_email;?>" name="email" id="email"> 
+                            <!-- send the owner's username  -->
+                                <input type="hidden" value="<?php echo $bi->user_email;?>" name="sent_to_username" id="sent_to_username"> 
                             <!-- send the requesters username -->
-                                <input type="hidden" value="<?php echo $user['username'];?>" name="username" id="username"> 
+                                <input type="hidden" value="<?php echo $user['username'];?>" name="sent_by_username" id="sent_by_username"> 
                             <!-- Hidden button to submit the form -->
                                 <button class="hidden mdl-button mdl-js-button mdl-button--icon" type="submit" name="submit" id="submit">Submit</button>   
                                 <!-- Displayed button to start the 'are you sure' message -->
