@@ -32,8 +32,8 @@ class Intro extends CI_Controller{
 
 //Load the profile view
     public function about(){
-        $user['loggedin']=null; 
         $user=$this->session->all_userdata();
+        if (!isset($user['loggedin'])){$user['loggedin']=null;};
         if ($user['loggedin']!=null){
             $data['profile']=$this->intro_model->get_profile_info();
             $data['user']=$user;
@@ -104,6 +104,7 @@ class Intro extends CI_Controller{
 //function to get the profile details from the DB in order to show it for the profile page:
     public function user_details(){
         $user=$this->session->all_userdata();
+        if (!isset($user['loggedin'])){$user['loggedin']=null;};
         if ($user['loggedin']!=null){
             $data['profile']=$this->intro_model->get_profile_info();
             $data['user']=$user;
@@ -131,6 +132,7 @@ class Intro extends CI_Controller{
         // Function to load my library from the index page
     public function my_library(){
         $user=$this->session->all_userdata();
+        if (!isset($user['loggedin'])){$user['loggedin']=null;};
         if ($user['loggedin']!=null){
             $data['user']=$user;
             $data['books']=$this->intro_model->get_library($user);
@@ -146,6 +148,7 @@ class Intro extends CI_Controller{
     // Function to load my swap requests from the index page
     public function my_requests(){
         $user=$this->session->all_userdata();
+        if (!isset($user['loggedin'])){$user['loggedin']=null;};
         if ($user['loggedin']!=null){
             $data['user']=$user;
             $data['requests_in']=$this->intro_model->get_incoming_reqs($user);
