@@ -23,7 +23,7 @@ class intro_model extends CI_Model {
 
     //Get Books from the DB in order to present it in the books library. currently limit is 50, we need pagination or something to deal with large mass of books.
     public function get_books($user){
-        if ("$user['username']" != null){
+        if ($user['username'] != null){
             $query=$this->db->query('SELECT * FROM `user_books` WHERE `availability`="1" AND NOT `user_username`= "'.$user['username'].'" ORDER BY `date_added` DESC LIMIT 50;');
         }
         else{
