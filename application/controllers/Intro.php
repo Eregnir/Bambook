@@ -116,7 +116,10 @@ class Intro extends CI_Controller{
     }
 // Function to load the available books from the index page
     public function available_books(){
-        $data['books']=$this->intro_model->get_books();
+        $user=$this->session->all_userdata();
+        if (!isset($user['loggedin'])){$user['loggedin']=null;};
+        $data['user']=$user;
+        $data['books']=$this->intro_model->get_books($user);
         $this->load->view('templates/HeadB',$data);
         $this->load->view('B_Views/available_books',$data);
         $this->load->view('templates/FootB');
