@@ -35,7 +35,7 @@
                                     2. the book's owner (username)
                                     3. the requester's username
                              -->
-                            <?php echo form_open('Books/single_book'); ?>
+                            <?php echo form_open('Books/send_swap_req'); ?>
                             <!-- send the book's UID -->
                                 <input type="hidden" value="<?php echo $bi->UID;?>" name="UID" id="UID">
                             <!-- send the owner's email as I don't have his username yet -->
@@ -43,7 +43,7 @@
                             <!-- send the requesters username -->
                                 <input type="hidden" value="<?php echo $user['username'];?>" name="username" id="username"> 
                             <!-- Hidden button to submit the form -->
-                                <button type="hidden" class="mdl-button mdl-js-button mdl-button--icon" type="submit" name="submit" id="submit">Submit</button>   
+                                <button class="hidden mdl-button mdl-js-button mdl-button--icon" type="submit" name="submit" id="submit">Submit</button>   
                                 <!-- Displayed button to start the 'are you sure' message -->
                                 <button id="swap" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent card-link alignright" type="button" name="swap">
                                     Request Swap
