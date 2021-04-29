@@ -143,7 +143,7 @@ class Intro extends CI_Controller{
     }
 
     // Function to load my swap requests from the index page
-    public function my_incoming_requests(){
+    public function my_requests(){
         $user=$this->session->all_userdata();
         if ($user['loggedin']!=null){
             $data['user']=$user;
