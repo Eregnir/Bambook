@@ -31,7 +31,7 @@
                         <!-- Text here if needed -->
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="<?php echo site_url('Intro/my_library');?>">Read more</a>
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="<?php echo site_url('Intro/my_library');?>">Browse my library</a>
                     </div>
                 </div>
                 <!-- End Box 1--> 
@@ -51,7 +51,7 @@
                          <!-- Text here if needed -->
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="<?php echo site_url('Intro/my_requests');?>">Browse my requests</a>
                     </div>
                 </div>
                 <!-- End box 2 -->
