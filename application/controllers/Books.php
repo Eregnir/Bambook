@@ -31,9 +31,7 @@ class Books extends CI_Controller{
             );
         $error=$this->books_model->send_swap_req($data);
         $data['error']=$error;
-        $this->load->view('templates/HeadB');
-        $this->load->view('B_Views/about_us');
-        $this->load->view('templates/FootB');
+        header('Location: https://assafye.mtacloud.co.il/Bambook/index.php/Intro/my_requests');
     }
 
 
