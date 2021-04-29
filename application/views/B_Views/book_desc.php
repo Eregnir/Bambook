@@ -29,7 +29,7 @@
                         </ul>
                         <div class="card-body">
                             <a href="javascript:history.back()" class="card-link alignleft">Go Back</a>
-                            <button onclick="location.href='#'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent card-link alignright" type="button">
+                            <button id="swap" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent card-link alignright" type="button">
                                 Request Swap
                             </button>
                             <!-- <a href="#" class="card-link alignright">Request Swap</a> -->
@@ -44,4 +44,8 @@
     <script type="text/javascript" src="<?php echo base_url('assets/JS/GJS.js');?>"></script>
 
     <script>
+        document.getElementById("swap").onclick=function()
+    {
+        window.location.href="<?php echo site_url('Intro/register');?>";   
+    };
     </script>
