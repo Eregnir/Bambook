@@ -67,7 +67,7 @@
                                     <?php echo form_close(); ?>
                                     </td>
                                     <td> <?php echo $req->title ?></td>
-                                    <td> <?php echo $req->sent_by_username ?></td>
+                                    <td> <?php echo $req->sent_to_username ?></td>
                                     <td> <?php echo $req->swap_status ?></td>
                                 </tr>
                         <?php endforeach; ?>

@@ -193,14 +193,14 @@ margin-bottom: 12px;
 }
 
 
-#myTable {
+#myTable, #myTable2 {
 border-collapse: collapse;
 width: 100%;
 border: 1px solid #ddd;
 font-size: 18px;
 }
 
-#myTable th, #myTable td {
+#myTable th, #myTable td, #myTable2 th, #myTable2 td {
 text-align: left;
 padding: 12px;
 }
