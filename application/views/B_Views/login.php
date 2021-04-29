@@ -3,7 +3,6 @@
                 <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
                     <div class="mdl-card__title">
                         <h2 class="mdl-card__title-text">Login to Bambook</h2><br>
-                        <?php echo $user['loggedin']; ?>
                     </div>
                     <div class="mdl-card__media">
                         <img class="article-image" src="<?php echo base_url('images/children-reading.png');?>" border="0" alt="">
