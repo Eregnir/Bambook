@@ -46,6 +46,6 @@
     <script>
         document.getElementById("swap").onclick=function()
     {
-        window.location.href="<?php echo site_url('Intro/register');?>";   
+        window.location.href="<?php echo site_url('Books/new_swap');?>";   
     };
     </script>
