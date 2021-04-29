@@ -29,7 +29,7 @@ class Books extends CI_Controller{
             'email' => $this->input->post('email'),
             'sent_by_username' => $this->input->post('sent_by_username')
             );
-        $swap = $this->books->model->send_swap_req($data);
+        $swap = $this->books_model->send_swap_req($data);
         $test['swap'] = $swap;
         $this->load->view('templates/HeadB',$swap);
         $this->load->view('B_Views/tet_page');
