@@ -56,8 +56,8 @@ class Intro extends CI_Controller{
         }
 //Load the login view
     public function login($reg=null){
+        $user['loggedin']=null;
         $user=$this->session->all_userdata();
-        $user['loggedin']=null; 
         $data['user']=$user;
         if ($user['loggedin']==null){
             $data['error']=null;
