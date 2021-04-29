@@ -11,23 +11,13 @@
 
                     <div class="mdl-grid portfolio-copy">
                        
-                        <img class="card-img-top" src='../../images/about_us_images/1.png' alt="upload a book">
-
-
-                        <!-- Images used to open the lightbox -->
-                    <div class="row">
-                        <div class="column">
-                            <img src='../../images/about_us_images/1.png' onclick="openModal();currentSlide(1)" class="hover-shadow">
-                        </div>
-                        <div class="column">
-                            <img src='../../images/about_us_images/1.png' onclick="openModal();currentSlide(2)" class="hover-shadow">
-                        </div>
-                        <div class="column">
-                            <img src='../../images/about_us_images/1.png' onclick="openModal();currentSlide(3)" class="hover-shadow">
-                        </div>
-                        <div class="column">
-                            <img src='../../images/about_us_images/1.png' onclick="openModal();currentSlide(4)" class="hover-shadow">
-                        </div>
+                    <!-- button used to open the lightbox -->
+                        <div class="row">
+                            <div class="column">
+                            <button id="swap" class="hover-shadow mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent card-link alignright" type="button" onclick="openModal();currentSlide(1)">
+                                Request Swap
+                            </button>
+                            </div>
                         </div>
 
                         <!-- The Modal/Lightbox -->
@@ -37,49 +27,15 @@
 
                             <div class="mySlides">
                             <div class="numbertext">1 / 4</div>
-                            <img src='../../images/about_us_images/1.png' style="width:100%">
+                            <img src='../../images/about_us_images/1.png' style="width:100%; max-height:250px;">
                             </div>
-
-                            <div class="mySlides">
-                            <div class="numbertext">2 / 4</div>
-                            <img src='../../images/about_us_images/1.png' style="width:100%">
-                            </div>
-
-                            <div class="mySlides">
-                            <div class="numbertext">3 / 4</div>
-                            <img src='../../images/about_us_images/1.png' style="width:100%">
-                            </div>
-
-                            <div class="mySlides">
-                            <div class="numbertext">4 / 4</div>
-                            <img src='../../images/about_us_images/1.png' style="width:100%">
-                            </div>
-
-                            <!-- Next/previous controls -->
-                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
                             <!-- Caption text -->
-                            <div class="caption-container">
-                            <p id="caption"></p>
-                            </div>
+                                <div class="caption-container">
+                                    <p id="caption"></p>
+                                </div>
 
-                            <!-- Thumbnail image controls -->
-                            <div class="column">
-                            <img class="demo" src='../../images/about_us_images/1.png' onclick="currentSlide(1)" alt="Nature">
-                            </div>
-
-                            <div class="column">
-                            <img class="demo" src='../../images/about_us_images/1.png' onclick="currentSlide(2)" alt="Snow">
-                            </div>
-
-                            <div class="column">
-                            <img class="demo" src='../../images/about_us_images/1.png' onclick="currentSlide(3)" alt="Mountains">
-                            </div>
-
-                            <div class="column">
-                            <img class="demo" src='../../images/about_us_images/1.png' onclick="currentSlide(4)" alt="Lights">
-                            </div>
+                               
                         </div>
                     </div>
                         
@@ -127,16 +83,6 @@ function closeModal() {
 
 var slideIndex = 1;
 showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
 
 function showSlides(n) {
   var i;
