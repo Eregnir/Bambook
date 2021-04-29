@@ -24,14 +24,25 @@ class Books extends CI_Controller{
 
     //Open a new swap request page:
     public function send_swap_req(){   
-        $data = array(
-            'desired_book' => $this->input->post('UID'),
-            'sent_to_username' => $this->input->post('sent_to_username'),
-            'sent_by_username' => $this->input->post('sent_by_username')
-            );
-        $error=$this->books_model->send_swap_req($data);
-        $data['error']=$error;
-        header('Location: https://assafye.mtacloud.co.il/Bambook/index.php/Intro/my_requests');
+        $user=$this->session->all_userdata();
+        if (!isset($user['loggedin'])){$user['loggedin']=null;};
+        if ($user['loggedin']!=null){
+            $data = array(
+                'desired_book' => $this->input->post('UID'),
+                'sent_to_username' => $this->input->post('sent_to_username'),
+                'sent_by_username' => $this->input->post('sent_by_username')
+                );
+            $error=$this->books_model->send_swap_req($data);
+            $data['error']=$error;
+            header('Location: https://assafye.mtacloud.co.il/Bambook/index.php/Intro/my_requests');
+        }
+        else{
+            $data['error']="So, you're interested in that book huh? You must be logged in to swap books!";
+            $data['reg']=null;
+            $this->load->view('templates/HeadB',$data);
+            $this->load->view('B_Views/login');
+            $this->load->view('templates/FootB');
+        }
     }
 
 
