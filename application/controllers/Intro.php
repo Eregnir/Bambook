@@ -148,7 +148,8 @@ class Intro extends CI_Controller{
         $user=$this->session->all_userdata();
         if ($user['loggedin']!=null){
             $data['user']=$user;
-            $data['requests']=$this->intro_model->get_incoming_reqs($user);
+            $data['requests_in']=$this->intro_model->get_incoming_reqs($user);
+            $data['requests_out']=$this->intro_model->get_outgoing_reqs($user);
             $this->load->view('templates/HeadB',$data);
             $this->load->view('B_Views/my_requests');
             $this->load->view('templates/FootB');

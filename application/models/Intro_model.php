@@ -39,9 +39,17 @@ class intro_model extends CI_Model {
         return $query->result();
     }
 
+    //function to get my outgoing swap requests:
+    public function get_outgoing_requests($user){
+        $query=$this->db->query('SELECT * FROM swap_reqs INNER JOIN user_books on swap_reqs.desired_book=user_books.UID WHERE sent_by_username ="'.$user['username'].'" ');
+        return $query->result();
+    }
+
    //function to find how many active requests, but need to add "where not = completed / cancelled etc.":
    public function count_active_reqs($user){
     $query=$this->db->query('SELECT swap_UID FROM swap_reqs WHERE (sent_by_username = "'.$user['username'].'" OR sent_to_username = "'.$user['username'].'") ');
     return $query->result();
     }
+
+    
 }
