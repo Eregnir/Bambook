@@ -15,6 +15,7 @@ class Intro extends CI_Controller{
         if (isset($user['loggedin'])){
             if ($user['loggedin']!=null){
                 $data['profile']=$this->intro_model->get_profile_info();
+                $data['swap_count']=$this->intro_model->count_active_reqs($user);
                 $data['user']=$user;
                 $this->load->view('templates/HeadB',$data);
                 $this->load->view('B_Views/index');

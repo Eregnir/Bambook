@@ -47,7 +47,9 @@
                         <h2 class="mdl-card__title-text">My Requests</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        Here you can find all of your message requests and communicate with other users.
+                        Active Requests: <br>
+                        <?php print_r($swap_count) ?>
+                        <br>Here you can find all of your message requests and communicate with other users.
                          <!-- Text here if needed -->
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
