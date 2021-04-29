@@ -1,11 +1,18 @@
         <main class="mdl-layout__content">
             <div class="mdl-grid portfolio-max-width">
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> <!-- centered div -->
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> 
+                    <!-- centered div -->
+
                     <?php foreach ($book_info as $bi):?>
 
                     <div class="card" style="width: 25rem">
+                    <p>
+                        <h4>Interested in this book?</h4><br>
+                        Great! by tapping "send request", this book's owner will be notified and be able to view and choose a book from your available books.<br>
+                        
+                    </p>
                     <!-- book image -->
-                        <span class="card-img-top"><?php echo '<img class="card-img-top" alt="Book Image"src="data:image/jpeg;base64,'.base64_encode( $bi->img).'"/>';?></span>
+                        <p class="card-img-top"><?php echo '<img class="card-img-top" alt="Book Image"src="data:image/jpeg;base64,'.base64_encode( $bi->img).'"/>';?></p>
                         <div class="card-body">
                             <!-- book title -->
                             <h2 class="card-title"><?php echo $bi->title ?></h2> 
@@ -46,11 +53,6 @@
     <script>
         document.getElementById("swap").onclick=function()
     {
-        var x = confirm("Sending a request will notify this book's owner and will allow browsing your available books, in order to complete the swap process. Continue?");
-        if (x==true){
-                window.location.href="<?php echo site_url('Books/send_swap_req');?>";   
-            };
-        };
-
-
+        window.location.href="<?php echo site_url('Books/new_swap');?>";   
+    };
     </script>

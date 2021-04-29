@@ -19,17 +19,12 @@ class Books extends CI_Controller{
         $this->load->view('B_Views/book_desc',$data);
         $this->load->view('templates/FootB');
         }
-    
-    //Open a new swap request page:
-    public function new_swap(){
-        $this->load->view('templates/HeadB');
-        $this->load->view('B_Views/request_new_swap');
-        $this->load->view('templates/FootB');
-    }
 
     //Open a new swap request page:
-    public function submit_swap_req(){
-        
+    public function send_swap_req(){
+        $this->load->view('templates/HeadB');
+        $this->load->view('B_Views/contact');
+        $this->load->view('templates/FootB');
     }
 
 
