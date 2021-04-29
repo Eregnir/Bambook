@@ -61,20 +61,28 @@ class Intro extends CI_Controller{
         // $user['loggedin']=null;
         $user=$this->session->all_userdata();
         $data['user']=$user;
+        //if loggedin is defined
         if (isset($user['loggedin'])){
-            if ($user['loggedin']==null){
+            //and it is not null, it means a user is logged in, so log him out.
+            if ($user['loggedin']!=null){
+                header('Location: https://assafye.mtacloud.co.il/Bambook/index.php/Users/logout');
+            }
+            //but if it is null, no one is logged in, so go to login page.
+            else{
                 $data['error']=null;
                 $data['reg']=$reg;
                 $this->load->view('templates/HeadB',$data);
                 $this->load->view('B_Views/login');
                 $this->load->view('templates/FootB');
             }
-            else{
-                header('Location: https://assafye.mtacloud.co.il/Bambook/index.php/Users/logout');
-            }
         }
+        //but if it is not defined, no one is logged in, so go to login page.
         else{
-            header('Location: https://assafye.mtacloud.co.il/Bambook/index.php/Users/logout');
+            $data['error']=null;
+            $data['reg']=$reg;
+            $this->load->view('templates/HeadB',$data);
+            $this->load->view('B_Views/login');
+            $this->load->view('templates/FootB');
         }
     }
 
