@@ -40,7 +40,7 @@ class intro_model extends CI_Model {
     }
 
     //function to get my outgoing swap requests:
-    public function get_outgoing_requests($user){
+    public function get_outgoing_reqs($user){
         $query=$this->db->query('SELECT * FROM swap_reqs INNER JOIN user_books on swap_reqs.desired_book=user_books.UID WHERE sent_by_username ="'.$user['username'].'" ');
         return $query->result();
     }
