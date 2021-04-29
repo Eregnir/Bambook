@@ -9,9 +9,12 @@
                         <p>You can request a book swap from the available books that Bambook's users have uploaded and suggest the book you would like to trade.
                             If a match is found, both users will be notified so they can arrange the book swap details.</p>
                         <p>
-                            Not a member yet? come read with us!
+                            Sounds interesting? Log in or join us today!
                             <div class="center-align"><br>
                                 <div class="text-center">
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" name="login ">
+                                        Login
+                                    </button> 
                                     <button id="register" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="button" name="register">
                                             Register
                                     </button>
@@ -72,5 +75,9 @@
     document.getElementById("register").onclick=function()
     {
         window.location.href="<?php echo site_url('Intro/register');?>";   
+    };
+    document.getElementById("login").onclick=function()
+    {
+        window.location.href="<?php echo site_url('Intro/login');?>";   
     };
     </script>
