@@ -47,7 +47,7 @@
                         <h2 class="mdl-card__title-text">My Requests</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        Hey! You have <?php echo count($swap_count);?> active requests!<br>
+                        You have <h3><?php echo count($swap_count);?></h3> active requests!<br>
                         <br>Here you can find all of your message requests and communicate with other users.
                          <!-- Text here if needed -->
                     </div>
