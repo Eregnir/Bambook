@@ -14,6 +14,8 @@ class Books extends CI_Controller{
         $data = array(
             'b_UID' => $this->input->post('b_UID')
             );
+        $user=$this->session->all_userdata();
+        $data['user']=$user;
         $data['book_info'] = $this->books_model->get_book_info($data['b_UID']);
         $this->load->view('templates/HeadB',$data);
         $this->load->view('B_Views/book_desc',$data);
@@ -21,9 +23,16 @@ class Books extends CI_Controller{
         }
 
     //Open a new swap request page:
-    public function send_swap_req(){
-        $this->load->view('templates/HeadB');
-        $this->load->view('B_Views/contact');
+    public function send_swap_req($data){   
+        $data = array(
+            'desired_book' => $this->input->post('desired_book'),
+            'email' => $this->input->post('email'),
+            'sent_by_username' => $this->input->post('sent_by_username')
+            );
+        $swap = $this->books->model->send_swap_req($data);
+        $test['swap'] = $swap;
+        $this->load->view('templates/HeadB',$swap);
+        $this->load->view('B_Views/tet_page');
         $this->load->view('templates/FootB');
     }
 

@@ -29,10 +29,27 @@
                         </ul>
                         <div class="card-body">
                             <a href="javascript:history.back()" class="card-link alignleft">Go Back</a>
-                            <button id="swap" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent card-link alignright" type="button">
-                                Request Swap
-                            </button>
-                            <!-- <a href="#" class="card-link alignright">Request Swap</a> -->
+                            <!-- 
+                                This is what I need when sending this form:
+                                    1. the desired book's UID
+                                    2. the book's owner (username)
+                                    3. the requester's username
+                             -->
+                            <?php echo form_open('Books/single_book'); ?>
+                            <!-- send the book's UID -->
+                                <input type="hidden" value="<?php echo $bi->UID;?>" name="UID" id="UID">
+                            <!-- send the owner's email as I don't have his username yet -->
+                                <input type="hidden" value="<?php echo $bi->user_email;?>" name="email" id="email"> 
+                            <!-- send the requesters username -->
+                                <input type="hidden" value="<?php echo $user['username'];?>" name="username" id="username"> 
+                            <!-- Hidden button to submit the form -->
+                                <button type="hidden" class="mdl-button mdl-js-button mdl-button--icon" type="submit" name="submit" id="submit">Submit</button>   
+                                <!-- Displayed button to start the 'are you sure' message -->
+                                <button id="swap" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent card-link alignright" type="button" name="swap">
+                                    Request Swap
+                                </button>
+                            <?php echo form_close(); ?>
+                            
                         </div>
                         <div style="clear: both;"></div>
                     </div> 
@@ -48,7 +65,7 @@
     {
         var x = confirm("Sending a request will notify this book's owner and will allow browsing your available books, in order to complete the swap process. Continue?");
         if (x==true){
-                window.location.href="<?php echo site_url('Books/send_swap_req');?>";   
+            document.getElementById("submit").click();
             };
         };
 
