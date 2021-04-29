@@ -38,6 +38,7 @@ body {
   height: 150px;
   width: 150px;
   margin: auto auto 10px;
+  transition: 0.3s;
 }
 
 .is-compact .portfolio-logo {
