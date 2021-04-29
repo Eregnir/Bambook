@@ -48,7 +48,7 @@
                     </div>
                     <div class="mdl-card__supporting-text">
                         Active Requests: <br>
-                        <?php print_r($swap_count) ?>
+                        <?php echo count($swap_count);?>
                         <br>Here you can find all of your message requests and communicate with other users.
                          <!-- Text here if needed -->
                     </div>
