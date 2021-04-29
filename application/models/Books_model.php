@@ -13,8 +13,7 @@ class books_model extends CI_Model {
     }
 
     public function send_swap_req($data){
-        $query=$this->db->query('SELECT date_registered FROM users WHERE username= "'.$data[`sent_to_username`].'" ');
-        return $query->result();
+        $this->db->insert('swap_reqs', $data);
     }
     
 
