@@ -32,4 +32,10 @@ class intro_model extends CI_Model {
         $query=$this->db->query('SELECT * FROM `user_books` INNER JOIN users ON user_books.user_email=users.email WHERE users.username="'.$user['username'].'";');
         return $query->result();
     }
+
+    //function to get my incoming swap requests:
+    public function get_incoming_reqs($user){
+        $query=$this->db->query('SELECT * FROM swap_reqs INNER JOIN user_books on swap_reqs.desired_book=user_books.UID WHERE sent_to_username ="'.$user['username'].'" ');
+        return $query->result();
+    }
 }

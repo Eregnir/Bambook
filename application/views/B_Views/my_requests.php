@@ -1,41 +1,36 @@
         <main class="mdl-layout__content">
             <div class="mdl-grid portfolio-max-width">
-                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
-                    <p><br>
-                    <h4>Welcome to your swap requests!</h4><br><br>
-                    Find swap requests sent to you, and the swap requests you sent out.
-                    </p>
-                </div>
-                <!-- Books table Start -->
                     <h2 class="pad5">My Requests</h2>
+                    <!-- Incoming requests -->
                     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for the book or author name..." title="Type in a name">
                     <br>
                     <table class="table table-image" id="myTable">
                         <thead>
                             <tr>
-                                <th scope="col">Image</th>
+                                <th scope="col">Requested Book</th>
                                 <th scope="col">Title</th>
-                                <th scope="col">Author</th>
-                                <th scope="col">Condition</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Status</th>
                             </tr>
                         </thead>
                         
                         <tbody>
-                        <?php foreach ($books as $book):
+                        <?php foreach ($requests as $req):
                         //Open a form that will send the book UID to the controller in order to show it's full details.
-                                $attributes = array('id' => $book->UID, 'name' =>$book->UID);?>
-                                <tr id="<?php echo 'book_'.$book->UID?>" class="table-row">
+                                $attributes = array('id' => $req->UID, 'name' =>$req->UID);?>
+                                <tr id="<?php echo 'req_'.$req->swap_UID?>" class="table-row">
                                     <td class="w-25">
-                                    <!-- Open a form that will send the avatar UID to the controller in order to select it and change the avatar. -->                                     
+                                    <!-- Open a form that will send the swap UID to the controller in order to select it and show the full request details and options. -->                                     
                                     <?php echo form_open('Books/single_book', $attributes); ?>
-                                        <input type="hidden" value="<?php echo $book->UID;?>" name="b_UID" id="<?php echo $book->UID?>"> 
-                                        <span class="img-fluid"> <?php echo '<img style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $book->img).'"/>';?> <br></span>
+                                    <!-- need to change some info here... b_UID etc and complete the correct form for the swap ID -->
+                                        <input type="hidden" value="<?php echo $req->UID;?>" name="b_UID" id="<?php echo $req->UID?>"> 
+                                        <span class="img-fluid"> <?php echo '<img style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $req->img).'"/>';?> <br></span>
                                         <button class="mdl-button mdl-js-button mdl-button--icon" type="submit" name="submit "><i class="material-icons">open_in_new</i></button>
                                     <?php echo form_close(); ?>
                                     </td>
-                                    <td> <?php echo $book->title ?></td>
-                                    <td> <?php echo $book->author ?></td>
-                                    <td> <?php echo $book->cond ?></td>
+                                    <td> <?php echo $req->title ?></td>
+                                    <td> <?php echo $req->start_time ?></td>
+                                    <td> <?php echo $req->swap_status ?></td>
                                 </tr>
                         <?php endforeach; ?>
                         </tbody>

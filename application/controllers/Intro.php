@@ -143,11 +143,11 @@ class Intro extends CI_Controller{
     }
 
     // Function to load my swap requests from the index page
-    public function my_requests(){
+    public function my_incoming_requests(){
         $user=$this->session->all_userdata();
         if ($user['loggedin']!=null){
             $data['user']=$user;
-            $data['books']=$this->intro_model->get_library($user);
+            $data['requests']=$this->intro_model->get_incoming_reqs($user);
             $this->load->view('templates/HeadB',$data);
             $this->load->view('B_Views/my_requests');
             $this->load->view('templates/FootB');
