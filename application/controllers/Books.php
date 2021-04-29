@@ -26,7 +26,7 @@ class Books extends CI_Controller{
     public function send_swap_req(){   
         $data = array(
             'desired_book' => $this->input->post('UID'),
-            'sent_to_username' => $this->input->post('sent_by_username'),
+            'sent_to_username' => $this->input->post('sent_to_username'),
             'sent_by_username' => $this->input->post('sent_by_username')
             );
         $swap = $this->books_model->send_swap_req($data);
