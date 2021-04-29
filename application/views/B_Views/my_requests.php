@@ -1,10 +1,11 @@
         <main class="mdl-layout__content">
-            <div class="mdl-grid portfolio-max-width"><div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
-            <p>
-            <h4>Welcome to your swap requests!</h4><br>
-            Find swap requests sent to you, and the swap requests you sent out.
-            </p>
-            </div>
+            <div class="mdl-grid portfolio-max-width">
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+                    <p><br>
+                    <h4>Welcome to your swap requests!</h4><br><br>
+                    Find swap requests sent to you, and the swap requests you sent out.
+                    </p>
+                </div>
                 <!-- Books table Start -->
                     <h2 class="pad5">My Requests</h2>
                     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for the book or author name..." title="Type in a name">
