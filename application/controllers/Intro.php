@@ -58,6 +58,7 @@ class Intro extends CI_Controller{
     public function login($reg=null){
         $user=$this->session->all_userdata();
         $user['loggedin']=null; 
+        $data['user']=$user;
         if ($user['loggedin']==null){
             $data['error']=null;
             $data['reg']=$reg;
