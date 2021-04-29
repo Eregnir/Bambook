@@ -1,5 +1,6 @@
 body {
   overflow-y: scroll; /* Show vertical scrollbar */
+  min-height: 100vh; 
 }
 
 .portfolio-header {
@@ -172,6 +173,9 @@ footer {
   background-image: url(../../images/footer-background.png);
   background-size: cover;
   bottom:0;
+
+  position: absolute;
+  width: 100%;
 }
 
 /************ available_books CSS *************/
