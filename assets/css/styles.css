@@ -181,7 +181,7 @@ footer {
   padding: 5px;
 }
 
-#myInput {
+#myInput, #myInput2 {
 background-image: url('/images/searchicon.png');
 background-position: 10px 10px;
 background-repeat: no-repeat;
