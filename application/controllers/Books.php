@@ -37,7 +37,7 @@ class Books extends CI_Controller{
             header('Location: https://assafye.mtacloud.co.il/Bambook/index.php/Intro/my_requests');
         }
         else{
-            $error['error']="So, you're interested in that book huh? Well, uou must be logged in to swap books. So hop on and lets go!";
+            $error['error']="So, you're interested in that book huh? Well, you must be logged in to swap books. So hop on and lets go!";
             $data['error']=$error;
             $data['reg']=null;
             $this->load->view('templates/HeadB',$data);
