@@ -12,7 +12,7 @@
                             Sounds interesting? Log in or join us today!
                             <div class="center-align"><br>
                                 <div class="text-center">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" name="login ">
+                                    <button id="login" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="button" name="login ">
                                         Login
                                     </button> 
                                     <button id="register" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="button" name="register">
