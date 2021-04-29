@@ -10,14 +10,16 @@ class Intro extends CI_Controller{
     }
 //Load the Homescreen view  
      public function index(){
-        $user['loggedin']=null;    
+        // $user['loggedin']=null;
         $user=$this->session->all_userdata();
-        if ($user['loggedin']!=null){
-            $data['profile']=$this->intro_model->get_profile_info();
-            $data['user']=$user;
-            $this->load->view('templates/HeadB',$data);
-            $this->load->view('B_Views/index');
-            $this->load->view('templates/FootB');
+        if (isset($user['loggedin'])){
+            if ($user['loggedin']!=null){
+                $data['profile']=$this->intro_model->get_profile_info();
+                $data['user']=$user;
+                $this->load->view('templates/HeadB',$data);
+                $this->load->view('B_Views/index');
+                $this->load->view('templates/FootB');
+            }
         }
         else{
             $this->load->view('templates/HeadB');
@@ -59,12 +61,17 @@ class Intro extends CI_Controller{
         $user['loggedin']=null;
         $user=$this->session->all_userdata();
         $data['user']=$user;
-        if ($user['loggedin']==null){
-            $data['error']=null;
-            $data['reg']=$reg;
-            $this->load->view('templates/HeadB',$data);
-            $this->load->view('B_Views/login');
-            $this->load->view('templates/FootB');
+        if (isset($user['loggedin'])){
+            if ($user['loggedin']==null){
+                $data['error']=null;
+                $data['reg']=$reg;
+                $this->load->view('templates/HeadB',$data);
+                $this->load->view('B_Views/login');
+                $this->load->view('templates/FootB');
+            }
+            else{
+                header('Location: https://assafye.mtacloud.co.il/Bambook/index.php/Users/logout');
+            }
         }
         else{
             header('Location: https://assafye.mtacloud.co.il/Bambook/index.php/Users/logout');
