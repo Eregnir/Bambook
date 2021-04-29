@@ -29,9 +29,9 @@ class Books extends CI_Controller{
             'sent_to_username' => $this->input->post('sent_to_username'),
             'sent_by_username' => $this->input->post('sent_by_username')
             );
-        $swap = $this->books_model->send_swap_req($data);
-        $test['swap'] = $swap;
-        $this->load->view('templates/HeadB',$swap);
+        $error=$this->books_model->send_swap_req($data);
+        $data['error']=$error;
+        $this->load->view('templates/HeadB',$data);
         $this->load->view('B_Views/tet_page');
         $this->load->view('templates/FootB');
     }
