@@ -118,8 +118,9 @@ class Intro extends CI_Controller{
     public function available_books(){
         $user=$this->session->all_userdata();
         if (!isset($user['loggedin'])){$user['loggedin']=null;};
+        if ($user['loggedin']==null){$data['books']=$this->intro_model->get_books_not_loggedin();}
+        else{$data['books']=$this->intro_model->get_books($user);};
         $data['user']=$user;
-        $data['books']=$this->intro_model->get_books($user);
         $this->load->view('templates/HeadB',$data);
         $this->load->view('B_Views/available_books',$data);
         $this->load->view('templates/FootB');
