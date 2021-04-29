@@ -39,7 +39,7 @@
                             <!-- send the book's UID -->
                                 <input type="hidden" value="<?php echo $bi->UID;?>" name="UID" id="UID">
                             <!-- send the owner's username  -->
-                                <input type="hidden" value="<?php echo $bi->user_email;?>" name="sent_to_username" id="sent_to_username"> 
+                                <input type="hidden" value="<?php echo $bi->user_username;?>" name="sent_to_username" id="sent_to_username"> 
                             <!-- send the requesters username -->
                                 <input type="hidden" value="<?php echo $user['username'];?>" name="sent_by_username" id="sent_by_username"> 
                             <!-- Hidden button to submit the form -->
