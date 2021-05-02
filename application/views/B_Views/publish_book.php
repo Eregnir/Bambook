@@ -83,89 +83,89 @@
         <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url('assets/JS/GJS.js');?>"></script>
 
-        <!-- JS for Google API search -->
+                                <!-- JS for Google API search -->
 
-        <script>
-            $("#search_form").submit(function(e) {
-                $("#books").html("");
+                                <script>
+                                    $("#search_form").submit(function(e) {
+                                        $("#books").html("");
 
-                e.preventDefault();
+                                        e.preventDefault();
 
-                var searchQuery = $("#search_txt").val();
-                searchQuery = searchQuery.split(" ").join("+");
+                                        var searchQuery = $("#search_txt").val();
+                                        searchQuery = searchQuery.split(" ").join("+");
 
-                if (!searchQuery) {
-                    searchQuery = "paleo";
-                }
+                                        if (!searchQuery) {
+                                            searchQuery = "paleo";
+                                        }
 
-                $.ajax({
-                    url: "https://www.googleapis.com/books/v1/volumes?q=" + searchQuery,
-                    success: function(json) {
-                    var thumb = "";
-                    var htmlcontent = "";
-                    var author = "";
-                    var p_date = "";
-                    var isbn = "";
+                                        $.ajax({
+                                            url: "https://www.googleapis.com/books/v1/volumes?q=" + searchQuery,
+                                            success: function(json) {
+                                            var thumb = "";
+                                            var htmlcontent = "";
+                                            var author = "";
+                                            var p_date = "";
+                                            var isbn = "";
 
-                    for (i = 0; i < json.items.length; i++) {
-                        if (typeof json.items[i].volumeInfo.imageLinks != "undefined") {
-                        thumb = json.items[i].volumeInfo.imageLinks.smallThumbnail;
-                        } else {
-                        thumb = "http://i.imgur.com/oM3MdAi.png"; // image not available
-                        // thumb = 'http://slems-oldboys.org.uk/library/wp-content/uploads/2013/11/library_nocover.jpg'
-                        }
-                        // Author
-                        if (typeof json.items[i].volumeInfo.authors != "undefined") {
-                        author = json.items[i].volumeInfo.authors[0];
-                        }
-                        
-                        // Published Date
-                        if (typeof json.items[i].volumeInfo.publishedDate != "undefined") {
-                        p_date = json.items[i].volumeInfo.publishedDate;
-                        }
+                                            for (i = 0; i < json.items.length; i++) {
+                                                if (typeof json.items[i].volumeInfo.imageLinks != "undefined") {
+                                                thumb = json.items[i].volumeInfo.imageLinks.smallThumbnail;
+                                                } else {
+                                                thumb = "http://i.imgur.com/oM3MdAi.png"; // image not available
+                                                // thumb = 'http://slems-oldboys.org.uk/library/wp-content/uploads/2013/11/library_nocover.jpg'
+                                                }
+                                                // Author
+                                                if (typeof json.items[i].volumeInfo.authors != "undefined") {
+                                                author = json.items[i].volumeInfo.authors[0];
+                                                }
+                                                
+                                                // Published Date
+                                                if (typeof json.items[i].volumeInfo.publishedDate != "undefined") {
+                                                p_date = json.items[i].volumeInfo.publishedDate;
+                                                }
 
-                        // Language
-                        if (typeof json.items[i].volumeInfo.language != "undefined") {
-                        language = json.items[i].volumeInfo.language;
-                        }
+                                                // Language
+                                                if (typeof json.items[i].volumeInfo.language != "undefined") {
+                                                language = json.items[i].volumeInfo.language;
+                                                }
 
-                        // ISBN
-                        if (typeof json.items[i].volumeInfo.industryIdentifiers != "undefined") {
-                        isbn = json.items[i].volumeInfo.industryIdentifiers[0].identifier;
-                        }
+                                                // ISBN
+                                                if (typeof json.items[i].volumeInfo.industryIdentifiers != "undefined") {
+                                                isbn = json.items[i].volumeInfo.industryIdentifiers[0].identifier;
+                                                }
 
-                        htmlcontent +=
-                        "<div class='thumbs'><b>Book Title:</b> " +
-                        json.items[i].volumeInfo.title +
-                        "</b> " +
-                        '<img src="' +
-                        thumb +
-                        '" + alt="' +
-                        json.items[i].volumeInfo.title +
-                        '">' +
-                        "<br><b>Author: </b>" +
-                        author +
-                        "<br><b>Published Date: </b>" +
-                        p_date +
-                        "<br><b>Language: </b>" +
-                        language +
-                        "<br><b>ISBN_13: </b>" +
-                        isbn +
-                        '</div>';
-                    }
-                    document.getElementById("books").innerHTML =
-                        "<div>" + htmlcontent + "</div><br>";
-                    }
-                });
-            });
+                                                htmlcontent +=
+                                                "<div class='thumbs'><b>Book Title:</b> " +
+                                                json.items[i].volumeInfo.title +
+                                                "</b> " +
+                                                '<img src="' +
+                                                thumb +
+                                                '" + alt="' +
+                                                json.items[i].volumeInfo.title +
+                                                '">' +
+                                                "<br><b>Author: </b>" +
+                                                author +
+                                                "<br><b>Published Date: </b>" +
+                                                p_date +
+                                                "<br><b>Language: </b>" +
+                                                language +
+                                                "<br><b>ISBN_13: </b>" +
+                                                isbn +
+                                                '</div>';
+                                            }
+                                            document.getElementById("books").innerHTML =
+                                                "<div>" + htmlcontent + "</div><br>";
+                                            }
+                                        });
+                                    });
 
-            function trunc(s, n) {
-            //if(typeof s !== "undefined"){
-            var t = s.indexOf(" ", n);
-            if (t == -1) return s;
-            return s.substring(0, t) + "...";
-            // } else {
-            //   return s;
-            // }
-            }
-        </script>
+                                    function trunc(s, n) {
+                                    //if(typeof s !== "undefined"){
+                                    var t = s.indexOf(" ", n);
+                                    if (t == -1) return s;
+                                    return s.substring(0, t) + "...";
+                                    // } else {
+                                    //   return s;
+                                    // }
+                                    }
+                                </script>
