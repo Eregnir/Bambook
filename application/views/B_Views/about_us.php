@@ -25,7 +25,9 @@
                     </div>
                     <!-- Image card 1 -->
                     <div class="card text-center" style="width: 22em;">
-                        <img class="card-img-top" src='../../images/about_us_images/1.png' alt="upload a book">
+                        <img class="card-img-top" src='<?php echo base_url('images/about_us_images/1.png');?>' alt="upload a book">
+
+
                         <div class="card-body">
                             <p class="card-text">Upload a book you no longer desire, you can either manually enter the information or scan the book's ISBN number.</p>
                             <a href="#" class="btn btn-primary">List a book</a>
