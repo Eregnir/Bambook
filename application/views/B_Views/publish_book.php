@@ -181,9 +181,9 @@
                                     }
 
                                     function autoFill() {
-                                        document.getElementById('book_title').value = json.items[i].volumeInfo.title; // To fix the right side the left side is working fine
-                                        document.getElementById('book_author').value = author; // to fix the right side
-                                        document.getElementById('book_language').value = language; // to fix the right side
-                                        document.getElementById('b_isbn').value = isbn; // to fix the right side
+                                        document.getElementById('book_title').value = json.items[i].volumeInfo.title[i]; // To fix the right side the left side is working fine
+                                        document.getElementById('book_author').value = author[i]; // to fix the right side
+                                        document.getElementById('book_language').value = language[i]; // to fix the right side
+                                        document.getElementById('b_isbn').value = isbn[i]; // to fix the right side
                                     }
                                 </script>
