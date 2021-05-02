@@ -432,4 +432,11 @@ form {
   margin: 0 10px 10px 0
 }
 
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
 /******************** END CSS Page - Publish Book ********************/

@@ -151,7 +151,7 @@
                                                 language +
                                                 "<br><b>ISBN_13: </b>" +
                                                 isbn +
-                                                '</div>';
+                                                '</div>' + "<div class='clearfix'></div>";
                                             }
                                             document.getElementById("books").innerHTML =
                                                 "<div>" + htmlcontent + "</div><br>";
