@@ -3,6 +3,17 @@ body {
   
 }
 
+/* Error Styling */
+
+.input-error {
+  color: #cc0033 !important;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 5px 0 0;
+}
+
+
 .portfolio-header {
   position: relative;
   background-image: url(../../images/header-bg.jpg);
