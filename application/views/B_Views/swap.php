@@ -85,17 +85,20 @@
 
                         
                             <!-- Approve or cancel swap -->
-                            <?php echo form_open('#'); ?>
-                            <!-- send the book's UID -->
-                                <input type="hidden" value="<?php echo $bi->UID;?>" name="UID" id="UID">
-                            <!-- send the owner's username  -->
-                                <input type="hidden" value="<?php // echo $bi->user_username;?>" name="sent_to_username" id="sent_to_username"> 
-                            <!-- send the requesters username -->
-                                <input type="hidden" value="<?php // echo $user['username'];?>" name="sent_by_username" id="sent_by_username"> 
+                            <?php echo form_open('Books/approve_swap'); ?>
+                            <!-- send the swap ID -->
+                            <input type="hidden" value="<?php echo $bi->swap_UID;?>" name="swp_UID" id="swp_UID">
+                            <!-- send the book1's UID -->
+                                <input type="hidden" value="<?php echo $bi->UID;?>" name="b1_UID" id="b1_UID">
+                            <!-- send the book2's UID  -->
+                            <?php foreach ($book2 as $b2): ?>
+                                <input type="hidden" value="<?php echo $b2->UID;?>" name="b2_UID" id="b2_UID"> 
+                            <?php endforeach ?>
+                            
                             <!-- Hidden button to submit the form -->
-                                <button class="hidden mdl-button mdl-js-button mdl-button--icon" type="submit" name="submit" id="submit">Submit</button>   
+                                <button class="hidden mdl-button mdl-js-button mdl-button--icon" type="submit" name="approve_btn" id="approve_btn">Submit</button>   
                                 <!-- Displayed button to start the 'are you sure' message -->
-                                <button id="swap" class="<?php if ($flagg==null){echo 'hidden';}?> mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent card-link alignright" type="button" name="swap">
+                                <button id="apr" class="<?php if ($flagg==null){echo 'hidden';}?> mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent card-link alignright" type="button" name="apr">
                                     Approve Swap
                                 </button>
                             <?php echo form_close(); ?>
@@ -121,11 +124,11 @@
     <script type="text/javascript" src="<?php echo base_url('assets/JS/GJS.js');?>"></script>
 
     <script>
-        document.getElementById("swap").onclick=function()
+        document.getElementById("apr").onclick=function()
         {
             var x = confirm("Approving the request will swap the books here on Bambook, and will share your contact info to each other for making the swap. Continue?");
             if (x==true){
-                document.getElementById("submit").click();
+                document.getElementById("approve_btn").click();
                 };
             };
 

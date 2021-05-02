@@ -103,5 +103,16 @@ class Books extends CI_Controller{
         $this->books_model->cancel_swap($data['swap_UID']);
         $this->zoom_swap2($data['swap_UID']);
     }
+
+    public function approve_swap(){
+        $data = array(
+            'swap_UID' => $this->input->post('swp_UID'),
+            'b1_UID' => $this->input->post('b1_UID'),
+            'b2_UID' => $this->input->post('b2_UID')
+            );
+        $this->books_model->approve_swap($data);
+        $this->zoom_swap2($data['swap_UID']);
+    }
+
     
 }

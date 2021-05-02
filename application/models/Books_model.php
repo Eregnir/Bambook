@@ -52,4 +52,13 @@ class books_model extends CI_Model {
         $query = $this->db->query('UPDATE swap_reqs SET swap_status="Cancelled", `end_time`=CURRENT_TIMESTAMP WHERE swap_UID= "'.$swap_UID.'" ');
     }
 
+    public function approve_swap($data){
+        //this will make the swap completed
+        $query = $this->db->query('UPDATE swap_reqs SET swap_status="Completed", `end_time`=CURRENT_TIMESTAMP WHERE swap_UID= "'.$data['swap_UID'].'" ');
+        //this will make book 1 unavailable
+        $query = $this->db->query('UPDATE user_books SET `availability`=0 WHERE `UID`="'.$data['b1_UID'].'" ');
+        //this will make book 2 unavailable
+        $query = $this->db->query('UPDATE user_books SET `availability`=0 WHERE `UID`="'.$data['b2_UID'].'" ');
+    }
+
 }
