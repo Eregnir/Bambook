@@ -34,23 +34,23 @@
                         <div style="clear: both;"></div>
                     </div>
                     <!-- If a book is not picked, write this: -->
-                    <?php if ($data['pick']==false):?>
+                    <?php if ($bi['received_book']==null):?>
                         <center><br><h4>Browse <?php echo $bi->sent_by_username?>'s books and choose one you'd like for the swap:"</h4><br></center>
                     <?php endif ?>
 
                      <!-- If a book is picked, write this: -->
-                     <?php if ($data['pick']==true):?>
+                     <?php if ($bi['received_book']!=null):?>
                         <center><br><h4>You have selected the following book:</h4><br></center>
                     <?php endif ?>
 
                     <!-- Book 2 = the book you will get -->
                     <div class="card" style="width: 25rem">
                         <!-- book image -->
-                        <?php if ($data['pick']==false):?>
+                        <?php if ($bi['received_book']==null):?>
                             <span id="img1" class="card-img-top"> <img style="width:50%" class="card-img-top" alt="Add Book" src='<?php echo base_url('images/add-book.png');?>'> </span>
                         <?php endif ?>
 
-                        <?php if ($data['pick']==true):?>
+                        <?php if ($bi['received_book']!=null):?>
                             <span id="img2" class="hidden card-img-top"><?php echo '<img style="width:50%" class="card-img-top" alt="Book Image"src="data:image/jpeg;base64,'.base64_encode( $bi->img).'"/>';?></span>
                             <div class=" card-body">
                             <!-- book title -->
