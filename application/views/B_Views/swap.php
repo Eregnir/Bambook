@@ -4,6 +4,7 @@
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> <!-- centered div -->
                 <span>
                 <?php foreach ($book_info as $bi):?>
+                    <?php if ($bi->received_book!=null){$flag = true;}?>
                 <h3>You have a swap request!</h3>
                 <h6>Status: <?php echo $bi->swap_status?>
                 <br>
@@ -37,7 +38,7 @@
 
                         <center><br><h4 class="" id="brw">Browse <?php echo $bi->sent_by_username?>'s books and choose one you'd like for the swap:"</h4><br></center>
                  
-                    <?php if ($bi->received_book!=null){$flag = true;}else{$flag=false;}?>
+                    
                      <!-- If a book is picked, write this: -->
                    
                         <center><br><h4>You have selected the following book:</h4><br></center>
