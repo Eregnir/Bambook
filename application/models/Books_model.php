@@ -33,7 +33,7 @@ class books_model extends CI_Model {
 
     //function to select the book itself and mark a swap as completed:
     public function select_book($data){
-        $query=$this->db->query('UPDATE `swap_reqs` SET `received_book`="'.$data['b_UID'].'", `end_time`=CURRENT_TIMESTAMP,`swap_status`=`Completed` WHERE swap_UID = "'.$data['swap_UID'].'" ');
+        $query=$this->db->query('UPDATE `swap_reqs` SET `received_book`="'.$data['b_UID'].'", `end_time`=CURRENT_TIMESTAMP,`swap_status`="Completed" WHERE swap_UID = "'.$data['swap_UID'].'" ');
         return $query->result();
     }
 }
