@@ -34,9 +34,9 @@
                     <a id="log" class="mdl-navigation__link" href="<?php echo site_url('Intro/login');?>">
                     <?php
                         if (isset($user['loggedin'])){
-                            $out = 'Login';
+                            $out = 'Log Out';
                         }else{
-                            $out = 'Logout';
+                            $out = 'Log In';
                         }
                         echo $out;
                     ?>
