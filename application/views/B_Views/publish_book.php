@@ -1,5 +1,5 @@
-<div class="panel deep-purple"></div>
-	<main class="freeBird">
+<main class="mdl-layout__content">
+    <div class="mdl-grid portfolio-max-width">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-7 m-x-auto pull-xs-none">
@@ -60,8 +60,8 @@
                 </div>
             </div>
         </div>
-    </main>
-</div>
+    </div>
+</main>
 
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/JS/GJS.js');?>"></script>
