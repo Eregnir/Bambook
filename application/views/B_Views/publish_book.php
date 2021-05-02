@@ -181,9 +181,9 @@
                                     }
 
                                     function autoFill() {
-                                        document.getElementById('book_title').innerHTML = json.items[i].volumeInfo.title;
-                                        document.getElementById('book_author').innerHTML = author;
-                                        document.getElementById('book_language').innerHTML = language;
-                                        document.getElementById('b_isbn').innerHTML = isbn;
+                                        document.getElementById('book_title').value = "test";
+                                        document.getElementById('book_author').value = author;
+                                        document.getElementById('book_language').value = language;
+                                        document.getElementById('b_isbn').value = isbn;
                                     }
                                 </script>
