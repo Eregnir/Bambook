@@ -9,7 +9,7 @@
                                 <!--Naked Form-->
                                 <div class="card-block">
                                     <!--Body-->
-                                    <form id="demoForm" action="#">
+                                    <form id="demoForm" novalidate action="#">
                                         <!-- Book Genre -->
                                         <div class="form-group">
                                             <label for="book_genre" class="bmd-label-floating">Genre</label>
@@ -143,7 +143,7 @@
                                                 }
 
                                                 htmlcontent +=
-                                                "<div class='thumbs' style='cursor: pointer;' onclick='autoFill(this); return true;'><b>Book Title: </b>" +
+                                                "<div class='thumbs' style='cursor: pointer;' onclick='autoFill($this); return true;'><b>Book Title: </b>" +
                                                 json.items[i].volumeInfo.title +
                                                 "</b>" +
                                                 '<img src="' +
