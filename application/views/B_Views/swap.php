@@ -3,8 +3,8 @@
             <div class="mdl-grid portfolio-max-width">
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> <!-- centered div -->
                 <?php foreach ($book_info as $bi):?>
-                <span class="<?php if($bi->swap_status == "Completed"){echo "hidden";} ?> ">
-                    <span>
+                <span>
+                    <span class="<?php if($bi->swap_status == "Completed"){echo "hidden";} ?> ">
                         <h3>You have a swap request!</h3>
                     </span>
 
