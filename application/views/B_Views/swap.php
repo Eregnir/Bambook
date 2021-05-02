@@ -5,7 +5,10 @@
                 <span>
                 <?php foreach ($book_info as $bi):?>
                 <h3>You have a swap request!</h3>
-                <?php $flagg = $flag[0]->received_book; ?>
+                <?php 
+                $flagg = $flag[0]->received_book; 
+                echo $flagg;
+                ?>
                 <h6>Status: <?php echo $bi->swap_status?>
                 <br>
                     Sent on: <?php echo $bi->start_time?>
