@@ -112,9 +112,9 @@
                         thumb = json.items[i].volumeInfo.imageLinks.smallThumbnail;
                         } else {
                         thumb = "http://i.imgur.com/oM3MdAi.png"; // image not available
-                        //thumb = 'http://slems-oldboys.org.uk/library/wp-content/uploads/2013/11/library_nocover.jpg'
+                        // thumb = 'http://slems-oldboys.org.uk/library/wp-content/uploads/2013/11/library_nocover.jpg'
                         }
-                        // AUTHOR
+                        // Author
                         if (typeof json.items[i].volumeInfo.authors != "undefined") {
                         author = json.items[i].volumeInfo.authors[0];
                         }
@@ -124,6 +124,12 @@
                         p_date = json.items[i].volumeInfo.publishedDate;
                         }
 
+                        // Language
+                        if (typeof json.items[i].volumeInfo.language != "undefined") {
+                        language = json.items[i].volumeInfo.language;
+                        }
+
+                        // ISBN
                         if (typeof json.items[i].volumeInfo.industryIdentifiers != "undefined") {
                         isbn = json.items[i].volumeInfo.industryIdentifiers[0].identifier;
                         }
@@ -141,6 +147,8 @@
                         author +
                         "<br><b>Published Date: </b>" +
                         p_date +
+                        "<br><b>Language: </b>" +
+                        language +
                         "<br><b>ISBN_13: </b>" +
                         isbn +
                         '</div>';
