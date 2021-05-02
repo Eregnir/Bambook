@@ -417,4 +417,14 @@ img.hover-shadow {
   font-size:12px;
 }
 
+/* Error Styling */
+
+.input-error {
+  color: #cc0033;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 5px 0 0;
+}
+
 /******************** END CSS Page - Publish Book ********************/
