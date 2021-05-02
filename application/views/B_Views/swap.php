@@ -34,10 +34,10 @@
                         <div style="clear: both;"></div>
                     </div>
                     <!-- If a book is not picked, write this: -->
-                   
+
                         <center><br><h4>Browse <?php echo $bi->sent_by_username?>'s books and choose one you'd like for the swap:"</h4><br></center>
                  
-
+                    <?php echo $bi->received_book ?>
                      <!-- If a book is picked, write this: -->
                    
                         <center><br><h4>You have selected the following book:</h4><br></center>
