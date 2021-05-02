@@ -40,7 +40,7 @@
                                         <!-- Book condition -->
                                         <div class="form-group">
                                             <label for="book_cond" class="bmd-label-floating">Book Condition*</label>
-                                            <select multiple class="form-control" name="book_cond" id="book_cond" required="required">
+                                            <select class="form-control" name="book_cond" id="book_cond" name="book_cond" required="required">
                                                 <option value="new">New</option>
                                                 <option value="like_new">Like New</option>
                                                 <option value="used">Used</option>
