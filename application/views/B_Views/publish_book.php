@@ -104,7 +104,7 @@
                     var htmlcontent = "";
                     var thumb = "";
                     var author = "";
-                    var language = "";
+                    var p_date = "";
                     var isbn = "";
 
                     for (i = 0; i < json.items.length; i++) {
@@ -119,9 +119,9 @@
                         author = json.items[i].volumeInfo.authors[0];
                         }
                         
-                        // Language
-                        if (typeof json.items[i].volumeInfo.language != "undefined") {
-                        language = json.items[i].volumeInfo.language[0];
+                        // Published Date
+                        if (typeof json.items[i].volumeInfo.PublishedDate != "undefined") {
+                        p_date = json.items[i].volumeInfo.publishedDate[0];
                         }
 
                         if (typeof json.items[i].volumeInfo.industryIdentifiers != "undefined") {
@@ -139,8 +139,8 @@
                         '">' +
                         "<br><b>Author: </b>" +
                         author +
-                        "<br><b>Language: </b>" +
-                        language +
+                        "<br><b>Published Date: </b>" +
+                        p_date +
                         "<br><b>ISBN_13: </b>" +
                         isbn +
                         '</div>';
