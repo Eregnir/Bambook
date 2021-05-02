@@ -425,7 +425,7 @@ form {
 .thumbs {
   float:left;
   width: 100%;
-  /* border: solid 2px #ccc; */
+  border: solid 2px #ccc;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   padding: 5px;
   margin: 5px;
