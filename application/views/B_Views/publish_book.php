@@ -14,6 +14,7 @@
 							<form action="#">
                                 <!-- Book Genre -->
                                 <div class="form-group">
+                                <label class="control-label" for="book_genre">Genres*</label><i class="bar"></i>
                                 <select name="genre" id="book_genre" name="book_genre" required="required">
                                     <option value="fantasy">Fantasy</option>
                                     <option value="mystery">Mystery</option>
@@ -23,34 +24,33 @@
                                     <option value="inspirational">Inspirational</option>
                                     <option value="other">Other</option>
                                 </select>
-                                <label class="control-label" for="book_genre">Genres*</label><i class="bar"></i>
                                 </div>
                                 <!-- Book Title -->
                                 <div class="form-group">
-                                <input type="text" id="book_title" name="book_title" required="required" placeholder="Enter your book title"/>
                                 <label class="control-label" for="book_title">Book Title*</label>
+                                <input type="text" id="book_title" name="book_title" required="required" placeholder="Enter your book title"/>
                                         <i class="bar"></i>
                                         <i class="input-error">Please enter a book name</i>
                                 </div>
                                 <!-- Book Author -->
                                 <div class="form-group">
-                                <input type="text" id="book_author" name="book_author" required="required" placeholder="Enter book author"/>
                                 <label class="control-label" for="book_author">Author*</label>
+                                <input type="text" id="book_author" name="book_author" required="required" placeholder="Enter book author"/>
                                         <i class="bar"></i>
                                         <i class="input-error">Please enter book author</i>			 
                                 </div>
                                 <!-- Book condition -->
                                 <div class="form-group">
+                                <label class="control-label" for="book_cond">Condition*</label><i class="bar"></i>
                                 <select name="book_cond" id="book_cond" required="required">
                                     <option value="new">New</option>
                                     <option value="like_new">Like New</option>
                                     <option value="used">Used</option>
                                 </select>
-                                <label class="control-label" for="book_cond">Condition*</label><i class="bar"></i>
                                 </div>
                                 <!-- Submit a button -->
                                 <div class="text-xs-center">
-                                        <button class="btn btn-primary">Publish a book</button>
+                                    <button class="btn btn-primary">Publish a book</button>
                                 </div>
 							</form>
                         </div>
