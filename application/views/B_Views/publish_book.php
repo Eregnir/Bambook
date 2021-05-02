@@ -27,14 +27,14 @@ s<main class="mdl-layout__content">
                                 </div>
                                 <!-- Book Title -->
                                 <div class="mdl-textfield mdl-js-textfield">
-                                <label class="mdl-textfield__label" for="book_title">Book Title*</label><br>
-                                <input class="mdl-textfield__input" type="text" id="book_title" name="book_title" required="required" placeholder="Enter your book title"/>
+                                    <label class="mdl-textfield__label" for="book_title">Book Title*</label><br>
+                                    <input class="mdl-textfield__input" type="text" id="book_title" name="book_title" required="required" placeholder="Enter your book title"/>
                                     <span class="mdl-textfield__error">Please enter a book name</span>
                                 </div>
                                 <!-- Book Author -->
                                 <div class="mdl-textfield mdl-js-textfield">
-                                <label class="mdl-textfield__label" for="book_author">Author*</label><br>
-                                <input class="mdl-textfield__input" type="text" id="book_author" name="book_author" required="required" placeholder="Enter book author"/>
+                                    <label class="mdl-textfield__label" for="book_author">Author*</label><br>
+                                    <input class="mdl-textfield__input" type="text" id="book_author" name="book_author" required="required" placeholder="Enter book author"/>
                                     <span class="mdl-textfield__error">Please enter book author</span>			 
                                 </div>
                                 <!-- Book condition -->
