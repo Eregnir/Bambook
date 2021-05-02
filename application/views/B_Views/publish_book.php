@@ -2,7 +2,7 @@
     <div class="mdl-grid portfolio-max-width">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-7 m-x-auto pull-xs-none">
+				<div class="col-md-7 m-x-auto pull-xs-none text-center">
 					<div class="jumbotron">
 						<h2 class="h2-responsive"><strong>Material Design Form</strong></h2>
 						<p>Example of Material Design Form</p>
