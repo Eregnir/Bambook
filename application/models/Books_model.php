@@ -41,4 +41,11 @@ class books_model extends CI_Model {
         $res=$query;
         return $res->result();
     }
+    
+
+    public function get_2nd_image($swap_UID){
+        $query=$this->db->query('SELECT * FROM `swap_reqs` INNER JOIN user_books ON `swap_reqs`.`received_book`=user_books.UID WHERE `swap_reqs`.`swap_UID`="'.$swap_UID.'" '); 
+        return $query->result();
+    }
+
 }

@@ -44,7 +44,7 @@
                     
                      <!-- If a book is picked, write this: -->
                    
-                        <center><br><h4>You have selected the following book:</h4><br></center>
+                        <center><br><h4 class = " <?php if ($flagg==null){echo 'hidden';}?> ">You have selected the following book:</h4><br></center>
                   
 
                     <!-- Book 2 = the book you will get -->
@@ -52,13 +52,14 @@
                         <!-- book image -->
                       
                             <span id="img1" class="card-img-top <?php if ($flagg !=null){echo "hidden";} ?>"> <img style="width:50%" class="card-img-top" alt="Add Book" src='<?php echo base_url('images/add-book.png');?>'> </span>
-                      
-                            <span id="img2" class="hidden card-img-top  <?php if ($flagg==null){echo 'hidden';}?> "><?php echo '<img style="width:50%" class="card-img-top" alt="Book Image"src="data:image/jpeg;base64,'.base64_encode( $bi->img).'"/>';?></span>
+                            <?php foreach ($book2 as $b2): ?>
+                            <span id="img2" class="card-img-top <?php if ($flagg ==null){echo 'hidden';} ?>"><?php echo '<img style="width:50%" class="card-img-top" alt="Book Image"src="data:image/jpeg;base64,'.base64_encode( $b2->img).'"/>';?> </span>
                             <div class="card-body <?php if ($flagg ==null){echo 'hidden';}?> ">
                                 <!-- book title -->
-                                <h3 class="card-title"><?php echo $bi->title ?></h3> 
+                                <h3 class="card-title"><?php echo $b2->title ?></h3> 
                                 <!--Book Author-->
-                                <h5 class="card-title"><?php echo $bi->author ?></h5> 
+                                <h5 class="card-title"><?php echo $b2->author ?></h5> 
+                            <?php endforeach ?>
                         </div>
                             <ul class="list-group list-group-flush <?php if ($flagg==null){echo 'hidden';}?>">
                                 <li class="list-group-item">Genre: Fiction</li><!-- to add these details from the DB -->
