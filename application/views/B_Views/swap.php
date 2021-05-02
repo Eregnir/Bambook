@@ -35,9 +35,9 @@
                     </div>
                     <!-- If a book is not picked, write this: -->
 
-                        <center><br><h4>Browse <?php echo $bi->sent_by_username?>'s books and choose one you'd like for the swap:"</h4><br></center>
+                        <center><br><h4 class="" id="brw">Browse <?php echo $bi->sent_by_username?>'s books and choose one you'd like for the swap:"</h4><br></center>
                  
-                    <?php echo $bi->received_book ?>
+                    <?php if ($bi->received_book!=null){$flag = true;}else{$flag=false;}?>
                      <!-- If a book is picked, write this: -->
                    
                         <center><br><h4>You have selected the following book:</h4><br></center>
@@ -48,8 +48,6 @@
                         <!-- book image -->
                       
                             <span id="img1" class="card-img-top"> <img style="width:50%" class="card-img-top" alt="Add Book" src='<?php echo base_url('images/add-book.png');?>'> </span>
-                     
-
                       
                             <span id="img2" class="hidden card-img-top"><?php echo '<img style="width:50%" class="card-img-top" alt="Book Image"src="data:image/jpeg;base64,'.base64_encode( $bi->img).'"/>';?></span>
                             <div class=" card-body">
@@ -128,6 +126,13 @@
         {
             document.getElementById("browse").click();
             };
-
+        
+        window.onload = function(){
+            var k = <?php echo $flag ?>
+            if (k == true){
+                document.getElementById("img1").classList.add("hidden");
+                document.getElementById("brw").classList.add("hidden");
+            }
+        }
 
     </script>
