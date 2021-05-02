@@ -5,7 +5,7 @@
                 <span>
                 <?php foreach ($book_info as $bi):?>
                 <h3>You have a swap request!</h3>
-                <?php echo $flag[0]->received_book; ?>
+                <?php $flagg = $flag[0]->received_book; ?>
                 <h6>Status: <?php echo $bi->swap_status?>
                 <br>
                     Sent on: <?php echo $bi->start_time?>
@@ -129,8 +129,8 @@
             };
         
         window.onload = function(){
-            var k = <?php echo $flag ?>
-            if (k == true){
+            var k = <?php echo $flagg ?>
+            if (k != null){
                 document.getElementById("img1").classList.add("hidden");
                 document.getElementById("brw").classList.add("hidden");
             }
