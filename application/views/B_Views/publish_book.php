@@ -47,14 +47,13 @@ s<main class="mdl-layout__content">
                                 </select>
                                 </div>
                                 <!-- Simple Select with arrow -->
-                                <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
-                                    <select id="gender" class="mdl-selectfield__select">
+                                <div class="mdl-selectfield mdl-js-selectfield">
+                                    <select id="myselect" name="myselect" class="mdl-selectfield__select">
                                         <option value=""></option>
-                                        <option value="option1">option 1</option>
-                                        <option value="option2">option 2</option>
+                                        <option value="option0_value">option 0</option>
+                                        <option value="option1_value">option 1</option>
                                     </select>
-                                    <label class="mdl-selectfield__label" for="gender">User gender</label>
-                                    <span class="mdl-textfield__error">Select a value</span>
+                                    <label class="mdl-selectfield__label" for="myselect">Choose option</label>
                                 </div>
                                 <!-- Submit a button -->
                                 <div class="text-xs"><br>
