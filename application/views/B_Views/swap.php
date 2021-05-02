@@ -50,9 +50,11 @@
                     <!-- Book 2 = the book you will get -->
                     <div class="card" style="width: 25rem">
                         <!-- book image -->
-                      
+
+                            <?php if ($flagg !=null): ?>
                             <span id="img1" class="card-img-top"> <img style="width:50%" class="card-img-top" alt="Add Book" src='<?php echo base_url('images/add-book.png');?>'> </span>
-                      
+                            <?php endif ?>
+
                             <span id="img2" class="hidden card-img-top"><?php echo '<img style="width:50%" class="card-img-top" alt="Book Image"src="data:image/jpeg;base64,'.base64_encode( $bi->img).'"/>';?></span>
                             <div class=" card-body">
                             <!-- book title -->
@@ -130,16 +132,5 @@
         {
             document.getElementById("browse").click();
             };
-        
-        document.onload = function(){
-            var k = <?php echo $flagg ?>
-            if (k != null){
-                var hidden1 = document.getElementById("img1");
-                hidden1.classList.add("hidden");
-
-                var hidden2 = document.getElementById("brw");
-                hidden2.classList.add("hidden");
-            }
-        }
 
     </script>
