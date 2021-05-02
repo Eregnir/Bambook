@@ -46,10 +46,16 @@ s<main class="mdl-layout__content">
                                     <option value="used">Used</option>
                                 </select>
                                 </div>
-                                <div class="mdl-textfield mdl-js-textfield">
-                                    <input class="mdl-textfield__input" type="text" id="user" pattern="[A-Z,a-z, ]*">
-                                    <label class="mdl-textfield__label" for="user">User name</label>
-                                    <span class="mdl-textfield__error">Letters and spaces only</span>
+                                <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
+                                    <select class="mdl-selectfield__select" id="professsion2" name="professsion">
+                                    <option value=""></option>
+                                    <option value="option1">option 1</option>
+                                    <option value="option2">option 2</option>
+                                    <option value="option3">option 3</option>
+                                    <option value="option4">option 4</option>
+                                    <option value="option5">option 5</option>
+                                    </select>
+                                    <label class="mdl-selectfield__label" for="professsion2">Profession</label>
                                 </div>
                                 <!-- Submit a button -->
                                 <div class="text-xs"><br>
