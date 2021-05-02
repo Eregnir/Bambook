@@ -59,15 +59,37 @@ class Books extends CI_Controller{
         $this->load->view('templates/FootB');
         }
 
+    public function zoom_swap2($swap_UID=null){
+        $data = array();
+        $data['swap_UID'] = $swap_UID;
+        // $user=$this->session->all_userdata();
+        // $data['user']=$user;
+        $data['book_info'] = $this->books_model->get_in_swap_info($data);
+        $this->load->view('templates/HeadB',$data);
+        $this->load->view('B_Views/swap',$data);
+        $this->load->view('templates/FootB');
+        }
+
     public function browse_books_for_swap(){
         $data = array(
-            'sent_by' => $this->input->post('sent_by')
+            'sent_by' => $this->input->post('sent_by'),
+            'swap_UID' => $this->input->post('swap_UID')
             );
         $data['books']=$this->books_model->get_other_library($data);
         $this->load->view('templates/HeadB',$data);
         $this->load->view('B_Views/book_select_4swap');
         $this->load->view('templates/FootB');
     }
+
+    public function select_book(){
+        $data = array(
+            'b_UID' => $this->input->post('b_UID'),
+            'swap_UID' => $this->input->post('swap_UID')
+            );
+        //send the book UID and the swap UID to select that book as the book the user chose for the swap (thus ending the swap and changing its status to completed)
+        $this->books_model->select_book($data);
+        $this->zoom_swap2($data['swap_UID']);
+        }
 
 
 }

@@ -33,7 +33,7 @@
 
                         <div style="clear: both;"></div>
                     </div>
-                    <center><br><h4>Browse <?php echo $bi->sent_by_username?>'s books to select one:"</h4><br></center>
+                    <center><br><h4>Browse <?php echo $bi->sent_by_username?>'s books and choose one you'd like for the swap:"</h4><br></center>
                     <!-- Book 2 = the book you will get -->
                     <div class="card" style="width: 25rem">
                         <!-- book image -->
@@ -58,6 +58,8 @@
                         <?php echo form_open('Books/browse_books_for_swap'); ?>
                             <!-- send the other user's username:-->
                                 <input type="hidden" value="<?php echo $bi->sent_by_username;?>" name="sent_by" id="sent_by">
+                            <!-- send the swap_UID:-->
+                            <input type="hidden" value="<?php echo $bi->swap_UID;?>" name="swap_UID" id="swap_UID">   
                             <!-- Hidden button to submit the form -->
                                 <button class="hidden mdl-button mdl-js-button mdl-button--raised" type="submit" name="browse" id="browse">Browse</button>   
                             <?php echo form_close(); ?>

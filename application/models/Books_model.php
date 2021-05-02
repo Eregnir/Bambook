@@ -25,9 +25,15 @@ class books_model extends CI_Model {
     }
     
 
-       //function to get a library books for swap purposes:
-       public function get_other_library($user){
+    //function to get a library books for swap purposes:
+    public function get_other_library($user){
         $query=$this->db->query('SELECT * FROM `user_books` INNER JOIN users ON user_books.user_email=users.email WHERE `availability`=1 AND users.username="'.$user['sent_by'].'" ');
+        return $query->result();
+    }
+
+    //function to select the book itself and mark a swap as completed:
+    public function select_book($data){
+        $query=$this->db->query('UPDATE `swap_reqs` SET `received_book`="'.$data['b_UID'].'", `end_time`=CURRENT_TIMESTAMP,`swap_status`=`Completed` WHERE swap_UID = "'.$data['swap_UID'].'" ');
         return $query->result();
     }
 }
