@@ -25,11 +25,11 @@
 
                         <div style="clear: both;"></div>
                     </div>
-
+                    <center><h4>Browse Username's books to select one:"</h4></center>
                     <!-- Book 2 = the book you will get -->
                     <div class="card" style="width: 25rem">
                         <!-- book image -->
-                        <h3>Select an available book from "Username"'s library:</h3><br>
+                        
                         <span class="card-img-top"><?php echo '<img style="width:50%" class="card-img-top" alt="Book Image"src="data:image/jpeg;base64,'.base64_encode( $bi->img).'"/>';?></span>
                         <div class="hidden card-body">
                             <!-- book title -->
