@@ -1,7 +1,7 @@
         <main class="mdl-layout__content">
             <div class="mdl-grid portfolio-max-width">
                 <!-- Books table Start -->
-                    <h2 class="pad5">Browsing <?php $books['sent_by'] ?>'s Books </h2>
+                    <h2 class="pad5">Browsing <?php $sent_by ?>'s Books </h2>
                     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for the book or author name..." title="Type in a name">
                     <br>
                     <table class="table table-image" id="myTable">
@@ -24,7 +24,7 @@
                                     <?php echo form_open('Books/single_book', $attributes); ?>
                                         <input type="hidden" value="<?php echo $book->UID;?>" name="b_UID" id="<?php echo $book->UID?>"> 
                                         <span class="img-fluid"> <?php echo '<img style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $book->img).'"/>';?> <br></span>
-                                        <button class="mdl-button mdl-js-button mdl-button--raised" type="submit" name="submit "><i class="material-icons">Select Book</i></button>
+                                        <button class="mdl-button mdl-js-button mdl-button--raised" type="submit" name="submit ">Select Book</button>
                                     <?php echo form_close(); ?>
                                     </td>
                                     <td> <?php echo $book->title ?></td>
