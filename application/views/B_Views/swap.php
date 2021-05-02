@@ -103,7 +103,7 @@
                             <!-- Cancel button for canceling the request -->
                             <?php echo form_open('Books/cancel_swap'); ?>
                             <!-- send the swap ID -->
-                                <input type="hidden" value="<?php echo $bi->UID;?>" name="UID" id="UID">
+                                <input type="hidden" value="<?php echo $bi->swap_UID;?>" name="cancel_swap1" id="cancel_swap1">
                             <!-- Hidden button to submit the form -->
                                 <button class="mdl-button mdl-js-button mdl-button--raised" type="button" name="cancel" id="cancel">Cancel Swap</button>
                                 <button class="hidden mdl-button mdl-js-button mdl-button--raised" type="submit" name="cancel1" id="cancel1">Cancel Swap</button>   
