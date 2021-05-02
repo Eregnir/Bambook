@@ -422,4 +422,14 @@ form {
   padding: 20px;
 }
 
+.thumbs {
+  float:left;
+/*   border: solid 1px #ccc */
+}
+.thumbs img{
+  float: left;
+  vertical-align: top;
+  margin: 0 10px 10px 0
+}
+
 /******************** END CSS Page - Publish Book ********************/
