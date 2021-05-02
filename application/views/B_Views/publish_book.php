@@ -146,7 +146,7 @@
                                                 }
 
                                                 htmlcontent +=
-                                                "<div class='thumbs card-4'><b>Book Title:</b> " +
+                                                "<div class='thumbs'><b>Book Title:</b> " +
                                                 json.items[i].volumeInfo.title +
                                                 "</b> " +
                                                 '<img src="' +
