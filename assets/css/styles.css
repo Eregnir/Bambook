@@ -406,3 +406,19 @@ img.hover-shadow {
 
 /******************** END CSS Page - request swap ********************/
 
+/******************** CSS Page - Publish Book ********************/
+
+.panel {
+  display:block;
+  height:278px;
+}
+
+.freeBird {
+  margin-top:-100px;
+}
+
+.small-text {
+  font-size:12px;
+}
+
+/******************** END CSS Page - Publish Book ********************/
