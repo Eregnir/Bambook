@@ -3,18 +3,19 @@
             <div class="mdl-grid portfolio-max-width">
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> <!-- centered div -->
                 <span>
+                <?php foreach ($book_info as $bi):?>
                 <h3>You have a swap request!</h3>
-                <h6>Swap Status: "Status"
+                <h6>Status: <?php echo $bi->swap_status?>
                 <br>
-                    Date: "Date"
+                    Sent on: <?php echo $bi->start_time?>
                 <br>
                 </h6>
                 </span>
-                    <?php foreach ($book_info as $bi):?>
+                    
                     <!-- Requested book -->
                     <div class="card" style="width: 25rem">
                         <!-- book image -->
-                        <h4>"username" wants:</h4>
+                        <h4><?php echo $bi->sent_by_username?> wants:</h4>
                         <span class="card-img-top"><?php echo '<img style="width:50%" class="card-img-top" alt="Book Image"src="data:image/jpeg;base64,'.base64_encode( $bi->img).'"/>';?></span>
                         <div class="card-body">
                             <!-- book title -->
@@ -32,7 +33,7 @@
 
                         <div style="clear: both;"></div>
                     </div>
-                    <center><br><h4>Browse Username's books to select one:"</h4><br></center>
+                    <center><br><h4>Browse <?php echo $bi->sent_by_username?>'s books to select one:"</h4><br></center>
                     <!-- Book 2 = the book you will get -->
                     <div class="card" style="width: 25rem">
                         <!-- book image -->
@@ -58,7 +59,7 @@
                             <!-- send the book's UID -->
                                 <input type="hidden" value="<?php echo $bi->UID;?>" name="UID" id="UID">
                             <!-- send the owner's username  -->
-                                <input type="hidden" value="<?php echo $bi->user_username;?>" name="sent_to_username" id="sent_to_username"> 
+                                <input type="hidden" value="<?php // echo $bi->user_username;?>" name="sent_to_username" id="sent_to_username"> 
                             <!-- send the requesters username -->
                                 <input type="hidden" value="<?php echo $user['username'];?>" name="sent_by_username" id="sent_by_username"> 
                             <!-- Hidden button to submit the form -->
