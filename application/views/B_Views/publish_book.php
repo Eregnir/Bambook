@@ -40,21 +40,14 @@
                                         <!-- Book condition -->
                                         <div class="mdl-selectfield mdl-js-selectfield">
                                         <label class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" for="book_cond">Condition*</label>
-                                        <select class="mdl-selectfield__select" name="book_cond" id="book_cond" required="required">
-                                            <option value="new">New</option>
-                                            <option value="like_new">Like New</option>
-                                            <option value="used">Used</option>
-                                        </select>
+                                            <select class="mdl-selectfield__select" name="book_cond" id="book_cond" required="required">
+                                                <option value="new">New</option>
+                                                <option value="like_new">Like New</option>
+                                                <option value="used">Used</option>
+                                            </select>
                                         </div>
                                         <!-- Simple Select with arrow -->
-                                        <div class="mdl-selectfield mdl-js-selectfield">
-                                            <select id="myselect" name="myselect" class="mdl-selectfield__select">
-                                                <option value=""></option>
-                                                <option value="option0_value">option 0</option>
-                                                <option value="option1_value">option 1</option>
-                                            </select>
-                                            <label class="mdl-selectfield__label" for="myselect">Choose option</label>
-                                        </div>
+                                        
                                         <!-- Submit a button -->
                                         <div class="text-xs"><br>
                                             <button class="btn btn-primary">Publish a book</button>
