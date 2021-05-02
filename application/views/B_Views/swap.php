@@ -33,26 +33,41 @@
 
                         <div style="clear: both;"></div>
                     </div>
-                    <center><br><h4>Browse <?php echo $bi->sent_by_username?>'s books and choose one you'd like for the swap:"</h4><br></center>
+                    <!-- If a book is not picked, write this: -->
+                    <?php if ($data['pick']==false):?>
+                        <center><br><h4>Browse <?php echo $bi->sent_by_username?>'s books and choose one you'd like for the swap:"</h4><br></center>
+                    <?php endif ?>
+
+                     <!-- If a book is picked, write this: -->
+                     <?php if ($data['pick']==true):?>
+                        <center><br><h4>You have selected the following book:</h4><br></center>
+                    <?php endif ?>
+
                     <!-- Book 2 = the book you will get -->
                     <div class="card" style="width: 25rem">
                         <!-- book image -->
-                        <span id="img1" class="card-img-top"> <img style="width:50%" class="card-img-top" alt="Add Book" src='<?php echo base_url('images/add-book.png');?>'> </span>
-                        <span id="img2" class="hidden card-img-top"><?php echo '<img style="width:50%" class="card-img-top" alt="Book Image"src="data:image/jpeg;base64,'.base64_encode( $bi->img).'"/>';?></span>
-                        <div class="hidden card-body">
+                        <?php if ($data['pick']==false):?>
+                            <span id="img1" class="card-img-top"> <img style="width:50%" class="card-img-top" alt="Add Book" src='<?php echo base_url('images/add-book.png');?>'> </span>
+                        <?php endif ?>
+
+                        <?php if ($data['pick']==true):?>
+                            <span id="img2" class="hidden card-img-top"><?php echo '<img style="width:50%" class="card-img-top" alt="Book Image"src="data:image/jpeg;base64,'.base64_encode( $bi->img).'"/>';?></span>
+                            <div class=" card-body">
                             <!-- book title -->
                             <h3 class="card-title"><?php echo $bi->title ?></h3> 
                             <!--Book Author-->
                             <h5 class="card-title"><?php echo $bi->author ?></h5> 
                         </div>
-                        <ul class="hidden list-group list-group-flush">
-                            <li class="list-group-item">Genre: Fiction</li><!-- to add these details from the DB -->
-                            <!-- Book Language -->
-                            <li class="list-group-item">Language: <?php echo $bi->lang?></li>
-                            <!-- Book Condition -->
-                            <li class="list-group-item">Condition: <?php echo $bi->cond ?></li>
-                        </ul>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Genre: Fiction</li><!-- to add these details from the DB -->
+                                <!-- Book Language -->
+                                <li class="list-group-item">Language: <?php echo $bi->lang?></li>
+                                <!-- Book Condition -->
+                                <li class="list-group-item">Condition: <?php echo $bi->cond ?></li>
+                            </ul>
                         <div class="card-body">
+                        <?php endif ?>
+                        
 
                         <!-- Form to open the other user's list of books, to allow selection of a book for the swap: -->
                         <?php echo form_open('Books/browse_books_for_swap'); ?>
