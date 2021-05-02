@@ -4,11 +4,17 @@
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> <!-- centered div -->
                 <span>
                 <?php foreach ($book_info as $bi):?>
+                <span> 
                 <h3>You have a swap request!</h3>
+                </span>
+
+                <!-- If the status is completed, show contact phone! -->
+                <span id="img1" class="card-img-top <?php if ($flagg !=null){echo "hidden";} ?>"> <img style="height:50px" class="card-img-top" alt="Add Book" src='<?php echo base_url('images/whatsapp.png');?>'> </span>
                 <?php 
                 $flagg = $flag[0]->received_book;
                 if (isset($flagg)){$flagg=true;}
                 ?>
+
                 <h6>Status: <?php echo $bi->swap_status?>
                 <br>
                     Sent on: <?php echo $bi->start_time?>
