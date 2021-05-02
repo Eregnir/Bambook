@@ -104,6 +104,7 @@
                     var htmlcontent = "";
                     var thumb = "";
                     var author = "";
+                    var language = "";
                     var isbn = "";
 
                     for (i = 0; i < json.items.length; i++) {
@@ -123,7 +124,7 @@
                         }
 
                         htmlcontent +=
-                        "<div class='thumbs'><b>Title:</b> " +
+                        "<div class='thumbs'><b>Book Title:</b> " +
                         json.items[i].volumeInfo.title +
                         "</b> " +
                         '<img src="' +
@@ -133,6 +134,8 @@
                         '">' +
                         "<br><b>Author: </b>" +
                         author +
+                        "<br><b>Language: </b>" +
+                        language +
                         "<br><b>ISBN_13: </b>" +
                         isbn +
                         '</div>';
