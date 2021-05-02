@@ -275,11 +275,7 @@ background-color: #f1f1f1;
 
 
 .mdl-layout__header-row .mdl-navigation__link {
-<<<<<<< HEAD
   padding: 0 10px;
-}
-=======
-  padding: 0 15px;
 }
 
 .row > .column {
@@ -409,4 +405,7 @@ img.hover-shadow {
 }
 
 /******************** END CSS Page - request swap ********************/
->>>>>>> 68ae501730d72cc7e4b4d5b9a01864dc54eb16d8
+
+/** Style Fonts **/
+
+h1 { font-family: "Gentium Book Basic"; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: "Gentium Book Basic"; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: "Gentium Book Basic"; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: "Gentium Book Basic"; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: "Gentium Book Basic"; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
