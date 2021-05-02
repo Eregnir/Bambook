@@ -59,5 +59,15 @@ class Books extends CI_Controller{
         $this->load->view('templates/FootB');
         }
 
+    public function browse_books_for_swap(){
+        $data = array(
+            'sent_by' => $this->input->post('sent_by')
+            );
+        $data['books']=$this->intro_model->get_other_library($user);
+        $this->load->view('templates/HeadB',$data);
+        $this->load->view('B_Views/book_select_4swap');
+        $this->load->view('templates/FootB');
+    }
+
 
 }

@@ -25,4 +25,9 @@ class books_model extends CI_Model {
     }
     
 
+       //function to get a library books for swap purposes:
+       public function get_other_library($user){
+        $query=$this->db->query('SELECT * FROM `user_books` INNER JOIN users ON user_books.user_email=users.email WHERE `availability`=1 AND users.username="'.$user['sent_by'].'" ');
+        return $query->result();
+    }
 }

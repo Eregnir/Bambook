@@ -53,6 +53,16 @@
                             <li class="list-group-item">Condition: <?php echo $bi->cond ?></li>
                         </ul>
                         <div class="card-body">
+
+                        <!-- Form to open the other user's list of books, to allow selection of a book for the swap: -->
+                        <?php echo form_open('#'); ?>
+                            <!-- send the other user's username:-->
+                                <input type="hidden" value="<?php echo $bi->sent_by_username;?>" name="sent_by" id="sent_by">
+                            <!-- Hidden button to submit the form -->
+                                <button class="hidden mdl-button mdl-js-button mdl-button--raised" type="submit" name="browse" id="browse">Browse</button>   
+                            <?php echo form_close(); ?>
+
+                        
                             <!-- Approve or cancel swap -->
                             <?php echo form_open('#'); ?>
                             <!-- send the book's UID -->
@@ -90,12 +100,17 @@
 
     <script>
         document.getElementById("swap").onclick=function()
-    {
-        var x = confirm("Approving the request will swap the books here on Bambook, and will share your contact info to each other for making the swap. Continue?");
-        if (x==true){
-            document.getElementById("submit").click();
+        {
+            var x = confirm("Approving the request will swap the books here on Bambook, and will share your contact info to each other for making the swap. Continue?");
+            if (x==true){
+                document.getElementById("submit").click();
+                };
             };
-        };
+
+        document.getElementById("img1").onclick=function()
+        {
+            document.getElementById("browse").click();
+            };
 
 
     </script>
