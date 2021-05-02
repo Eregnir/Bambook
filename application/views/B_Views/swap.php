@@ -9,7 +9,7 @@
                 </span>
 
                 <!-- If the status is completed, show contact phone! -->
-                <span id="img1" class="card-img-top <?php if ($flagg !=null){echo "hidden";} ?>"> <img style="height:50px" class="card-img-top" alt="Add Book" src='<?php echo base_url('images/whatsapp.png');?>'> </span>
+                <span id="img1" class="card-img-top"> <img style="height:50px" class="card-img-top" alt="Add Book" src='<?php echo base_url('images/whatsapp.png');?>'> </span>
                 <?php 
                 $flagg = $flag[0]->received_book;
                 if (isset($flagg)){$flagg=true;}
