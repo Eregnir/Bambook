@@ -47,29 +47,15 @@ s<main class="mdl-layout__content">
                                 </select>
                                 </div>
                                 <!-- Simple Select with arrow -->
-                                <div class="mdl-color--whitemdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
-                                    <div class="mdl-cell mdl-cell--2-col">
-                                        <div class="mdl-selectfield mdl-js-selectfield" style="width:100px">
-                                            <select id="profile_information_form_dob_2i_1" name="profile_information_form[dob(2i)_1]" class="date required mdl-selectfield__select" required>
-                                                <option value=""></option>
-                                                <option value="1">January</option>
-                                                <option value="2">February</option>
-                                                <option value="3">March</option>
-                                                <option value="4">April</option>
-                                                <option value="5">May</option>
-                                                <option value="6">June</option>
-                                                <option value="7">July</option>
-                                                <option value="8">August</option>
-                                                <option value="9">September</option>
-                                                <option value="10">October</option>
-                                                <option value="11">November</option>
-                                                <option value="12">December</option>
-                                            </select>
-                                            <label for="profile_information_form_dob_2i_1" class="mdl-selectfield__label">MM</label>
-                                            <span class="mdl-selectfield__error">Input is not a empty!</span>
-                                        </div>
-                                    </div>
-                                </div> 
+                                <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
+                                    <select id="gender" class="mdl-selectfield__select">
+                                        <option value=""></option>
+                                        <option value="option1">option 1</option>
+                                        <option value="option2">option 2</option>
+                                    </select>
+                                    <label class="mdl-selectfield__label" for="gender">User gender</label>
+                                    <span class="mdl-textfield__error">Select a value</span>
+                                </div>
                                 <!-- Submit a button -->
                                 <div class="text-xs"><br>
                                     <button class="btn btn-primary">Publish a book</button>
