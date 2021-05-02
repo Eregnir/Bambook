@@ -11,6 +11,12 @@ class books_model extends CI_Model {
         return $query->result();
 
     }
+
+    public function send_swap_req($data){
+        $this->db->db_debug = FALSE;
+        $query=$this->db->insert('swap_reqs', $data);
+        return $query;
+    }
     
 
 }

@@ -22,7 +22,12 @@ class intro_model extends CI_Model {
     }
 
     //Get Books from the DB in order to present it in the books library. currently limit is 50, we need pagination or something to deal with large mass of books.
-    public function get_books(){
+    public function get_books($user){
+        $query=$this->db->query('SELECT * FROM `user_books` WHERE `availability`="1" AND NOT `user_username`= "'.$user['username'].'" ORDER BY `date_added` DESC LIMIT 50;');
+        return $query->result();
+    }
+
+    public function get_books_not_loggedin(){
         $query=$this->db->query('SELECT * FROM `user_books` WHERE `availability`="1" ORDER BY `date_added` DESC LIMIT 50;');
         return $query->result();
     }
@@ -32,4 +37,24 @@ class intro_model extends CI_Model {
         $query=$this->db->query('SELECT * FROM `user_books` INNER JOIN users ON user_books.user_email=users.email WHERE users.username="'.$user['username'].'";');
         return $query->result();
     }
+
+    //function to get my incoming swap requests:
+    public function get_incoming_reqs($user){
+        $query=$this->db->query('SELECT * FROM swap_reqs INNER JOIN user_books on swap_reqs.desired_book=user_books.UID WHERE sent_to_username ="'.$user['username'].'" ');
+        return $query->result();
+    }
+
+    //function to get my outgoing swap requests:
+    public function get_outgoing_reqs($user){
+        $query=$this->db->query('SELECT * FROM swap_reqs INNER JOIN user_books on swap_reqs.desired_book=user_books.UID WHERE sent_by_username ="'.$user['username'].'" ');
+        return $query->result();
+    }
+
+   //function to find how many active requests, but need to add "where not = completed / cancelled etc.":
+   public function count_active_reqs($user){
+    $query=$this->db->query('SELECT swap_UID FROM swap_reqs WHERE (sent_by_username = "'.$user['username'].'" OR sent_to_username = "'.$user['username'].'") ');
+    return $query->result();
+    }
+
+    
 }

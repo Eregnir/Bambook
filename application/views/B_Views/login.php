@@ -2,7 +2,7 @@
             <div class="mdl-grid portfolio-max-width portfolio-contact">
                 <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
                     <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Login to Bambook</h2>
+                        <h2 class="mdl-card__title-text">Login to Bambook</h2><br>
                     </div>
                     <div class="mdl-card__media">
                         <img class="article-image" src="<?php echo base_url('images/children-reading.png');?>" border="0" alt="">
@@ -50,7 +50,7 @@
                             <!-- Need to add password validation -->
                             <p>
                                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" name="submit ">
-                                    Login
+                                    Log In
                                 </button>
                             </p>
                         </form>

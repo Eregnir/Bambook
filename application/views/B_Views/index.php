@@ -31,7 +31,7 @@
                         <!-- Text here if needed -->
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="<?php echo site_url('Intro/my_library');?>">Read more</a>
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="<?php echo site_url('Intro/my_library');?>">Browse my library</a>
                     </div>
                 </div>
                 <!-- End Box 1--> 
@@ -47,11 +47,12 @@
                         <h2 class="mdl-card__title-text">My Requests</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        Here you can find all of your message requests and communicate with other users.
+                        You have <h3 style="display:inline;"><?php echo count($swap_count);?></h3> active requests!<br>
+                        <br>Here you can find all of your message requests and communicate with other users.
                          <!-- Text here if needed -->
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="<?php echo site_url('Intro/my_requests');?>">Browse my requests</a>
                     </div>
                 </div>
                 <!-- End box 2 -->

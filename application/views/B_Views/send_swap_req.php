@@ -1,11 +1,18 @@
         <main class="mdl-layout__content">
             <div class="mdl-grid portfolio-max-width">
-                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> <!-- centered div -->
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> 
+                    <!-- centered div -->
+
                     <?php foreach ($book_info as $bi):?>
 
                     <div class="card" style="width: 25rem">
+                    <p>
+                        <h4>Interested in this book?</h4><br>
+                        Great! by tapping "send request", this book's owner will be notified and be able to view and choose a book from your available books.<br>
+                        
+                    </p>
                     <!-- book image -->
-                        <span class="card-img-top"><?php echo '<img class="card-img-top" alt="Book Image"src="data:image/jpeg;base64,'.base64_encode( $bi->img).'"/>';?></span>
+                        <p class="card-img-top"><?php echo '<img class="card-img-top" alt="Book Image"src="data:image/jpeg;base64,'.base64_encode( $bi->img).'"/>';?></p>
                         <div class="card-body">
                             <!-- book title -->
                             <h2 class="card-title"><?php echo $bi->title ?></h2> 
@@ -29,27 +36,10 @@
                         </ul>
                         <div class="card-body">
                             <a href="javascript:history.back()" class="card-link alignleft">Go Back</a>
-                            <!-- 
-                                This is what I need when sending this form:
-                                    1. the desired book's UID
-                                    2. the book's owner (username)
-                                    3. the requester's username
-                             -->
-                            <?php echo form_open('Books/send_swap_req'); ?>
-                            <!-- send the book's UID -->
-                                <input type="hidden" value="<?php echo $bi->UID;?>" name="UID" id="UID">
-                            <!-- send the owner's username  -->
-                                <input type="hidden" value="<?php echo $bi->user_username;?>" name="sent_to_username" id="sent_to_username"> 
-                            <!-- send the requesters username -->
-                                <input type="hidden" value="<?php echo $user['username'];?>" name="sent_by_username" id="sent_by_username"> 
-                            <!-- Hidden button to submit the form -->
-                                <button class="hidden mdl-button mdl-js-button mdl-button--icon" type="submit" name="submit" id="submit">Submit</button>   
-                                <!-- Displayed button to start the 'are you sure' message -->
-                                <button id="swap" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent card-link alignright" type="button" name="swap">
-                                    Request Swap
-                                </button>
-                            <?php echo form_close(); ?>
-                            
+                            <button id="swap" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent card-link alignright" type="button">
+                                Request Swap
+                            </button>
+                            <!-- <a href="#" class="card-link alignright">Request Swap</a> -->
                         </div>
                         <div style="clear: both;"></div>
                     </div> 
@@ -63,11 +53,6 @@
     <script>
         document.getElementById("swap").onclick=function()
     {
-        var x = confirm("Sending a request will notify this book's owner and will allow browsing your available books, in order to complete the swap process. Continue?");
-        if (x==true){
-            document.getElementById("submit").click();
-            };
-        };
-
-
+        window.location.href="<?php echo site_url('Books/new_swap');?>";   
+    };
     </script>
