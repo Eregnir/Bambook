@@ -35,6 +35,16 @@
                                             <input class="form-control" type="text" id="book_author" name="book_author" required="required" placeholder="Enter book author"/>
                                             <span class="mdl-textfield__error">Please enter book author</span>			 
                                         </div>
+                                        <!-- Book Language -->
+                                        <div class="form-group">
+                                            <label class="bmd-label-floating" for="book_language">Language*</label><br>
+                                            <input class="form-control" type="text" id="book_language" name="book_language" required="required" placeholder="Enter book language"/>
+                                            <span class="mdl-textfield__error">Please enter book language</span>			 
+                                        </div>
+                                        <!-- Book ISBN -->
+                                        <div class="form-group">
+                                            <input class="form-control" type="hidden" id="b_isbn" name="b_isbn"/>
+                                        </div>
                                         <!-- Book condition -->
                                         <div class="form-group">
                                             <label for="book_cond" class="bmd-label-floating">Book Condition*</label>
@@ -105,6 +115,7 @@
                                             var htmlcontent = "";
                                             var author = "";
                                             var p_date = "";
+                                            var language = "";
                                             var isbn = "";
 
                                             for (i = 0; i < json.items.length; i++) {
@@ -135,7 +146,7 @@
                                                 }
 
                                                 htmlcontent +=
-                                                "<div class='thumbs'><b>Book Title:</b> " +
+                                                "<div class='thumbs card-4'><b>Book Title:</b> " +
                                                 json.items[i].volumeInfo.title +
                                                 "</b> " +
                                                 '<img src="' +
