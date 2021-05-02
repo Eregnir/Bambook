@@ -46,12 +46,13 @@ s<main class="mdl-layout__content">
                                     <option value="used">Used</option>
                                 </select>
                                 </div>
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
-                                    <input type="text" value="" class="mdl-textfield__input" id="sample4" readonly>
-                                    <input type="hidden" value="" name="sample4">
+                                <!-- Simple Select with arrow -->
+                                <div class="mdl-textfield mdl-js-textfield getmdl-select">
+                                    <input type="text" value="" class="mdl-textfield__input" id="sample2" readonly>
+                                    <input type="hidden" value="" name="sample2">
                                     <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
-                                    <label for="sample4" class="mdl-textfield__label">Country</label>
-                                    <ul for="sample4" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                                    <label for="sample2" class="mdl-textfield__label">Country</label>
+                                    <ul for="sample2" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
                                         <li class="mdl-menu__item" data-val="DEU">Germany</li>
                                         <li class="mdl-menu__item" data-val="BLR">Belarus</li>
                                         <li class="mdl-menu__item" data-val="RUS">Russia</li>
