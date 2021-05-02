@@ -3,6 +3,7 @@
             <div class="mdl-grid portfolio-max-width">
             Test
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> <!-- centered div -->
+                Test 2
                 <?php foreach ($book_info as $bi):?>
                 <span>
                     <span class="<?php if($bi->swap_status == "Completed"){echo "hidden";} ?> ">
@@ -19,6 +20,9 @@
                         </a>
                         <?php endforeach ?>
                     </span>
+                <!-- End if status is completed -->
+
+
                     <?php 
                     $flagg = $flag[0]->received_book;
                     if (isset($flagg)){$flagg=true;}
