@@ -47,17 +47,29 @@ s<main class="mdl-layout__content">
                                 </select>
                                 </div>
                                 <!-- Simple Select with arrow -->
-                                <div class="mdl-textfield mdl-js-textfield getmdl-select">
-                                    <input type="text" value="" class="mdl-textfield__input" id="sample2" readonly>
-                                    <input type="hidden" value="" name="sample2">
-                                    <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
-                                    <label for="sample2" class="mdl-textfield__label">Country</label>
-                                    <ul for="sample2" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-                                        <li class="mdl-menu__item" data-val="DEU">Germany</li>
-                                        <li class="mdl-menu__item" data-val="BLR">Belarus</li>
-                                        <li class="mdl-menu__item" data-val="RUS">Russia</li>
-                                    </ul>
-                                </div>
+                                <div class="mdl-color--whitemdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+                                    <div class="mdl-cell mdl-cell--2-col">
+                                        <div class="mdl-selectfield mdl-js-selectfield" style="width:100px">
+                                            <select id="profile_information_form_dob_2i_1" name="profile_information_form[dob(2i)_1]" class="date required mdl-selectfield__select" required>
+                                                <option value=""></option>
+                                                <option value="1">January</option>
+                                                <option value="2">February</option>
+                                                <option value="3">March</option>
+                                                <option value="4">April</option>
+                                                <option value="5">May</option>
+                                                <option value="6">June</option>
+                                                <option value="7">July</option>
+                                                <option value="8">August</option>
+                                                <option value="9">September</option>
+                                                <option value="10">October</option>
+                                                <option value="11">November</option>
+                                                <option value="12">December</option>
+                                            </select>
+                                            <label for="profile_information_form_dob_2i_1" class="mdl-selectfield__label">MM</label>
+                                            <span class="mdl-selectfield__error">Input is not a empty!</span>
+                                        </div>
+                                    </div>
+                                </div> 
                                 <!-- Submit a button -->
                                 <div class="text-xs"><br>
                                     <button class="btn btn-primary">Publish a book</button>
