@@ -65,6 +65,12 @@ class books_model extends CI_Model {
         $query = $this->db->query('SELECT * FROM users INNER JOIN swap_reqs ON swap_reqs.sent_by_username=users.username WHERE `swap_reqs`.`swap_UID`="'.$data['swap_UID'].'" ');
         return $query->result();
     }
+
+    public function get_other_user2($data){
+        //Getting the other user's phone number and all data
+        $query = $this->db->query('SELECT * FROM users INNER JOIN swap_reqs ON swap_reqs.sent_to_username=users.username WHERE `swap_reqs`.`swap_UID`="'.$data['swap_UID'].'" ');
+        return $query->result();
+    }
     
 
 }
