@@ -117,7 +117,7 @@
             </div>
             <?php endforeach; ?>
 
-    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js" ></script>
     <script type="text/javascript" src="<?php echo base_url('assets/JS/GJS.js');?>"></script>
 
     <script>
