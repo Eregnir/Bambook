@@ -38,7 +38,7 @@ class books_model extends CI_Model {
 
     public function set_swap_flag($swap_UID){
         $query=$this->db->query('SELECT received_book FROM swap_reqs WHERE swap_UID= "'.$swap_UID.'" ');
-        $res=$query['received_book'];
+        $res=$query;
         return $res->result();
     }
 }
