@@ -3,12 +3,12 @@
             <div class="mdl-grid portfolio-max-width">
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> <!-- centered div -->
                 <span>
-                <h3>You have a swap request!</h3><br>
-                <h5>Status: "Status"
+                <h3>You have a swap request!</h3>
+                <h6>Swap Status: "Status"
                 <br>
                     Date: "Date"
                 <br>
-                </h5>
+                </h6>
                 </span>
                     <?php foreach ($book_info as $bi):?>
                     <!-- Requested book -->
@@ -36,8 +36,8 @@
                     <!-- Book 2 = the book you will get -->
                     <div class="card" style="width: 25rem">
                         <!-- book image -->
-                        
-                        <span class="card-img-top"><?php echo '<img style="width:50%" class="card-img-top" alt="Book Image"src="data:image/jpeg;base64,'.base64_encode( $bi->img).'"/>';?></span>
+                        <span id="img1" class="card-img-top"> <img style="width:50%" class="card-img-top" alt="Add Book" src='<?php echo base_url('images/add-book.png');?>'> </span>
+                        <span id="img2" class="hidden card-img-top"><?php echo '<img style="width:50%" class="card-img-top" alt="Book Image"src="data:image/jpeg;base64,'.base64_encode( $bi->img).'"/>';?></span>
                         <div class="hidden card-body">
                             <!-- book title -->
                             <h3 class="card-title"><?php echo $bi->title ?></h3> 
@@ -68,6 +68,14 @@
                                     Approve Swap
                                 </button>
                             <?php echo form_close(); ?>
+
+                            <!-- Cancel button for canceling the request -->
+                            <?php echo form_open('#'); ?>
+                            <!-- send the swap ID -->
+                                <input type="hidden" value="<?php echo $bi->UID;?>" name="UID" id="UID">
+                            <!-- Hidden button to submit the form -->
+                                <button class="mdl-button mdl-js-button mdl-button--icon" type="submit" name="cancel" id="cancel">Cancel Swap</button>   
+                            <?php echo form_close(); ?>
                             
                         </div>
                         <div style="clear: both;"></div>
@@ -82,7 +90,7 @@
     <script>
         document.getElementById("swap").onclick=function()
     {
-        var x = confirm("Sending a request will notify this book's owner and will allow browsing your available books, in order to complete the swap process. Continue?");
+        var x = confirm("Approving the request will swap the books here on Bambook, and will share your contact info to each other for making the swap. Continue?");
         if (x==true){
             document.getElementById("submit").click();
             };
