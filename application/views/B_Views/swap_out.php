@@ -1,6 +1,7 @@
         <!-- This page will show an incoming swap request and let the user select a book he desires, and approve or cancel the request. -->
         <main class="mdl-layout__content text-center">
             <div class="mdl-grid portfolio-max-width">
+            Test
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> <!-- centered div -->
                 <?php foreach ($book_info as $bi):?>
                 <span>
