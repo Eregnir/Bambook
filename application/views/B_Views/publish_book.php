@@ -121,7 +121,7 @@
                         
                         // Published Date
                         if (typeof json.items[i].volumeInfo.publishedDate != "undefined") {
-                        p_date = json.items[i].volumeInfo.publishedDate[0];
+                        p_date = json.items[i].volumeInfo.publishedDate[0].identifier;
                         }
 
                         if (typeof json.items[i].volumeInfo.industryIdentifiers != "undefined") {
