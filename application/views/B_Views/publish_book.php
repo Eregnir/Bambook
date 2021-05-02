@@ -143,7 +143,7 @@
                                                 }
 
                                                 htmlcontent +=
-                                                "<div class='thumbs' style='cursor: pointer;' onclick='autoFill(this); return true;'><b>Book Title: </b>" +
+                                                "<div class='thumbs' style='cursor: pointer;' onclick='autoFill(); return true;'><b>Book Title: </b>" +
                                                 json.items[i].volumeInfo.title +
                                                 "</b>" +
                                                 '<img src="' +
@@ -179,7 +179,7 @@
 
                                     function autoFill() {
                                         document.getElementById('book_title').value = json.items[i].volumeInfo.title; // To fix the right side the left side is working fine
-                                        document.getElementById('book_author').value = author; // to fix the right side
+                                        document.getElementById('book_author').value = $(".thumbs").author; // to fix the right side
                                         document.getElementById('book_language').value = language; // to fix the right side
                                         document.getElementById('b_isbn').value = isbn; // to fix the right side
                                     }
