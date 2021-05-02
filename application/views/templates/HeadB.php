@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="<?php echo base_url('/assets/css/styles.css');?>">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="icon" href="<?php echo base_url('images/favicon.jpg');?>" type="image/png">
+    <link rel="icon" href="<?php echo base_url('images/favicon.png');?>" type="image/png">
 </head>
 
 <body>
