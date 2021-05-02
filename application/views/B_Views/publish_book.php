@@ -44,11 +44,6 @@
                                                 <option value="used">Used</option>
                                             </select>
                                         </div>
-                                        <!-- Book Description -->
-                                        <!-- <div class="form-group">
-                                            <label for="book_desc" class="bmd-label-floating">Book Description</label>
-                                            <textarea class="form-control" name="book_desc" id="book_desc" rows="3"></textarea>
-                                        </div> -->
                                         <!-- Upload Image -->
                                         <div class="form-group">
                                             <label for="input_img" class="bmd-label-floating">Upload image</label>
@@ -68,7 +63,7 @@
                                 <h5 class="h5-responsive">Search your book name & save time on the upload</h5>
                                 <div id="search">
                                     <form id="search_form">
-                                        <input type="text" class="form-control" id="search_txt" placeholder="Book title, author or ISBN"/>
+                                        <input type="text" class="form-control" id="search_txt" placeholder="Book title, author or ISBN"/><br>
                                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
                                             Search Books
                                         </button>
@@ -109,7 +104,6 @@
                     var htmlcontent = "";
                     var thumb = "";
                     var author = "";
-                    var description = "";
                     var isbn = "";
 
                     for (i = 0; i < json.items.length; i++) {
@@ -122,11 +116,6 @@
                         // AUTHOR
                         if (typeof json.items[i].volumeInfo.authors != "undefined") {
                         author = json.items[i].volumeInfo.authors[0];
-                        }
-                        
-                            // AUTHOR
-                        if (typeof json.items[i].volumeInfo.description != "undefined") {
-                        description = json.items[i].volumeInfo.description;
                         }
                         
                         if (typeof json.items[i].volumeInfo.industryIdentifiers != "undefined") {
@@ -146,10 +135,7 @@
                         author +
                         "<br><b>ISBN_13: </b>" +
                         isbn +
-                        "<br><br>" +
-                        "<b>description:</b> " +
-                        trunc(description, 400) +
-                        "</div>";
+                        '</div>';
                     }
                     document.getElementById("books").innerHTML =
                         "<div>" + htmlcontent + "</div><br>";
