@@ -146,7 +146,7 @@
                                                 }
 
                                                 htmlcontent +=
-                                                "<div class='thumbs'><b>Book Title:</b> " +
+                                                "<div class='thumbs' style='cursor: pointer;' onclick='autoFill(); return true;'><b>Book Title:</b> " +
                                                 json.items[i].volumeInfo.title +
                                                 "</b> " +
                                                 '<img src="' +
@@ -178,5 +178,12 @@
                                     // } else {
                                     //   return s;
                                     // }
+                                    }
+
+                                    function autoFill() {
+                                        document.getElementById('book_title').value = json.items[i].volumeInfo.title;
+                                        document.getElementById('book_author').value = author;
+                                        document.getElementById('book_language').value = language;
+                                        document.getElementById('b_isbn').value = isbn;
                                     }
                                 </script>
