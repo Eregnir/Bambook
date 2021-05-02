@@ -131,11 +131,14 @@
             document.getElementById("browse").click();
             };
         
-        window.onload = function(){
+        document.onload = function(){
             var k = <?php echo $flagg ?>
             if (k != null){
-                document.getElementById("img1").classList.add("hidden");
-                document.getElementById("brw").classList.add("hidden");
+                var hidden1 = document.getElementById("img1");
+                hidden1.classList.add("hidden");
+
+                var hidden2 = document.getElementById("brw");
+                hidden2.classList.add("hidden");
             }
         }
 
