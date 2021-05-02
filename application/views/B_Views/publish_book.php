@@ -2,7 +2,7 @@
     <div class="mdl-grid portfolio-max-width">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-7 m-x-auto pull-xs-none text-center">
+				<div class="col-md-7 m-x-auto pull-xs-none">
 					<div class="jumbotron">
 						<h2 class="h2-responsive"><strong>Material Design Form</strong></h2>
 						<p>Example of Material Design Form</p>
@@ -61,7 +61,7 @@
             </div>
         </div>
     </div>
-</main>
+</main
 
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/JS/GJS.js');?>"></script>
