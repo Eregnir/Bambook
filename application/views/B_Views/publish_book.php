@@ -9,7 +9,7 @@
                                 <!--Naked Form-->
                                 <div class="card-block">
                                     <!--Body-->
-                                    <form onsubmit="return validateForm(this)" action="#">
+                                    <form id="demoForm" action="#">
                                         <!-- Book Genre -->
                                         <div class="form-group">
                                             <label for="book_genre" class="bmd-label-floating">Genre</label>
@@ -27,31 +27,16 @@
                                         <div class="form-group">
                                             <label class="bmd-label-floating" for="book_title">Book Title*</label><br>
                                             <input class="form-control" type="text" id="book_title" name="book_title" required="required" placeholder="Enter your book title"/>
-                                            <span class="input-check">
-                                                <i class="fas fa-check-circle"></i>
-                                                <i class="fas fa-exclamation-circle"></i>
-                                            </span>
-                                            <small class="input-alert"></small>
                                         </div>
                                         <!-- Book Author -->
                                         <div class="form-group">
                                             <label class="bmd-label-floating" for="book_author">Author*</label><br>
-                                            <input class="form-control" type="text" id="book_author" name="book_author" required="required" placeholder="Enter book author"/>
-                                            <span class="input-check">
-                                                <i class="fas fa-check-circle"></i>
-                                                <i class="fas fa-exclamation-circle"></i>
-                                            </span>
-                                            <small class="input-alert"></small>		 
+                                            <input class="form-control" type="text" id="book_author" name="book_author" required="required" placeholder="Enter book author"/>	 
                                         </div>
                                         <!-- Book Language -->
                                         <div class="form-group">
                                             <label class="bmd-label-floating" for="book_language">Language*</label><br>
-                                            <input class="form-control" type="text" id="book_language" name="book_language" required="required" placeholder="Enter book language"/>
-                                            <span class="input-check">
-                                                <i class="fas fa-check-circle"></i>
-                                                <i class="fas fa-exclamation-circle"></i>
-                                            </span>
-                                            <small class="input-alert"></small>			 
+                                            <input class="form-control" type="text" id="book_language" name="book_language" required="required" placeholder="Enter book language"/>		 
                                         </div>
                                         <!-- Book ISBN -->
                                         <div class="form-group">
@@ -65,11 +50,6 @@
                                                 <option value="like_new">Like New</option>
                                                 <option value="used">Used</option>
                                             </select>
-                                            <span class="input-check">
-                                                <i class="fas fa-check-circle"></i>
-                                                <i class="fas fa-exclamation-circle"></i>
-                                            </span>
-                                            <small class="input-alert"></small>
                                         </div>
                                         <!-- Upload Image -->
                                         <div class="form-group">
@@ -163,7 +143,7 @@
                                                 }
 
                                                 htmlcontent +=
-                                                "<div class='thumbs' style='cursor: pointer;' onclick='autoFill(); return true;'><b>Book Title: </b>" +
+                                                "<div class='thumbs' style='cursor: pointer;' onclick='autoFill(this); return true;'><b>Book Title: </b>" +
                                                 json.items[i].volumeInfo.title +
                                                 "</b>" +
                                                 '<img src="' +
@@ -204,48 +184,105 @@
                                         document.getElementById('b_isbn').value = isbn; // to fix the right side
                                     }
 
-                                    // Set Error Message
-                                    function setError(input, errormsg) {
-                                        const formGroup = input.parentElement;
-                                        const inputAlert = formGroup.querySelector(".input-alert");
-                                        formGroup.className = "form-group error";
-                                        inputAlert.innerText = errormsg;
-                                    }
+                                    // Form validation //
 
-                                    // Set Success Message
-                                    function setSuccess(input) {
-                                        const formGroup = input.parentElement;
-                                        formGroup.className = "form-group success";
-                                    }
+                                    document.addEventListener('DOMContentLoaded', function(e) {
+                                    FormValidation.formValidation(
+                                        document.getElementById('demoForm'),
+                                        {
+                                            fields: {
+                                                book_title: {
+                                                    validators: {
+                                                        notEmpty: {
+                                                            message: 'Please enter the book title'
+                                                        },
+                                                        stringLength: {
+                                                            min: 2,
+                                                            max: 60,
+                                                            message: 'The book title must be more than 2 and less than 60 characters long'
+                                                        },
+                                                    }
+                                                },
+                                                book_author: {
+                                                    validators: {
+                                                        notEmpty: {
+                                                            message: 'Please enter the book author'
+                                                        },
+                                                        stringLength: {
+                                                            min: 2,
+                                                            max: 60,
+                                                            message: 'The book author must be more than 2 and less than 60 characters long'
+                                                        },
+                                                    }
+                                                },
+                                                book_language: {
+                                                    validators: {
+                                                        notEmpty: {
+                                                            message: 'Please enter the book language'
+                                                        },
+                                                        stringLength: {
+                                                            min: 1,
+                                                            max: 30,
+                                                            message: 'The book language must be more than 1 and less than 20 characters long'
+                                                        },
+                                                    }
+                                                },
+                                                book_condition: {
+                                                    validators: {
+                                                        notEmpty: {
+                                                            message: 'Please enter the book condition'
+                                                        },
+                                                        stringLength: {
+                                                            min: 1,
+                                                            max: 30,
+                                                            message: 'The book condition must be more than 2 and less than 60 characters long'
+                                                        },
+                                                    }
+                                                },
+                                            },
+                                            plugins: {
+                                                trigger: new FormValidation.plugins.Trigger(),
+                                                tachyons: new FormValidation.plugins.Tachyons(),
+                                                submitButton: new FormValidation.plugins.SubmitButton(),
+                                                icon: new FormValidation.plugins.Icon({
+                                                    valid: 'material-icons valid-icon',
+                                                    invalid: 'material-icons invalid-icon',
+                                                    validating: 'material-icons validating-icon',
+                                                }),
+                                            },
+                                        }
+                                    );
+                                });
+                                // Triggering the event
+                                FormValidation
+                                    .formValidation(document.getElementById('demoForm'), {
+                                        plugins: {
+                                            icon: new FormValidation.plugins.Icon({
+                                                valid: 'material-icons icon-valid',
+                                                invalid: 'material-icons icon-invalid',
+                                                validating: 'material-icons icon-validating',
+                                            }),
+                                        },
+                                    })
+                                    .on('plugins.icon.set', function(e) {
+                                        if (e.iconElement) {
+                                            switch (e.status) {
+                                                case 'Validating':
+                                                    e.iconElement.innerHTML = 'graphic_eq';
+                                                    break;
 
-                                    // Form Validation Check
-                                    function validateForm(form) {
-                                        if (form.book_title.value.trim() === "") {
-                                            setError(form.book_title, "Please enter a book name");
-                                            return false;
-                                        } else {
-                                            setSuccess(form.book_title);
-                                        }
-                                        if (form.book_author.value.trim() === "") {
-                                            setError(form.book_author, "Please enter the author name");
-                                            return false;
-                                        } else {
-                                            setSuccess(form.book_author);
-                                        }
-                                        if (form.book_language.value.trim() === "") {
-                                            setError(form.book_language, "Please enter the book language");
-                                            return false;
-                                        } else {
-                                            setSuccess(form.book_language);
-                                        }
-                                        if (form.book_cond.value.trim() === "") {
-                                            setError(form.book_cond, "Please the condition of the book");
-                                            return false;
-                                        } else {
-                                            setSuccess(form.book_cond);
-                                        }
+                                                case 'Invalid':
+                                                    e.iconElement.innerHTML = 'clear';
+                                                    break;
 
-                                        return true;
-                                    }
+                                                case 'Valid':
+                                                    e.iconElement.innerHTML = 'check';
+                                                    break;
 
+                                                default:
+                                                    e.iconElement.innerHTML = '';
+                                                    break;
+                                            }
+                                        }     
+                                    });
                                 </script>

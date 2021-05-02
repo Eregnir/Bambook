@@ -445,79 +445,17 @@ form {
 
 /******************** FORM VALIDATION ******************************/
 
-
-.input-check i.fas {
-  position: absolute;
-  font-size: 1rem;
-  line-height: inherit;
-  display: block;
-  top: 2.5rem;
-  right: 1rem;
-  opacity: 0;
-  visibility: hidden;
+.material-icons.valid-icon:after {
+  content: 'check';
+  font-size: 24px;
 }
-
-.input-alert {
-  position: absolute;
-  display: block;
-  font-family: inherit;
-  font-size: 0.875rem;
-  font-weight: normal;
-  line-height: inherit;
-  left: 0;
-  bottom: 0;
-  opacity: 0;
-  visibility: hidden;
-  color: #f44336;
+.material-icons.invalid-icon:after {
+  content: 'clear';
+  font-size: 24px;
 }
-
-.input-submit {
-  font-family: inherit;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: inherit;
-  cursor: pointer;
-  width: 100%;
-  height: auto;
-  padding: 0.75rem 1.5rem;
-  margin-top: 1rem;
-  border: none;
-  outline: none;
-  border-radius: 0.25rem;
-  color: white;
-  text-transform: capitalize;
-  text-rendering: optimizeLegibility;
+.material-icons.validating-icon:after {
+  content: 'graphic_eq';
+  font-size: 24px;
 }
-
-&.success {
-  .input-field {
-    border-bottom: 2px solid #2ecc71;
-}
-
-  .input-check {
-    i.fa-check-circle {
-      opacity: 1;
-      visibility: visible;
-      color: #2ecc71;
-    }
-  }
-}
-
-&.error {
-  .input-field {
-    border-bottom: 2px solid $color-red;
-  }
-
-  .input-check {
-    i.fa-exclamation-circle {
-      opacity: 1;
-      visibility: visible;
-      color: $color-red;
-    }
-  }
-
-  .input-alert {
-    opacity: 1;
-    visibility: visible;
 
 /******************** END CSS Page - Publish Book ********************/

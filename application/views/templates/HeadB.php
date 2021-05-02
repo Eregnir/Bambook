@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="<?php echo base_url('/assets/css/styles.css');?>">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--Forms validation-->
+    <link rel="stylesheet" href="/vendors/formvalidation/dist/css/formValidation.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css">
     <link rel="icon" href="<?php echo base_url('images/favicon.png');?>" type="image/png">
 </head>
 
