@@ -1,8 +1,8 @@
         <main class="mdl-layout__content">
             <div class="mdl-grid portfolio-max-width">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-md-7 m-x-auto pull-xs-none"> <!--offset-3 to center the div-->
+                    <div class="d-flex justify-content-center"> 
+                        <div class="col-md-7 m-x-auto pull-xs-none"> 
                             <div class="jumbotron">
                                 <h2 class="h2-responsive"><strong>Publish a book</strong></h2><br>
                                 <!-- <hr class="m-y-2"> -->
@@ -45,10 +45,10 @@
                                             </select>
                                         </div>
                                         <!-- Book Description -->
-                                        <div class="form-group">
+                                        <!-- <div class="form-group">
                                             <label for="book_desc" class="bmd-label-floating">Book Description</label>
                                             <textarea class="form-control" name="book_desc" id="book_desc" rows="3"></textarea>
-                                        </div>
+                                        </div> -->
                                         <!-- Upload Image -->
                                         <div class="form-group">
                                             <label for="input_img" class="bmd-label-floating">Upload image</label>
