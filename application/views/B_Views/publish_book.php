@@ -119,6 +119,11 @@
                         author = json.items[i].volumeInfo.authors[0];
                         }
                         
+                        // Language
+                        if (typeof json.items[i].volumeInfo.language != "undefined") {
+                        language = json.items[i].volumeInfo.language[0];
+                        }
+
                         if (typeof json.items[i].volumeInfo.industryIdentifiers != "undefined") {
                         isbn = json.items[i].volumeInfo.industryIdentifiers[0].identifier;
                         }
