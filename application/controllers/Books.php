@@ -49,11 +49,11 @@ class Books extends CI_Controller{
 
     public function zoom_swap(){
         $data = array(
-            'b_UID' => $this->input->post('b_UID')
+            'swap_UID' => $this->input->post('swap_UID')
             );
-        $user=$this->session->all_userdata();
-        $data['user']=$user;
-        $data['book_info'] = $this->books_model->get_book_info($data['b_UID']);
+        // $user=$this->session->all_userdata();
+        // $data['user']=$user;
+        $data['book_info'] = $this->books_model->get_in_swap_info($data);
         $this->load->view('templates/HeadB',$data);
         $this->load->view('B_Views/swap',$data);
         $this->load->view('templates/FootB');

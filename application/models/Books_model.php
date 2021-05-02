@@ -17,6 +17,12 @@ class books_model extends CI_Model {
         $query=$this->db->insert('swap_reqs', $data);
         return $query;
     }
+
+    public function get_in_swap_info($data){
+        $query=$this->db->query('SELECT * FROM swap_reqs INNER JOIN user_books on swap_reqs.desired_book=user_books.UID WHERE swap_UID ="'.$data['swap_UID'].'" ');
+        return $query->result();
+
+    }
     
 
 }

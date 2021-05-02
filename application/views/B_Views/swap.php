@@ -74,7 +74,7 @@
                             <!-- send the swap ID -->
                                 <input type="hidden" value="<?php echo $bi->UID;?>" name="UID" id="UID">
                             <!-- Hidden button to submit the form -->
-                                <button class="mdl-button mdl-js-button mdl-button--icon" type="submit" name="cancel" id="cancel">Cancel Swap</button>   
+                                <button class="mdl-button mdl-js-button mdl-button--raised" type="submit" name="cancel" id="cancel">Cancel Swap</button>   
                             <?php echo form_close(); ?>
                             
                         </div>
