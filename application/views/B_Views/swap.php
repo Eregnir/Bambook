@@ -101,11 +101,12 @@
                             <?php echo form_close(); ?>
 
                             <!-- Cancel button for canceling the request -->
-                            <?php echo form_open('#'); ?>
+                            <?php echo form_open('Books/cancel_swap'); ?>
                             <!-- send the swap ID -->
                                 <input type="hidden" value="<?php echo $bi->UID;?>" name="UID" id="UID">
                             <!-- Hidden button to submit the form -->
-                                <button class="mdl-button mdl-js-button mdl-button--raised" type="submit" name="cancel" id="cancel">Cancel Swap</button>   
+                                <button class="mdl-button mdl-js-button mdl-button--raised" type="button" name="cancel" id="cancel">Cancel Swap</button>
+                                <button class="hidden mdl-button mdl-js-button mdl-button--raised" type="submit" name="cancel1" id="cancel1">Cancel Swap</button>   
                             <?php echo form_close(); ?>
                             <br>
                             <a href="javascript:history.back()" class="card-link alignleft">Go Back</a>
@@ -125,6 +126,14 @@
             var x = confirm("Approving the request will swap the books here on Bambook, and will share your contact info to each other for making the swap. Continue?");
             if (x==true){
                 document.getElementById("submit").click();
+                };
+            };
+
+        document.getElementById("cancel").onclick=function()
+        {
+            var t = confirm("Are you sure you want to cancel this swap?");
+            if (t==true){
+                document.getElementById("cancel1").click();
                 };
             };
 

@@ -33,7 +33,7 @@ class books_model extends CI_Model {
 
     //function to select the book itself and mark a swap as completed:
     public function select_book($data){
-        $query=$this->db->query('UPDATE `swap_reqs` SET `received_book`="'.$data['b_UID'].'", `end_time`=CURRENT_TIMESTAMP,`swap_status`="To be approved" WHERE swap_UID = "'.$data['swap_UID'].'" ');
+        $query=$this->db->query('UPDATE `swap_reqs` SET `received_book`="'.$data['b_UID'].'", `swap_status`="To be approved" WHERE swap_UID = "'.$data['swap_UID'].'" ');
     }
 
     public function set_swap_flag($swap_UID){
@@ -46,6 +46,10 @@ class books_model extends CI_Model {
     public function get_2nd_image($swap_UID){
         $query=$this->db->query('SELECT * FROM `swap_reqs` INNER JOIN user_books ON `swap_reqs`.`received_book`=user_books.UID WHERE `swap_reqs`.`swap_UID`="'.$swap_UID.'" '); 
         return $query->result();
+    }
+
+    public function cancel_swap($swap_UID){
+        $query = $this->db->query(' UPDATE swap_reqs SET swap_status="Cancelled", `end_time`=CURRENT_TIMESTAMP WHERE `swap_UID`="'.$swap_UID.'" ');
     }
 
 }
