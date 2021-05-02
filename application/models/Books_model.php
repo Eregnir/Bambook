@@ -60,5 +60,11 @@ class books_model extends CI_Model {
         //this will make book 2 unavailable
         $query = $this->db->query('UPDATE user_books SET `availability`=0 WHERE `UID`="'.$data['b2_UID'].'" ');
     }
+    public function get_other_user($data){
+        //Getting the other user's phone number and all data
+        $query = $this->db->query('SELECT * FROM users INNER JOIN swap_reqs ON swap_reqs.sent_by_username=users.username WHERE `swap_reqs`.`swap_UID`="'.$data['swap_UID'].'" ');
+        return $query->result();
+    }
+    
 
 }
