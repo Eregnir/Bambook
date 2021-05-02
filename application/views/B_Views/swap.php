@@ -128,12 +128,12 @@
             document.getElementById("browse").click();
             };
         
-        window.onload = function(){
-            var k = <?php echo $flagg ?>
-            if (k != null){
-                document.getElementById("img1").classList.add("hidden");
-                document.getElementById("brw").classList.add("hidden");
-            }
-        }
+        // window.onload = function(){
+        //     var k = <?php // echo $flagg ?>
+        //     if (k != null){
+        //         document.getElementById("img1").classList.add("hidden");
+        //         document.getElementById("brw").classList.add("hidden");
+        //     }
+        // }
 
     </script>
