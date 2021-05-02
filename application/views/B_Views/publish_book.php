@@ -46,16 +46,16 @@ s<main class="mdl-layout__content">
                                     <option value="used">Used</option>
                                 </select>
                                 </div>
-                                <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
-                                    <select class="mdl-selectfield__select" id="professsion2" name="professsion">
-                                    <option value=""></option>
-                                    <option value="option1">option 1</option>
-                                    <option value="option2">option 2</option>
-                                    <option value="option3">option 3</option>
-                                    <option value="option4">option 4</option>
-                                    <option value="option5">option 5</option>
-                                    </select>
-                                    <label class="mdl-selectfield__label" for="professsion2">Profession</label>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+                                    <input type="text" value="" class="mdl-textfield__input" id="sample4" readonly>
+                                    <input type="hidden" value="" name="sample4">
+                                    <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+                                    <label for="sample4" class="mdl-textfield__label">Country</label>
+                                    <ul for="sample4" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                                        <li class="mdl-menu__item" data-val="DEU">Germany</li>
+                                        <li class="mdl-menu__item" data-val="BLR">Belarus</li>
+                                        <li class="mdl-menu__item" data-val="RUS">Russia</li>
+                                    </ul>
                                 </div>
                                 <!-- Submit a button -->
                                 <div class="text-xs"><br>
