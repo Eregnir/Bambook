@@ -36,7 +36,7 @@
                     <br><br><br>
                     <!-- Image card 2 -->
                     <div class="card text-center" style="width: 22em;">
-                        <img class="card-img-top" src='../../images/about_us_images/2.png' alt="search a book">
+                        <img class="card-img-top" src='<?php echo base_url('images/about_us_images/2.png');?>' alt="search a book">
                         <div class="card-body">
                             <p class="card-text">Search a book from the available Bambook's library which is growing every single day!</p>
                             <a href="#" class="btn btn-primary">Search a book</a>
@@ -45,7 +45,7 @@
                     <br><br><br>
                     <!-- Image card 3 -->
                     <div class="card text-center" style="width: 22em;">
-                        <img class="card-img-top" src='../../images/about_us_images/3.png' alt="request or get a book swap">
+                        <img class="card-img-top" src='<?php echo base_url('images/about_us_images/3.png');?>' alt="request or get a book swap">
                         <div class="card-body">
                             <p class="card-text">Found a book that interest you? Request a swap from the person who listed the book and offer a book instead.<br>
                             <br>Received a request? Accept or decline the swap, if both sides agree (yay!), arrange the book swap details!</p>
@@ -55,7 +55,7 @@
                     <br><br><br>
                     <!-- Image card 4 -->
                     <div class="card text-center" style="width: 22em;">
-                        <img class="card-img-top" src='../../images/about_us_images/4.png' alt="read a book">
+                        <img class="card-img-top" src='<?php echo base_url('images/about_us_images/4.png');?>' alt="read a book">
                         <div class="card-body">
                             <p class="card-text">Finished your Bambook Swap? Start reading your new book! Happy reading 😊</p>
                             <a href="#" class="btn btn-primary">Read</a>
