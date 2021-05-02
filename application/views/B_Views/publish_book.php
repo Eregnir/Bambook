@@ -146,9 +146,9 @@
                                                 }
 
                                                 htmlcontent +=
-                                                "<div class='thumbs' style='cursor: pointer;' onclick='autoFill(); return true;'><b>Book Title:</b> " +
+                                                "<div class='thumbs' style='cursor: pointer;' onclick='autoFill(); return true;'><b>Book Title:</b>" +
                                                 json.items[i].volumeInfo.title +
-                                                "</b> " +
+                                                "</b>" +
                                                 '<img src="' +
                                                 thumb +
                                                 '" + alt="' +
