@@ -13,9 +13,9 @@ s<main class="mdl-layout__content">
 							<!--Body-->
 							<form action="#">
                                 <!-- Book Genre -->
-                                <div class="form-group">
-                                <label class="control-label" for="book_genre">Genres*</label><i class="bar"></i><br>
-                                <select name="genre" id="book_genre" name="book_genre" required="required">
+                                <div class="mdl-selectfield mdl-js-selectfield">
+                                <label class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" for="book_genre">Genres*</label><i class="bar"></i><br>
+                                <select class="mdl-selectfield__select" name="genre" id="book_genre" name="book_genre" required="required">
                                     <option value="fantasy">Fantasy</option>
                                     <option value="mystery">Mystery</option>
                                     <option value="romance">Romance</option>
@@ -26,23 +26,21 @@ s<main class="mdl-layout__content">
                                 </select>
                                 </div>
                                 <!-- Book Title -->
-                                <div class="form-group">
-                                <label class="control-label" for="book_title">Book Title*</label><br>
-                                <input type="text" id="book_title" name="book_title" required="required" placeholder="Enter your book title"/><br>
-                                        <i class="bar"></i>
-                                        <span class="mdl-textfield__error">Please enter a book name</span>
+                                <div class="mdl-textfield mdl-js-textfield">
+                                <label class="mdl-textfield__label" for="book_title">Book Title*</label><br>
+                                <input class="mdl-textfield__input" type="text" id="book_title" name="book_title" required="required" placeholder="Enter your book title"/>
+                                    <span class="mdl-textfield__error">Please enter a book name</span>
                                 </div>
                                 <!-- Book Author -->
-                                <div class="form-group">
-                                <label class="control-label" for="book_author">Author*</label><br>
-                                <input type="text" id="book_author" name="book_author" required="required" placeholder="Enter book author"/><br>
-                                        <i class="bar"></i>
-                                        <span class="mdl-textfield__error"">Please enter book author</span>			 
+                                <div class="mdl-textfield mdl-js-textfield">
+                                <label class="mdl-textfield__label" for="book_author">Author*</label><br>
+                                <input class="mdl-textfield__input" type="text" id="book_author" name="book_author" required="required" placeholder="Enter book author"/>
+                                    <span class="mdl-textfield__error">Please enter book author</span>			 
                                 </div>
                                 <!-- Book condition -->
-                                <div class="form-group">
-                                <label class="control-label" for="book_cond">Condition*</label><i class="bar"></i><br>
-                                <select name="book_cond" id="book_cond" required="required">
+                                <div class="mdl-selectfield mdl-js-selectfield">
+                                <label class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label" for="book_cond">Condition*</label>
+                                <select class="mdl-selectfield__select" name="book_cond" id="book_cond" required="required">
                                     <option value="new">New</option>
                                     <option value="like_new">Like New</option>
                                     <option value="used">Used</option>
