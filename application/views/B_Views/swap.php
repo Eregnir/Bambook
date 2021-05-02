@@ -9,7 +9,11 @@
                 </span>
 
                 <!-- If the status is completed, show contact phone! -->
-                <span id="img1" class="card-img-top"> <img style="height:50px" class="card-img-top" alt="Add Book" src='<?php echo base_url('images/whatsapp.png');?>'> </span>
+                <span> 
+                <a href="https://api.whatsapp.com/send?phone=0503332850">
+                <img style="height:50px; width:50px;" class="card-img-top" alt="Contact" src='<?php echo base_url('images/whatsapp.png');?>' >
+                </a>
+                </span>
                 <?php 
                 $flagg = $flag[0]->received_book;
                 if (isset($flagg)){$flagg=true;}
