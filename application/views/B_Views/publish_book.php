@@ -101,8 +101,8 @@
                 $.ajax({
                     url: "https://www.googleapis.com/books/v1/volumes?q=" + searchQuery,
                     success: function(json) {
-                    var htmlcontent = "";
                     var thumb = "";
+                    var htmlcontent = "";
                     var author = "";
                     var p_date = "";
                     var isbn = "";
