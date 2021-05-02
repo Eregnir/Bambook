@@ -68,8 +68,11 @@
                                 <h5 class="h5-responsive">Search your book name & save time on the upload</h5>
                                 <div id="search">
                                     <form id="search_form">
-                                        <input type="text" size="70" id="search_txt" placeholder="Book title, author or ISBN"/>
-                                        <input type="submit" value="Search Books">
+                                        <input type="text" class="form-control" id="search_txt" placeholder="Book title, author or ISBN"/>
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                                            Search Books
+                                        </button>
+                                        <!-- <input type="submit" value="Search Books"> -->
                                     </form>
                                 </div>
                                 <br>
