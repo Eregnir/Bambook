@@ -179,7 +179,7 @@
 
                                     function autoFill() {
                                         document.getElementById('book_title').value = json.items[i].volumeInfo.title; // To fix the right side the left side is working fine
-                                        document.getElementById('book_author').value = 'Mkoa'; // to fix the right side
+                                        document.getElementById('book_author').value = 'Mkoa' // to fix the right side
                                         document.getElementById('book_language').value = language; // to fix the right side
                                         document.getElementById('b_isbn').value = isbn; // to fix the right side
                                     }
