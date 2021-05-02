@@ -39,7 +39,7 @@
                     </div>
                     <!-- If a book is not picked, write this: -->
 
-                        <center><br><h4 class="" id="brw">Browse <?php echo $bi->sent_by_username?>'s books and choose one you'd like for the swap:"</h4><br></center>
+                        <center><br><h4 class="<?php if ($flagg !=null){echo 'hidden';} ?>" id="brw">Browse <?php echo $bi->sent_by_username?>'s books and choose one you'd like for the swap:"</h4><br></center>
                  
                     
                      <!-- If a book is picked, write this: -->
@@ -53,14 +53,14 @@
                       
                             <span id="img1" class="card-img-top <?php if ($flagg !=null){echo "hidden";} ?>"> <img style="width:50%" class="card-img-top" alt="Add Book" src='<?php echo base_url('images/add-book.png');?>'> </span>
                       
-                            <span id="img2" class="hidden card-img-top"><?php echo '<img style="width:50%" class="card-img-top" alt="Book Image"src="data:image/jpeg;base64,'.base64_encode( $bi->img).'"/>';?></span>
-                            <div class=" card-body">
-                            <!-- book title -->
-                            <h3 class="card-title"><?php echo $bi->title ?></h3> 
-                            <!--Book Author-->
-                            <h5 class="card-title"><?php echo $bi->author ?></h5> 
+                            <span id="img2" class="hidden card-img-top  <?php if ($flagg==null){echo 'hidden';}?> "><?php echo '<img style="width:50%" class="card-img-top" alt="Book Image"src="data:image/jpeg;base64,'.base64_encode( $bi->img).'"/>';?></span>
+                            <div class="card-body <?php if ($flagg ==null){echo 'hidden';}?> ">
+                                <!-- book title -->
+                                <h3 class="card-title"><?php echo $bi->title ?></h3> 
+                                <!--Book Author-->
+                                <h5 class="card-title"><?php echo $bi->author ?></h5> 
                         </div>
-                            <ul class="list-group list-group-flush">
+                            <ul class="list-group list-group-flush <?php if ($flagg==null){echo 'hidden';}?>">
                                 <li class="list-group-item">Genre: Fiction</li><!-- to add these details from the DB -->
                                 <!-- Book Language -->
                                 <li class="list-group-item">Language: <?php echo $bi->lang?></li>
@@ -93,7 +93,7 @@
                             <!-- Hidden button to submit the form -->
                                 <button class="hidden mdl-button mdl-js-button mdl-button--icon" type="submit" name="submit" id="submit">Submit</button>   
                                 <!-- Displayed button to start the 'are you sure' message -->
-                                <button id="swap" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent card-link alignright" type="button" name="swap">
+                                <button id="swap" class="<?php if ($flagg==null){echo 'hidden';}?> mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent card-link alignright" type="button" name="swap">
                                     Approve Swap
                                 </button>
                             <?php echo form_close(); ?>
