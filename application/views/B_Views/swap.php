@@ -59,14 +59,15 @@
                                 <h3 class="card-title"><?php echo $b2->title ?></h3> 
                                 <!--Book Author-->
                                 <h5 class="card-title"><?php echo $b2->author ?></h5> 
-                            <?php endforeach ?>
+                            
                         </div>
                             <ul class="list-group list-group-flush <?php if ($flagg==null){echo 'hidden';}?>">
                                 <li class="list-group-item">Genre: Fiction</li><!-- to add these details from the DB -->
                                 <!-- Book Language -->
-                                <li class="list-group-item">Language: <?php echo $bi->lang?></li>
+                                <li class="list-group-item">Language: <?php echo $b2->lang?></li>
                                 <!-- Book Condition -->
-                                <li class="list-group-item">Condition: <?php echo $bi->cond ?></li>
+                                <li class="list-group-item">Condition: <?php echo $b2->cond ?></li>
+                                <?php endforeach ?>
                             </ul>
                         <div class="card-body">
                       
