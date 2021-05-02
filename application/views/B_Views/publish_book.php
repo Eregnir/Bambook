@@ -1,4 +1,4 @@
-<main class="mdl-layout__content">
+s<main class="mdl-layout__content">
     <div class="mdl-grid portfolio-max-width">
 		<div class="container">
 			<div class="row">
@@ -30,14 +30,14 @@
                                 <label class="control-label" for="book_title">Book Title*</label><br>
                                 <input type="text" id="book_title" name="book_title" required="required" placeholder="Enter your book title"/><br>
                                         <i class="bar"></i>
-                                        <i class="mdl-textfield__error">Please enter a book name</i>
+                                        <span class="mdl-textfield__error">Please enter a book name</span>
                                 </div>
                                 <!-- Book Author -->
                                 <div class="form-group">
                                 <label class="control-label" for="book_author">Author*</label><br>
                                 <input type="text" id="book_author" name="book_author" required="required" placeholder="Enter book author"/><br>
                                         <i class="bar"></i>
-                                        <i class="mdl-textfield__error">Please enter book author</i>			 
+                                        <span class="mdl-textfield__error"">Please enter book author</span>			 
                                 </div>
                                 <!-- Book condition -->
                                 <div class="form-group">
