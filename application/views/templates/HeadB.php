@@ -52,7 +52,16 @@
                     <a class="mdl-navigation__link" href="<?php echo site_url('Intro/available_books');?>">Public Library</a>
                     <a class="mdl-navigation__link" href="<?php echo site_url('Intro/about');?>">Profile</a>
                     <a class="mdl-navigation__link" href="<?php echo site_url('Intro/contact');?>">Contact</a>
-                    <a class="mdl-navigation__link" href="<?php echo site_url('Intro/login');?>">Login / Logout</a>
+                    <a class="mdl-navigation__link" href="<?php echo site_url('Intro/login');?>">
+                    <?php
+                        if (isset($user['loggedin'])){
+                            $out = 'Log Out';
+                        }else{
+                            $out = 'Log In';
+                        }
+                        echo $out;
+                    ?>
+                    </a>
             </nav>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
