@@ -48,6 +48,11 @@ s<main class="mdl-layout__content">
                                     <option value="used">Used</option>
                                 </select>
                                 </div>
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="text" id="user" pattern="[A-Z,a-z, ]*">
+                                    <label class="mdl-textfield__label" for="user">User name</label>
+                                    <span class="mdl-textfield__error">Letters and spaces only</span>
+                                </div>
                                 <!-- Submit a button -->
                                 <div class="text-xs"><br>
                                     <button class="btn btn-primary">Publish a book</button>
