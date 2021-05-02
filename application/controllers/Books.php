@@ -53,7 +53,7 @@ class Books extends CI_Controller{
             );
         // $user=$this->session->all_userdata();
         // $data['user']=$user;
-        $data['pick'] = false;
+        $data['flag']=$this->books_model->set_swap_flag($data['swap_UID']);
         $data['book_info'] = $this->books_model->get_in_swap_info($data);
         $this->load->view('templates/HeadB',$data);
         $this->load->view('B_Views/swap',$data);
@@ -65,7 +65,7 @@ class Books extends CI_Controller{
         $data['swap_UID'] = $swap_UID;
         // $user=$this->session->all_userdata();
         // $data['user']=$user;
-        $data['pick'] = true;
+        $data['flag']=$this->books_model->set_swap_flag($data['swap_UID']);
         $data['book_info'] = $this->books_model->get_in_swap_info($data);
         $this->load->view('templates/HeadB',$data);
         $this->load->view('B_Views/swap',$data);

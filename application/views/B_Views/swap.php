@@ -4,8 +4,8 @@
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> <!-- centered div -->
                 <span>
                 <?php foreach ($book_info as $bi):?>
-                    <?php if ($bi->received_book!=null){$flag = true;}?>
                 <h3>You have a swap request!</h3>
+                <?php echo $flag ?>
                 <h6>Status: <?php echo $bi->swap_status?>
                 <br>
                     Sent on: <?php echo $bi->start_time?>
