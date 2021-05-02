@@ -1,7 +1,7 @@
         <main class="mdl-layout__content">
             <div class="mdl-grid portfolio-max-width">
                 <!-- Books table Start -->
-                    <h2 class="pad5">Available Books</h2>
+                    <h2 class="pad5">My Library</h2>
                     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for the book or author name..." title="Type in a name">
                     <br>
                     <table class="table table-image" id="myTable">
