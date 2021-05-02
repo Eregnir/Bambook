@@ -55,7 +55,7 @@
                         <div class="card-body">
 
                         <!-- Form to open the other user's list of books, to allow selection of a book for the swap: -->
-                        <?php echo form_open('browse_books_for_swap'); ?>
+                        <?php echo form_open('Books/browse_books_for_swap'); ?>
                             <!-- send the other user's username:-->
                                 <input type="hidden" value="<?php echo $bi->sent_by_username;?>" name="sent_by" id="sent_by">
                             <!-- Hidden button to submit the form -->
