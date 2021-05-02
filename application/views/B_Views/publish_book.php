@@ -9,7 +9,7 @@
                                 <!--Naked Form-->
                                 <div class="card-block">
                                     <!--Body-->
-                                    <form action="#">
+                                    <form onsubmit="return validateForm(this)" action="#">
                                         <!-- Book Genre -->
                                         <div class="form-group">
                                             <label for="book_genre" class="bmd-label-floating">Genre</label>
@@ -27,19 +27,31 @@
                                         <div class="form-group">
                                             <label class="bmd-label-floating" for="book_title">Book Title*</label><br>
                                             <input class="form-control" type="text" id="book_title" name="book_title" required="required" placeholder="Enter your book title"/>
-                                            <span class="mdl-textfield__error">Please enter a book name</span>
+                                            <span class="input-check">
+                                                <i class="fas fa-check-circle"></i>
+                                                <i class="fas fa-exclamation-circle"></i>
+                                            </span>
+                                            <small class="input-alert"></small>
                                         </div>
                                         <!-- Book Author -->
                                         <div class="form-group">
                                             <label class="bmd-label-floating" for="book_author">Author*</label><br>
                                             <input class="form-control" type="text" id="book_author" name="book_author" required="required" placeholder="Enter book author"/>
-                                            <span class="mdl-textfield__error">Please enter book author</span>			 
+                                            <span class="input-check">
+                                                <i class="fas fa-check-circle"></i>
+                                                <i class="fas fa-exclamation-circle"></i>
+                                            </span>
+                                            <small class="input-alert"></small>		 
                                         </div>
                                         <!-- Book Language -->
                                         <div class="form-group">
                                             <label class="bmd-label-floating" for="book_language">Language*</label><br>
                                             <input class="form-control" type="text" id="book_language" name="book_language" required="required" placeholder="Enter book language"/>
-                                            <span class="mdl-textfield__error">Please enter book language</span>			 
+                                            <span class="input-check">
+                                                <i class="fas fa-check-circle"></i>
+                                                <i class="fas fa-exclamation-circle"></i>
+                                            </span>
+                                            <small class="input-alert"></small>			 
                                         </div>
                                         <!-- Book ISBN -->
                                         <div class="form-group">
@@ -53,6 +65,11 @@
                                                 <option value="like_new">Like New</option>
                                                 <option value="used">Used</option>
                                             </select>
+                                            <span class="input-check">
+                                                <i class="fas fa-check-circle"></i>
+                                                <i class="fas fa-exclamation-circle"></i>
+                                            </span>
+                                            <small class="input-alert"></small>
                                         </div>
                                         <!-- Upload Image -->
                                         <div class="form-group">
@@ -181,9 +198,54 @@
                                     }
 
                                     function autoFill() {
-                                        document.getElementById('book_title').value = json.items[i].volumeInfo.title.textContent; // To fix the right side the left side is working fine
+                                        document.getElementById('book_title').value = json.items[i].volumeInfo.title; // To fix the right side the left side is working fine
                                         document.getElementById('book_author').value = author; // to fix the right side
                                         document.getElementById('book_language').value = language; // to fix the right side
                                         document.getElementById('b_isbn').value = isbn; // to fix the right side
                                     }
+
+                                    // Set Error Message
+                                    function setError(input, errormsg) {
+                                        const formGroup = input.parentElement;
+                                        const inputAlert = formGroup.querySelector(".input-alert");
+                                        formGroup.className = "form-group error";
+                                        inputAlert.innerText = errormsg;
+                                    }
+
+                                    // Set Success Message
+                                    function setSuccess(input) {
+                                        const formGroup = input.parentElement;
+                                        formGroup.className = "form-group success";
+                                    }
+
+                                    // Form Validation Check
+                                    function validateForm(form) {
+                                        if (form.book_title.value.trim() === "") {
+                                            setError(form.book_title, "Please enter a book name");
+                                            return false;
+                                        } else {
+                                            setSuccess(form.book_title);
+                                        }
+                                        if (form.book_author.value.trim() === "") {
+                                            setError(form.book_author, "Please enter the author name");
+                                            return false;
+                                        } else {
+                                            setSuccess(form.book_author);
+                                        }
+                                        if (form.book_language.value.trim() === "") {
+                                            setError(form.book_language, "Please enter the book language");
+                                            return false;
+                                        } else {
+                                            setSuccess(form.book_language);
+                                        }
+                                        if (form.book_cond.value.trim() === "") {
+                                            setError(form.book_cond, "Please the condition of the book");
+                                            return false;
+                                        } else {
+                                            setSuccess(form.book_cond);
+                                        }
+
+                                        return true;
+                                    }
+
                                 </script>
