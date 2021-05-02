@@ -22,7 +22,7 @@
                                 <tr id="<?php echo 'req_'.$req->swap_UID?>" class="table-row">
                                     <td class="w-25">
                                     <!-- Open a form that will send the swap UID to the controller in order to select it and show the full request details and options. -->                                     
-                                    <?php echo form_open('Books/single_book', $attributes); ?>
+                                    <?php echo form_open('Books/zoom_swap', $attributes); ?>
                                     <!-- need to change some info here... b_UID etc and complete the correct form for the swap ID -->
                                         <input type="hidden" value="<?php echo $req->UID;?>" name="b_UID" id="<?php echo $req->UID?>"> 
                                         <span class="img-fluid"> <?php echo '<img style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $req->img).'"/>';?> <br></span>
@@ -30,8 +30,8 @@
                                     <?php echo form_close(); ?>
                                     </td>
                                     <td> <?php echo $req->title ?></td>
-                                    <td> <?php echo $req->sent_by_username ?></td>
-                                    <td> <?php echo $req->swap_status ?></td>
+                                    <td> <?php echo $req->sent_by_username?></td>
+                                    <td> <?php echo $req->swap_status?></td>
                                 </tr>
                         <?php endforeach; ?>
                         </tbody>
