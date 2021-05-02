@@ -1,12 +1,19 @@
         <!-- This page will show an incoming swap request and let the user select a book he desires, and approve or cancel the request. -->
-        <main class="mdl-layout__content">
+        <main class="mdl-layout__content text-center">
             <div class="mdl-grid portfolio-max-width">
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> <!-- centered div -->
+                <span>
+                <h3>You have a swap request!</h3><br>
+                <h5>Status: "Status"
+                <br>
+                    Date: "Date"
+                <br>
+                </h5>
+                </span>
                     <?php foreach ($book_info as $bi):?>
                     <!-- Requested book -->
                     <div class="card" style="width: 25rem">
                         <!-- book image -->
-                        <h3>You have a swap request!</h3><br>
                         <h4>"username" wants:</h4>
                         <span class="card-img-top"><?php echo '<img style="width:50%" class="card-img-top" alt="Book Image"src="data:image/jpeg;base64,'.base64_encode( $bi->img).'"/>';?></span>
                         <div class="card-body">
@@ -25,7 +32,7 @@
 
                         <div style="clear: both;"></div>
                     </div>
-                    <center><h4>Browse Username's books to select one:"</h4></center>
+                    <center><br><h4>Browse Username's books to select one:"</h4><br></center>
                     <!-- Book 2 = the book you will get -->
                     <div class="card" style="width: 25rem">
                         <!-- book image -->
