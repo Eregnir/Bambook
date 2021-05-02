@@ -12,7 +12,7 @@
                     <span class='<?php if($bi->swap_status != "Completed"){echo "hidden";} ?> '> 
                         <h3>You completed a swap!</h3>
                         <h5>You may now reach each other and work out the details!</h5>
-                        <a href="https://api.whatsapp.com/send?phone=+972503332860/?text=hello" target="_blank">
+                        <a href="https://api.whatsapp.com/send?phone=+972503332860&text=Hi!%20It%27s%20me%20from%20Bambook.%20Lets%20finish%20our%20book%20swap!" target="_blank">
                         <img style="height:50px; width:50px;" class="card-img-top" alt="Contact" src='<?php echo base_url('images/whatsapp.png');?>' >
                         </a>
                     </span>
