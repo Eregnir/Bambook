@@ -10,16 +10,6 @@
                                 <div class="card-block">
                                     <!--Body-->
                                     <form action="#">
-                                        <!-- Search Book using Google API -->
-                                        <h5 class="h5-responsive">Search your book name & save time on the upload</h5>
-                                        <div id="search">
-                                            <form id="search_form">
-                                                <input type="text" size="70" id="search_txt" placeholder="Book title, author or ISBN"/>
-                                                <input type="submit" value="Search Books">
-                                            </form>
-                                            </div>
-                                            <br>
-                                        <div id="books"></div>
                                         <!-- Book Genre -->
                                         <div class="form-group">
                                             <label for="book_genre" class="bmd-label-floating">Genre</label>
@@ -74,6 +64,16 @@
                                         <button class="btn btn-primary">Publish a book</button>
                                     </form>
                                 </div>
+                                <!-- Search Book using Google API -->
+                                <h5 class="h5-responsive">Search your book name & save time on the upload</h5>
+                                <div id="search">
+                                    <form id="search_form">
+                                        <input type="text" size="70" id="search_txt" placeholder="Book title, author or ISBN"/>
+                                        <input type="submit" value="Search Books">
+                                    </form>
+                                </div>
+                                <br>
+                                <div id="books"></div>
                             </div>
                         </div>
                     </div>
