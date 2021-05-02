@@ -436,26 +436,15 @@ form {
   margin: 0 10px 10px 0
 }
 
-.clearfix::after {
+/* .clearfix::after {
   content: "";
   clear: both;
   display: table;
-}
+} */
 
 
 /******************** FORM VALIDATION ******************************/
 
-.material-icons.valid-icon:after {
-  content: 'check';
-  font-size: 24px;
-}
-.material-icons.invalid-icon:after {
-  content: 'clear';
-  font-size: 24px;
-}
-.material-icons.validating-icon:after {
-  content: 'graphic_eq';
-  font-size: 24px;
-}
+
 
 /******************** END CSS Page - Publish Book ********************/

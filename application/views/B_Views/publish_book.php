@@ -9,7 +9,7 @@
                                 <!--Naked Form-->
                                 <div class="card-block">
                                     <!--Body-->
-                                    <form id="demoForm" novalidate action="#">
+                                    <form id="publish_book_form" action="#">
                                         <!-- Book Genre -->
                                         <div class="form-group">
                                             <label for="book_genre" class="bmd-label-floating">Genre</label>
@@ -143,7 +143,7 @@
                                                 }
 
                                                 htmlcontent +=
-                                                "<div class='thumbs' style='cursor: pointer;' onclick='autoFill($this); return true;'><b>Book Title: </b>" +
+                                                "<div class='thumbs' style='cursor: pointer;' onclick='autoFill(this); return true;'><b>Book Title: </b>" +
                                                 json.items[i].volumeInfo.title +
                                                 "</b>" +
                                                 '<img src="' +
@@ -159,7 +159,7 @@
                                                 language +
                                                 "<br><b>ISBN_13: </b>" +
                                                 isbn +
-                                                '</div>' + "<div class='clearfix'></div>";
+                                                '</div>';
                                             }
                                             document.getElementById("books").innerHTML =
                                                 "<div>" + htmlcontent + "</div><br>";
@@ -184,105 +184,4 @@
                                         document.getElementById('b_isbn').value = isbn; // to fix the right side
                                     }
 
-                                    // Form validation //
-
-                                    document.addEventListener('DOMContentLoaded', function(e) {
-                                    FormValidation.formValidation(
-                                        document.getElementById('demoForm'),
-                                        {
-                                            fields: {
-                                                book_title: {
-                                                    validators: {
-                                                        notEmpty: {
-                                                            message: 'Please enter the book title'
-                                                        },
-                                                        stringLength: {
-                                                            min: 2,
-                                                            max: 60,
-                                                            message: 'The book title must be more than 2 and less than 60 characters long'
-                                                        },
-                                                    }
-                                                },
-                                                book_author: {
-                                                    validators: {
-                                                        notEmpty: {
-                                                            message: 'Please enter the book author'
-                                                        },
-                                                        stringLength: {
-                                                            min: 2,
-                                                            max: 60,
-                                                            message: 'The book author must be more than 2 and less than 60 characters long'
-                                                        },
-                                                    }
-                                                },
-                                                book_language: {
-                                                    validators: {
-                                                        notEmpty: {
-                                                            message: 'Please enter the book language'
-                                                        },
-                                                        stringLength: {
-                                                            min: 1,
-                                                            max: 30,
-                                                            message: 'The book language must be more than 1 and less than 20 characters long'
-                                                        },
-                                                    }
-                                                },
-                                                book_condition: {
-                                                    validators: {
-                                                        notEmpty: {
-                                                            message: 'Please enter the book condition'
-                                                        },
-                                                        stringLength: {
-                                                            min: 1,
-                                                            max: 30,
-                                                            message: 'The book condition must be more than 2 and less than 60 characters long'
-                                                        },
-                                                    }
-                                                },
-                                            },
-                                            plugins: {
-                                                trigger: new FormValidation.plugins.Trigger(),
-                                                tachyons: new FormValidation.plugins.Tachyons(),
-                                                submitButton: new FormValidation.plugins.SubmitButton(),
-                                                icon: new FormValidation.plugins.Icon({
-                                                    valid: 'material-icons valid-icon',
-                                                    invalid: 'material-icons invalid-icon',
-                                                    validating: 'material-icons validating-icon',
-                                                }),
-                                            },
-                                        }
-                                    );
-                                });
-                                // Triggering the event
-                                FormValidation
-                                    .formValidation(document.getElementById('demoForm'), {
-                                        plugins: {
-                                            icon: new FormValidation.plugins.Icon({
-                                                valid: 'material-icons icon-valid',
-                                                invalid: 'material-icons icon-invalid',
-                                                validating: 'material-icons icon-validating',
-                                            }),
-                                        },
-                                    })
-                                    .on('plugins.icon.set', function(e) {
-                                        if (e.iconElement) {
-                                            switch (e.status) {
-                                                case 'Validating':
-                                                    e.iconElement.innerHTML = 'graphic_eq';
-                                                    break;
-
-                                                case 'Invalid':
-                                                    e.iconElement.innerHTML = 'clear';
-                                                    break;
-
-                                                case 'Valid':
-                                                    e.iconElement.innerHTML = 'check';
-                                                    break;
-
-                                                default:
-                                                    e.iconElement.innerHTML = '';
-                                                    break;
-                                            }
-                                        }     
-                                    });
                                 </script>
