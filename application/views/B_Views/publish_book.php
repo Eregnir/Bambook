@@ -12,12 +12,6 @@
 
                                     <!--Body-->
                                     <form action="#">
-                                        <!-- Email address will be generated from the logged in user -->
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1" class="bmd-label-floating">Email address</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1">
-                                            <span class="bmd-help">We'll never share your email with anyone else.</span>
-                                        </div>
                                         <!-- Book Genre -->
                                         <div class="form-group">
                                             <label for="book_genre" class="bmd-label-floating">Genre*</label>
@@ -32,15 +26,15 @@
                                             </select>
                                         </div>
                                         <!-- Book Title -->
-                                        <div class="mdl-textfield mdl-js-textfield">
-                                            <label class="mdl-textfield__label" for="book_title">Book Title*</label><br>
-                                            <input class="mdl-textfield__input" type="text" id="book_title" name="book_title" required="required" placeholder="Enter your book title"/>
+                                        <div class="form-group">
+                                            <label class="bmd-label-floating" for="book_title">Book Title*</label><br>
+                                            <input class="form-control" type="text" id="book_title" name="book_title" required="required" placeholder="Enter your book title"/>
                                             <span class="mdl-textfield__error">Please enter a book name</span>
                                         </div>
                                         <!-- Book Author -->
-                                        <div class="mdl-textfield mdl-js-textfield">
-                                            <label class="mdl-textfield__label" for="book_author">Author*</label><br>
-                                            <input class="mdl-textfield__input" type="text" id="book_author" name="book_author" required="required" placeholder="Enter book author"/>
+                                        <div class="form-group">
+                                            <label class="bmd-label-floating" for="book_author">Author*</label><br>
+                                            <input class="form-control" type="text" id="book_author" name="book_author" required="required" placeholder="Enter book author"/>
                                             <span class="mdl-textfield__error">Please enter book author</span>			 
                                         </div>
                                         <!-- Book condition -->
@@ -62,6 +56,14 @@
                                             <label for="exampleInputFile" class="bmd-label-floating">File input</label>
                                             <input type="file" class="form-control-file" id="exampleInputFile">
                                             <small class="text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="file" accept="image/*" id="file-input">
+                                            <script>
+                                            const fileInput = document.getElementById('file-input');
+
+                                            fileInput.addEventListener('change', (e) => doSomethingWithFiles(e.target.files));
+                                            </script>
                                         </div>
                                         <!-- Submit button -->
                                         <button class="btn btn-primary">Publish a book</button>
