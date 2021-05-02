@@ -31,7 +31,16 @@
                     <a id="blg" class="mdl-navigation__link" href="#">Public Library</a>
                     <a id="abt" class="mdl-navigation__link" href="#">Profile</a>
                     <a id="cnt" class="mdl-navigation__link" href="#">Contact</a>
-                    <a id="log" class="mdl-navigation__link" href="<?php echo site_url('Intro/login');?>">Login / Logout</a>
+                    <a id="log" class="mdl-navigation__link" href="<?php echo site_url('Intro/login');?>">
+                    <?php
+                        if (isset($user['loggedin'])){
+                            $out = 'Login';
+                        }else{
+                            $out = 'Logout';
+                        }
+                        echo $out;
+                    ?>
+                    </a>
 
                 </nav>
             </div>
