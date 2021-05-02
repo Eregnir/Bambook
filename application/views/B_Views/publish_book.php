@@ -134,15 +134,15 @@
                                                 isbn = json.items[i].volumeInfo.industryIdentifiers[0].identifier;
                                                 }
 
-                                                htmlcontent +=
-                                                "<div class='thumbs'><b>Book Title:</b> " +
-                                                json.items[i].volumeInfo.title +
-                                                "</b> " +
-                                                '<img src="' +
+                                                '<img src="' +=
                                                 thumb +
                                                 '" + alt="' +
                                                 json.items[i].volumeInfo.title +
                                                 '">' +
+                                                htmlcontent +
+                                                "<div class='thumbs'><b>Book Title:</b> " +
+                                                json.items[i].volumeInfo.title +
+                                                "</b> " +
                                                 "<br><b>Author: </b>" +
                                                 author +
                                                 "<br><b>Published Date: </b>" +
