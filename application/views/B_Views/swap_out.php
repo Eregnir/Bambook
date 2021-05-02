@@ -2,6 +2,9 @@
         <main class="mdl-layout__content text-center">
             <div class="mdl-grid portfolio-max-width">
             Test
+            <?php foreach ($book_info as $bi):
+                echo $bi->swap_status; 
+                endforeach ?>
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> <!-- centered div -->
                 Test 2
                 <?php foreach ($book_info as $bi):?>
@@ -23,10 +26,7 @@
                 <!-- End if status is completed -->
 
 
-                    <?php 
-                    $flagg = $flag[0]->received_book;
-                    if (isset($flagg)){$flagg=true;}
-                    ?>
+                    <?php $flagg = $flag[0]->received_book; if (isset($flagg)){$flagg=true;}?>
 
                     <h6>Status: <?php echo $bi->swap_status?>
                     <br>
