@@ -98,7 +98,7 @@ class Books extends CI_Controller{
     //function to cancel a swap, for any reason at all
     public function cancel_swap(){
         $data = array(
-            'swap_UID' => $this->input->post('swap_UID')
+            'swap_UID' => $this->input->post('cancel_swap1')
             );
         $this->books_model->cancel_swap($data['swap_UID']);
         $this->zoom_swap2($data['swap_UID']);

@@ -49,7 +49,7 @@ class books_model extends CI_Model {
     }
 
     public function cancel_swap($swap_UID){
-        $query = $this->db->query(' UPDATE swap_reqs SET swap_status="Cancelled", `end_time`=CURRENT_TIMESTAMP WHERE `swap_UID`="'.$swap_UID.'" ');
+        $query = $this->db->query('UPDATE swap_reqs SET swap_status="Cancelled", `end_time`=CURRENT_TIMESTAMP WHERE swap_UID= "'.$swap_UID.'" ');
     }
 
 }
