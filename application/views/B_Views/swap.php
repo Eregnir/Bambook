@@ -6,8 +6,8 @@
                 <?php foreach ($book_info as $bi):?>
                 <h3>You have a swap request!</h3>
                 <?php 
-                $flagg = $flag[0]->received_book; 
-                echo $flagg;
+                $flagg = $flag[0]->received_book;
+                if (isset($flagg)){$flagg=true;}
                 ?>
                 <h6>Status: <?php echo $bi->swap_status?>
                 <br>
@@ -131,12 +131,12 @@
             document.getElementById("browse").click();
             };
         
-        // window.onload = function(){
-        //     var k = <?php // echo $flagg ?>
-        //     if (k != null){
-        //         document.getElementById("img1").classList.add("hidden");
-        //         document.getElementById("brw").classList.add("hidden");
-        //     }
-        // }
+        window.onload = function(){
+            var k = <?php echo $flagg ?>
+            if (k != null){
+                document.getElementById("img1").classList.add("hidden");
+                document.getElementById("brw").classList.add("hidden");
+            }
+        }
 
     </script>
