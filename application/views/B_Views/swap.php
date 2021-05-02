@@ -2,28 +2,30 @@
         <main class="mdl-layout__content text-center">
             <div class="mdl-grid portfolio-max-width">
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> <!-- centered div -->
-                <span>
                 <?php foreach ($book_info as $bi):?>
-                <span> 
-                <h3>You have a swap request!</h3>
-                </span>
+                <span class="<?php if($bi->swap_status == "Completed"){echo "hidden";} ?> ">
+                    <span>
+                        <h3>You have a swap request!</h3>
+                    </span>
 
                 <!-- If the status is completed, show contact phone! -->
-                <span> 
-                <a href="https://api.whatsapp.com/send?phone=+972503332860/?text=hello" target="_blank">
-                <img style="height:50px; width:50px;" class="card-img-top" alt="Contact" src='<?php echo base_url('images/whatsapp.png');?>' >
-                </a>
-                </span>
-                <?php 
-                $flagg = $flag[0]->received_book;
-                if (isset($flagg)){$flagg=true;}
-                ?>
+                    <span class='<?php if($bi->swap_status != "Completed"){echo "hidden";} ?> '> 
+                        <h3>You completed a swap!</h3>
+                        <h5>You may now reach each other and work out the details!</h5>
+                        <a href="https://api.whatsapp.com/send?phone=+972503332860/?text=hello" target="_blank">
+                        <img style="height:50px; width:50px;" class="card-img-top" alt="Contact" src='<?php echo base_url('images/whatsapp.png');?>' >
+                        </a>
+                    </span>
+                    <?php 
+                    $flagg = $flag[0]->received_book;
+                    if (isset($flagg)){$flagg=true;}
+                    ?>
 
-                <h6>Status: <?php echo $bi->swap_status?>
-                <br>
-                    Sent on: <?php echo $bi->start_time?>
-                <br>
-                </h6>
+                    <h6>Status: <?php echo $bi->swap_status?>
+                    <br>
+                        Sent on: <?php echo $bi->start_time?>
+                    <br>
+                    </h6>
                 </span>
                     
                     <!-- Requested book -->
