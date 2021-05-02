@@ -10,7 +10,7 @@
 
                 <!-- If the status is completed, show contact phone! -->
                 <span> 
-                <a href="https://api.whatsapp.com/send?phone=0503332850">
+                <a href="https://api.whatsapp.com/send?phone=+972503332850">
                 <img style="height:50px; width:50px;" class="card-img-top" alt="Contact" src='<?php echo base_url('images/whatsapp.png');?>' >
                 </a>
                 </span>
