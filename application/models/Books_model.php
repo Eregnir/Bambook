@@ -23,6 +23,12 @@ class books_model extends CI_Model {
         return $query->result();
 
     }
+
+    public function get_out_swap_info($data){
+        $query=$this->db->query('SELECT * FROM user_books INNER JOIN swap_reqs ON user_books.UID=swap_reqs.desired_book WHERE swap_reqs.swap_UID = "'.$data['swap_UID'].'" ');
+        return $query->result();
+
+    }
     
 
     //function to get a library books for swap purposes:

@@ -126,6 +126,7 @@ class Books extends CI_Controller{
         $data['other_user']=$this->books_model->get_other_user2($data);
         $data['book2']=$this->books_model->get_2nd_image($data['swap_UID']);
         $data['book_info'] = $this->books_model->get_in_swap_info($data);
+        $data['book_info2'] = $this->books_model->get_out_swap_info($data);
         $this->load->view('templates/HeadB',$data);
         $this->load->view('B_Views/swap_out',$data);
         $this->load->view('templates/FootB');
