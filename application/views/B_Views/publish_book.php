@@ -120,7 +120,7 @@
                         }
                         
                         // Published Date
-                        if (typeof json.items[i].volumeInfo.PublishedDate != "undefined") {
+                        if (typeof json.items[i].volumeInfo.publishedDate != "undefined") {
                         p_date = json.items[i].volumeInfo.publishedDate[0];
                         }
 
