@@ -53,7 +53,6 @@
                             <li class="list-group-item">Condition: <?php echo $bi->cond ?></li>
                         </ul>
                         <div class="card-body">
-                            <a href="javascript:history.back()" class="card-link alignleft">Go Back</a>
                             <!-- Approve or cancel swap -->
                             <?php echo form_open('#'); ?>
                             <!-- send the book's UID -->
@@ -77,7 +76,8 @@
                             <!-- Hidden button to submit the form -->
                                 <button class="mdl-button mdl-js-button mdl-button--raised" type="submit" name="cancel" id="cancel">Cancel Swap</button>   
                             <?php echo form_close(); ?>
-                            
+                            <br>
+                            <a href="javascript:history.back()" class="card-link alignleft">Go Back</a>
                         </div>
                         <div style="clear: both;"></div>
                     </div> 
