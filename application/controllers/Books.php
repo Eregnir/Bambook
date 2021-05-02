@@ -63,7 +63,7 @@ class Books extends CI_Controller{
         $data = array(
             'sent_by' => $this->input->post('sent_by')
             );
-        $data['books']=$this->books_model->get_other_library($user);
+        $data['books']=$this->books_model->get_other_library($data);
         $this->load->view('templates/HeadB',$data);
         $this->load->view('B_Views/book_select_4swap');
         $this->load->view('templates/FootB');
