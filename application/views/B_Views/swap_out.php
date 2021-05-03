@@ -118,7 +118,7 @@
                             <!-- Hidden button to submit the form -->
                                 <button class="hidden mdl-button mdl-js-button mdl-button--icon" type="submit" name="approve_btn" id="approve_btn">Submit</button>   
                                 <!-- Displayed button to start the 'are you sure' message -->
-                                <button id="apr" class="<?php if ($flagg==null){echo 'hidden';}?> mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent card-link alignright" type="button" name="apr">
+                                <button id="apr" class="<?php if ($flagg==null){echo 'hidden';}?> mdl-button mdl-js-button mdl-button--raised mdl-button--accent card-link alignright" type="button" name="apr">
                                     Approve Swap
                                 </button>
                             <?php echo form_close(); ?>

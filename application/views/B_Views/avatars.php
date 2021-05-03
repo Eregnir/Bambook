@@ -12,7 +12,7 @@
                             <input type="hidden" value="<?php echo $avatar->avatar_UID;?>" name="avatar_UID" id="<?php echo 'avatar_'.$avatar->avatar_UID?>"> 
                         <center><div id="<?php echo $avatar->avatar_UID?>" class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding">
                             <?php echo '<img style="max-height:150px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $avatar->img).'"/>'; ?>
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" name="submit ">
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" type="submit" name="submit ">
                                     Select
                                 </button>
                         </div> </center>

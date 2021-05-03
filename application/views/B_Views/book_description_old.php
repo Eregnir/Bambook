@@ -27,7 +27,7 @@
                         </ul>
                         <div class="card-body">
                             <a href="javascript:history.back()" class="card-link alignleft">Go Back</a>
-                            <button onclick="location.href='#'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent card-link alignright" type="button">
+                            <button onclick="location.href='#'" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent card-link alignright" type="button">
                                 Request Swap
                             </button>
                             <!-- <a href="#" class="card-link alignright">Request Swap</a> -->

@@ -71,7 +71,7 @@
                                 <div id="search">
                                     <form id="search_form">
                                         <input type="text" class="form-control" id="search_txt" placeholder="Book title, author or ISBN"/><br>
-                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                                        <button class="mdl-button mdl-js-button mdl-button--raised">
                                             Search Books
                                         </button>
                                         <!-- <input type="submit" value="Search Books"> -->

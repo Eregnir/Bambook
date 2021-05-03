@@ -49,7 +49,7 @@
                             <br><br>
                             <!-- Need to add password validation -->
                             <p>
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" name="submit ">
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" type="submit" name="submit ">
                                     Log In
                                 </button>
                             </p>

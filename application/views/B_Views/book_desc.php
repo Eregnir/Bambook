@@ -45,7 +45,7 @@
                             <!-- Hidden button to submit the form -->
                                 <button class="hidden mdl-button mdl-js-button mdl-button--icon" type="submit" name="submit" id="submit">Submit</button>   
                                 <!-- Displayed button to start the 'are you sure' message -->
-                                <button id="swap" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent card-link alignright" type="button" name="swap">
+                                <button id="swap" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent card-link alignright" type="button" name="swap">
                                     Request Swap
                                 </button>
                             <?php echo form_close(); ?>
