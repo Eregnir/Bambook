@@ -31,7 +31,7 @@
                         <!-- Text here if needed -->
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="<?php echo site_url('Intro/my_library');?>">Browse my library</a>
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-button--accent" href="<?php echo site_url('Intro/my_library');?>">Browse my library</a>
                     </div>
                 </div>
                 <!-- End Box 1--> 
