@@ -17,15 +17,15 @@
                         <tbody>
                         <!-- Loop Books -->
                         <?php
-                        if (isset($books)){
-                            echo 'Books is set';
-                        }
-                        else{
-                            echo 'Books is not set, there are no books';
-                        }
+                        
                         ?>
                         <?php foreach ($books as $book):
-                                
+                                if (isset($book)){
+                                    echo 'Book is set';
+                                }
+                                else{
+                                    echo 'Book is not set, there are no books';
+                                }
                                 echo isset($book);
                                 $attributes = array('id' => $book->UID, 'name' =>$book->UID);?>
                                 <tr id="<?php echo 'book_'.$book->UID?>" class="table-row">
