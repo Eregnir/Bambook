@@ -1,18 +1,10 @@
         <main class="mdl-layout__content">
             <div class="mdl-grid portfolio-max-width">
+                <?php if ($books):?>
                 <!-- Books table Start -->
                     <h2 class="pad5">Browsing Books for Swap: </h2>
                     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for the book or author name..." title="Type in a name">
                     <br>
-                    <?php foreach ($books as $book):
-                                if (isset($book)){
-                                    echo 'Book is set';
-                                }
-                                else{
-                                    echo 'Book is not set, there are no books';
-                                }
-                            endforeach
-                    ?>
                     <table class="table table-image" id="myTable">
                         <thead>
                             <tr>
@@ -25,21 +17,7 @@
                         
                         <tbody>
                         <!-- Loop Books -->
-                        <?php
-                        
-                        ?>
-                        <?php 
-                        if (!$books){
-                            echo 'There are no books';
-                        }
-                        foreach ($books as $book):
-                                if (isset($book)){
-                                    echo 'Book is set';
-                                }
-                                else{
-                                    echo 'Book is not set, there are no books';
-                                }
-                                echo isset($book);
+                        <?php foreach ($books as $book):
                                 $attributes = array('id' => $book->UID, 'name' =>$book->UID);?>
                                 <tr id="<?php echo 'book_'.$book->UID?>" class="table-row">
                                     <td class="w-25">
@@ -70,6 +48,10 @@
                             });
                     </script>
                 <!-- Books table end -->
+
+                <?php if(!$books){
+                    echo 'This user has no books to choose from!';
+                } ?>
             </div>
 
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
