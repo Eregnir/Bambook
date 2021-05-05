@@ -12,15 +12,13 @@
 
          -->
 
-         
+
         <main class="mdl-layout__content text-center">
             <div class="mdl-grid portfolio-max-width">
-                Test
                 <?php foreach ($book_info2 as $bi):
                 echo $bi->swap_status; 
                 endforeach ?>
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> <!-- centered div -->
-                Test 2
                 <?php foreach ($book_info2 as $bi):?>
                 <span>
                     <span class="<?php if($bi->swap_status == "Completed"){echo "hidden";} ?> ">
