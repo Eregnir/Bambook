@@ -29,7 +29,6 @@ class books_model extends CI_Model {
         return $query->result();
 
     }
-    
 
     //function to get a library books for swap purposes:
     public function get_other_library($user){
