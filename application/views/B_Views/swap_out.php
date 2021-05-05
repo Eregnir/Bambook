@@ -18,23 +18,25 @@
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> <!-- centered div -->
                 <?php foreach ($book_info2 as $bi):?>
                 <span>
-                    <span class="<?php if($bi->swap_status == "Completed"){echo "hidden";} ?> ">
-                        <h3>You sent a swap request!</h3>
+                    <span>
+                        <?php 
+                            if($bi->swap_status != "Completed" && $bi->swap_status != "Cancelled"):
+                                echo ("<h3>You sent a swap request!</h3>");
+                            elseif($bi->swap_status == "Completed"):?>
+                                <!-- If the status is completed, show contact phone! -->
+                                    <h3>You completed a swap!</h3>
+                                    <h5>You may now reach each other and work out the details!</h5>
+                                    <?php foreach ($other_user as $ou): ?>
+                                    <a href="https://api.whatsapp.com/send?phone=+972<?php echo $ou->phone_num?>&text=Hi!%20It%27s%20me%20from%20Bambook.%20Lets%20finish%20our%20book%20swap!" target="_blank">
+                                    <img style="height:50px; width:50px;" class="card-img-top" alt="Contact" src='<?php echo base_url('images/whatsapp.png');?>' >
+                                    </a>
+                                    <?php endforeach ?>
+                                <!-- End if status is completed -->
+                                <?php
+                            else: echo "<h3>Sorry, This swap request was cancelled :_( </h3>"; ?>
+                
                     </span>
-
-                <!-- If the status is completed, show contact phone! -->
-                    <span class='<?php if($bi->swap_status != "Completed"){echo "hidden";} ?> '> 
-                        <h3>You completed a swap!</h3>
-                        <h5>You may now reach each other and work out the details!</h5>
-                        <?php foreach ($other_user as $ou): ?>
-                        <a href="https://api.whatsapp.com/send?phone=+972<?php echo $ou->phone_num?>&text=Hi!%20It%27s%20me%20from%20Bambook.%20Lets%20finish%20our%20book%20swap!" target="_blank">
-                        <img style="height:50px; width:50px;" class="card-img-top" alt="Contact" src='<?php echo base_url('images/whatsapp.png');?>' >
-                        </a>
-                        <?php endforeach ?>
-                    </span>
-                <!-- End if status is completed -->
-
-
+                    
                     <?php $flagg = $flag[0]->received_book; if (isset($flagg)){$flagg=true;}?>
 
                     <h6>Status: <?php echo $bi->swap_status?>
