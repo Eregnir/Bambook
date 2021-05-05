@@ -4,6 +4,15 @@
                     <h2 class="pad5">Browsing Books for Swap: </h2>
                     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for the book or author name..." title="Type in a name">
                     <br>
+                    <?php foreach ($books as $book):
+                                if (isset($book)){
+                                    echo 'Book is set';
+                                }
+                                else{
+                                    echo 'Book is not set, there are no books';
+                                }
+                            endforeach
+                    ?>
                     <table class="table table-image" id="myTable">
                         <thead>
                             <tr>
