@@ -52,7 +52,7 @@ class intro_model extends CI_Model {
 
    //function to find how many active requests, but need to add "where not = completed / cancelled etc.":
    public function count_active_reqs($user){
-    $query=$this->db->query('SELECT swap_UID FROM swap_reqs WHERE (sent_by_username = "'.$user['username'].'" OR sent_to_username = "'.$user['username'].'") ');
+    $query=$this->db->query('SELECT swap_UID FROM swap_reqs WHERE (sent_by_username = "'.$user['username'].'" OR sent_to_username = "'.$user['username'].'") AND (swap_status != "Cancelled" OR swap_status != "Completed" ');
     return $query->result();
     }
 

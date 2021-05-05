@@ -97,7 +97,7 @@
                                 <button class="hidden mdl-button mdl-js-button mdl-button--raised" type="submit" name="browse" id="browse">Browse</button>   
                             <?php echo form_close(); ?>
 
-                        <span id="<?php if ($bi->swap_status == "Completed" || $bi->swap_status == "Cancelled") echo 'hidden'?> ">
+                        <span class="<?php if ($bi->swap_status == "Completed" || $bi->swap_status == "Cancelled") echo 'hidden'?> ">
                             
                                 <!-- Approve or cancel swap -->
                                 <?php echo form_open('Books/approve_swap'); ?>
