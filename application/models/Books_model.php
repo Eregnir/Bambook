@@ -60,7 +60,7 @@ class books_model extends CI_Model {
 
     //check if it is an in or out request
     public function check_inout($swap_UID, $username){
-        $query = $this->db->query('SELECT * FROM swap_reqs WHERE swap_UID= `'.$swap_UID.'` AND `sent_by_username` =  "'.$username.'" ');
+        $query = $this->db->query('SELECT * FROM swap_reqs WHERE swap_UID= "'.$swap_UID.'" AND `sent_by_username` =  "'.$username.'" ');
     }
 
     public function approve_swap($data){
