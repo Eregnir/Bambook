@@ -17,6 +17,8 @@
                         <tbody>
                         <!-- Loop Books -->
                         <?php foreach ($books as $book):
+                                echo isset($books);
+                                echo isset($book);
                                 $attributes = array('id' => $book->UID, 'name' =>$book->UID);?>
                                 <tr id="<?php echo 'book_'.$book->UID?>" class="table-row">
                                     <td class="w-25">
