@@ -28,7 +28,9 @@
                         <?php
                         
                         ?>
-                        <?php foreach ($books as $book):
+                        <?php 
+                        print_r($books);
+                        foreach ($books as $book):
                                 if (isset($book)){
                                     echo 'Book is set';
                                 }
