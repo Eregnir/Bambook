@@ -49,9 +49,12 @@
                     </script>
                 <!-- Books table end -->
 
-                <?php if(!$books){
-                    echo 'This user has no books to choose from!';
-                } ?>
+                    <?php 
+                    endif;
+                    if(!$books){
+                        echo 'This user has no books to choose from!';
+                    } ?>
+
             </div>
 
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
