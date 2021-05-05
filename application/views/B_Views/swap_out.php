@@ -74,7 +74,7 @@
 
                     <!-- If a book is not picked, write this: -->
 
-                        <center><br><h4 class="<?php if ($flagg !=null){echo 'hidden';} ?>" id="brw">Looks like <?php echo $bi->sent_to_username?> hasn't selected a book yet."</h4><br></center>
+                        <center><br><h4 class="<?php if ($flagg !=null){echo 'hidden';} ?>" id="brw">Looks like <?php echo $bi->sent_to_username?> hasn't selected a book yet. Once selected, it will show here."</h4></center>
                  
                     
                      <!-- If a book is picked, write this: -->
@@ -86,7 +86,7 @@
                     <div class="card" style="width: 25rem">
                         <!-- book image -->
                       
-                            <span id="img1" class="card-img-top <?php if ($flagg !=null){echo "hidden";} ?>"> <img style="width:50%" class="card-img-top" alt="Add Book" src='<?php echo base_url('images/add-book.png');?>'> </span>
+                            <span id="img1" class="card-img-top <?php if ($flagg !=null){echo "hidden";} ?>"> <img style="width:50%" class="card-img-top" alt="Mystery Book" src='<?php echo base_url('images/books_images/mystery_book.png');?>'> </span>
                             <?php foreach ($book2 as $b2): ?>
                             <span id="img2" class="card-img-top <?php if ($flagg ==null){echo 'hidden';} ?>"><?php echo '<img style="width:50%" class="card-img-top" alt="Book Image"src="data:image/jpeg;base64,'.base64_encode( $b2->img).'"/>';?> </span>
                             <div class="card-body <?php if ($flagg ==null){echo 'hidden';}?> ">
@@ -104,40 +104,7 @@
                                 <li class="list-group-item">Condition: <?php echo $b2->cond ?></li>
                                 <?php endforeach ?>
                             </ul>
-                        <div class="card-body">
-                      
-                        
-
-                        <!-- Form to open the other user's list of books, to allow selection of a book for the swap: -->
-                        <?php echo form_open('Books/browse_books_for_swap'); ?>
-                            <!-- send the other user's username:-->
-                                <input type="hidden" value="<?php echo $bi->sent_by_username;?>" name="sent_by" id="sent_by">
-                            <!-- send the swap_UID:-->
-                            <input type="hidden" value="<?php echo $bi->swap_UID;?>" name="swap_UID" id="swap_UID">   
-                            <!-- Hidden button to submit the form -->
-                                <button class="hidden mdl-button mdl-js-button mdl-button--raised" type="submit" name="browse" id="browse">Browse</button>   
-                            <?php echo form_close(); ?>
-
-                        
-                            <!-- Approve or cancel swap -->
-                            <?php echo form_open('Books/approve_swap'); ?>
-                            <!-- send the swap ID -->
-                            <input type="hidden" value="<?php echo $bi->swap_UID;?>" name="swp_UID" id="swp_UID">
-                            <!-- send the book1's UID -->
-                                <input type="hidden" value="<?php echo $bi->UID;?>" name="b1_UID" id="b1_UID">
-                            <!-- send the book2's UID  -->
-                            <?php foreach ($book2 as $b2): ?>
-                                <input type="hidden" value="<?php echo $b2->UID;?>" name="b2_UID" id="b2_UID"> 
-                            <?php endforeach?>
-                            
-                            <!-- Hidden button to submit the form -->
-                                <button class="hidden mdl-button mdl-js-button mdl-button--icon" type="submit" name="approve_btn" id="approve_btn">Submit</button>   
-                                <!-- Displayed button to start the 'are you sure' message -->
-                                <button id="apr" class="<?php if ($flagg==null){echo 'hidden';}?> mdl-button mdl-js-button mdl-button--raised mdl-button--accent card-link alignright" type="button" name="apr">
-                                    Approve Swap
-                                </button>
-                            <?php echo form_close(); ?>
-
+                        <div class="card-body <?php if ($bi->swap_status == "Completed" || $bi->swap_status == "Cancelled") echo 'hidden'?>" >
                             <!-- Cancel button for canceling the request -->
                             <?php echo form_open('Books/cancel_swap'); ?>
                             <!-- send the swap ID -->
@@ -175,11 +142,6 @@
             if (t==true){
                 document.getElementById("cancel1").click();
                 };
-            };
-
-        document.getElementById("img1").onclick=function()
-        {
-            document.getElementById("browse").click();
             };
 
     </script>
