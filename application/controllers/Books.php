@@ -98,12 +98,28 @@ class Books extends CI_Controller{
         }
 
     //function to cancel a swap, for any reason at all
-    public function cancel_swap(){
-        $data = array(
-            'swap_UID' => $this->input->post('cancel_swap1')
-            );
+    public function cancel_swap($swap_UID=null){
+        $user=$this->session->all_userdata();
+        $data['user']=$user;
+        if ($swap_UID == null){
+            $data = array(
+                'swap_UID' => $this->input->post('cancel_swap1')
+                );
+        }
+        else{
+            $data['swap_UID'] = $swap_UID;
+        }
         $this->books_model->cancel_swap($data['swap_UID']);
-        $this->zoom_swap2($data['swap_UID']);
+        //check if this is incoming or outgoing request. if true it is an outgoing req.
+        $out=$this->books_model->check_inout($data['swap_UID'],$user['username']);
+        //if the request was initiated by this user, access the outgoing request view.
+        if (isset($out)){
+            $this->zoom_swap_out($data['swap_UID']);
+        }
+        //if it was not, access the incoming request view.
+        else{
+            $this->zoom_swap2($data['swap_UID']);
+        }
     }
 
     public function approve_swap(){
@@ -117,10 +133,17 @@ class Books extends CI_Controller{
     }
 
     //Allows a user that sent out a request to access it, see its status, contact info etc.
-    public function zoom_swap_out(){
-        $data = array(
-            'swap_UID' => $this->input->post('swap_UID')
-            );
+    public function zoom_swap_out($swap_UID=null){
+        //if a swap_ID wasn't sent, get it from the submitted form.
+        if ($swap_UID == null){
+            $data = array(
+                'swap_UID' => $this->input->post('cancel_swap1')
+                );
+        }
+        // if there was a swap_ID sent, just set it as the swap ID.
+        else{
+            $data['swap_UID'] = $swap_UID;
+        }
         // $user=$this->session->all_userdata();
         // $data['user']=$user;
         $data['flag']=$this->books_model->set_swap_flag($data['swap_UID']); //swap flag checks if a book was selected by the requested user or not

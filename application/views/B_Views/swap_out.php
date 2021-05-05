@@ -19,7 +19,7 @@
                 <?php foreach ($book_info2 as $bi): ?>
                     <span>
                     <!-- If the swap is completed: -->
-                        <span class="<?php   if ($bi->swap_status != "Completed"){echo "hidden";}?>">
+                        <span class="<?php if ($bi->swap_status != "Completed"){echo "hidden";}?>">
                             <!-- If the status is completed, show contact phone! -->
                             <h3>You completed a swap!</h3>
                                         <h5>You may now reach each other and work out the details!</h5>

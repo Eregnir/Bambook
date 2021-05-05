@@ -58,6 +58,11 @@ class books_model extends CI_Model {
         $query = $this->db->query('UPDATE swap_reqs SET swap_status="Cancelled", `end_time`=CURRENT_TIMESTAMP WHERE swap_UID= "'.$swap_UID.'" ');
     }
 
+    //check if it is an in or out request
+    public function check_inout($swap_UID, $username){
+        $query = $this->db->query('SELECT * FROM swap_reqs WHERE swap_UID= `'.$swap_UID.'` AND `sent_by_username` =  "'.$username.'" ');
+    }
+
     public function approve_swap($data){
         //this will make the swap completed
         $query = $this->db->query('UPDATE swap_reqs SET swap_status="Completed", `end_time`=CURRENT_TIMESTAMP WHERE swap_UID= "'.$data['swap_UID'].'" ');
