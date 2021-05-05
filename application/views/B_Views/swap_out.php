@@ -16,27 +16,31 @@
         <main class="mdl-layout__content text-center">
             <div class="mdl-grid portfolio-max-width">
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> <!-- centered div -->
-                <?php foreach ($book_info2 as $bi):?>
-                <span>
+                <?php foreach ($book_info2 as $bi): ?>
                     <span>
-                        <?php 
-                            if($bi->swap_status != "Completed" && $bi->swap_status != "Cancelled"):
-                                echo ("<h3>You sent a swap request!</h3>");
-                            elseif($bi->swap_status == "Completed"):?>
-                                <!-- If the status is completed, show contact phone! -->
-                                    <h3>You completed a swap!</h3>
-                                    <h5>You may now reach each other and work out the details!</h5>
-                                    <?php foreach ($other_user as $ou): ?>
-                                    <a href="https://api.whatsapp.com/send?phone=+972<?php echo $ou->phone_num?>&text=Hi!%20It%27s%20me%20from%20Bambook.%20Lets%20finish%20our%20book%20swap!" target="_blank">
-                                    <img style="height:50px; width:50px;" class="card-img-top" alt="Contact" src='<?php echo base_url('images/whatsapp.png');?>' >
-                                    </a>
-                                    <?php endforeach ?>
-                                <!-- End if status is completed -->
-                                <?php
-                            else: echo "<h3>Sorry, This swap request was cancelled :_( </h3>"; ?>
+                    <!-- If the swap is completed: -->
+                        <span class="<?php   if ($bi->swap_status != "Completed"){echo "hidden";}?>">
+                            <!-- If the status is completed, show contact phone! -->
+                            <h3>You completed a swap!</h3>
+                                        <h5>You may now reach each other and work out the details!</h5>
+                                        <?php foreach ($other_user as $ou): ?>
+                                        <a href="https://api.whatsapp.com/send?phone=+972<?php echo $ou->phone_num?>&text=Hi!%20It%27s%20me%20from%20Bambook.%20Lets%20finish%20our%20book%20swap!" target="_blank">
+                                        <img style="height:50px; width:50px;" class="card-img-top" alt="Contact" src='<?php echo base_url('images/whatsapp.png');?>' >
+                                        </a>
+                                        <?php endforeach ?>
+                            <!-- End if status is completed -->
+                        </span>
+                    <!-- if the swap was cancelled: -->
+                        <span class="<?php if ($bi->swap_status != "Cancelled"){echo "hidden";}?>">
+                            <h3>Sorry, This swap request was cancelled.</h3>            
+                        </span>
+
+                    <!-- If the swap was not completed or not cancelled: -->
+                        <span>
+                            <?php if($bi->swap_status != "Completed" && $bi->swap_status != "Cancelled"){echo ("<h3>You sent a swap request!</h3>");}?>
+                        </span>
+                            
                 
-                    </span>
-                    
                     <?php $flagg = $flag[0]->received_book; if (isset($flagg)){$flagg=true;}?>
 
                     <h6>Status: <?php echo $bi->swap_status?>
@@ -124,7 +128,7 @@
                             <!-- send the book2's UID  -->
                             <?php foreach ($book2 as $b2): ?>
                                 <input type="hidden" value="<?php echo $b2->UID;?>" name="b2_UID" id="b2_UID"> 
-                            <?php endforeach ?>
+                            <?php endforeach?>
                             
                             <!-- Hidden button to submit the form -->
                                 <button class="hidden mdl-button mdl-js-button mdl-button--icon" type="submit" name="approve_btn" id="approve_btn">Submit</button>   
@@ -149,7 +153,9 @@
                     </div> 
                 </div>
             </div>
-            <?php endforeach; ?>
+            <?php 
+            endforeach
+            ?>
 
     <script src="https://code.getmdl.io/1.3.0/material.min.js" ></script>
     <script type="text/javascript" src="<?php echo base_url('assets/JS/GJS.js');?>"></script>
