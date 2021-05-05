@@ -97,34 +97,36 @@
                                 <button class="hidden mdl-button mdl-js-button mdl-button--raised" type="submit" name="browse" id="browse">Browse</button>   
                             <?php echo form_close(); ?>
 
-                        
-                            <!-- Approve or cancel swap -->
-                            <?php echo form_open('Books/approve_swap'); ?>
-                            <!-- send the swap ID -->
-                            <input type="hidden" value="<?php echo $bi->swap_UID;?>" name="swp_UID" id="swp_UID">
-                            <!-- send the book1's UID -->
-                                <input type="hidden" value="<?php echo $bi->UID;?>" name="b1_UID" id="b1_UID">
-                            <!-- send the book2's UID  -->
-                            <?php foreach ($book2 as $b2): ?>
-                                <input type="hidden" value="<?php echo $b2->UID;?>" name="b2_UID" id="b2_UID"> 
-                            <?php endforeach ?>
+                        <span id="<?php if ($bi->swap_status == "Completed" || $bi->swap_status == "Cancelled") echo 'hidden'?> ">
                             
-                            <!-- Hidden button to submit the form -->
-                                <button class="hidden mdl-button mdl-js-button mdl-button--icon" type="submit" name="approve_btn" id="approve_btn">Submit</button>   
-                                <!-- Displayed button to start the 'are you sure' message -->
-                                <button id="apr" class="<?php if ($flagg==null){echo 'hidden';}?> mdl-button mdl-js-button mdl-button--raised mdl-button--accent card-link alignright" type="button" name="apr">
-                                    Approve Swap
-                                </button>
-                            <?php echo form_close(); ?>
-
-                            <!-- Cancel button for canceling the request -->
-                            <?php echo form_open('Books/cancel_swap'); ?>
-                            <!-- send the swap ID -->
-                                <input type="hidden" value="<?php echo $bi->swap_UID;?>" name="cancel_swap1" id="cancel_swap1">
-                            <!-- Hidden button to submit the form -->
-                                <button class="mdl-button mdl-js-button mdl-button--raised" type="button" name="cancel" id="cancel">Cancel Swap</button>
-                                <button class="hidden mdl-button mdl-js-button mdl-button--raised" type="submit" name="cancel1" id="cancel1">Cancel Swap</button>   
-                            <?php echo form_close(); ?>
+                                <!-- Approve or cancel swap -->
+                                <?php echo form_open('Books/approve_swap'); ?>
+                                <!-- send the swap ID -->
+                                <input type="hidden" value="<?php echo $bi->swap_UID;?>" name="swp_UID" id="swp_UID">
+                                <!-- send the book1's UID -->
+                                    <input type="hidden" value="<?php echo $bi->UID;?>" name="b1_UID" id="b1_UID">
+                                <!-- send the book2's UID  -->
+                                <?php foreach ($book2 as $b2): ?>
+                                    <input type="hidden" value="<?php echo $b2->UID;?>" name="b2_UID" id="b2_UID"> 
+                                <?php endforeach ?>
+                                
+                                <!-- Hidden button to submit the form -->
+                                    <button class="hidden mdl-button mdl-js-button mdl-button--icon" type="submit" name="approve_btn" id="approve_btn">Submit</button>   
+                                    <!-- Displayed button to start the 'are you sure' message -->
+                                    <button id="apr" class="<?php if ($flagg==null){echo 'hidden';}?> mdl-button mdl-js-button mdl-button--raised mdl-button--accent card-link alignright" type="button" name="apr">
+                                        Approve Swap
+                                    </button>
+                                <?php echo form_close(); ?>
+    
+                                <!-- Cancel button for canceling the request -->
+                                <?php echo form_open('Books/cancel_swap'); ?>
+                                <!-- send the swap ID -->
+                                    <input type="hidden" value="<?php echo $bi->swap_UID;?>" name="cancel_swap1" id="cancel_swap1">
+                                <!-- Hidden button to submit the form -->
+                                    <button class="mdl-button mdl-js-button mdl-button--raised" type="button" name="cancel" id="cancel">Cancel Swap</button>
+                                    <button class="hidden mdl-button mdl-js-button mdl-button--raised" type="submit" name="cancel1" id="cancel1">Cancel Swap</button>   
+                                <?php echo form_close(); ?>
+                        </span>
                             <br>
                             <a href="javascript:history.back()" class="card-link alignleft">Go Back</a>
                         </div>
