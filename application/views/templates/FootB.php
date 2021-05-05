@@ -38,6 +38,11 @@
         window.location.href="<?php echo site_url('Intro/contact');?>";   
     };
 
+    document.getElementById("bkb").onclick=function()
+    {
+        window.location.href="<?php echo site_url('Intro/my_requests');?>";   
+    };
+
 </script>
 
 </body>

@@ -59,6 +59,9 @@
                             Oh no! <br>
                             This user has no available books to choose from, and the swap request cannot be completed.<br>
                             <span id="img1" class="card-img-top"> <img style="width:50%" class="card-img-top" alt="No Books" src='<?php echo base_url('images/books_images/ohno.webp');?>'> </span>
+                            <button id = "bkb" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" type="button" name="submit ">
+                                    Back to Requests
+                                </button>
                             <br>
                         </h4>
                     </div>
