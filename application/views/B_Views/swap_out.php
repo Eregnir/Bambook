@@ -128,14 +128,6 @@
     <script type="text/javascript" src="<?php echo base_url('assets/JS/GJS.js');?>"></script>
 
     <script>
-        document.getElementById("apr").onclick=function()
-        {
-            var x = confirm("Approving the request will swap the books here on Bambook, and will share your contact info to each other for making the swap. Continue?");
-            if (x==true){
-                document.getElementById("approve_btn").click();
-                };
-            };
-
         document.getElementById("cancel").onclick=function()
         {
             var t = confirm("Are you sure you want to cancel this swap?");
