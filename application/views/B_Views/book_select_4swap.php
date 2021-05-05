@@ -58,9 +58,8 @@
                         <h4>
                             Oh no! <br>
                             This user has no available books to choose from, and the swap request cannot be completed.<br>
-                            <span id="img1" class="card-img-top"> <img style="width:50%" class="card-img-top" alt="No Books" src='<?php echo base_url('images/ohno.webp');?>'> </span>
+                            <span id="img1" class="card-img-top"> <img style="width:50%" class="card-img-top" alt="No Books" src='<?php echo base_url('images/books_images/ohno.webp');?>'> </span>
                             <br>
-                            <a href="javascript:history.back()" class="card-link alignleft">Go Back</a>
                         </h4>
                     </div>
                 </div>
