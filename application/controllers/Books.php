@@ -134,9 +134,14 @@ class Books extends CI_Controller{
 
     //Allows a user that sent out a request to access it, see its status, contact info etc.
     public function zoom_swap_out($swap_UID=null){
-        $data = array(
-            'swap_UID' => $this->input->post('swap_UID')
-            );
+        if ($swap_UID != null){
+            $data['swap_UID'] = $swap_UID;
+        }
+        else{
+            $data = array(
+                'swap_UID' => $this->input->post('swap_UID')
+                );
+        }
         // $user=$this->session->all_userdata();
         // $data['user']=$user;
         $data['flag']=$this->books_model->set_swap_flag($data['swap_UID']); //swap flag checks if a book was selected by the requested user or not
