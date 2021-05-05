@@ -116,17 +116,18 @@ class Books extends CI_Controller{
         $this->zoom_swap2($data['swap_UID']);
     }
 
+    //Allows a user that sent out a request to access it, see its status, contact info etc.
     public function zoom_swap_out(){
         $data = array(
             'swap_UID' => $this->input->post('swap_UID')
             );
         // $user=$this->session->all_userdata();
         // $data['user']=$user;
-        $data['flag']=$this->books_model->set_swap_flag($data['swap_UID']);
-        $data['other_user']=$this->books_model->get_other_user2($data);
-        $data['book2']=$this->books_model->get_2nd_image($data['swap_UID']);
-        $data['book_info'] = $this->books_model->get_in_swap_info($data);
-        $data['book_info2'] = $this->books_model->get_out_swap_info($data);
+        $data['flag']=$this->books_model->set_swap_flag($data['swap_UID']); //swap flag checks if a book was selected by the requested user or not
+        $data['other_user']=$this->books_model->get_other_user2($data); //Gets the other user's information
+        $data['book2']=$this->books_model->get_2nd_image($data['swap_UID']); //Gets all of the data on the received book (if selected) 
+        $data['book_info'] = $this->books_model->get_in_swap_info($data); //Gets all the data on the desired book
+        $data['book_info2'] = $this->books_model->get_out_swap_info($data); //Gets the swap info and the desired book info 
         $this->load->view('templates/HeadB',$data);
         $this->load->view('B_Views/swap_out',$data);
         $this->load->view('templates/FootB');

@@ -42,6 +42,7 @@ class books_model extends CI_Model {
         $query=$this->db->query('UPDATE `swap_reqs` SET `received_book`="'.$data['b_UID'].'", `swap_status`="To be approved" WHERE swap_UID = "'.$data['swap_UID'].'" ');
     }
 
+    //Checks if a book was selected by the requested user or not
     public function set_swap_flag($swap_UID){
         $query=$this->db->query('SELECT received_book FROM swap_reqs WHERE swap_UID= "'.$swap_UID.'" ');
         $res=$query;
