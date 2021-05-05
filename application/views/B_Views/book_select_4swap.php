@@ -29,7 +29,9 @@
                         
                         ?>
                         <?php 
-                        print_r($books);
+                        if (!$books){
+                            echo 'There are no books';
+                        }
                         foreach ($books as $book):
                                 if (isset($book)){
                                     echo 'Book is set';
