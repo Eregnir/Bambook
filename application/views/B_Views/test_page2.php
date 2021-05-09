@@ -8,7 +8,7 @@
 <body>
     <div>
         <?php
-        echo $email;
+        echo $email[0];
         ?>
     </div>
 </body>
