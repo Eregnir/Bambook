@@ -204,17 +204,7 @@
                                             document.getElementById('book_language').value = 'Russian';
                                         }
 
-                                        // When the user clicks on the button, scroll to the top of the document
-                                        function topFunction() {
-                                        document.body.scrollTop = 0;
-                                        document.documentElement.scrollTop = 0;
-                                        }
-
-                                        topfunction();
+                                        // smooth scroll upon clicking the div
+                                        window.scrollTo({ top: 0, behavior: 'smooth' });
                                     }
-
-
-
-
-
                                 </script>
