@@ -105,6 +105,13 @@ class books_model extends CI_Model {
         $query = $this->db->query('SELECT email FROM users WHERE username = "'.$username.'" ');
         return $query->result();        
     }
+
+    public function upload_image($data){
+        // $this->db->db_debug = FALSE;
+        $query=$this->db->query('UPDATE `user_books` SET `img`="'.base64_encode($data['img']).'" WHERE ISBN = "'.$data['ISBN'].'" ORDER BY date_added DESC LIMIT 1 ');
+        // $b_UID = $this->db->query('SELECT "UID" FROM user_books WHERE ISBN = "'.$data['ISBN'].'" ORDER BY "date_added" DESC LIMIT 1');
+        // return $b_UID;
+    }
     
 
 }
