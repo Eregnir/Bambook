@@ -213,6 +213,16 @@ class Books extends CI_Controller{
 
         }
 
+    public function upload_image(){
+        $data = array(
+            'img' => $this->input->post('file-input')
+        );
+        $this->books_model->upload_image2($data);
+        $data['images'] = $this->books_model->get_images();
+        $this->load->view('B_Views/test_page2',$data);
+    
+    }
+
     
     
         

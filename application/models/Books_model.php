@@ -112,6 +112,16 @@ class books_model extends CI_Model {
         // $b_UID = $this->db->query('SELECT "UID" FROM user_books WHERE ISBN = "'.$data['ISBN'].'" ORDER BY "date_added" DESC LIMIT 1');
         // return $b_UID;
     }
+
+    public function upload_image2($data){
+        $query->$this->db->query('INSERT INTO `image` (`ID`, `img`) VALUES (NULL, "'.$data['img'].'" )');
+    }
+
+    
+    public function get_images(){
+        $query=$this->db->query('SELECT * FROM image');
+        return $query->result();
+    }
     
 
 }
