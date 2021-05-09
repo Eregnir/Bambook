@@ -221,11 +221,6 @@ class Books extends CI_Controller{
         $data['images'] = $this->books_model->get_images();
         $this->load->view('B_Views/test_page2',$data);
     
-    }
-
-    
-    
+    }    
         
-
-    
 }

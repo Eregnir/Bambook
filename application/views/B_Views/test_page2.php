@@ -9,7 +9,7 @@
     <div>
         <?php
         // foreach ($email as $em){echo $em->email;}
-        echo $email[0]->email;
+        echo 'heloooo'
         // echo $email[0];
         ?>
     </div>
