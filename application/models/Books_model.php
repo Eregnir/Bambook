@@ -93,6 +93,13 @@ class books_model extends CI_Model {
             $query = $this->db->query('UPDATE user_books SET `availability`=1 WHERE `UID`="'.$data['b_UID'].'" ');
         }
     }
+
+    public function upload_book($data){
+        $this->db->db_debug = FALSE;
+        $data['email'] = $this->db->query('SELECT email FROM users WHERE username = "'.$data['username'].'" ');
+        $query=$this->db->insert('user_books', $data);
+        return $query;
+    }
     
 
 }

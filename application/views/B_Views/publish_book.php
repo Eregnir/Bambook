@@ -9,7 +9,8 @@
                                 <!--Naked Form-->
                                 <div class="card-block">
                                     <!--Body-->
-                                    <form id="publish_book_form" action="#">
+                                    <?php echo form_open('Books/upload_book'); ?>
+                                    <!-- <form id="publish_book_form" action="#"> -->
                                         <!-- Book Genre -->
                                         <div class="form-group">
                                             <label for="book_genre" class="bmd-label-floating">Genre</label>
@@ -66,7 +67,8 @@
                                         </div>
                                         <!-- Submit button -->
                                         <button class="btn btn-primary">Publish a book</button>
-                                    </form>
+                                    <!-- </form> -->
+                                    <?php echo form_close(); ?>
                                 </div>
                                 <!-- Search Book using Google API -->
                                 <h5 class="h5-responsive">Search your book name & save time on the upload</h5>
@@ -95,6 +97,8 @@
                                 <!-- JS for Google API search -->
 
                                 <script>
+
+
                                     $("#search_form").submit(function(e) {
                                         $("#books").html("");
 
