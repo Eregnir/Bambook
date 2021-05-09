@@ -170,13 +170,13 @@ img.article-image {
   margin: auto;
 }
 
-footer {
+/* footer {
   background-image: url(../../images/footer-background.png);
   background-size: cover;
   bottom:0;
 
 
-}
+} */
 
 /************ available_books CSS *************/
 
@@ -448,3 +448,14 @@ form {
 
 
 /******************** END CSS Page - Publish Book ********************/
+
+/**** FOOTER ****/
+
+footer {
+  background-image: url(../../images/footer-background.png);
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
