@@ -461,3 +461,15 @@ footer {
     display:none;
   }
 }
+
+@media screen and (max-width: 370px) {
+  #myTable tr td {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #myTable tr td {
+    font-size: 13px;
+  }
+}
