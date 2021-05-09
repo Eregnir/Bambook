@@ -199,9 +199,9 @@ class Books extends CI_Controller{
             'img' => $this->input->post('file-input')
             );
         $user=$this->session->all_userdata();
-        $data['username'] = $user['username'];
-        $email = $this->books_model->get_email_by_username($data['username']);
-        $data['email'] = $email[0]->email;
+        $data['user_username'] = $user['username'];
+        $email = $this->books_model->get_email_by_username($data['user_username']);
+        $data['user_email'] = $email[0]->email;
         $this->books_model->upload_book($data);
         // $this->my_book2($data);
         header('Location: https://assafye.mtacloud.co.il/Bambook/index.php/Intro/my_library');
