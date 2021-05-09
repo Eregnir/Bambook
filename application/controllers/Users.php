@@ -49,7 +49,7 @@ class Users extends CI_Controller{
                'username' => $this->input->post('username'),
                'password' => $this->input->post('password')
          );
-        
+        $data['email'] = $this->users_model->get_email($data);
         $error=$this->users_model->save($data);
         if ($error)
             $this->register($error);
@@ -81,7 +81,7 @@ class Users extends CI_Controller{
                'username' => $this->input->post('username'),
                'password' => $this->input->post('password')
              );
-           
+            $data['email'] = $this->users_model->get_email($data);
             $check=$this->users_model->auth($data);
           
             if ($check==null){
