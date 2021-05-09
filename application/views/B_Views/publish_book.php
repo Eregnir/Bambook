@@ -14,6 +14,7 @@
                                         <div class="form-group">
                                             <label for="book_genre" class="bmd-label-floating">Genre</label>
                                             <select class="form-control" name="book_genre" id="book_genre" name="book_genre">
+                                                <option value="" disabled default selected>--Select--</option>
                                                 <option value="fantasy">Fantasy</option>
                                                 <option value="mystery">Mystery</option>
                                                 <option value="romance">Romance</option>
