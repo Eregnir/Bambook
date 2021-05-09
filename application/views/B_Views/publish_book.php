@@ -208,9 +208,7 @@
                                             document.getElementById('book_language').value = 'Russian';
                                         }
 
-                                        $('.thumbs').onclick('scrollUp',function(){
-                                        alert("scroll up event");
-                                    });
+                                        alert("I am an alert box!");
                                     }
 
 
