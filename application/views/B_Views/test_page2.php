@@ -8,7 +8,7 @@
 <body>
     <div>
         <?php
-        echo $email;
+        print_r($email);
         ?>
     </div>
 </body>
