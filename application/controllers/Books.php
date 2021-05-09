@@ -6,8 +6,7 @@ class Books extends CI_Controller{
         $this->load->helper('url');
         $this->load->helper('form');
         $this->load->library('form_validation');
-        $this->load->library('session');    
-        $this->load->helper(array('form', 'url')); 
+        $this->load->library('session');     
     }
 
     // Function to load the available books from the index page
@@ -189,7 +188,7 @@ class Books extends CI_Controller{
         }
 
     //function to set the availability of one of the user's books
-    public function upload_book(){
+    public function upload_book1(){
         $data = array(
             'book_genre' => $this->input->post('book_genre'),
             'title' => $this->input->post('book_title'),
@@ -199,10 +198,7 @@ class Books extends CI_Controller{
             'cond' => $this->input->post('book_cond'),
             'img' => $this->input->post('file-input')
             );
-        // $image = array(
-            
-        //     'ISBN' => $this->input->post('b_isbn')
-        // );
+
         $user=$this->session->all_userdata();
         $data['user_username'] = $user['username'];
         $email = $this->books_model->get_email_by_username($data['user_username']);
@@ -214,43 +210,31 @@ class Books extends CI_Controller{
 
         }
 
+
+        public function upload_book(){
+            $data = array(
+                'book_genre' => $this->input->post('book_genre'),
+                'title' => $this->input->post('book_title'),
+                'author' => $this->input->post('book_author'),
+                'lang' => $this->input->post('book_language'),
+                'ISBN' => $this->input->post('b_isbn'),
+                'cond' => $this->input->post('book_cond'),
+                'img' => $this->input->post('file-input')
+                );
+    
+            $this->load->view('templates/HeadB',$data);
+            $this->load->view('B_Views/test',$data);
+            $this->load->view('templates/FootB');
+                
+    
+            }
+
     public function upload_image(){
         $data = array(
-            'img' => $this->input->post('fields_upload[multi_edit][0][b798abe6e1b1318ee36b0dcb3fb9e4d3]')
+            'img' => $this->input->post('file-input')
         );
         $this->books_model->upload_image2($data);
         $data['images'] = $this->books_model->get_images();
         $this->load->view('B_Views/test_page2',$data);
-    
     }    
-    
-    public function do_upload()
-        {
-                $config['upload_path']          = './uploads/';
-                $config['allowed_types']        = 'gif|jpg|png';
-                $config['max_size']             = 1000;
-                $config['max_width']            = 1980;
-                $config['max_height']           = 1020;
-
-                $this->load->library('upload', $config);
-
-                if ( ! $this->upload->do_upload('userfile'))
-                {
-                        $error = array('error' => $this->upload->display_errors());
-
-                        $this->load->view('upload_form', $error);
-                }
-                else
-                {
-                        $data = array('upload_data' => $this->upload->data());
-
-                        $this->load->view('upload_success', $data);
-                }
-        }
-
-    public function to_upload(){
-        $this->load->view('B_Views/upload_form');
-
-    }
-
 }
