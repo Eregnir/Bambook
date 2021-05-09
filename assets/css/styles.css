@@ -457,8 +457,17 @@ footer {
   #myTable tr td {
     font-size: 15px;
   }
-  td .img-fluid {
+  td img {
     display: none;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  #myTable tr td {
+    font-size: 12px;
+  }
+  tr th {
+    font-size: 15px;
   }
 }
 
