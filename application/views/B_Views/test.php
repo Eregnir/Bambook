@@ -7,7 +7,7 @@
 </head>
 <body>
     <div>
-        <?php echo $username ?> <br>
+        <?php echo $user_username ?> <br>
         <span class="card-img-top"><?php echo '<img class="card-img-top" alt="Book Image"src="data:image/jpeg;base64,'.base64_encode( $img).'"/>';?></span>
     </div>
 </body>
