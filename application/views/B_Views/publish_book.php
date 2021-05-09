@@ -208,9 +208,13 @@
                                             document.getElementById('book_language').value = 'Russian';
                                         }
                                         
-                                        new Alert({
-                                            title: 'Booked was added successfully!',
-                                            content: 'Your book was added to the form successfully!\nContinue selecting the genre and the condition of the book.'
+                                        $(window).scroll(function() {
+                                            if ($(this).scrollTop() == ($(document).height() - $(window).height())) {
+                                        //        console.log($(this).scrollTop());
+                                        //        console.log($(document).height());
+                                        //        console.log($(window).height());
+                                                alert('Your book was added to the form successfully!');
+                                            }
                                         });
                                     }
                                 </script>
