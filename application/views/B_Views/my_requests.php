@@ -1,6 +1,6 @@
         <main class="mdl-layout__content">
+            <h2 class="pad5">My Requests</h2><br>
             <div class="mdl-grid portfolio-max-width">
-                <h2 class="pad5">My Requests</h2><br>
                 <h4 class="pad5">Received Requests</h4>
                 <!-- Received requests -->
                 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for the book or author name..." title="Type in a name">
