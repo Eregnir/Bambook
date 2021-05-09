@@ -208,14 +208,12 @@
                                             document.getElementById('book_language').value = 'Russian';
                                         }
 
-                                        jQuery(document).ready(function() {
-                                            jQuery('.thumbs').click(function(){
-                                            alert('Your book was added successfully to the form!');
-                                            jQuery('html, body').animate({scrollTop:0}, 'smooth');
-                                            return false;
-                                            });
-                                        });
+                                        
                                     }
 
-
+                                    $('.thumbs').click(function() {
+                                        $('html, body').animate({
+                                        scrollTop: '0px'
+                                        });
+                                    });
                                 </script>
