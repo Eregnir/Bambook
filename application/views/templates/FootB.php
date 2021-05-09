@@ -1,4 +1,5 @@
-            <footer class="mdl-mini-footer">
+        </main>
+        <footer class="mdl-mini-footer">
                 <div class="mdl-mini-footer__left-section">
                     <div class="mdl-logo">Bambook - Book Swap</div>
                 </div>
@@ -9,7 +10,6 @@
                     </ul>
                 </div>
             </footer>
-        </main>
     </div>
 
 <script>
