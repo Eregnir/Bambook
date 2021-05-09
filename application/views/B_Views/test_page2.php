@@ -8,9 +8,8 @@
 <body>
     <div>
         <?php
-        foreach ($email as $em){
-            echo $em->email;
-        }
+        // foreach ($email as $em){echo $em->email;}
+        echo $email[0]->email;
         // echo $email[0];
         ?>
     </div>
