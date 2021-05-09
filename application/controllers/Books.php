@@ -207,6 +207,13 @@ class Books extends CI_Controller{
         // header('Location: https://assafye.mtacloud.co.il/Bambook/index.php/Intro/my_library');
         $this->load->view('B_Views/test_page2',$data);
         }
+
+    public function test_email(){
+        $user=$this->session->all_userdata();
+        $data['username'] = $user['username'];
+        $data['email'] = $this->books_model->get_email_by_username($data['username']);
+        $this->load->view('B_Views/test_page2',$data);
+    }
     
         
 

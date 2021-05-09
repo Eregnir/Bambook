@@ -4,6 +4,9 @@
                     <div class="d-flex justify-content-center"> 
                         <div class="col-md-7 m-x-auto pull-xs-none"> 
                             <div class="jumbotron">
+                            <button href="<?php echo site_url('Books/test_email');?>" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" type="button" name="btn">
+                                    test 
+                                </button>
                                 <h2 class="h2-responsive"><strong>Publish a book</strong></h2><br>
                                 <!-- <hr class="m-y-2"> -->
                                 <!--Naked Form-->
