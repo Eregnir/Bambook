@@ -8,7 +8,9 @@
 <body>
     <div>
         <?php
-        print_r($email);
+        foreach ($email as $em){
+            echo $em;
+        }
         ?>
     </div>
 </body>
