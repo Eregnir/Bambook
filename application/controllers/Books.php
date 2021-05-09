@@ -243,7 +243,7 @@ class Books extends CI_Controller{
 
         $fileData = array();
         // File upload script
-        $this->upload->initialize(array(
+        $this->Books->initialize(array(
             'upload_path' => './uploads/',
             'overwrite' => false,
             'max_filename' => 300,
