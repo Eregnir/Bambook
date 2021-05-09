@@ -4,10 +4,10 @@
                     <div class="d-flex justify-content-center"> 
                         <div class="col-md-7 m-x-auto pull-xs-none"> 
                             <div class="jumbotron">
-                                <h2 class="h2-responsive" id="scrollUpHere"><strong>Publish a book</strong></h2><br>
+                                <h2 class="h2-responsive"><strong>Publish a book</strong></h2><br>
                                 <!-- <hr class="m-y-2"> -->
                                 <!--Naked Form-->
-                                <div class="card-block">
+                                <div class="card-block" id="scrollUpHere">
                                     <!--Body-->
                                     <?php echo form_open('Books/upload_book'); ?>
                                     <!-- <form id="publish_book_form" action="#"> -->
@@ -208,7 +208,6 @@
                                             document.getElementById('book_language').value = 'Russian';
                                         }
                                         
-                                        alert("Your book was added successfully to the form!");
                                         document.getElementById("scrollUpHere").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
                                    }
                                 </script>
