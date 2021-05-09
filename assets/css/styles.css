@@ -454,11 +454,21 @@ footer {
 
 /* On screens that are 470px or less, hide image column */
 @media screen and (max-width: 470px) {
+  #myTable tr td {
+    font-size: 15px;
+  }
+  td .img-fluid {
+    display: none;
+  }
+}
+
+
+/* @media screen and (max-width: 470px) {
   #availableBookImg {
     display: none;
   }
   #myTable tr td:first-child {
-    display:none;
+    display: none;
   }
 }
 
@@ -472,4 +482,4 @@ footer {
   #myTable tr td {
     font-size: 13px;
   }
-}
+} */
