@@ -207,13 +207,10 @@
                                         if ($('.thumbs')[i].childNodes[11].wholeText == 'ru') {
                                             document.getElementById('book_language').value = 'Russian';
                                         }
-
-                                        
+                                        $('.thumbs')[i].click(function() {
+                                            $('html, body').animate({
+                                                scrollTop: '0px'
+                                            });
+                                        }); 
                                     }
-
-                                    $('.thumbs').click(function() {
-                                        $('html, body').animate({
-                                        scrollTop: '0px'
-                                        });
-                                    });
                                 </script>
