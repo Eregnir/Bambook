@@ -83,6 +83,16 @@ class books_model extends CI_Model {
         $query = $this->db->query('SELECT * FROM users INNER JOIN swap_reqs ON swap_reqs.sent_to_username=users.username WHERE `swap_reqs`.`swap_UID`="'.$data['swap_UID'].'" ');
         return $query->result();
     }
+
+    public function set_availability($data){
+        //Getting the other user's phone number and all data
+        if ($data['availability'] == 1){
+            $query = $this->db->query('UPDATE user_books SET `availability`=0 WHERE `UID`="'.$data['b_UID'].'" ');
+        }
+        else{
+            $query = $this->db->query('UPDATE user_books SET `availability`=1 WHERE `UID`="'.$data['b_UID'].'" ');
+        }
+    }
     
 
 }

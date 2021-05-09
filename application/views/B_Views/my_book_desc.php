@@ -26,6 +26,8 @@
                             <li class="list-group-item">Language: <?php echo $bi->lang?></li>
                             <!-- Book Condition -->
                             <li class="list-group-item">Condition: <?php echo $bi->cond ?></li>
+                            <!-- Book availability -->
+                            <li class="list-group-item">Available for swap: <?php if ($bi->availability == 1){echo 'Yes' ;} else{echo 'no';} ?></li>
                         </ul>
                         
                         <!-- Form to change the availability  -->
@@ -36,18 +38,16 @@
                                     1. create the correct form in the controller
                                     2. send to here from my library
                              -->
-                            <?php echo form_open('Books/single_book'); ?>
+                            <?php echo form_open('Books/set_availability'); ?>
                             <!-- send the book's UID -->
                                 <input type="hidden" value="<?php echo $bi->UID;?>" name="UID" id="UID">
-                            <!-- send the owner's username  -->
-                                <input type="hidden" value="<?php echo $bi->user_username;?>" name="sent_to_username" id="sent_to_username"> 
-                            <!-- send the requesters username -->
-                                <input type="hidden" value="<?php echo $user['username'];?>" name="sent_by_username" id="sent_by_username"> 
+                            <!-- send the book's current availability -->
+                            <input type="hidden" value="<?php echo $bi->availability;?>" name="avail" id="avail">
                             <!-- Hidden button to submit the form -->
                                 <button class="hidden mdl-button mdl-js-button mdl-button--icon" type="submit" name="submit" id="submit">Submit</button>   
                                 <!-- Displayed button to start the 'are you sure' message -->
                                 <button id="swap" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent card-link alignright" type="button" name="swap">
-                                    Request Swap
+                                    Change Availability
                                 </button>
                             <?php echo form_close(); ?>
                         </div>
