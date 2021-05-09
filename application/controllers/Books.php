@@ -195,18 +195,19 @@ class Books extends CI_Controller{
             'author' => $this->input->post('book_author'),
             'lang' => $this->input->post('book_language'),
             'ISBN' => $this->input->post('b_isbn'),
-            'cond' => $this->input->post('book_cond')
+            'cond' => $this->input->post('book_cond'),
+            'img' => $this->input->post('file-input')
             );
-        $image = array(
-            'img' => $this->input->post('file-input'),
-            'ISBN' => $this->input->post('b_isbn')
-        );
+        // $image = array(
+            
+        //     'ISBN' => $this->input->post('b_isbn')
+        // );
         $user=$this->session->all_userdata();
         $data['user_username'] = $user['username'];
         $email = $this->books_model->get_email_by_username($data['user_username']);
         $data['user_email'] = $email[0]->email;
         $this->books_model->upload_book($data);
-        $this->books_model->upload_image($image);
+        // $this->books_model->upload_image($image);
         // $this->my_book2($data);
         header('Location: https://assafye.mtacloud.co.il/Bambook/index.php/Intro/my_library');
 
