@@ -1,9 +1,9 @@
         <main class="mdl-layout__content">
             <div class="mdl-grid portfolio-max-width">
-                <div>
+                <div class="mdl-card__title-text">
                     <h2 class="pad5">My Requests</h2><br>
                 </div>
-                <div>
+                <div class="mdl-card__subtitle-text">
                     <h4>Received Requests</h4>
                 </div>
                 <!-- Received requests -->
