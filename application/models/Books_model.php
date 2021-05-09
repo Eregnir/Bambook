@@ -95,7 +95,7 @@ class books_model extends CI_Model {
     }
 
     public function upload_book($data){
-        // $this->db->db_debug = FALSE;
+        $this->db->db_debug = FALSE;
         $query=$this->db->insert('user_books', $data);
         // $b_UID = $this->db->query('SELECT "UID" FROM user_books WHERE ISBN = "'.$data['ISBN'].'" ORDER BY "date_added" DESC LIMIT 1');
         // return $b_UID;
