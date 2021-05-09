@@ -66,7 +66,7 @@
                                             </script>
                                         </div>
                                         <!-- Submit button -->
-                                        <button class="btn btn-primary">Publish a book</button>
+                                        <button type="submit" class="btn btn-primary">Publish a book</button>
                                     <!-- </form> -->
                                     <?php echo form_close(); ?>
                                 </div>
