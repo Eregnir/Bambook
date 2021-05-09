@@ -8,7 +8,8 @@
 <body>
     <div>
         <?php
-        print_r($email)
+        echo $username;
+        // echo $email[0];
         ?>
     </div>
 </body>
