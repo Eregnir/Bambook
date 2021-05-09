@@ -28,16 +28,15 @@
                             <li class="list-group-item">Condition: <?php echo $bi->cond ?></li>
                         </ul>
                         
-                        <!-- Form to send a request swap -->
+                        <!-- Form to change the availability  -->
                         <div class="card-body">
                             <a href="javascript:history.back()" class="card-link alignleft">Go Back</a>
                             <!-- 
                                 This is what I need when sending this form:
-                                    1. the desired book's UID
-                                    2. the book's owner (username)
-                                    3. the requester's username
+                                    1. create the correct form in the controller
+                                    2. send to here from my library
                              -->
-                            <?php echo form_open('Books/send_swap_req'); ?>
+                            <?php echo form_open('Books/single_book'); ?>
                             <!-- send the book's UID -->
                                 <input type="hidden" value="<?php echo $bi->UID;?>" name="UID" id="UID">
                             <!-- send the owner's username  -->

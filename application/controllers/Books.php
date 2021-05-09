@@ -154,5 +154,19 @@ class Books extends CI_Controller{
         $this->load->view('templates/FootB');
         }
 
+
+    // Function to load my book in order to view it and change its availability
+    public function my_book(){
+        $data = array(
+            'b_UID' => $this->input->post('b_UID')
+            );
+        $user=$this->session->all_userdata();
+        $data['user']=$user;
+        $data['book_info'] = $this->books_model->get_book_info($data['b_UID']);
+        $this->load->view('templates/HeadB',$data);
+        $this->load->view('B_Views/my_book_desc',$data);
+        $this->load->view('templates/FootB');
+        }
+
     
 }
