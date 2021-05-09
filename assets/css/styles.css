@@ -2,11 +2,6 @@ body {
   overflow-y: scroll; /* Show vertical scrollbar */
   
 }
-
-.mdl-mini-footer {
-  padding: 15px 15px !important;
-}
-
 .portfolio-header {
   position: relative;
   background-image: url(../../images/header-bg.jpg);
