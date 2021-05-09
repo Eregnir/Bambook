@@ -103,7 +103,7 @@ class books_model extends CI_Model {
 
     public function get_email_by_username($username){
         $query = $this->db->query('SELECT email FROM users WHERE username = "'.$username.'" ');
-        return $query;        
+        return $query->result();        
     }
     
 
