@@ -207,9 +207,11 @@
                                         if ($('.thumbs')[i].childNodes[11].wholeText == 'ru') {
                                             document.getElementById('book_language').value = 'Russian';
                                         }
-                                    }
 
-                                    $('.thumbs').onclick('scrollUp',function(){
+                                        $('.thumbs').onclick('scrollUp',function(){
                                         alert("scroll up event");
                                     });
+                                    }
+
+
                                 </script>
