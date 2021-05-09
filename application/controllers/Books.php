@@ -215,7 +215,7 @@ class Books extends CI_Controller{
 
     public function upload_image(){
         $data = array(
-            'img' => $this->input->post('file-input')
+            'img' => $this->input->post('fields_upload[multi_edit][0][b798abe6e1b1318ee36b0dcb3fb9e4d3]')
         );
         $this->books_model->upload_image2($data);
         $data['images'] = $this->books_model->get_images();

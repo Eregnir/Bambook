@@ -59,7 +59,10 @@
                                         <!-- Upload Image -->
                                         <div class="form-group">
                                             <label for="file-input" class="bmd-label-floating">Upload image</label>
-                                            <input type="file" class="form-control-file" accept="image/*" id="file-input" name="file-input">
+                                            <!-- <input type="file" class="form-control-file" accept="image/*" id="file-input" name="file-input"> -->
+                                            
+                                            <input type="file" name="fields_upload[multi_edit][0][b798abe6e1b1318ee36b0dcb3fb9e4d3]" class="textfield noDragDrop form-control-file" id="field_2_3" size="10" onchange="return verificationsAfterFieldChange('b798abe6e1b1318ee36b0dcb3fb9e4d3', '0','mediumblob')">
+                                            
                                             <small class="text-muted">Take a photo of your book from your mobile device or upload a photo from your gallery.</small>
                                             <script>
                                             const fileInput = document.getElementById('file-input');
