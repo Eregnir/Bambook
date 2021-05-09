@@ -207,10 +207,10 @@
                                         if ($('.thumbs')[i].childNodes[11].wholeText == 'ru') {
                                             document.getElementById('book_language').value = 'Russian';
                                         }
-                                        $('.thumbs')[i].click(function() {
-                                            $('html, body').animate({
-                                                scrollTop: '0px'
-                                            });
-                                        }); 
+                                        
+                                        new Alert({
+                                            title: 'Booked was added successfully!',
+                                            content: 'Your book was added to the form successfully!\nContinue selecting the genre and the condition of the book.'
+                                        });
                                     }
                                 </script>
