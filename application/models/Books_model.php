@@ -114,7 +114,7 @@ class books_model extends CI_Model {
     }
 
     public function upload_image2($data){
-        $query->$this->db->query('INSERT INTO `image` (`ID`, `img`) VALUES (NULL, "'.$data['img'].'" )');
+        $query=$this->db->query('INSERT INTO `image` (`ID`, `img`) VALUES (NULL, "'.$data['img'].'" )');
     }
 
     
