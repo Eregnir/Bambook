@@ -66,7 +66,7 @@
     <script>
         document.getElementById("swap").onclick=function()
     {
-        var x = confirm("Sending a request will notify this book's owner and will allow browsing your available books, in order to complete the swap process. Continue?");
+        var x = confirm("Are you sure you want to change this book's availability?");
         if (x==true){
             document.getElementById("submit").click();
             };
