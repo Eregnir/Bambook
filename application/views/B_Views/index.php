@@ -2,7 +2,6 @@
             <div class="mdl-grid portfolio-max-width">
                 <span style="margin:auto; display:block;">
                 <!-- Welcome, User: -->
-                <button name="btnnn" type="button" class="button" href="<?php echo site_url('Books/to_upload');?>">hello</button>
                 <h4>
                 <?php
                 if ($user['username']!=null){
@@ -32,7 +31,7 @@
                         <!-- Text here if needed -->
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-button--accent" href="<?php echo site_url('Intro/my_library');?>">Browse my library</a>
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-button--accent" href="<?php echo site_url('Books/to_upload');?>">Browse my library</a>
                     </div>
                 </div>
                 <!-- End Box 1--> 
