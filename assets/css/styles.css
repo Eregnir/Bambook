@@ -3,6 +3,9 @@ body {
   
 }
 
+.mdl-mini-footer {
+  padding: 15px 15px !important;
+}
 
 .portfolio-header {
   position: relative;
@@ -458,8 +461,4 @@ footer {
   bottom: 0;
   width: 100%;
   height: 50px;
-}
-
-.mdl-mini-footer {
-  padding: 15px 15px !important;
 }
