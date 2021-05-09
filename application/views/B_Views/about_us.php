@@ -2,11 +2,11 @@
             <div class="mdl-grid portfolio-max-width">
                 <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
                     <div class="mdl-grid portfolio-copy">
-                        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline text-center">Welcome to Bambook!</h3>
+                        <h2 class="mdl-cell mdl-cell--12-col mdl-typography--headline text-center">Welcome to Bambook!</h2>
                     </div>
                     <!-- Image card 1 -->
                     <div class="card text-center" style="width: 22em;">
-                        <img class="card-img-top" src='<?php echo base_url('images/about_us_images/1.png');?>' alt="upload a book">
+                        <img class="card-img-top" src='<?php echo base_url('images/about_us_images/1.png');?>' alt="welcome to bambook">
                         <div class="card-body">
                             <p class="card-text">
                                 Bambook is an eco-friendly easy to use platform that allows you to swap books for free with our growing community.
@@ -57,16 +57,17 @@
                             <!-- <a href="#" class="btn btn-primary">Read</a> -->
                         </div>
                     </div>
-                    <br><br><br>
-                    <div class="center-align"><br>
-                        <p>Sounds interesting? Log in or join us today!<p><br>
+                    <br><br>
+                    <div class="center-align">
+                        <h3 class="text-center">Sounds interesting? Log in or join us today!</h3><br>
                         <div class="text-center">
-                            <button id="login" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" type="button" name="login ">
+                            <button id="login" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" type="button" name="login">
                                 Login
                             </button> 
                             <button id="register" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="button" name="register">
                                 Register
                             </button>
+                            <br><br>
                         </div>
                     </div>
                 </div>
