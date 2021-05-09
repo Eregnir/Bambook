@@ -201,7 +201,6 @@ class Books extends CI_Controller{
         $user=$this->session->all_userdata();
         $data['username'] = $user['username'];
         $email = $this->books_model->get_email_by_username($data['username']);
-        foreach 
         $this->books_model->upload_book($data);
         $this->my_book2($data);
         }
