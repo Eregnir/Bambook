@@ -209,7 +209,7 @@
                                         }
                                     }
 
-                                    function scrollUp() {
-                                        window.scrollTo({top: 0, behavior: "smooth"});
-                                    }
+                                    $('.thumbs').on("click",function(){
+                                        $(window).scrollTop(0);
+                                    });
                                 </script>
