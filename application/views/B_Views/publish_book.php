@@ -185,7 +185,7 @@
                                         document.getElementById('book_language').value = $('.thumbs')[i].childNodes[11].wholeText; // to fix the right side
                                         document.getElementById('b_isbn').value = $('.thumbs')[i].childNodes[14].wholeText; // to fix the right side
                                     
-                                        if ($('.thumbs')[i].childNodes[11].wholeText == 'en' || ($('.thumbs')[i].childNodes[11].wholeText == 'en-GB') {
+                                        if ($('.thumbs')[i].childNodes[11].wholeText == 'en') {
                                             document.getElementById('book_language').value = 'English';
                                         }
                                         if ($('.thumbs')[i].childNodes[11].wholeText == 'iw') {
@@ -193,6 +193,9 @@
                                         }
                                         if ($('.thumbs')[i].childNodes[11].wholeText == 'ar') {
                                             document.getElementById('book_language').value = 'Arabic';
+                                        }
+                                        if ($('.thumbs')[i].childNodes[11].wholeText == 'en-GB') {
+                                            document.getElementById('book_language').value = 'English';
                                         }
                                         if ($('.thumbs')[i].childNodes[11].wholeText == 'es') {
                                             document.getElementById('book_language').value = 'Spanish';
