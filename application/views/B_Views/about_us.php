@@ -2,7 +2,7 @@
             <div class="mdl-grid portfolio-max-width">
                 <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
                     <div class="mdl-grid portfolio-copy">
-                        <h3 class="text-center">Welcome to Bambook!</h3>
+                        <h3 class="text-center" style="padding: 5px;">Welcome to Bambook!</h3>
                     </div>
                     <!-- Image card 1 -->
                     <div class="card text-center" style="width: 22em;">
