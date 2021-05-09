@@ -104,7 +104,7 @@
                                         searchQuery = searchQuery.split(" ").join("+");
 
                                         if (!searchQuery) {
-                                            searchQuery = "paleo";
+                                            searchQuery = "Harry Potter"; // defauly query
                                         }
 
                                         $.ajax({
