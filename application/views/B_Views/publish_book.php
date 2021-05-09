@@ -208,7 +208,8 @@
                                             document.getElementById('book_language').value = 'Russian';
                                         }
 
-                                        alert("I am an alert box!");
+                                        // alert("Your book was added to the form");
+                                        window.scrollTo(0, 0)
                                     }
 
 
