@@ -1,5 +1,5 @@
         </main>
-        <footer class="mdl-mini-footer">
+        <footer class="mdl-mini-footer" style="padding: 15px 15px;">
                 <div class="mdl-mini-footer__left-section">
                     <div class="mdl-logo">Bambook - Book Swap</div>
                 </div>
@@ -11,39 +11,6 @@
                 </div>
             </footer>
     </div>
-
-<script>
-    document.getElementById("ind").onclick=function()
-    {
-        window.location.href="<?php echo site_url('Intro/index');?>";   
-    };
-
-    // document.getElementById("aus").onclick=function()
-    // {
-    //     window.location.href="<?php echo site_url('Intro/about_us');?>";   
-    // };
-
-    document.getElementById("blg").onclick=function()
-    {
-        window.location.href="<?php echo site_url('Intro/available_books');?>";   
-    };
-
-    document.getElementById("abt").onclick=function()
-    {
-        window.location.href="<?php echo site_url('Intro/about');?>";   
-    };
-
-    document.getElementById("cnt").onclick=function()
-    {
-        window.location.href="<?php echo site_url('Intro/contact');?>";   
-    };
-
-    document.getElementById("bkb").onclick=function()
-    {
-        window.location.href="<?php echo site_url('Intro/my_requests');?>";   
-    };
-
-</script>
 
 </body>
 

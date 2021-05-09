@@ -74,4 +74,34 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-        
+        <script>
+            document.getElementById("ind").onclick=function()
+                {
+                    window.location.href="<?php echo site_url('Intro/index');?>";   
+                };
+
+                // document.getElementById("aus").onclick=function()
+                // {
+                //     window.location.href="<?php echo site_url('Intro/about_us');?>";   
+                // };
+
+                document.getElementById("blg").onclick=function()
+                {
+                    window.location.href="<?php echo site_url('Intro/available_books');?>";   
+                };
+
+                document.getElementById("abt").onclick=function()
+                {
+                    window.location.href="<?php echo site_url('Intro/about');?>";   
+                };
+
+                document.getElementById("cnt").onclick=function()
+                {
+                    window.location.href="<?php echo site_url('Intro/contact');?>";   
+                };
+
+                document.getElementById("bkb").onclick=function()
+                {
+                    window.location.href="<?php echo site_url('Intro/my_requests');?>";   
+                };
+        </script>
