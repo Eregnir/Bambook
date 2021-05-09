@@ -213,8 +213,8 @@
                                             alert('Your book was added successfully to the form!');
                                             jQuery('html, body').animate({scrollTop:0}, 'smooth');
                                             return false;
+                                            });
                                         });
-                                    });
                                     }
 
 
