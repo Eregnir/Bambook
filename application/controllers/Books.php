@@ -211,23 +211,23 @@ class Books extends CI_Controller{
         }
 
 
-        public function upload_book(){
-            $data = array(
-                'book_genre' => $this->input->post('book_genre'),
-                'title' => $this->input->post('book_title'),
-                'author' => $this->input->post('book_author'),
-                'lang' => $this->input->post('book_language'),
-                'ISBN' => $this->input->post('b_isbn'),
-                'cond' => $this->input->post('book_cond'),
-                'img' => $this->input->post('file-input')
-                );
-    
-            $this->load->view('templates/HeadB',$data);
-            $this->load->view('B_Views/test',$data);
-            $this->load->view('templates/FootB');
-                
-    
-            }
+    public function upload_book(){
+        $data = array(
+            'book_genre' => $this->input->post('book_genre'),
+            'title' => $this->input->post('book_title'),
+            'author' => $this->input->post('book_author'),
+            'lang' => $this->input->post('book_language'),
+            'ISBN' => $this->input->post('b_isbn'),
+            'cond' => $this->input->post('book_cond'),
+            'img' => $this->input->post('file-input')
+            );
+
+        $this->load->view('templates/HeadB',$data);
+        $this->load->view('B_Views/test',$data);
+        $this->load->view('templates/FootB');
+            
+
+        }
 
     public function upload_image(){
         $data = array(
@@ -237,4 +237,61 @@ class Books extends CI_Controller{
         $data['images'] = $this->books_model->get_images();
         $this->load->view('B_Views/test_page2',$data);
     }    
+
+    public function do_upload() {
+
+
+        $fileData = array();
+        // File upload script
+        $this->upload->initialize(array(
+            'upload_path' => './uploads/',
+            'overwrite' => false,
+            'max_filename' => 300,
+            'encrypt_name' => true,
+            'remove_spaces' => true,
+            'allowed_types' => 'gif|jpg|png',
+            'max_size' => 100,
+            'xss_clean' => true,
+        ));
+
+        $this->form_validation->set_rules('title', 'Title', 'required|min_length[2]');
+        $this->form_validation->set_rules('body', 'Body', 'required|min_length[2]');
+
+
+
+        if ($this->form_validation->run() == TRUE) {
+
+            if ($this->upload->do_upload('userfile')) {
+
+                $data = $this->upload->data(); // Get the file data
+                $fileData[] = $data; // It's an array with many data
+                // Interate throught the data to work with them
+                foreach ($fileData as $file) {
+                    $file_data = $file;
+                }
+
+                var_dump($file_data);
+
+                $this->db->insert('image', array(
+                    // So you can work with the values, like:
+                    'title' => $this->input->post('title', true), // TRUE is XSS protection
+                    'body' => $this->input->post('body', true),
+                    'file_name' => $file_data['file_name'],
+                    'file_ext' => $file_data['file_ext'],
+                ));
+
+
+
+                $this->session->set_flashdata('success', 'Form submitted successfully');
+                redirect('Books/test');
+            } else {
+                $this->session->set_flashdata('error', $this->upload->display_errors());
+                redirect('Books/test');
+            }
+        } else {
+            $this->session->set_flashdata('error', validation_errors());
+            redirect('Books/test');
+        }
+    }
+
 }

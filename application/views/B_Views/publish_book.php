@@ -75,6 +75,18 @@
                                     <!-- </form> -->
                                     <?php echo form_close(); ?>
                                 </div>
+
+                                <div>
+                                <?php echo form_open_multipart('Books/do_upload');?>
+
+                                    <input type="file" name="userfile" size="20" />
+
+                                    <br /><br />
+
+                                    <input type="submit" value="upload" />
+
+                                    </form>
+                                </div>
                                 <!-- Search Book using Google API -->
                                 <h5 class="h5-responsive">Search your book name & save time on the upload</h5>
                                 <div id="search">
