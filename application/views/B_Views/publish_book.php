@@ -145,7 +145,7 @@
                                                 }
 
                                                 htmlcontent +=
-                                                "<div class='thumbs' style='cursor: pointer;' onclick='autoFill("+i+"); topFunction();' return true;'><b>Book Title: </b>" +
+                                                "<div class='thumbs' style='cursor: pointer;' onclick='autoFill("+i+");' return true;'><b>Book Title: </b>" +
                                                 json.items[i].volumeInfo.title +
                                                 "</b>" +
                                                 '<img src="' +
@@ -203,12 +203,18 @@
                                         if ($('.thumbs')[i].childNodes[11].wholeText == 'ru') {
                                             document.getElementById('book_language').value = 'Russian';
                                         }
+
+                                        // When the user clicks on the button, scroll to the top of the document
+                                        function topFunction() {
+                                        document.body.scrollTop = 0;
+                                        document.documentElement.scrollTop = 0;
+                                        }
+
+                                        topfunction();
                                     }
 
-                                    // When the user clicks on the button, scroll to the top of the document
-                                    function topFunction() {
-                                    document.body.scrollTop = 0;
-                                    document.documentElement.scrollTop = 0;
-                                    }
+
+
+
 
                                 </script>
