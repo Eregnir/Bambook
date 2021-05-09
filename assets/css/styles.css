@@ -186,7 +186,7 @@ img.article-image {
 }
 
 #myInput, #myInput2 {
-background-image: url("<?php echo base_url('images/searchicon.png'?>");
+background-image: url("<?php echo base_url('images/searchicon.png')?>");
 background-position: 10px 10px;
 background-repeat: no-repeat;
 width: 100%;
