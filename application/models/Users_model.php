@@ -57,9 +57,5 @@ class users_model extends CI_Model {
       $this->db->where('username', $user['username']);
       $this->db->update('users', $avatar);
    }
-
-   public function get_email($data){
-      $data['email'] = $this->db->query('SELECT email FROM users WHERE username = "'.$data['username'].'" ');
-      return $data;
-   }
+   
 }
