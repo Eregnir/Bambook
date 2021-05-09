@@ -1,5 +1,7 @@
         <main class="mdl-layout__content">
-            <h2 class="pad5">My Requests</h2><br>
+            <div class="text-center">
+                <h2 class="pad5">My Requests</h2><br>
+            </div>
             <div class="mdl-grid portfolio-max-width">
                 <h4 class="pad5">Received Requests</h4>
                 <!-- Received requests -->
