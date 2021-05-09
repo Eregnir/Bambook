@@ -209,7 +209,21 @@
                                         }
                                     }
 
-                                    $('.thumbs').on("click",function(){
-                                        $(window).scrollTop(0);
-                                    });
+                                    var scrollToTopBtn = document.querySelector(".thumbs")
+                                    var rootElement = document.documentElement
+
+                                    function handleScroll() {
+                                    // Do something on scroll
+                                    var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
+                                    }
+
+                                    function scrollToTop() {
+                                    // Scroll to top logic
+                                    rootElement.scrollTo({
+                                        top: 0,
+                                        behavior: "smooth"
+                                    })
+                                    }
+                                    scrollToTopBtn.addEventListener("click", scrollToTop)
+                                    document.addEventListener("scroll", handleScroll)
                                 </script>
