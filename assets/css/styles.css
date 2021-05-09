@@ -455,6 +455,9 @@ footer {
 /* On screens that are 470px or less, hide image column */
 @media screen and (max-width: 470px) {
   #availableBookImg {
-    visibility: hidden;
+    display: none;
+  }
+  #myTable tr td:first-child {
+    display:none;
   }
 }
