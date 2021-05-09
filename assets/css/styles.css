@@ -449,3 +449,12 @@ footer {
   /* bottom: 0; */
   width: 100%;
 }
+
+/******** MEDIA QUERIES FOR available books ***********/
+
+/* On screens that are 470px or less, hide image column */
+@media screen and (max-width: 470px) {
+  #availableBookImg {
+    visibility: hidden;
+  }
+}

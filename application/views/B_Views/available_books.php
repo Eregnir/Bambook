@@ -7,10 +7,10 @@
                     <table class="table table-image" id="myTable">
                         <thead>
                             <tr>
-                                <th scope="col">Image</th>
-                                <th scope="col">Title</th>
-                                <th scope="col">Author</th>
-                                <th scope="col">Condition</th>
+                                <th scope="col" id="availableBookImg">Image</th>
+                                <th scope="col" id="availableBookTitle">Title</th>
+                                <th scope="col" id="availableBookAuthor">Author</th>
+                                <th scope="col" id="availableBookCond">Condition</th>
                             </tr>
                         </thead>
                         
