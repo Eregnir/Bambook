@@ -13,7 +13,7 @@
                                         <!-- Book Genre -->
                                         <div class="form-group">
                                             <label for="book_genre" class="bmd-label-floating">Genre</label>
-                                            <select class="form-control" name="book_genre" id="book_genre" name="book_genre">
+                                            <select class="form-control" name="book_genre" id="book_genre" name="book_genre" required="required">
                                                 <option value="" disabled default selected>--Select--</option>
                                                 <option value="fantasy">Fantasy</option>
                                                 <option value="mystery">Mystery</option>
@@ -47,6 +47,7 @@
                                         <div class="form-group">
                                             <label for="book_cond" class="bmd-label-floating">Book Condition*</label>
                                             <select class="form-control" name="book_cond" id="book_cond" name="book_cond" required="required">
+                                                <option value="" disabled default selected>--Select--</option>
                                                 <option value="new">New</option>
                                                 <option value="like_new">Like New</option>
                                                 <option value="used">Used</option>
