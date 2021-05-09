@@ -7,7 +7,7 @@
                                 <h2 class="h2-responsive"><strong>Publish a book</strong></h2><br>
                                 <!-- <hr class="m-y-2"> -->
                                 <!--Naked Form-->
-                                <div class="card-block">
+                                <div class="card-block" id="cardFormPublish">
                                     <!--Body-->
                                     <?php echo form_open('Books/upload_book'); ?>
                                     <!-- <form id="publish_book_form" action="#"> -->
@@ -209,6 +209,6 @@
                                         }
                                         
                                         alert("Your book was added successfully to the form!");
-                                        document.getElementById("books").scrollIntoView(true);
+                                        document.getElementById("cardFormPublish").scrollIntoView(true);
                                    }
                                 </script>
