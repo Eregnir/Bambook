@@ -201,9 +201,10 @@ class Books extends CI_Controller{
         $user=$this->session->all_userdata();
         $data['username'] = $user['username'];
         $data['email'] = $this->books_model->get_email_by_username($user['username']);
-        $this->books_model->upload_book($data);
+        // $this->books_model->upload_book($data);
         // $this->my_book2($data);
-        header('Location: https://assafye.mtacloud.co.il/Bambook/index.php/Intro/my_library');
+        // header('Location: https://assafye.mtacloud.co.il/Bambook/index.php/Intro/my_library');
+        $this->load->view('B_Views/test_page2',$data);
         }
     
         
