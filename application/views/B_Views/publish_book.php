@@ -178,7 +178,7 @@
                                     }
 
                                     function autoFill(i) {
-                                        document.getElementById('book_title').value = $('.thumbs')[i].childNodes[1].wholeText; // To fix the right side the left side is working fine
+                                        document.getElementById('book_title').value = $('.thumbs')[0].childNodes[1].wholeText; // To fix the right side the left side is working fine
                                         document.getElementById('book_author').value = $('.thumbs')[i].childNodes[5].wholeText; // to fix the right side
                                         document.getElementById('book_language').value = $('.thumbs')[i].childNodes[11].wholeText; // to fix the right side
                                         document.getElementById('b_isbn').value = $('.thumbs')[i].childNodes[14].wholeText; // to fix the right side
