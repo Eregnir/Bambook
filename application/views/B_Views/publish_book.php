@@ -55,8 +55,8 @@
                                         </div>
                                         <!-- Upload Image -->
                                         <div class="form-group">
-                                            <label for="input_img" class="bmd-label-floating">Upload image</label>
-                                            <input type="file" class="form-control-file" id="input_img" accept="image/*" id="file-input">
+                                            <label for="file-input" class="bmd-label-floating">Upload image</label>
+                                            <input type="file" class="form-control-file" accept="image/*" id="file-input" name="file-input">
                                             <small class="text-muted">Take a photo of your book from your mobile device or upload a photo from your gallery.</small>
                                             <script>
                                             const fileInput = document.getElementById('file-input');
