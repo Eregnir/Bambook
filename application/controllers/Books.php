@@ -200,7 +200,7 @@ class Books extends CI_Controller{
             );
         $user=$this->session->all_userdata();
         $data['username'] = $user['username'];
-        $this->books_model->upload_book($data);
+        $data['b_UID'] = $this->books_model->upload_book($data);
         $this->my_book2($data);
         }
 
