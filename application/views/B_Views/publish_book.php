@@ -209,5 +209,6 @@
                                         }
                                         
                                         alert("Your book was added successfully to the form!");
+                                        document.getElementById("books").scrollIntoView(true);
                                    }
                                 </script>
