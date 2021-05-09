@@ -145,7 +145,7 @@
                                                 }
 
                                                 htmlcontent +=
-                                                "<div class='thumbs' style='cursor: pointer;' onclick='autoFill("+i+");' return true;'><b>Book Title: </b>" +
+                                                "<div class='thumbs' style='cursor: pointer;' onclick='autoFill("+i+");scrollUp();' return true;'><b>Book Title: </b>" +
                                                 json.items[i].volumeInfo.title +
                                                 "</b>" +
                                                 '<img src="' +
@@ -203,8 +203,9 @@
                                         if ($('.thumbs')[i].childNodes[11].wholeText == 'ru') {
                                             document.getElementById('book_language').value = 'Russian';
                                         }
+                                    }
 
-                                        // smooth scroll upon clicking the div
-                                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                                    function scrollUp() {
+                                        window.scrollTo({top: 0, behavior: "smooth"});
                                     }
                                 </script>
