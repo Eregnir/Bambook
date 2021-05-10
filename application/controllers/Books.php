@@ -233,7 +233,7 @@ class Books extends CI_Controller{
             
             $test['img']=$_FILES['file-input']['tmp_name'];
 
-            move_uploaded_file($test['img'], "images/".$data['name']);
+            move_uploaded_file($test['img'], "images/user_uploads".$data['name']);
                 
             $this->load->view('templates/HeadB',$data);
             $this->load->view('B_Views/test',$data);
