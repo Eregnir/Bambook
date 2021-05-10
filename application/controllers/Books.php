@@ -235,11 +235,14 @@ class Books extends CI_Controller{
             $user=$this->session->all_userdata();
             $data['user']=$user;
             
-            //create a new name for the image?
-            $data['new_name']=$user['username'].'_'.$data['title'].'_'.time();
-            $_FILES['file-input']['name'] = $data['new_name'];
-            $test['img']=$_FILES['file-input']['tmp_name'];
-
+            //create a new name for the image
+                //get the extension
+                $path = $_FILES['file-input']['name'];
+                $ext = pathinfo($path, PATHINFO_EXTENSION);
+            //create the whole new name:
+            $data['new_name']=$user['username'].'_'.$data['title'].'_'.time().$ext;
+            // $test['img']=$_FILES['file-input']['tmp_name'];
+                    
             move_uploaded_file($test['img'], "images/user_uploads/".$data['new_name']);
                 
             $this->load->view('templates/HeadB',$data);
