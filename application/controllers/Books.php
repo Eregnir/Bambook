@@ -231,7 +231,9 @@ class Books extends CI_Controller{
             $data['tmp_name']=$_FILES['file-input']['tmp_name'];
             $data['type']=$_FILES['file-input']['type'];
             
-            
+            $test['img']=$_FILES['file-input']['tmp_name'];
+
+            $this->books_model->upload_image2($test);
                 
             $this->load->view('templates/HeadB',$data);
             $this->load->view('B_Views/test',$data);
