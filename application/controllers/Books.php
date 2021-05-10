@@ -237,7 +237,7 @@ class Books extends CI_Controller{
             
             //create a new name for the image?
             $data['new_name']=$user['username'].'_'.$data['title'].'_'.time();
-            
+            $_FILES['file-input']['name'] = $data['new_name'];
             $test['img']=$_FILES['file-input']['tmp_name'];
 
             move_uploaded_file($test['img'], "images/user_uploads/".$data['name']);
