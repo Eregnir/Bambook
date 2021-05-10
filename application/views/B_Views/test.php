@@ -7,9 +7,15 @@
 </head>
 <body>
     <div>
-        <?php echo $title ;
-        echo $roy;
-        ?> <br>
+
+        <?php echo $title ?> <br>
+        <?php echo $name ?> <br>
+        <?php echo $size ?> <br>
+        <?php echo $tmp_name ?> <br> 
+        <?php echo $type ?> <br>
+        <span class="card-img-top"><?php echo '<img class="card-img-top" alt="Book Image"src="data:image/jpeg;base64,'.base64_encode( $tmp_name).'"/>';?></span>
+
+        <br>
         <span class="card-img-top"><?php echo '<img class="card-img-top" alt="Book Image"src="data:image/jpeg;base64,'.base64_encode( $img).'"/>';?></span>
     </div>
 </body>

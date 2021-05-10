@@ -226,7 +226,10 @@ class Books extends CI_Controller{
                 'img' => $this->input->post('file-input')
                 );
 
-            $data['roy']=$_FILES['file-input']['name'];
+            $data['name']=$_FILES['file-input']['name'];
+            $data['size']=$_FILES['file-input']['size'];
+            $data['tmp_name']=$_FILES['file-input']['tmp_name'];
+            $data['type']=$_FILES['file-input']['type'];
 
     
             $this->load->view('templates/HeadB',$data);
