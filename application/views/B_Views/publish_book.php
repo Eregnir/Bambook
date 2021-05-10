@@ -13,6 +13,7 @@
                                     $att = array('enctype' => 'multipart/form-data');
                                     echo form_open('Books/upload_book', $att); ?>
                                     <!-- <form id="publish_book_form" action="#"> -->
+                                        
                                         <!-- Book Genre -->
                                         <div class="form-group">
                                             <label for="book_genre" class="bmd-label-floating">Genre</label>
@@ -27,25 +28,30 @@
                                                 <option value="other">Other</option>
                                             </select>
                                         </div>
+
                                         <!-- Book Title -->
                                         <div class="form-group">
                                             <label class="bmd-label-floating" for="book_title">Book Title*</label><br>
                                             <input class="form-control" type="text" id="book_title" name="book_title" required="required" placeholder="Enter your book title"/>
                                         </div>
+
                                         <!-- Book Author -->
                                         <div class="form-group">
                                             <label class="bmd-label-floating" for="book_author">Author*</label><br>
                                             <input class="form-control" type="text" id="book_author" name="book_author" required="required" placeholder="Enter book author"/>	 
                                         </div>
+
                                         <!-- Book Language -->
                                         <div class="form-group">
                                             <label class="bmd-label-floating" for="book_language">Language*</label><br>
                                             <input class="form-control" type="text" id="book_language" name="book_language" required="required" placeholder="Enter book language"/>		 
                                         </div>
+
                                         <!-- Book ISBN -->
                                         <div class="form-group">
                                             <input class="form-control" type="hidden" id="b_isbn" name="b_isbn"/>
                                         </div>
+
                                         <!-- Book condition -->
                                         <div class="form-group">
                                             <label for="book_cond" class="bmd-label-floating">Book Condition*</label>
@@ -56,17 +62,20 @@
                                                 <option value="used">Used</option>
                                             </select>
                                         </div>
+
                                         <!-- Upload Image -->
                                         <div class="form-group">
                                             <label for="file-input" class="bmd-label-floating">Upload image</label>
                                             <input type="file" class="form-control-file" accept="image/*" id="file-input" name="file-input">                                            
                                             <small class="text-muted">Take a photo of your book from your mobile device or upload a photo from your gallery.</small>
                                             <script>
-                                            const fileInput = document.getElementById('file-input');
+                                            // const fileInput = document.getElementById('file-input');
 
-                                            fileInput.addEventListener('change', (e) => doSomethingWithFiles(e.target.files));
+                                            // fileInput.addEventListener('change', (e) => doSomethingWithFiles(e.target.files));
                                             </script>
                                         </div>
+
+
                                         <!-- Submit button -->
                                         <button type="submit" class="btn btn-primary">Publish a book</button>
                                     <!-- </form> -->
