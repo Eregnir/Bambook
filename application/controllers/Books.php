@@ -199,6 +199,10 @@ class Books extends CI_Controller{
             'ISBN' => $this->input->post('b_isbn'),
             'cond' => $this->input->post('book_cond')
             );
+        
+        //Get the user data
+        $user=$this->session->all_userdata();
+        $data['user_username'] = $user['username'];
 
         //Get the uploaded file's information
         $file['name']=$_FILES['file-input']['name'];
@@ -221,9 +225,7 @@ class Books extends CI_Controller{
         //put the new image's unique name in a variable to be uploaded to the DB:
         $data['img_title'] = file['new_name'];
 
-        //get the user data
-        $user=$this->session->all_userdata();
-        $data['user_username'] = $user['username'];
+        
         
         //get the user email
         $email = $this->books_model->get_email_by_username($data['user_username']);
