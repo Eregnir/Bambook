@@ -190,28 +190,54 @@ class Books extends CI_Controller{
     //function to set the availability of one of the user's books
     public function upload_book(){
         $data = array(
-            'img' => $this->input->post('file-input'),
+            // 'img' => $this->input->post('file-input'),
+            // I think we don't need the image to be posted just yet.
             'book_genre' => $this->input->post('book_genre'),
             'title' => $this->input->post('book_title'),
             'author' => $this->input->post('book_author'),
             'lang' => $this->input->post('book_language'),
             'ISBN' => $this->input->post('b_isbn'),
             'cond' => $this->input->post('book_cond')
-            
             );
 
+        //Get the uploaded file's information
+        $file['name']=$_FILES['file-input']['name'];
+        $file['size']=$_FILES['file-input']['size'];
+        $file['tmp_name']=$_FILES['file-input']['tmp_name'];
+        $file['type']=$_FILES['file-input']['type'];
+
+        //create a new unique name for the uploaded image
+        //get the extension
+        $path = $_FILES['file-input']['name'];
+        $ext = pathinfo($path, PATHINFO_EXTENSION);
+        //create the whole new name:
+        $file['new_name']=$user['username'].'_'.$data['title'].'_'.time().'.'.$ext;
+
+        //create a  variable to hold the image
+        $image['image']=$_FILES['file-input']['tmp_name'];
+        //and place the image in the correct folder:        
+        move_uploaded_file($image['image'], "images/user_uploads/".$data['new_name']);
+
+        //put the new image's unique name in a variable to be uploaded to the DB:
+        $data['img_title'] = file['new_name'];
+
+        //get the user data
         $user=$this->session->all_userdata();
         $data['user_username'] = $user['username'];
+        
+        //get the user email
         $email = $this->books_model->get_email_by_username($data['user_username']);
         $data['user_email'] = $email[0]->email;
+
+        //AAND upload the data including the image's new title.
         $this->books_model->upload_book($data);
+
         // $this->books_model->upload_image($image);
         // $this->my_book2($data);
-        // header('Location: https://assafye.mtacloud.co.il/Bambook/index.php/Intro/my_library');
-        $data['roy']=$_FILES['file-input']['name'];
-        $this->load->view('templates/HeadB',$data);
-        $this->load->view('B_Views/test',$data);
-        $this->load->view('templates/FootB');
+
+        //And open the my library view.
+        header('Location: https://assafye.mtacloud.co.il/Bambook/index.php/Intro/my_library');
+        
         }
 
 
