@@ -10,7 +10,7 @@
                                 <div class="card-block" id="scrollUpHere">
                                     <!--Body-->
                                     <?php 
-                                    // $att = array('enctype' => 'multipart/form-data');
+                                    $att = array('enctype' => 'multipart/form-data');
                                     echo form_open('Books/upload_book'); ?>
                                     <!-- <form id="publish_book_form" action="#"> -->
 
