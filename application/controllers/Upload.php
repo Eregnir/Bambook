@@ -27,7 +27,7 @@ class Upload extends CI_Controller {
                 {
                         $error = array('error' => $this->upload->display_errors());
 
-                        $this->load->view('upload_form', $error);
+                        $this->load->view('B_Views/upload_form', $error);
                 }
                 else
                 {
