@@ -11,9 +11,9 @@
                                     <!--Body-->
                                     <?php 
                                     $att = array('enctype' => 'multipart/form-data');
-                                    echo form_open('Books/upload_book', $att); ?>
+                                    echo form_open('Books/upload_book1', $att); ?>
                                     <!-- <form id="publish_book_form" action="#"> -->
-                                        
+
                                         <!-- Book Genre -->
                                         <div class="form-group">
                                             <label for="book_genre" class="bmd-label-floating">Genre</label>
