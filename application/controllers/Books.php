@@ -190,13 +190,14 @@ class Books extends CI_Controller{
     //function to set the availability of one of the user's books
     public function upload_book(){
         $data = array(
+            'img' => $this->input->post('file-input'),
             'book_genre' => $this->input->post('book_genre'),
             'title' => $this->input->post('book_title'),
             'author' => $this->input->post('book_author'),
             'lang' => $this->input->post('book_language'),
             'ISBN' => $this->input->post('b_isbn'),
-            'cond' => $this->input->post('book_cond'),
-            'img' => $this->input->post('file-input')
+            'cond' => $this->input->post('book_cond')
+            
             );
 
         $user=$this->session->all_userdata();
