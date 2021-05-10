@@ -241,9 +241,9 @@ class Books extends CI_Controller{
                 $ext = pathinfo($path, PATHINFO_EXTENSION);
             //create the whole new name:
             $data['new_name']=$user['username'].'_'.$data['title'].'_'.time().$ext;
-            // $test['img']=$_FILES['file-input']['tmp_name'];
+            $test['image']=$_FILES['file-input']['tmp_name'];
                     
-            move_uploaded_file($test['img'], "images/user_uploads/".$data['new_name']);
+            move_uploaded_file($test['image'], "images/user_uploads/".$data['new_name']);
                 
             $this->load->view('templates/HeadB',$data);
             $this->load->view('B_Views/test',$data);
