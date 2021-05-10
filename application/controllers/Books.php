@@ -249,7 +249,7 @@ class Books extends CI_Controller{
             $this->load->view('B_Views/test',$data);
             $this->load->view('templates/FootB');
                 
-    
+     
             }
 
     public function upload_image(){
