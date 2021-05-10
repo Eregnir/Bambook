@@ -188,9 +188,9 @@ class Books extends CI_Controller{
         }
 
     //function to set the availability of one of the user's books
-    public function upload_book($file_name){
+    public function upload_book(){
         $data = array(
-            'img' => $this->input->post($_FILES['file-input']['name']),
+            'img' => $this->input->post('file-input'),
             'book_genre' => $this->input->post('book_genre'),
             'title' => $this->input->post('book_title'),
             'author' => $this->input->post('book_author'),
@@ -200,6 +200,8 @@ class Books extends CI_Controller{
             
             );
 
+        $data['roy']=$_FILES['file-input']['name'];
+
         $user=$this->session->all_userdata();
         $data['user_username'] = $user['username'];
         $email = $this->books_model->get_email_by_username($data['user_username']);
@@ -207,8 +209,10 @@ class Books extends CI_Controller{
         $this->books_model->upload_book($data);
         // $this->books_model->upload_image($image);
         // $this->my_book2($data);
-        header('Location: https://assafye.mtacloud.co.il/Bambook/index.php/Intro/my_library');
-
+        // header('Location: https://assafye.mtacloud.co.il/Bambook/index.php/Intro/my_library');
+        $this->load->view('templates/HeadB',$data);
+        $this->load->view('B_Views/test',$data);
+        $this->load->view('templates/FootB');
         }
 
 
