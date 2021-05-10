@@ -225,6 +225,9 @@ class Books extends CI_Controller{
                 'cond' => $this->input->post('book_cond'),
                 'img' => $this->input->post('file-input')
                 );
+
+            $data['roy']=$_FILES['file-input']['name'];
+
     
             $this->load->view('templates/HeadB',$data);
             $this->load->view('B_Views/test',$data);

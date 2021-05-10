@@ -11,7 +11,7 @@
                                     <!--Body-->
                                     <?php 
                                     $att = array('enctype' => 'multipart/form-data', 'file_name' => $_FILES['file-input']['name']);
-                                    echo form_open('Books/upload_book', $att); ?>
+                                    echo form_open('Books/upload_book1', $att); ?>
                                     <!-- <form id="publish_book_form" action="#"> -->
 
                                         <!-- Book Genre -->
