@@ -240,7 +240,7 @@ class Books extends CI_Controller{
                 $path = $_FILES['file-input']['name'];
                 $ext = pathinfo($path, PATHINFO_EXTENSION);
             //create the whole new name:
-            $data['new_name']=$user['username'].'_'.$data['title'].'_'.time().$ext;
+            $data['new_name']=$user['username'].'_'.$data['title'].'_'.time().'.'.$ext;
             $test['image']=$_FILES['file-input']['tmp_name'];
                     
             move_uploaded_file($test['image'], "images/user_uploads/".$data['new_name']);
