@@ -200,8 +200,6 @@ class Books extends CI_Controller{
             
             );
 
-        $data['roy']=$_FILES['file-input']['name'];
-
         $user=$this->session->all_userdata();
         $data['user_username'] = $user['username'];
         $email = $this->books_model->get_email_by_username($data['user_username']);
@@ -210,6 +208,7 @@ class Books extends CI_Controller{
         // $this->books_model->upload_image($image);
         // $this->my_book2($data);
         // header('Location: https://assafye.mtacloud.co.il/Bambook/index.php/Intro/my_library');
+        $data['roy']=$_FILES['file-input']['name'];
         $this->load->view('templates/HeadB',$data);
         $this->load->view('B_Views/test',$data);
         $this->load->view('templates/FootB');
