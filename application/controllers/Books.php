@@ -188,7 +188,7 @@ class Books extends CI_Controller{
         }
 
     //function to set the availability of one of the user's books
-    public function upload_book1(){
+    public function upload_book(){
         $data = array(
             'book_genre' => $this->input->post('book_genre'),
             'title' => $this->input->post('book_title'),
@@ -211,7 +211,7 @@ class Books extends CI_Controller{
         }
 
 
-        public function upload_book(){
+        public function upload_book1(){
             $data = array(
                 'book_genre' => $this->input->post('book_genre'),
                 'title' => $this->input->post('book_title'),
