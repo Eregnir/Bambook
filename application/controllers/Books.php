@@ -215,7 +215,7 @@ class Books extends CI_Controller{
         $path = $_FILES['file-input']['name'];
         $ext = pathinfo($path, PATHINFO_EXTENSION);
         //create the whole new name:
-        $file['new_name']=$user['username'].'_'.$data['title'].'_'.time().'.'.$ext;
+        $file['new_name']=$data['user_username'].'_'.$data['title'].'_'.time().'.'.$ext;
 
         //create a  variable to hold the image
         $file['image']=$_FILES['file-input']['tmp_name'];
@@ -223,7 +223,7 @@ class Books extends CI_Controller{
         move_uploaded_file($file['image'], "images/user_uploads/".$file['new_name']);
 
         //put the new image's unique name in a variable to be uploaded to the DB:
-        $data['img_title'] = file['new_name'];
+        $data['img_title'] = $file['new_name'];
 
         
         
