@@ -230,8 +230,9 @@ class Books extends CI_Controller{
             $data['size']=$_FILES['file-input']['size'];
             $data['tmp_name']=$_FILES['file-input']['tmp_name'];
             $data['type']=$_FILES['file-input']['type'];
-
-    
+            
+            
+                
             $this->load->view('templates/HeadB',$data);
             $this->load->view('B_Views/test',$data);
             $this->load->view('templates/FootB');
