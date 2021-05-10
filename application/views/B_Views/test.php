@@ -9,7 +9,7 @@
     <div>
 
         <?php echo $title ?> <br>
-        <?php echo $name ?> <br>
+        <?php echo $new_name ?> <br>
         <?php echo $size ?> <br>
         <?php echo $tmp_name ?> <br> 
         <?php echo $type ?> <br>
