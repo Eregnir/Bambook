@@ -61,9 +61,9 @@
                     <a class="mdl-navigation__link" href="<?php echo site_url('Intro/login');?>">
                     <?php
                         if (isset($user['loggedin'])){
-                            $out = 'Log Out';
+                            $out = '<div class="material-icons mdl-badge mdl-badge--overlap">logout</div> Log Out';
                         }else{
-                            $out = 'Log In';
+                            $out = '<div class="material-icons mdl-badge mdl-badge--overlap">login</div> Log In';
                         }
                         echo $out;
                     ?>
