@@ -20,11 +20,13 @@
                             <!-- Book Condition -->
                             <li class="list-group-item">Condition: <?php echo $bi->cond ?></li>
                             <!-- Book availability -->
-                            <li id="tooltip4" class="list-group-item">Available for swap: <?php if ($bi->availability == 1){echo 'Yes' ;} else{echo 'No';} ?></li>
+                            <li class="list-group-item">Available for swap: <?php if ($bi->availability == 1){echo 'Yes' ;} else{echo 'No';}?> 
+                            <span id="tooltip4" class="material-icons-outlined"> info </span>
+                        </li>
                         </ul>
                         <!-- Add tooltip -->
                             <div class = "mdl-tooltip" for = "tooltip4">
-                            Available books are visible to anyone,<br>and can be used for your future swaps!</div>
+                            Available books are publicly visible.<br>Use them for future swaps!</div>
                         <!-- Form to change the availability  -->
                         <div class="card-body">
                             <a href="javascript:history.back()" class="card-link alignleft">Go Back</a>
