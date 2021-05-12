@@ -5,7 +5,8 @@
 
                     <div class="card" style="width: 25rem">
                     <!-- book image -->
-                        <span class="card-img-top"><?php echo '<img class="card-img-top" alt="Book Image"src="data:image/jpeg;base64,'.base64_encode( $bi->img).'"/>';?></span>
+                        <span class="card-img-top"> <img src="<?php echo base_url('images/user_uploads/'.$bi->img_title);?>" class="card-img-top" alt="Book Photo"> <br></span>
+
                         <div class="card-body">
                             <!-- book title -->
                             <h2 class="card-title"><?php echo $bi->title ?></h2> 
