@@ -49,7 +49,7 @@
                             
                         function submitit(id)
                             {
-                                window.alert('submit_'.id)
+                                window.alert(id)
                                 // document.getElementById('submit_'.id).click();
                                 
                                 };
