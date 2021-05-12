@@ -32,7 +32,7 @@
             <div class="mdl-layout__header-row portfolio-logo-row">
                 <span class="mdl-layout__title">
                     <div class="portfolio-logo"></div>
-                    <span class="mdl-layout__title">Bambook - Book Swap <?php print_r($swap_count);?> </span>
+                    <span class="mdl-layout__title">Bambook - Book Swap <?php echo count($swap_count);?> </span>
                 </span>
             </div>
             <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
