@@ -49,7 +49,7 @@
                             
                         function submitit(id)
                             {
-                                alert(id);
+                                document.getElementById(id).click();
                                 };
 
                     </script>
