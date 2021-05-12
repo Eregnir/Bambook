@@ -31,7 +31,7 @@
                 <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
                     <a id="ind" class="mdl-navigation__link" href="#"><div class="material-icons mdl-badge mdl-badge--overlap">home</div> Homepage</a>
                     <!-- <a id="aus" class="mdl-navigation__link" href="#">About Us</a> -->
-                    <a id="blg" class="mdl-navigation__link" href="#"><div class="material-icons mdl-badge mdl-badge--overlap">local_library</div> Public Library</a>
+                    <a id="blg" class="mdl-navigation__link" href="#"><div class="material-icons mdl-badge mdl-badge--overlap">local_library</div> Library</a>
                     <a class="mdl-navigation__link" href="<?php echo site_url('Intro/my_requests');?>"><div class="material-icons mdl-badge mdl-badge--overlap">menu_book</div> My Swaps </a>
                     <a id="abt" class="mdl-navigation__link" href="#"><div class="material-icons mdl-badge mdl-badge--overlap">face</div> Profile</a>
                     <a id="cnt" class="mdl-navigation__link" href="#"><div class="material-icons mdl-badge mdl-badge--overlap">email</div> Contact</a>
@@ -54,10 +54,10 @@
             <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
                     <a class="mdl-navigation__link is-active" href="<?php echo site_url('Intro/index');?>">Homepage</a>
                     <!-- <a class="mdl-navigation__link" href="<?php // echo site_url('Intro/about_us');?>">About Us</a> -->
-                    <a class="mdl-navigation__link" href="<?php echo site_url('Intro/available_books');?>">Public Library</a>
-                    <a class="mdl-navigation__link" href="<?php echo site_url('Intro/my_requests');?>">My Requests</a>
-                    <a class="mdl-navigation__link" href="<?php echo site_url('Intro/about');?>">Profile</a>
-                    <a class="mdl-navigation__link" href="<?php echo site_url('Intro/contact');?>">Contact</a>
+                    <a class="mdl-navigation__link" href="<?php echo site_url('Intro/available_books');?>"><div class="material-icons mdl-badge mdl-badge--overlap">local_library</div> Library</a>
+                    <a class="mdl-navigation__link" href="<?php echo site_url('Intro/my_requests');?>"><div class="material-icons mdl-badge mdl-badge--overlap">menu_book</div> My Swaps</a>
+                    <a class="mdl-navigation__link" href="<?php echo site_url('Intro/about');?>"><div class="material-icons mdl-badge mdl-badge--overlap">face</div> Profile</a>
+                    <a class="mdl-navigation__link" href="<?php echo site_url('Intro/contact');?>"><div class="material-icons mdl-badge mdl-badge--overlap">email</div> Contact</a>
                     <a class="mdl-navigation__link" href="<?php echo site_url('Intro/login');?>">
                     <?php
                         if (isset($user['loggedin'])){
