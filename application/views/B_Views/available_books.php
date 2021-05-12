@@ -52,8 +52,8 @@
                                 var str1 = id;
                                 var str2 = 'submit_';
                                 var res = str2.concat(str1);
-                                window.alert(res)
-                                // document.getElementById('submit_'.id).click();
+                                // window.alert(res)
+                                document.getElementById('submit_'.id).click();
                                 
                                 };
 
