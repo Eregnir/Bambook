@@ -18,7 +18,7 @@
                     <?php foreach ($requests_in as $req):
                     //Open a form that will send the book UID to the controller in order to show it's full details.
                             $attributes = array('id' => $req->UID, 'name' =>$req->UID);?>
-                            <tr id="<?php echo 'req_'.$req->swap_UID?>" class="table-row">
+                            <tr id="<?php echo '_'.$req->swap_UID?>" class="table-row" onclick="submitit(this.id)">
                                 <td class="w-25">
                                 <!-- Open a form that will send the swap UID to the controller in order to select it and show the full request details and options. -->                                     
                                 <?php echo form_open('Books/zoom_swap', $attributes); ?>
@@ -26,7 +26,7 @@
                                     <input type="hidden" value="<?php echo $req->swap_UID;?>" name="swap_UID" id="<?php echo $req->swap_UID?>"> 
                                     <span class="img-fluid"> <img src="<?php echo base_url('images/user_uploads/'.$req->img_title);?>" alt="Book Photo" style="max-height:200px; max-width: 100%;"> <br></span>
 
-                                    <button class="mdl-button mdl-js-button mdl-button--icon" type="submit" name="submit "><i class="material-icons">open_in_new</i></button>
+                                    <button id="<?php echo 'submit_'.$req->swap_UID;?>" class="mdl-button mdl-js-button mdl-button--icon hidden" type="submit" name="submit "><i class="material-icons">open_in_new</i></button>
                                 <?php echo form_close(); ?>
                                 </td>
                                 <td> <?php echo $req->title ?></td>
@@ -93,6 +93,19 @@
                             });
                         });
                     });
+
+                    //view incoming requests
+                    function submitit(id)
+                            {
+                                var str1 = id;
+                                var str2 = 'submit';
+                                var res = str2.concat(str1);
+                                // window.alert(res)
+                                document.getElementById(res).click();
+                                
+                                };
+
+
                 </script>
             <!-- Books table end -->
         </div>
