@@ -18,7 +18,7 @@
                         <?php foreach ($books as $book):
                         //Open a form that will send the book UID to the controller in order to show it's full details.
                                 $attributes = array('id' => $book->UID, 'name' =>$book->UID);?>
-                                <tr id="<?php echo 'book_'.$book->UID?>" class="table-row" onclick="submitit(this.id)">
+                                <tr id="<?php echo 'book_'.$book->UID?>" class="table-row" onclick="submitit(<?php echo $book->UID?>);">
                                     <td class="w-25">
                                         <!--Open the form -->
                                     <?php echo form_open('Books/single_book', $attributes); ?>
@@ -48,7 +48,7 @@
                             });
                             
                         function submitit(id){
-                            document.getElementById(id).click();
+                            document.getElementById('submit_'.id).click();
                         }
                     </script>
                 <!-- Books table end -->
