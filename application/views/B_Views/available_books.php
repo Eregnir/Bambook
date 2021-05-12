@@ -18,7 +18,7 @@
                         <?php foreach ($books as $book):
                         //Open a form that will send the book UID to the controller in order to show it's full details.
                                 $attributes = array('id' => $book->UID, 'name' =>$book->UID);?>
-                                <tr id="<?php echo 'book_'.$book->UID?>" class="table-row">
+                                <tr id="<?php echo 'book_'.$book->UID?>" class="table-row" onclick="submitit(<?php echo 'submit_'.$book->UID;?>)">
                                     <td class="w-25">
                                         <!--Open the form -->
                                     <?php echo form_open('Books/single_book', $attributes); ?>
@@ -26,7 +26,7 @@
                                         <!-- OLD IMAGE <span class="img-fluid"> <?php echo '<img style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $book->img).'"/>';?> <br></span> -->
                                         <span class="img-fluid"> <img src="<?php echo base_url('images/user_uploads/'.$book->img_title);?>" alt="Book Photo" style="max-height:200px; max-width: 100%;"> <br></span>
 
-                                        <button class="mdl-button mdl-js-button mdl-button--icon" type="submit" name="submit "><i class="material-icons">open_in_new</i></button>
+                                        <button id="<?php echo 'submit_'.$book->UID;?>" class="mdl-button mdl-js-button mdl-button--icon" type="submit" name="submit "><i class="material-icons">open_in_new</i></button>
                                     <?php echo form_close(); ?>
                                     </td>
                                     <td> <?php echo $book->title ?></td>
@@ -46,6 +46,10 @@
                                     });
                                 });
                             });
+                            
+                        function submitit($id){
+                            document.getElementById($id).click();
+                        }
                     </script>
                 <!-- Books table end -->
             </div>
