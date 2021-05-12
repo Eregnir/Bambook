@@ -19,6 +19,14 @@
 </head>
 
 <body>
+    <!-- Trying to get the active swap count -->
+    <?php 
+
+        $user=$this->session->all_userdata();
+        $CI =& get_instance();
+        $swap_count=$CI->intro_model->count_active_reqs($user);
+    ?>
+
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
             <div class="mdl-layout__header-row portfolio-logo-row">
@@ -32,9 +40,9 @@
                     <a id="ind" class="mdl-navigation__link" href="#">Homepage</a>
                     <!-- <a id="aus" class="mdl-navigation__link" href="#">About Us</a> -->
                     <a id="blg" class="mdl-navigation__link" href="#">Public Library</a>
-                    <a class="mdl-navigation__link" href="<?php echo site_url('Intro/my_requests');?>">My Requests</a>
+                    <a class="mdl-navigation__link" href="<?php echo site_url('Intro/my_requests');?>">My Swaps <div class="material-icons mdl-badge mdl-badge--overlap" data-badge="<?php echo $swap_count;?>">menu_book</div></a>
                     <a id="abt" class="mdl-navigation__link" href="#">Profile</a>
-                    <a id="cnt" class="mdl-navigation__link" href="#"><div class="material-icons mdl-badge mdl-badge--overlap" data-badge="12">menu_book</div></a>
+                    <a id="cnt" class="mdl-navigation__link" href="#">Contact</a>
                     <a id="log" class="mdl-navigation__link" href="<?php echo site_url('Intro/login');?>">
                     <?php
                         $user=$this->session->all_userdata();
