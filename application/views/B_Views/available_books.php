@@ -49,7 +49,10 @@
                             
                         function submitit(id)
                             {
-                                window.alert(id)
+                                var str1 = id;
+                                var str2 = 'submit_';
+                                var res = str1.concat(str2);
+                                window.alert(res)
                                 // document.getElementById('submit_'.id).click();
                                 
                                 };
