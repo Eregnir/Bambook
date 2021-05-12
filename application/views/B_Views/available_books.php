@@ -26,7 +26,7 @@
                                         <!-- OLD IMAGE <span class="img-fluid"> <?php echo '<img style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $book->img).'"/>';?> <br></span> -->
                                         <span class="img-fluid"> <img src="<?php echo base_url('images/user_uploads/'.$book->img_title);?>" alt="Book Photo" style="max-height:200px; max-width: 100%;"> <br></span>
 
-                                        <button id="<?php echo 'submit_'.$book->UID;?>" class="mdl-button mdl-js-button mdl-button--icon" type="submit" name="submit "><i class="material-icons">open_in_new</i></button>
+                                        <button id="<?php echo 'submit_'.$book->UID;?>" class="mdl-button mdl-js-button mdl-button--icon hidden" type="submit" name="submit "><i class="material-icons">open_in_new</i></button>
                                     <?php echo form_close(); ?>
                                     </td>
                                     <td> <?php echo $book->title ?></td>
