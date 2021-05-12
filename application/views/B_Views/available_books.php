@@ -49,7 +49,8 @@
                             
                         function submitit(id)
                             {
-                                document.getElementById('submit_'.id).click();
+                                window.alert('submit_'.id)
+                                // document.getElementById('submit_'.id).click();
                                 
                                 };
 
