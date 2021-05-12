@@ -20,15 +20,11 @@
                             <!-- Book Condition -->
                             <li class="list-group-item">Condition: <?php echo $bi->cond ?></li>
                             <!-- Book availability -->
-                            <li class="list-group-item"><?php 
-                                if ($bi->availability == 1){
-                                    echo 'Available for swap: This book is visible to anyone and can be used for future swaps!' ;
-                                    ?> <span class="tooltiptext">Tooltip text</span> <?php
-                                    } 
-                                    else{
-                                        echo 'No';
-                                        } 
-                                        ?> </li>
+                            <li class="list-group-item">Available for swap: <?php if ($bi->availability == 1){echo 'Yes' ;} else{echo 'No';} ?> 
+                            <div class="tooltip">  Test <span class="tooltiptext">Tooltip text</span>
+ </div>
+                        
+                        </li>
                         </ul>
                         
                         <!-- Form to change the availability  -->
