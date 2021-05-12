@@ -40,13 +40,13 @@ class intro_model extends CI_Model {
 
     //function to get my incoming swap requests:
     public function get_incoming_reqs($user){
-        $query=$this->db->query('SELECT * FROM swap_reqs INNER JOIN user_books on swap_reqs.desired_book=user_books.UID WHERE sent_to_username ="'.$user['username'].'" ');
+        $query=$this->db->query('SELECT * FROM swap_reqs INNER JOIN user_books on swap_reqs.desired_book=user_books.UID WHERE sent_to_username ="'.$user['username'].'" ORDER BY `swap_status` DESC');
         return $query->result();
     }
 
     //function to get my outgoing swap requests:
     public function get_outgoing_reqs($user){
-        $query=$this->db->query('SELECT * FROM swap_reqs INNER JOIN user_books on swap_reqs.desired_book=user_books.UID WHERE sent_by_username ="'.$user['username'].'" ');
+        $query=$this->db->query('SELECT * FROM swap_reqs INNER JOIN user_books on swap_reqs.desired_book=user_books.UID WHERE sent_by_username ="'.$user['username'].'" ORDER BY `swap_status` DESC ');
         return $query->result();
     }
 
