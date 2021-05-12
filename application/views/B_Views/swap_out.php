@@ -54,7 +54,8 @@
                     <div class="card" style="width: 25rem">
                         <!-- book image -->
                         <h4>The book you want:</h4>
-                        <span class="card-img-top"><?php echo '<img style="width:50%" class="card-img-top" alt="Book Image"src="data:image/jpeg;base64,'.base64_encode( $bi->img).'"/>';?></span>
+                        <span class="card-img-top"> <img src="<?php echo base_url('images/user_uploads/'.$bi->img_title);?>" class="card-img-top" alt="Book Photo" style="width:50%"> <br></span>
+
                         <div class="card-body">
                             <!-- book title -->
                             <h3 class="card-title"><?php echo $bi->title ?></h3> 
@@ -88,8 +89,10 @@
                       
                             <span id="img1" class="card-img-top <?php if ($flagg !=null){echo "hidden";} ?>"> <img style="width:50%" class="card-img-top" alt="Mystery Book" src='<?php echo base_url('images/books_images/mystery_book.png');?>'> </span>
                             <?php foreach ($book2 as $b2): ?>
-                            <span id="img2" class="card-img-top <?php if ($flagg ==null){echo 'hidden';} ?>"><?php echo '<img style="width:50%" class="card-img-top" alt="Book Image"src="data:image/jpeg;base64,'.base64_encode( $b2->img).'"/>';?> </span>
-                            <div class="card-body <?php if ($flagg ==null){echo 'hidden';}?> ">
+                            <!--  OLD IMAGE: <span id="img2" class="card-img-top <?php if ($flagg ==null){echo 'hidden';} ?>"><?php echo '<img style="width:50%" class="card-img-top" alt="Book Image"src="data:image/jpeg;base64,'.base64_encode( $b2->img).'"/>';?> </span> -->
+                            <span id="img2" class="card-img-top <?php if ($flagg ==null){echo 'hidden';} ?>"> <img src="<?php echo base_url('images/user_uploads/'.$b2->img_title);?>" class="card-img-top" alt="Book Photo" style="width:50%"> <br></span>
+
+                           <div class="card-body <?php if ($flagg ==null){echo 'hidden';}?> ">
                                 <!-- book title -->
                                 <h3 class="card-title"><?php echo $b2->title ?></h3> 
                                 <!--Book Author-->

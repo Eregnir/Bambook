@@ -166,5 +166,10 @@
         {
             document.getElementById("browse").click();
             };
+        
+        document.getElementById("img2").onclick=function()
+        {
+            document.getElementById("browse").click();
+            };
 
     </script>
