@@ -1,6 +1,6 @@
         <main class="mdl-layout__content">
             <div class="mdl-grid portfolio-max-width">
-                <h4 class="pad5">Received Requests</h4>
+                <h2 class="pad5">Received Requests</h2>
                 <!-- Received requests -->
                 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for the book or author name..." title="Type in a name">
                 <br>
@@ -38,7 +38,7 @@
                 </table> <br><br><br>
 
 
-                <h4>Sent Requests</h4>
+                <h2>Sent Requests</h2>
                 <!-- Sent requests -->
                 <input type="text" id="myInput2" onkeyup="myFunction()" placeholder="Search for the book or author name..." title="Type in a name">
                 <br>
@@ -88,7 +88,7 @@
                     $(document).ready(function(){
                     $("#myInput2").on("keyup", function() {
                         var value = $(this).val().toLowerCase();
-                        $("#myTable tr").filter(function() {
+                        $("#myTable2 tr").filter(function() {
                             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
                             });
                         });
