@@ -18,13 +18,13 @@
                         <?php foreach ($books as $book):
                         //Open a form that will send the book UID to the controller in order to show it's full details.
                                 $attributes = array('id' => $book->UID, 'name' =>$book->UID);?>
-                                <tr id="<?php echo 'book_'.$book->UID?>" class="table-row">
+                                <tr id="<?php echo '_'.$book->UID?>" class="table-row" onclick="submitit(this.id)">
                                     <td class="w-25">
                                     <!-- Open a form that will send the avatar UID to the controller in order to select it and change the avatar. -->                                     
                                     <?php echo form_open('Books/my_book', $attributes); ?>
                                         <input type="hidden" value="<?php echo $book->UID;?>" name="b_UID" id="<?php echo $book->UID?>"> 
                                         <span class="img-fluid"> <img src="<?php echo base_url('images/user_uploads/'.$book->img_title);?>" class="card-img-top" alt="Book_Img" style="max-height:200px; max-width: 100%;"> <br></span>
-                                        <button class="mdl-button mdl-js-button mdl-button--icon" type="submit" name="submit "><i class="material-icons">open_in_new</i></button>
+                                        <button id="<?php echo 'submit_'.$book->UID;?>" class="mdl-button mdl-js-button mdl-button--icon hidden" type="submit" name="submit "><i class="material-icons">open_in_new</i></button>
                                     <?php echo form_close(); ?>
                                     </td>
                                     <td> <?php echo $book->title ?></td>
@@ -44,6 +44,16 @@
                                     });
                                 });
                             });
+
+                        function submitit(id)
+                        {
+                            var str1 = id;
+                            var str2 = 'submit';
+                            var res = str2.concat(str1);
+                            // window.alert(res)
+                            document.getElementById(res).click();
+                            
+                            };
                     </script>
                 <!-- Books table end -->
             </div>
