@@ -24,7 +24,8 @@
                                 <?php echo form_open('Books/zoom_swap', $attributes); ?>
                                 <!-- need to change some info here... b_UID etc and complete the correct form for the swap ID -->
                                     <input type="hidden" value="<?php echo $req->swap_UID;?>" name="swap_UID" id="<?php echo $req->swap_UID?>"> 
-                                    <span class="img-fluid"> <?php echo '<img style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $req->img).'"/>';?> <br></span>
+                                    <span class="img-fluid"> <img src="<?php echo base_url('images/user_uploads/'.$req->img_title);?>" alt="Book Photo" style="max-height:200px; max-width: 100%;"> <br></span>
+
                                     <button class="mdl-button mdl-js-button mdl-button--icon" type="submit" name="submit "><i class="material-icons">open_in_new</i></button>
                                 <?php echo form_close(); ?>
                                 </td>
@@ -60,8 +61,9 @@
                                 <!-- Open a form that will send the swap UID to the controller in order to select it and show the full request details and options. -->                                     
                                 <?php echo form_open('Books/zoom_swap_out', $attributes); ?>
                                 <!-- need to change some info here... b_UID etc and complete the correct form for the swap ID -->
-                                    <input type="hidden" value="<?php echo $req->swap_UID;?>" name="swap_UID" id="swap_<?php echo $req->swap_UID?>"> 
-                                    <span class="img-fluid"> <?php echo '<img style="max-height:200px; max-width: 100%;" src="data:image/jpeg;base64,'.base64_encode( $req->img).'"/>';?> <br></span>
+                                    <input type="hidden" value="<?php echo $req->swap_UID;?>" name="swap_UID" id="swap_<?php echo $req->swap_UID?>">                                     
+                                    <span class="img-fluid"> <img src="<?php echo base_url('images/user_uploads/'.$req->img_title);?>" alt="Book Photo" style="max-height:200px; max-width: 100%;"> <br></span>
+
                                     <button class="mdl-button mdl-js-button mdl-button--icon" type="submit" name="submit "><i class="material-icons">open_in_new</i></button>
                                 <?php echo form_close(); ?>
                                 </td>
