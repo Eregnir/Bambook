@@ -21,7 +21,7 @@
                             <li class="list-group-item">Condition: <?php echo $bi->cond ?></li>
                             <!-- Book availability -->
                             <li class="list-group-item">Available for swap: <?php if ($bi->availability == 1){echo 'Yes' ;} else{echo 'No';}?> 
-                            <span id="tooltip4" class="material-icons-outlined"> info </span>
+                            <span id="tooltip4" class="material-icons">info</span>
                         </li>
                         </ul>
                         <!-- Add tooltip -->
