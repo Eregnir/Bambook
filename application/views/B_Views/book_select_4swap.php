@@ -19,7 +19,7 @@
                         <!-- Loop Books -->
                         <?php foreach ($books as $book):
                                 $attributes = array('id' => $book->UID, 'name' =>$book->UID);?>
-                                <tr id="<?php echo 'book_'.$book->UID?>" class="table-row">
+                                <tr id="<?php echo '_'.$book->UID?>" class="table-row" onclick="submitit(this.id)">
                                     <td class="w-25">
                                     <!-- Open a form that will send the swap_UID and the book_UID in order to select it for the swap. -->                                     
                                     <?php echo form_open('Books/select_book', $attributes); ?>
@@ -28,7 +28,7 @@
                                         <!-- Old image <span class="img-fluid"> <?php echo '<img style="max-height:200px; max-width: 100%; cursor: pointer;" src="data:image/jpeg;base64,'.base64_encode( $book->img).'"/>';?> <br></span> -->
                                         <span class="img-fluid"> <img style="max-height:200px; max-width: 100%; cursor: pointer;" src="<?php echo base_url('images/user_uploads/'.$book->img_title);?>" class="card-img-top" alt="Book Photo"> <br></span>
 
-                                        <button class="mdl-button mdl-js-button mdl-button--raised" type="submit" name="submit ">Select Book</button>
+                                        <button id="<?php echo 'submit_'.$book->UID;?>" class="mdl-button mdl-js-button mdl-button--raised hidden" type="submit" name="submit ">Select Book</button>
                                     <?php echo form_close(); ?>
                                     </td>
                                     <td> <?php echo $book->title ?></td>
@@ -48,6 +48,16 @@
                                     });
                                 });
                             });
+
+                        function submitit(id)
+                        {
+                            var str1 = id;
+                            var str2 = 'submit';
+                            var res = str2.concat(str1);
+                            // window.alert(res)
+                            document.getElementById(res).click();
+                            
+                            };
                     </script>
                 <!-- Books table end -->
 
