@@ -25,7 +25,9 @@
                                     <?php echo form_open('Books/select_book', $attributes); ?>
                                         <input type="hidden" value="<?php echo $book->UID;?>" name="b_UID" id="<?php echo $book->UID?>"> 
                                         <input type="hidden" value="<?php echo $swap_UID;?>" name="swap_UID" id="swap_<?php echo $book->UID?>">
-                                        <span class="img-fluid"> <?php echo '<img style="max-height:200px; max-width: 100%; cursor: pointer;" src="data:image/jpeg;base64,'.base64_encode( $book->img).'"/>';?> <br></span>
+                                        <!-- Old image <span class="img-fluid"> <?php echo '<img style="max-height:200px; max-width: 100%; cursor: pointer;" src="data:image/jpeg;base64,'.base64_encode( $book->img).'"/>';?> <br></span> -->
+                                        <span class="img-fluid"> <img style="max-height:200px; max-width: 100%; cursor: pointer;" src="<?php echo base_url('images/user_uploads/'.$book->img_title);?>" class="card-img-top" alt="Book Photo"> <br></span>
+
                                         <button class="mdl-button mdl-js-button mdl-button--raised" type="submit" name="submit ">Select Book</button>
                                     <?php echo form_close(); ?>
                                     </td>
