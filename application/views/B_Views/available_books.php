@@ -49,7 +49,9 @@
                             
                         function submitit(id)
                             {
-                                document.getElementById(id).click();
+                                var button =document.getElementById(id);
+                                button.click();
+                                alert(button);
                                 };
 
                     </script>
