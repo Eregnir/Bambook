@@ -57,12 +57,17 @@ class Books extends CI_Controller{
         $data['other_user']=$this->books_model->get_other_user($data);
         $data['book2']=$this->books_model->get_2nd_image($data['swap_UID']);
         $data['book_info'] = $this->books_model->get_in_swap_info($data);
+
+        $user=$this->session->all_userdata();
+        $data['user']=$user;
+
         $this->load->view('templates/HeadB',$data);
         $this->load->view('B_Views/swap',$data);
         $this->load->view('templates/FootB');
         }
 
     public function zoom_swap2($swap_UID=null){
+        
         $data = array();
         $data['swap_UID'] = $swap_UID;
         // $user=$this->session->all_userdata();
@@ -71,6 +76,8 @@ class Books extends CI_Controller{
         $data['other_user']=$this->books_model->get_other_user($data);
         $data['book2']=$this->books_model->get_2nd_image($data['swap_UID']);
         $data['book_info'] = $this->books_model->get_in_swap_info($data);
+        $user=$this->session->all_userdata();
+        $data['user']=$user;
         $this->load->view('templates/HeadB',$data);
         $this->load->view('B_Views/swap',$data);
         $this->load->view('templates/FootB');
@@ -82,6 +89,8 @@ class Books extends CI_Controller{
             'swap_UID' => $this->input->post('swap_UID')
             );
         $data['books']=$this->books_model->get_other_library($data);
+        $user=$this->session->all_userdata();
+        $data['user']=$user;
         $this->load->view('templates/HeadB',$data);
         $this->load->view('B_Views/book_select_4swap');
         $this->load->view('templates/FootB');
@@ -149,6 +158,8 @@ class Books extends CI_Controller{
         $data['book2']=$this->books_model->get_2nd_image($data['swap_UID']); //Gets all of the data on the received book (if selected) 
         $data['book_info'] = $this->books_model->get_in_swap_info($data); //Gets all the data on the desired book
         $data['book_info2'] = $this->books_model->get_out_swap_info($data); //Gets the swap info and the desired book info 
+        $user=$this->session->all_userdata();
+        $data['user']=$user;
         $this->load->view('templates/HeadB',$data);
         $this->load->view('B_Views/swap_out',$data);
         $this->load->view('templates/FootB');
@@ -163,6 +174,8 @@ class Books extends CI_Controller{
         $user=$this->session->all_userdata();
         $data['user']=$user;
         $data['book_info'] = $this->books_model->get_book_info($data['b_UID']);
+        $user=$this->session->all_userdata();
+        $data['user']=$user;
         $this->load->view('templates/HeadB',$data);
         $this->load->view('B_Views/my_book_desc',$data);
         $this->load->view('templates/FootB');
@@ -172,6 +185,8 @@ class Books extends CI_Controller{
         $user=$this->session->all_userdata();
         $data['user']=$user;
         $data['book_info'] = $this->books_model->get_book_info($data['b_UID']);
+        $user=$this->session->all_userdata();
+        $data['user']=$user;
         $this->load->view('templates/HeadB',$data);
         $this->load->view('B_Views/my_book_desc',$data);
         $this->load->view('templates/FootB');
