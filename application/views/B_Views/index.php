@@ -38,7 +38,7 @@
                 <!-- Box 2 -->
                 <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
                     <div class="mdl-card__media">
-                        <a href="portfolio-example02.html">
+                        <a href="<?php echo site_url('Intro/my_requests');?>">
                             <img class="article-image" src="<?php echo base_url('images/my_requests.jpg');?>" border="0" alt="available_books">
                         </a>
                     </div>
