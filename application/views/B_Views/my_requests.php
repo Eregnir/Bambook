@@ -5,13 +5,14 @@
                 <?php 
                 if (empty($requests_in)): ?>
                         <div class="mdl-cell mdl-cell--12-col mdl-card text-center mdl-shadow--2dp">
-                            <span id="img1" class="card-img-top text-center"> <img style="max-width:200px;" class="card-img-top" alt="No Books" src='<?php echo base_url('images/empty_cart2.png');?>'> </span>
+                            <span id="img1" class="card-img-top text-center"> <img style="max-width:200px;" class="card-img-top" alt="No Books" src='<?php echo base_url('images/no_out_reqs.png');?>'> </span>
                             <h4>You don't have any incoming requests yet,<br>
                                 But if you add more books, you'll get more requests! </h4><br>
                             
                             <button id = "aab" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent text-center" style="max-width:150px; display:block; margin:auto;" type="button" name="submit ">
                                     Publish a book
                             </button>
+                            <br><br>
                         </div>
                     
 
@@ -59,6 +60,23 @@
                 <?php endif; ?>
 
                 <span class="material-icons">send</span>&nbsp;<h2>Sent Requests</h2>
+
+
+                <?php 
+                if (empty($requests_out)): ?>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card text-center mdl-shadow--2dp">
+                            <span id="img1" class="card-img-top text-center"> <img style="max-width:200px;" class="card-img-top" alt="No Books" src='<?php echo base_url('images/empty_cart2.png');?>'> </span>
+                            <h4>You haven't sent any swap requests yet,<br>
+                                But hundreds of book are waiting just for you! </h4><br>
+                            <button id = "bbks" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent text-center" style="max-width:150px; display:block; margin:auto;" type="button" name="submit ">
+                                    Browse Books
+                            </button>
+                            <br><br>
+                        </div>
+                    
+
+                <?php endif;
+                if (!empty($requests_out)): ?>
                 <!-- Sent requests -->
                 <input type="text" id="myInput2" onkeyup="myFunction()" placeholder="Search for the book or author name..." title="Type in a name">
                 <br>
@@ -94,7 +112,7 @@
                     <?php endforeach; ?>
                     </tbody>
                 </table>
-                    
+                    <?php endif; ?>
                 <script>
                     $(document).ready(function(){
                         $("#myInput").on("keyup", function() {
@@ -153,6 +171,11 @@
     document.getElementById("aab").onclick=function()
     {
         window.location.href="<?php echo site_url('Intro/publish_book');?>";   
+    };
+
+    document.getElementById("bbks").onclick=function()
+    {
+        window.location.href="<?php echo site_url('Intro/available_books');?>";   
     };
 
     // $(document).ready(function($) {
