@@ -476,8 +476,10 @@ footer {
   }
 }
 
+/***** Table 2 *****/
+
 @media screen and (max-width: 470px) {
-  #myTable tr td {
+  #myTable2 tr td {
     font-size: 15px;
   }
   /* td img {
