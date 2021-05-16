@@ -3,11 +3,23 @@
                 <span class="material-icons">mark_email_unread</span><h2 class="pad5">Received Requests</h2>
                 <!-- Received requests -->
                 <?php 
-                if (empty($requests_in)):
-                    echo 'empty array';
+                if (empty($requests_in)): ?>
+                        <div class="mdl-cell mdl-cell--12-col mdl-card text-center">
+                            <span id="img1" class="card-img-top text-center"> <img style="max-width:300px;" class="card-img-top" alt="No Books" src='<?php echo base_url('images/books_images/ohno.webp');?>'> </span>
+                            <h3>You don't have any books listed on Bambook...<br>
+                                But that can all be changed, right now: </h3><br>
+                            
+                            <button id = "aab" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent text-center" style="max-width:150px; display:block; margin:auto;" type="button" name="submit ">
+                                    Publish a book
+                            </button>
+                        </div>
+                    
 
-                endif;
+                <?php endif;
+                
+                if (!empty($requests_in)):
                 ?>
+                
                 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for the book or author name..." title="Type in a name">
                 <br>
                 <table class="table table-image" id="myTable">
@@ -43,7 +55,8 @@
                     <?php endforeach; ?>
                     </tbody>
                 </table> <br><br><br>
-
+                
+                <?php endif; ?>
 
                 <span class="material-icons">send</span>&nbsp;<h2>Sent Requests</h2>
                 <!-- Sent requests -->
