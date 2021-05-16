@@ -6,7 +6,8 @@
                 if (empty($requests_in)): ?>
                         <div class="mdl-cell mdl-cell--12-col mdl-card text-center mdl-shadow--2dp">
                             <span id="img1" class="card-img-top text-center"> <img style="max-width:200px;" class="card-img-top" alt="No Books" src='<?php echo base_url('images/no_out_reqs.png');?>'> </span>
-                            <h4>You don't have any incoming requests yet,<br>
+                            <h4><br><br>
+                                You don't have any incoming requests yet,<br>
                                 But if you add more books, you'll get more requests! </h4><br>
                             
                             <button id = "aab" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent text-center" style="max-width:150px; display:block; margin:auto;" type="button" name="submit ">
@@ -66,7 +67,8 @@
                 if (empty($requests_out)): ?>
                         <div class="mdl-cell mdl-cell--12-col mdl-card text-center mdl-shadow--2dp">
                             <span id="img1" class="card-img-top text-center"> <img style="max-width:200px;" class="card-img-top" alt="No Books" src='<?php echo base_url('images/empty_cart2.png');?>'> </span>
-                            <h4>You haven't sent any swap requests yet,<br>
+                            <h4><br><br>
+                                You haven't sent any swap requests yet,<br>
                                 But hundreds of book are waiting just for you! </h4><br>
                             <button id = "bbks" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent text-center" style="max-width:150px; display:block; margin:auto;" type="button" name="submit ">
                                     Browse Books
