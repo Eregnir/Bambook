@@ -15,16 +15,16 @@ class intro_model extends CI_Model {
         $this->db->db_debug = FALSE; 
         $email = $this->db->query('SELECT email FROM users WHERE email=  "'.$data['email'].'" LIMIT 1 ');
         $username = $this->db->query('SELECT username FROM users WHERE email=  "'.$data['username'].'" LIMIT 1 ');
-
         $row = $email->row();
+        $row2 = $username->row();
         if (isset($row)){
-            $err = 'This email is already in use. Try again!';
+            $err = 'This email is already in use. Try using a different one!';
             return $err;
         }
-        // elseif (isset($username)){
-        //     $err = 'This username is already in use. Try again!';
-        //     return $err;
-        // }
+        elseif(isset($row2)){
+            $err = 'This username is already in use. Try using a different one!';
+            return $err;
+        }
         else{
             $query=$this->db->insert('users', $data);
         }     
