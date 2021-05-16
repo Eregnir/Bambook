@@ -2,6 +2,9 @@
             <div class="mdl-grid portfolio-max-width">
                 <!-- Books table Start -->
                     <h2 class="pad5">My Library</h2>
+
+                    <?php if (empty($books)){echo 'No Books';}
+                    if (!empty($books)): ?>
                     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for the book or author name..." title="Type in a name">
                     <br>
                     <table class="table table-image" id="myTable">
@@ -56,6 +59,7 @@
                             };
                     </script>
                 <!-- Books table end -->
+                <?php endif ?>
             </div>
 
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
