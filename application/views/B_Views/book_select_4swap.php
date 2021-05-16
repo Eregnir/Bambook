@@ -67,11 +67,12 @@
 
                 <div class="mdl-grid portfolio-max-width">
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> <!-- centered div -->
+                    <span id="img1" class="card-img-top text-center"> <img style="max-width:200px;" class="card-img-top text-center" alt="No Books" src='<?php echo base_url('images/empty_cart2.png');?>'> </span>
+
                         <h4>
                             Oh no! <br>
                             This user has no available books to choose from, and the swap request cannot be completed.<br>
-                            <span id="img1" class="card-img-top"> <img style="max-width:200px;" class="card-img-top" alt="No Books" src='<?php echo base_url('images/empty_cart2.png');?>'> </span>
-                            <button id = "bkb" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" type="button" name="submit ">
+                            <button id = "bkb" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent text-center" type="button" style="max-width:150px; display:block; margin:auto;" name="submit ">
                                     Back to Requests
                                 </button>
                             <br>
