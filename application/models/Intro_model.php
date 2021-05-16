@@ -13,8 +13,8 @@ class intro_model extends CI_Model {
     
     public function save_register($data){
         $this->db->db_debug = FALSE; 
-        $email = $this->db->query('SELECT email FROM users WHERE email=  "'.$data['email'].'" LIMIT 1 ');
-        $username = $this->db->query('SELECT username FROM users WHERE email=  "'.$data['username'].'" LIMIT 1 ');
+        $email = $this->db->query('SELECT email FROM users WHERE email= "'.$data['email'].'" LIMIT 1 ');
+        $username = $this->db->query('SELECT username FROM users WHERE username= "'.$data['username'].'" LIMIT 1 ');
         $row = $email->row();
         $row2 = $username->row();
         if (isset($row)){
