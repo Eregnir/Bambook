@@ -1,6 +1,6 @@
         <main class="mdl-layout__content">
             <div class="mdl-grid portfolio-max-width">
-                <h2 class="pad5">Received Requests</h2> <span><i class="fas fa-envelope-open-text"></i></span>
+                <h2 class="pad5">Received Requests</h2><span class="material-icons">mark_email_unread</span>
                 <!-- Received requests -->
                 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for the book or author name..." title="Type in a name">
                 <br>
