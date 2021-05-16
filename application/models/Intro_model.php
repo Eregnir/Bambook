@@ -13,7 +13,9 @@ class intro_model extends CI_Model {
     
     public function save_register($data){
         $this->db->db_debug = FALSE; 
-        $query = $this->db->insert('users', $data);
+        // $query=$this->db->insert('users', $data);
+        $query=$this->db->query('INSERT INTO `users` (`f_name`, `l_name`, `email`, `username`, `phone_num`, `password`) VALUES ("'.$data['f_name'].'", "'.$data['l_name'].'", "'.$data['email'].'", "'.$data['username'].'", "'.$data['phone_num'].'", "'.$data['password'].'" )');
+
         return $query->result();        
     }
 
