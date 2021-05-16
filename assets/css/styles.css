@@ -1,5 +1,5 @@
-body {
-  overflow-y: scroll; /* Show vertical scrollbar */
+html {
+  overflow-y: auto; /* Show vertical scrollbar */
   
 }
 .portfolio-header {
