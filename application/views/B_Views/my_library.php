@@ -5,7 +5,7 @@
 
                     <?php  if (empty($books)): ?>
                         <div class="mdl-cell mdl-cell--12-col mdl-card text-center">
-                            <span id="img1" class="card-img-top text-center"> <img style="max-width:300px;" class="card-img-top" alt="No Books" src='<?php echo base_url('images/books_images/ohno.webp');?>'> </span>
+                            <span id="img1" class="card-img-top text-center"> <img style="max-width:300px;" class="card-img-top" alt="No Books" src='<?php echo base_url('images/no_out_reqs.png');?>'> </span>
                             <h3>You don't have any books listed on Bambook...<br>
                                 But that can all be changed, right now: </h3><br>
                             
