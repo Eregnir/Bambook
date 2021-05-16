@@ -13,7 +13,10 @@
                                 List a book
                             </button> -->
                         </div>
-                    <?php if (!empty($books)): ?>
+                        
+                    <?php 
+                    endif;
+                    if (!empty($books)): ?>
                     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for the book or author name..." title="Type in a name">
                     <br>
                     <table class="table table-image" id="myTable">
