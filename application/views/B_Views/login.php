@@ -34,7 +34,7 @@
                         <center>
                             <p>
                             <?php 
-                                if ($reg!=null){print_r($reg);};
+                                if ($reg!=null){echo $reg;};
                             ?>
                             </p>
                         </center>
