@@ -16,7 +16,8 @@
                     
                     <tbody>
                     <?php foreach ($requests_in as $req):
-                    
+                    print_r($req);
+                    echo '<br><br>';
                     //Open a form that will send the book UID to the controller in order to show it's full details.
                             $attributes = array('id' => $req->UID, 'name' =>$req->UID);?>
                             <tr id="<?php echo '_'.$req->swap_UID?>" class="table-row" onclick="submitit(this.id)">
