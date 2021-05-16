@@ -34,7 +34,7 @@
                         <center>
                             <p>
                             <?php 
-                                if ($reg!=null){echo $reg->reg;};
+                                if ($reg!=null){echo $reg['reg'];};
                             ?>
                             </p>
                         </center>
