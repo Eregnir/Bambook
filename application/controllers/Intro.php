@@ -95,8 +95,11 @@ class Intro extends CI_Controller{
             'email' => $this->input->post('email'), 
             'username' => $this->input->post('username'),
             'phone_num' => $this->input->post('phone_num'),
-            'password' => md5($this->input->post('password'))
+            'password' => $this->input->post('password')
          );
+
+         $data['password'] = md5($data['password']);
+
          $this->intro_model->save_register($data);
          $reg = 'Registered Successfully! Please Log In to complete the process.';
          $this->login($reg);
