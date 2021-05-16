@@ -47,6 +47,7 @@
                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">Edit Info</button>
                         </div>
 
+
                         <div style="display:none;" id="bspe" class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
                         
                             <!-- Edit info Form -->
@@ -90,7 +91,6 @@
                     </div>
                 </div>
 
-
             </div>
 
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
@@ -116,5 +116,6 @@
     {
         window.location.href="<?php echo site_url('Users/show_avatars');?>";
     };
+
     </script>
 
