@@ -100,9 +100,10 @@ class Intro extends CI_Controller{
 
          $data['password'] = md5($data['password']);
 
-         $this->intro_model->save_register($data);
-         $reg = 'Registered Successfully! Please Log In to complete the process.';
-         $this->login($reg);
+         $data['err'] = $this->intro_model->save_register($data);
+         $data['reg'] = 'Registered Successfully! Please Log In to complete the process.';
+
+         $this->login($data);
         }
 //function to get the profile details from the DB in order to show it for the profile page:
     public function user_details(){
