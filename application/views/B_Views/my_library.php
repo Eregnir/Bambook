@@ -9,7 +9,7 @@
                         <h3>You don't have any books listed on Bambook...<br>
                         But that can all be changed, right now! </h3>
                         
-                        <button id = "aab" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" type="button" name="submit ">
+                        <button id = "aab" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" style="max-width:150px" type="button" name="submit ">
                                 List a book
                         </button>
                         </div>
