@@ -66,11 +66,11 @@
                                 Register
                             </button>
                             <br><br>
-                            <p>
+                            <div class="mdl-cell mdl-cell--4-col" >
                             After you register to Bambook, you can list the books you own and wish to exchange, and search for books you would like to read.<br>
                             You can request a book swap from the available books that Bambook users have uploaded and suggest the book you would like to trade.
                             If a match is found, both users will be notified so they can arrange the book swap details.<br>
-                            </p>
+                            </div>
                         </div>
                     </div>
                 </div>
