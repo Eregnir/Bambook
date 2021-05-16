@@ -202,7 +202,7 @@ class Books extends CI_Controller{
         $this->my_book2($data);
         }
 
-    //function to set the availability of one of the user's books
+    //function that uploads a book, stores its info and image.
     public function upload_book(){
         $data = array(
             // 'img' => $this->input->post('file-input'),

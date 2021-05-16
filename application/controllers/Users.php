@@ -79,7 +79,7 @@ class Users extends CI_Controller{
      public function auth(){
            $data = array(
                'username' => $this->input->post('username'),
-               'password' => $this->input->post('password')
+               'password' => md5($this->input->post('password'))
              );
            
             $check=$this->users_model->auth($data);
