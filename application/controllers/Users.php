@@ -155,8 +155,10 @@ class Users extends CI_Controller{
             'lname' => $this->input->post('lname'),
             'email' => $this->input->post('email'), 
             'username' => $this->input->post('username'),
-            'password' => md5($this->input->post('password'))
+            'password' => $this->input->post('password')
          );
+
+        $data['password'] = md5($data['password']);
         
         $error=$this->users_model->save($data);
         if ($error){
