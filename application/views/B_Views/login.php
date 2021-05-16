@@ -44,13 +44,13 @@
                         <form method="post" action="<?php echo site_url('Users/auth');?>" class="">
                         <!-- Username -->
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="username" name="username">
-                                <label class="mdl-textfield__label" for="username">Username...</label>
+                                <input class="mdl-textfield__input" type="text" id="username" name="username" style="padding: 5px;">
+                                <label class="mdl-textfield__label" for="username" style="padding: 5px; font-size: 18px;">Username...</label>
                             </div>
                         <!-- Password -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="password" id="password" name="password">
-                                <label class="mdl-textfield__label" for="password">Password...</label>
+                                <input class="mdl-textfield__input" type="password" id="password" name="password" style="padding: 5px;">
+                                <label class="mdl-textfield__label" for="password" style="padding: 5px; font-size: 18px;">Password...</label>
                             </div>
                             <br><br>
                             <!-- Need to add password validation -->
