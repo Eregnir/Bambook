@@ -9,11 +9,12 @@
                     </div>
                     <div class="mdl-card__supporting-text text-center">
                         <p>
-                            Hi there reader, and welcome to Bambook!<br>
-                            Aren't books just great? We think so too, thats why we created Bambook: your online social book swap platform.
+                            <h2>Hi there reader, and welcome to Bambook!</h2>
+                            Aren't books just great? We think so too, thats why we created Bambook:<br> 
+                            your online social book swapping platform.
                         </p>
                         <p>
-                            So what are you waiting for? join the Bambook train and get swappin'!
+                            So what are you waiting for? join the Bambook train and get swapping!
                         </p>
                         <p style="color:red">
                             <?php if (isset($err)){print_r($err);}?>
