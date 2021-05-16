@@ -38,7 +38,7 @@
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                 <input required class="mdl-textfield__input" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{2,15}$" type="text" id="username" name="username">
                                 <label class="mdl-textfield__label" for="username">Username...</label>
-                                <span class="mdl-textfield__error">Must contain 3-20 characters</span>
+                                <span class="mdl-textfield__error">Must start with a letter and contain 3-20 characters</span>
                             </div>
                         <!-- email address -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
