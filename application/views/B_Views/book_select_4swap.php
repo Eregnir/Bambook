@@ -1,7 +1,7 @@
         <main class="mdl-layout__content">
             <div class="mdl-grid portfolio-max-width">
                 <?php if ($books):?>
-                <!-- Books table Start -->
+                    <!-- Books table Start -->
                     <h2 class="pad5">Browsing Books for Swap: </h2>
                     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for the book or author name..." title="Type in a name">
                     <br>
@@ -91,7 +91,10 @@
     //     active.classList.add("is-active");
     //     }
     
-
+    document.getElementById("bkb").onclick=function()
+    {
+        window.location.href="<?php echo site_url('Intro/my_requests');?>";   
+    };
     // $(document).ready(function($) {
     //     $(".table-row").click(function() {
     //         window.document.location = $(this).data("href");
