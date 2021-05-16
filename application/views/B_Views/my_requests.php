@@ -2,6 +2,7 @@
             <div class="mdl-grid portfolio-max-width">
                 <span class="material-icons">mark_email_unread</span><h2 class="pad5">Received Requests</h2>
                 <!-- Received requests -->
+                <?php print_r($requests_in)?>
                 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for the book or author name..." title="Type in a name">
                 <br>
                 <table class="table table-image" id="myTable">
