@@ -476,6 +476,15 @@ footer {
   }
 }
 
+@media screen and (max-width: 405px) {
+  #myTable tr td {
+    font-size: 10px;
+  }
+  tr th {
+    font-size: 12px;
+  }
+}
+
 /***** Table 2 *****/
 
 @media screen and (max-width: 470px) {
@@ -499,6 +508,15 @@ footer {
   }
   tr th {
     font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 405px) {
+  #myTable2 tr td {
+    font-size: 10px;
+  }
+  tr th {
+    font-size: 12px;
   }
 }
 
