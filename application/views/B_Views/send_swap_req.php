@@ -28,7 +28,7 @@
                             </p>
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Genre: Fiction</li><!-- to add these details from the DB -->
+                            <li class="list-group-item"><?php echo $bi->book_genre ?></li><!-- to add these details from the DB -->
                             <!-- Book Language -->
                             <li class="list-group-item">Language: <?php echo $bi->lang?></li>
                             <!-- Book Condition -->
