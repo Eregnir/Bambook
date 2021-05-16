@@ -12,7 +12,7 @@
                                 Bambook is an eco-friendly easy to use platform that allows you to swap books for free with our growing community.
                                 With Bambook you can swap the books you no longer need with books you would like to read.<br><br>
                                 After you register to Bambook, you can list the books you own and wish to exchange, and search for books you would like to read.<br>
-                                You can request a book swap from the available books that Bambook's users have uploaded and suggest the book you would like to trade.
+                                You can request a book swap from the available books that Bambook users have uploaded and suggest the book you would like to trade.
                                 If a match is found, both users will be notified so they can arrange the book swap details.<br>
                             </p>
                             <!-- <a href="#" class="btn btn-primary">List a book</a> -->

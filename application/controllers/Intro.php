@@ -52,8 +52,8 @@ class Intro extends CI_Controller{
         $this->load->view('templates/FootB');
         }
 //Load the register view
-    public function register(){
-        $this->load->view('templates/HeadB');
+    public function register($err=null){
+        $this->load->view('templates/HeadB',$err);
         $this->load->view('B_Views/register');
         $this->load->view('templates/FootB');
         }
@@ -96,15 +96,21 @@ class Intro extends CI_Controller{
             'username' => $this->input->post('username'),
             'phone_num' => $this->input->post('phone_num'),
             'password' => $this->input->post('password')
-         );
+        );
 
-         $data['password'] = md5($data['password']);
+        $data['password'] = md5($data['password']);
 
-         $data['err'] = $this->intro_model->save_register($data);
-         $data['reg'] = 'Registered Successfully! Please Log In to complete the process.';
-
-         $this->login($data);
+        $data['err'] = $this->intro_model->save_register($data);
+        $data['reg'] = 'Registered Successfully! Please Log In to complete the process.';
+        if (isset($data['err'])){
+            $this->register($data);
         }
+        else{
+            {
+            $this->login($data);
+            }
+        }   
+    }
 //function to get the profile details from the DB in order to show it for the profile page:
     public function user_details(){
         $user=$this->session->all_userdata();

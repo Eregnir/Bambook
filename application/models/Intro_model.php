@@ -12,7 +12,9 @@ class intro_model extends CI_Model {
     }
     
     public function save_register($data){
-        $this->db->insert('users', $data);
+        $query = $this->db->insert('users', $data);
+        return $query->result();
+        
     }
 
     public function get_profile_info(){

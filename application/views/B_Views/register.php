@@ -7,12 +7,16 @@
                     <div class="mdl-card__media">
                         <img class="article-image" src="<?php echo base_url('images/login-bambook.png');?>" border="0" alt="">
                     </div>
-                    <div class="mdl-card__supporting-text">
+                    <div class="mdl-card__supporting-text text-center">
                         <p>
-                            This text will welcome the new user to Bambook
+                            Hi there reader, and welcome to Bambook!<br>
+                            Aren't books just great? We think so too, thats why we created Bambook: your online social book swap platform.
                         </p>
                         <p>
-                            And this text as well.
+                            So what are you waiting for? join the Bambook train and get swappin'!
+                        </p>
+                        <p style="color:red">
+                            <?php if (isset($err)){print_r($err);}?>
                         </p>
                         <!-- Registration Form -->
 
