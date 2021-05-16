@@ -38,7 +38,7 @@
                 </table> <br><br><br>
 
 
-                <h2>Sent Requests</h2><span class="material-icons">send</span>
+                <h2>Sent Requests </h2><span class="material-icons">send</span>
                 <!-- Sent requests -->
                 <input type="text" id="myInput2" onkeyup="myFunction()" placeholder="Search for the book or author name..." title="Type in a name">
                 <br>
