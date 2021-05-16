@@ -15,7 +15,7 @@ class intro_model extends CI_Model {
         $this->db->db_debug = FALSE; 
         $email = $this->db->query('SELECT email FROM users WHERE email=  "'.$data['email'].'" LIMIT 1 ');
         $username = $this->db->query('SELECT email FROM users WHERE email=  "'.$data['email'].'" LIMIT 1 ');
-        if (isset($email)){
+        if ($email['affected_rows'] == 1){
             $err = 'This email is already in use. Try again!';
             return $email;
         }
