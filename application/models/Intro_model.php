@@ -19,7 +19,7 @@ class intro_model extends CI_Model {
         $row = $email->row();
         if (isset($row)){
             $err = 'This email is already in use. Try again!';
-            return $email;
+            return $err;
         }
         // elseif (isset($username)){
         //     $err = 'This username is already in use. Try again!';
