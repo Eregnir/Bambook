@@ -15,7 +15,13 @@
                     </thead>
                     
                     <tbody>
-                    <?php // $row = $requests_in->row(); if (!isset($row->UID)){echo 'no swaps here';}?>
+                    <?php
+                    $row = $requests_in->row(); 
+                    if (!isset($row->UID)):
+                        echo 'no swaps here';
+                
+                    else:
+                    ?>
                     <?php foreach ($requests_in as $req):
                     //Open a form that will send the book UID to the controller in order to show it's full details.
                             $attributes = array('id' => $req->UID, 'name' =>$req->UID);?>
