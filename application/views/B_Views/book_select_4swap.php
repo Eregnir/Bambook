@@ -67,7 +67,7 @@
 
                 <div class="mdl-grid portfolio-max-width">
                     <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> <!-- centered div -->
-                    <span id="img1" class="card-img-top text-center"> <img style="max-width:200px;" class="card-img-top text-center" alt="No Books" src='<?php echo base_url('images/empty_cart2.png');?>'> </span>
+                    <span id="img1" class="card-img-top text-center"> <img style="max-width:200px; display:block; margin:auto;" class="card-img-top text-center" alt="No Books" src='<?php echo base_url('images/empty_cart2.png');?>'> </span>
                         <br><br>
                         <h4>
                             Oh no! <br>
