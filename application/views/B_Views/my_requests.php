@@ -4,7 +4,7 @@
                 <!-- Received requests -->
                 <?php 
                 if (empty($requests_in)): ?>
-                        <div class="mdl-cell mdl-cell--12-col mdl-card text-center mdl-shadow--2dp">
+                        <div class="mdl-cell mdl-cell--12-col mdl-card text-center mdl-shadow--2dp"><br>
                             <span id="img1" class="card-img-top text-center"> <img style="max-width:200px;" class="card-img-top" alt="No Books" src='<?php echo base_url('images/no_out_reqs.png');?>'> </span>
                             <h4><br><br>
                                 You don't have any incoming requests yet,<br>
@@ -65,7 +65,7 @@
 
                 <?php 
                 if (empty($requests_out)): ?>
-                        <div class="mdl-cell mdl-cell--12-col mdl-card text-center mdl-shadow--2dp">
+                        <div class="mdl-cell mdl-cell--12-col mdl-card text-center mdl-shadow--2dp"><br>
                             <span id="img1" class="card-img-top text-center"> <img style="max-width:200px;" class="card-img-top" alt="No Books" src='<?php echo base_url('images/empty_cart2.png');?>'> </span>
                             <h4><br><br>
                                 You haven't sent any swap requests yet,<br>
