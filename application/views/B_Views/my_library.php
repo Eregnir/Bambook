@@ -5,13 +5,13 @@
 
                     <?php  if (empty($books)): ?>
                         <div class="mdl-cell mdl-cell--12-col mdl-card text-center">
-                        <!-- <span id="img1" class="card-img-top"> <img style="width:50%" class="card-img-top" alt="No Books" src='<?php echo base_url('images/books_images/ohno.webp');?>'> </span> -->
+                        <span id="img1" class="card-img-top"> <img style="width:50%" class="card-img-top" alt="No Books" src='<?php echo base_url('images/books_images/ohno.webp');?>'> </span>
                         <h3>You don't have any books listed on Bambook...<br>
                         But that can all be changed, right now! </h3>
                         
-                        <!-- <button id = "aab" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" type="button" name="submit ">
+                        <button id = "aab" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" type="button" name="submit ">
                                 List a book
-                            </button> -->
+                        </button>
                         </div>
                         
                     <?php 
