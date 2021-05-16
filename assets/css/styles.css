@@ -459,8 +459,8 @@ footer {
   /* td img {
     display: none;
   } */
-  #myTable tr td:nth-child(3) {
-    display: none;
+  /* #myTable tr td:nth-child(3) {
+    display: none; */
   }
   #availableBookAuthor {
     display: none;
