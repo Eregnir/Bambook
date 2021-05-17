@@ -5,7 +5,7 @@
                         <h2 class="mdl-card__title-text">Register to Bambook</h2>
                     </div>
                     <div class="mdl-card__media">
-                        <img class="article-image" src="<?php echo base_url('images/login-bambook.png');?>" border="0" alt="">
+                        <img class="article-image" src="<?php echo base_url('images/mobile-only.png');?>" border="0" alt="">
                     </div>
                     <div class="mdl-card__supporting-text text-center">
                         <p>

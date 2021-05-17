@@ -4,6 +4,18 @@
                     <div class="mdl-grid portfolio-copy">
                         <h3 class="text-center" style="padding: 15px;">Welcome to Bambook!</h3>
                     </div>
+                    <!-- Image card 0 -->
+                    <div id="mobile" class="card text-center" style="width: 22em;">
+                        <img class="card-img-top" src='<?php echo base_url('images/mobile-only.png');?>' alt="welcome to bambook">
+                        <div class="card-body">
+                            <p class="card-text">
+                                We've detected you are not using a mobile device to browse Bambook.<br>
+                                Bambook was developed as a mobile Web App! to get the best experience, we recommend you to switch to mobile.<br>
+                                You don't have to, but some features might not work for desktop users.
+                            </p>
+                        </div>
+                    </div>
+                    <br><br><br>
                     <!-- Image card 1 -->
                     <div class="card text-center" style="width: 22em;">
                         <img class="card-img-top" src='<?php echo base_url('images/about_us_images/1.png');?>' alt="welcome to bambook">
@@ -90,4 +102,18 @@
     {
         window.location.href="<?php echo site_url('Intro/login');?>";   
     };
+
+    window.onload = function(){
+        var mobile = document.getElementById("mobile");
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+        // true for mobile device
+        active.classList.add("card");
+        }
+        else{
+            active.classList.add("hidden");
+        }
+        
+    }
+
+    
     </script>
