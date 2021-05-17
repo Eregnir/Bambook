@@ -227,8 +227,8 @@ class Users extends CI_Controller{
         }
 
     public function get_region(){
-        // $data['api_res'] = $this->Users_model->get_region();
-        $this->load->view('templates/HeadB');
+        $data['api_res'] = $this->Users_model->get_region();
+        $this->load->view('templates/HeadB',$data);
         $this->load->view('B_Views/upload_form');
         $this->load->view('templates/FootB');
     }
