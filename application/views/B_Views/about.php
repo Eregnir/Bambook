@@ -11,12 +11,6 @@
 
                     <div class="mdl-grid portfolio-copy">
                         <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline"><u>My Profile:</u></h3>
-
-                        <!-- Location API: -->
-                        <button onclick="getLocation()">Try It</button>
-                        <p id="demo"></p>
-
-
                         <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
                             <p>
                             <h4><br>Hello, <?php foreach ($profile as $prof){echo $prof->username;}?>! </h4><br>
@@ -92,6 +86,9 @@
 
                         </div>
 
+                        <!-- Location API: -->
+                        <button onclick="getLocation()">Try It</button>
+                        <p id="demo"></p>
                         
                     </div>
                 </div>
