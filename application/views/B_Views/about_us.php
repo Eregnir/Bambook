@@ -9,7 +9,7 @@
                         <img class="card-img-top" src='<?php echo base_url('images/mobile-only.png');?>' alt="welcome to bambook">
                         <div class="card-body">
                             <p class="card-text">
-                                We've detected you are not using a mobile device to browse Bambook.<br>
+                                <h4>We've detected you are not using a mobile device to browse Bambook.</h4>
                                 Bambook was developed as a mobile Web App! to get the best experience, we recommend you to switch to mobile.<br>
                                 You don't have to, but some features might not work for desktop users.
                             </p>
