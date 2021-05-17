@@ -89,7 +89,7 @@
                         <!-- Location API: -->
                         <button onclick="getLocation()">Try It</button>
                         <p id="demo"></p>
-                        
+
                     </div>
                 </div>
 
@@ -131,5 +131,25 @@
         x.innerHTML="Latitude: " + position.coords.latitude + 
         "<br>Longitude: " + position.coords.longitude;
     }
+
+    function getCity(){
+        x.innerHTML = ;
+    }
+
+
+    $(document).ready(function() {
+        $.ajax({
+          url: "http://api.positionstack.com/v1/reverse?access_key=94b2a6a83105d295d435493f4441ee82&query=31.785047,35.214647&limit=1",
+          type: "GET",
+          success: function(result) {
+            console.log(result);
+          },
+          error: function(error) {
+            console.log(error);
+          }
+        });
+      });
+  
     </script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

@@ -1,7 +1,7 @@
         <main class="mdl-layout__content">
             <div class="mdl-grid portfolio-max-width">
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> 
-                 <?php print_r($error)?>
+                 <?php print_r($api_res)?>
                 </div>
             </div>
 

@@ -225,4 +225,11 @@ class Users extends CI_Controller{
         $this->users_model->update_avatar($data);
         header('Location: https://assafye.mtacloud.co.il/Bambook/index.php/Intro/about');
         }
+
+    public function get_region(){
+        $data['api_res'] = $this->Users_model->get_region();
+        $this->load->view('templates/HeadB',$data);
+        $this->load->view('B_Views/test_page');
+        $this->load->view('templates/FootB');
+    }
 }

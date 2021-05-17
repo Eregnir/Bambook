@@ -57,5 +57,23 @@ class users_model extends CI_Model {
       $this->db->where('username', $user['username']);
       $this->db->update('users', $avatar);
    }
+
+   public function get_region(){
+      $queryString = http_build_query([
+          'access_key' => '94b2a6a83105d295d435493f4441ee82',
+          'query' => '48.2084,16.3731',
+          'language' => 'EN',
+        ]);
+        
+        $ch = curl_init(sprintf('%s?%s', 'https://api.positionstack.com/v1/reverse', $queryString));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        
+        $json = curl_exec($ch);
+        
+        curl_close($ch);
+        
+        $apiResult = json_decode($json, true);
+        return($apiResult);
+  }
    
 }
