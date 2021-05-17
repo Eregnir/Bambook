@@ -96,6 +96,6 @@
 
                 document.getElementById("cnt").onclick=function()
                 {
-                    window.location.href="<?php echo site_url('Intro/contact');?>";   
+                    window.location.href="<?php echo site_url('Users/get_region');?>";   
                 };
         </script>
