@@ -11,6 +11,12 @@
 
                     <div class="mdl-grid portfolio-copy">
                         <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline"><u>My Profile:</u></h3>
+
+                        <!-- Location API: -->
+                        <button onclick="getLocation()">Try It</button>
+                        <p id="demo"></p>
+
+
                         <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
                             <p>
                             <h4><br>Hello, <?php foreach ($profile as $prof){echo $prof->username;}?>! </h4><br>
@@ -116,5 +122,17 @@
         window.location.href="<?php echo site_url('Users/show_avatars');?>";
     };
 
+    var x = document.getElementById("demo");
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.watchPosition(showPosition);
+        } else { 
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    } 
+    function showPosition(position) {
+        x.innerHTML="Latitude: " + position.coords.latitude + 
+        "<br>Longitude: " + position.coords.longitude;
+    }
     </script>
 
