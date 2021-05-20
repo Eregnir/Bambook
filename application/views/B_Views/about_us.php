@@ -1,8 +1,11 @@
         <main class="mdl-layout__content">
             <div class="mdl-grid portfolio-max-width">
                 <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
-                    <div class="mdl-grid portfolio-copy">
+                    <div class="mdl-grid portfolio-copy text-center">
                         <h3 class="text-center" style="padding: 15px;">Welcome to Bambook!</h3>
+                        <button id="login" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent text-center" type="button" name="login">
+                                Login
+                            </button>
                     </div>
                     <!-- Image card 0 -->
                     <div id="mobile" class="card text-center" style="width: 22em;">
