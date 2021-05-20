@@ -57,9 +57,9 @@
                                             <label for="book_cond" class="bmd-label-floating">Book Condition*</label>
                                             <select class="form-control" name="book_cond" id="book_cond" name="book_cond" required="required">
                                                 <option value="" disabled default selected>--Select--</option>
-                                                <option value="new">New</option>
-                                                <option value="like_new">Like New</option>
-                                                <option value="used">Used</option>
+                                                <option value="New">New</option>
+                                                <option value="Like New">Like New</option>
+                                                <option value="Used">Used</option>
                                             </select>
                                         </div>
 
