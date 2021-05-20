@@ -107,10 +107,10 @@
         var mobile = document.getElementById("mobile");
         if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
         // true for mobile device
-        active.classList.add("card");
+        mobile.classList.add("card");
         }
         else{
-            active.classList.add("hidden");
+            mobile.classList.add("hidden");
         }
         
     }
