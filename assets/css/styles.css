@@ -543,3 +543,13 @@ footer {
 } */
 
 /*********** About (Profile page) Google Maps ***********/
+
+/****** Image lightbox ****/
+.img2 {
+  transition:transform 0.25s ease;
+}
+
+.img2:hover {
+  -webkit-transform:scale(1.5); /* or some other value */
+  transform:scale(1.5);
+}

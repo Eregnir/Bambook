@@ -8,7 +8,7 @@
                     <button id="login" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent text-center" type="button" name="login">
                                 Login
                             </button>
-                    </div>
+                    </div><br>
                     <!-- Image card 0 -->
                     <div id="mobile" class="card text-center" style="width: 22em;">
                         <img class="card-img-top" src='<?php echo base_url('images/mobile-only.png');?>' alt="welcome to bambook">

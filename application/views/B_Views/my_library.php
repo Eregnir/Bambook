@@ -38,7 +38,7 @@
                                     <!-- Open a form that will send the avatar UID to the controller in order to select it and change the avatar. -->                                     
                                     <?php echo form_open('Books/my_book', $attributes); ?>
                                         <input type="hidden" value="<?php echo $book->UID;?>" name="b_UID" id="<?php echo $book->UID?>"> 
-                                        <span class="img-fluid"> <img src="<?php echo base_url('images/user_uploads/'.$book->img_title);?>" class="card-img-top" alt="Book_Img" style="max-height:200px; max-width: 100%;"> <br></span>
+                                        <span class="img-fluid img2"> <img src="<?php echo base_url('images/user_uploads/'.$book->img_title);?>" class="card-img-top" alt="Book_Img" style="max-height:200px; max-width: 100%;"> <br></span>
                                         <button id="<?php echo 'submit_'.$book->UID;?>" class="mdl-button mdl-js-button mdl-button--icon hidden" type="submit" name="submit "><i class="material-icons">open_in_new</i></button>
                                     <?php echo form_close(); ?>
                                     </td>
