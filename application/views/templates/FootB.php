@@ -9,7 +9,7 @@
                         <li><a href="#">Privacy & Terms</a></li>
                     </ul>
                 </div>
-            </footer>
+        </footer>
     </div>
 
 </body>
