@@ -72,7 +72,7 @@
                          <!-- Text here if needed -->
                     </div>
                     <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-button--accent" href="<?php echo site_url('Intro/publish_book');?>">Read more</a>
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-button--accent" href="<?php echo site_url('Intro/publish_book');?>">List a book</a>
                     </div>
                 </div>
                 <!-- End box 3 -->
