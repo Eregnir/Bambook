@@ -44,7 +44,14 @@
                                         <!-- Book Language -->
                                         <div class="form-group">
                                             <label class="bmd-label-floating" for="book_language">Language*</label><br>
-                                            <input class="form-control" type="text" id="book_language" name="book_language" required="required" placeholder="Enter book language"/>		 
+                                            <select class="form-control" name="book_language" id="book_language" name="book_cond" required="required">
+                                                <option value="" disabled default selected>--Select--</option>
+                                                <option value="English">English</option>
+                                                <option value="Hebrew">Hebrew</option>
+                                                <option value="Arabic">Arabic</option>
+                                                <option value="Russian">Russian</option>
+                                                <option value="Spanish">Spanish</option>
+                                            </select>	 
                                         </div>
 
                                         <!-- Book ISBN -->
