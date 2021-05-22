@@ -96,6 +96,9 @@
 
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBn97o86O6LNTNw5O2K_BejK_QCLVbESXM"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Google Maps JavaScript library -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyAA5iKqhOQe2_WiVbY7Z-uCKcJlFYbga3c"></script>
     <script>
     window.onload = function(){
         var active = document.getElementById("abt");
@@ -124,7 +127,7 @@
     var searchInput = 'location';
     $(document).ready(function () {
         var autocomplete;
-        autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
+        autocomplete = new google.maps.places.Autocomplete((document.getElementById(input)), {
             types: ['geocode'],
         })
 
