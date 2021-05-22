@@ -72,6 +72,17 @@
                                     <input value="<?php foreach ($profile as $prof){if($prof->location!=null){echo $prof->location;}}?>" class="mdl-textfield__input" type="text" id="location" name="location">
                                     <label class="mdl-textfield__label" for="location">Location</label>
                                 </div>
+                                <div class="container">
+                                    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                                    <div id="map"></div>
+                                    <div class="mdl-card__actions mdl-card--border">
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" id="location">
+                                        <label class="mdl-textfield__label" for="location">...</label>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
                                 <br><br>
                                 <p>
                                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" type="submit" name="submit ">
@@ -116,4 +127,30 @@
     {
         window.location.href="<?php echo site_url('Users/show_avatars');?>";
     };
+
+    // Google Maps API 
+
+    var map;
+        function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: -34.397, lng: 150.644},
+            zoom: 8
+        });
+        var input = document.getElementById('location');
+        var options = {
+            types: ['geocode']
+        };
+        var autocomplete = new google.maps.places.Autocomplete(input, options);
+        
+        autocomplete.addListener('place_changed', on_place_changed);
+        
+        function on_place_changed() {
+            console.log("Place Has Changed");
+            var loc = autocomplete.getPlace();
+            var lat = loc['geometry']['location']['lat'];
+            var lng = loc['geometry']['location']['lng'];
+            map.panTo(loc.geometry.location);
+            console.log("LAT: " + lat + " LNG: " + lng);
+        } 
+    }
     </script>
