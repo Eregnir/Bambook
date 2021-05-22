@@ -127,7 +127,7 @@
     var searchInput = 'location';
     $(document).ready(function () {
         var autocomplete;
-        autocomplete = new google.maps.places.Autocomplete((document.getElementById(input)), {
+        autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
             types: ['geocode'],
         })
 
