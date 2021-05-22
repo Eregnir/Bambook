@@ -69,19 +69,9 @@
                                 </div>
                             <!-- User Location -->
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input value="<?php foreach ($profile as $prof){if($prof->location!=null){echo $prof->location;}}?>" class="mdl-textfield__input" type="text" id="location" name="location">
+                                    <input value="<?php foreach ($profile as $prof){if($prof->location!=null){echo $prof->location;}}?>" class="mdl-textfield__input" type="text" id="location" name="location" placeholder="Type address...">
                                     <label class="mdl-textfield__label" for="location">Location</label>
-                                </div>
-                                <div class="container">
-                                    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
-                                    <div id="map"></div>
-                                    <div class="mdl-card__actions mdl-card--border">
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="location">
-                                        <label class="mdl-textfield__label" for="location">...</label>
-                                        </div>
-                                    </div>
-                                    </div>
+                                    
                                 </div>
                                 <br><br>
                                 <p>
@@ -105,6 +95,7 @@
             </div>
 
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBn97o86O6LNTNw5O2K_BejK_QCLVbESXM"></script>
     <script>
     window.onload = function(){
         var active = document.getElementById("abt");
@@ -130,27 +121,16 @@
 
     // Google Maps API 
 
-    var map;
-        function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: -34.397, lng: 150.644},
-            zoom: 8
+    var searchInput = 'location';
+    $(document).ready(function () {
+        var autocomplete;
+        autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
+            types: ['geocode'],
+        })
+
+        google.maps.event.addListener(autocomplete, 'place_changed', function() {
+            var near_place = autocomplete.getPlace();
         });
-        var input = document.getElementById('location');
-        var options = {
-            types: ['geocode']
-        };
-        var autocomplete = new google.maps.places.Autocomplete(input, options);
-        
-        autocomplete.addListener('place_changed', on_place_changed);
-        
-        function on_place_changed() {
-            console.log("Place Has Changed");
-            var loc = autocomplete.getPlace();
-            var lat = loc['geometry']['location']['lat'];
-            var lng = loc['geometry']['location']['lng'];
-            map.panTo(loc.geometry.location);
-            console.log("LAT: " + lat + " LNG: " + lng);
-        } 
-    }
+    });
+
     </script>
