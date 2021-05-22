@@ -460,11 +460,11 @@ footer {
     display: none;
   } */
   /* #myTable tr td:nth-child(3) {
-    display: none; */
+    display: none; 
   }
   #availableBookAuthor {
     display: none;
-  }
+  }*/
 }
 
 @media screen and (max-width: 430px) {
@@ -495,11 +495,11 @@ footer {
     display: none;
   } */
   /* #myTable tr td:nth-child(3) {
-    display: none; */
+    display: none; 
   }
   #availableBookAuthor {
     display: none;
-  }
+  }*/
 }
 
 @media screen and (max-width: 430px) {
@@ -543,4 +543,5 @@ footer {
 } */
 
 /*********** About (Profile page) Google Maps ***********/
+
 
