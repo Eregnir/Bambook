@@ -4,6 +4,60 @@
                     <h2 class="pad5">Available Books</h2>
                     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for the book or author name..." title="Type in a name">
                     <br>
+                    <!-- Table Filters -->
+                    <div class="container">
+                        <div class="row">
+                            <table class="table">
+                                <thead>
+                                <tr class="filters">
+                                    <th>Assigned User
+                                    <select id="assigned-user-filter" class="form-control">
+                                        <option>None</option>
+                                        <option>John</option>
+                                        <option>Rob</option>
+                                        <option>Larry</option>
+                                        <option>Donald</option>
+                                        <option>Roger</option>
+                                    </select>
+                                    </th>
+                                    <th>Status
+                                    <select id="status-filter" class="form-control">
+                                        <option>Any</option>
+                                        <option>Not Started</option>
+                                        <option>In Progress</option>
+                                        <option>Completed</option>
+                                    </select>
+                                    </th>
+                                    <th>Milestone
+                                    <select id="milestone-filter" class="form-control">
+                                        <option>None</option>
+                                        <option>Milestone 1</option>
+                                        <option>Milestone 2</option>
+                                        <option>Milestone 3</option>
+                                    </select>
+                                    </th>
+                                    <th>Priority
+                                    <select id="priority-filter" class="form-control">
+                                        <option>Any</option>
+                                        <option>Low</option>
+                                        <option>Medium</option>
+                                        <option>High</option>
+                                        <option>Urgent</option>
+                                    </select>
+                                    </th>
+                                    <th>Tags
+                                    <select id="tags-filter" class="form-control">
+                                        <option>None</option>
+                                        <option>Tag 1</option>
+                                        <option>Tag 2</option>
+                                        <option>Tag 3</option>
+                                    </select>
+                                    </th>
+                                </tr>
+                                </thead>
+                            </table>
+
+                    <!-- Table Books -->
                     <table class="table table-image" id="myTable">
                         <thead>
                             <tr>
@@ -76,6 +130,71 @@
     //         window.document.location = $(this).data("href");
     //     });
     // });
+
+    // Filter by genre, condition, author
+
+    var
+        filters = {
+            user: null,
+            status: null,
+            milestone: null,
+            priority: null,
+            tags: null
+    };
+
+    function updateFilters() {
+        $('.task-list-row').hide().filter(function() {
+            var
+            self = $(this),
+            result = true; // not guilty until proven guilty
+            
+            Object.keys(filters).forEach(function (filter) {
+            if (filters[filter] && (filters[filter] != 'None') && (filters[filter] != 'Any')) {
+                result = result && filters[filter] === self.data(filter);
+            }
+    });
+
+        return result;
+        }).show();
+    }
+
+    function changeFilter(filterName) {
+        filters[filterName] = this.value;
+        updateFilters();
+    }
+
+    // Assigned User Dropdown Filter
+    $('#assigned-user-filter').on('change', function() {
+        changeFilter.call(this, 'user');
+    });
+
+    // Task Status Dropdown Filter
+    $('#status-filter').on('change', function() {
+        changeFilter.call(this, 'status');
+    });
+
+    // Task Milestone Dropdown Filter
+    $('#milestone-filter').on('change', function() {
+        changeFilter.call(this, 'milestone');
+    });
+
+    // Task Priority Dropdown Filter
+    $('#priority-filter').on('change', function() {
+        changeFilter.call(this, 'priority');
+    });
+
+    // Task Tags Dropdown Filter
+    $('#tags-filter').on('change', function() {
+        changeFilter.call(this, 'tags');
+    });
+
+    /*
+    future use for a text input filter
+    $('#search').on('click', function() {
+        $('.box').hide().filter(function() {
+            return $(this).data('order-number') == $('#search-criteria').val().trim();
+        }).show();
+    });*/
 
     </script>
 
