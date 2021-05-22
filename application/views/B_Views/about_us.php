@@ -140,9 +140,7 @@
             document.getElementById("overlay-text").style.display = "block";
             document.getElementById("overlay-text-sml").style.display = "block";
         } else {
-            document.getElementById("overlay").style.display = "none";
-            document.getElementById("overlay-text").style.display = "none";
-            document.getElementById("overlay-text-sml").style.display = "none";
+            offOverlay();
         }
     }
 
