@@ -212,6 +212,9 @@
                                         if ($('.thumbs')[i].childNodes[11].wholeText == 'en-GB') {
                                             document.getElementById('book_language').value = 'English';
                                         }
+                                        if ($('.thumbs')[i].childNodes[11].wholeText == 'un') {
+                                            document.getElementById('book_language').value = 'English';
+                                        }
                                         if ($('.thumbs')[i].childNodes[11].wholeText == 'es') {
                                             document.getElementById('book_language').value = 'Spanish';
                                         }
