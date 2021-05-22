@@ -10,47 +10,34 @@
                             <table class="table">
                                 <thead>
                                 <tr class="filters">
-                                    <th>Assigned User
-                                    <select id="assigned-user-filter" class="form-control">
-                                        <option>None</option>
-                                        <option>John</option>
-                                        <option>Rob</option>
-                                        <option>Larry</option>
-                                        <option>Donald</option>
-                                        <option>Roger</option>
-                                    </select>
-                                    </th>
-                                    <th>Status
-                                    <select id="status-filter" class="form-control">
+                                    <th>Book Genre
+                                    <select id="genre-filter" class="form-control">
                                         <option>Any</option>
-                                        <option>Not Started</option>
-                                        <option>In Progress</option>
-                                        <option>Completed</option>
+                                        <option>Fantasy</option>
+                                        <option>Mystery</option>
+                                        <option>Romance</option>
+                                        <option>Thrillers</option>
+                                        <option>Biography</option>
+                                        <option>Insiprational</option>
+                                        <option>Other</option>
                                     </select>
                                     </th>
-                                    <th>Milestone
-                                    <select id="milestone-filter" class="form-control">
-                                        <option>None</option>
-                                        <option>Milestone 1</option>
-                                        <option>Milestone 2</option>
-                                        <option>Milestone 3</option>
-                                    </select>
-                                    </th>
-                                    <th>Priority
-                                    <select id="priority-filter" class="form-control">
+                                    <th>Book Language
+                                    <select id="language-filter" class="form-control">
                                         <option>Any</option>
-                                        <option>Low</option>
-                                        <option>Medium</option>
-                                        <option>High</option>
-                                        <option>Urgent</option>
+                                        <option>English</option>
+                                        <option>Hebrew</option>
+                                        <option>Arabic</option>
+                                        <option>Russian</option>
+                                        <option>Spanish</option>
                                     </select>
                                     </th>
-                                    <th>Tags
-                                    <select id="tags-filter" class="form-control">
-                                        <option>None</option>
-                                        <option>Tag 1</option>
-                                        <option>Tag 2</option>
-                                        <option>Tag 3</option>
+                                    <th>Book Condition
+                                    <select id="condition-filter" class="form-control">
+                                        <option>Any</option>
+                                        <option>New</option>
+                                        <option>Like New</option>
+                                        <option>Used</option>
                                     </select>
                                     </th>
                                 </tr>
@@ -135,12 +122,10 @@
 
     var
         filters = {
-            user: null,
-            status: null,
-            milestone: null,
-            priority: null,
-            tags: null
-    };
+            genre_f: null,
+            language_f: null,
+            condition_f: null
+        };
 
     function updateFilters() {
         $('.task-list-row').hide().filter(function() {
@@ -163,29 +148,19 @@
         updateFilters();
     }
 
-    // Assigned User Dropdown Filter
-    $('#assigned-user-filter').on('change', function() {
-        changeFilter.call(this, 'user');
+    // Book Genre Dropdown Filter
+    $('#genre-filter').on('change', function() {
+        changeFilter.call(this, 'genre_f');
     });
 
-    // Task Status Dropdown Filter
-    $('#status-filter').on('change', function() {
-        changeFilter.call(this, 'status');
+    // Language Dropdown Filter
+    $('#language-filter').on('change', function() {
+        changeFilter.call(this, 'language_f');
     });
 
-    // Task Milestone Dropdown Filter
-    $('#milestone-filter').on('change', function() {
-        changeFilter.call(this, 'milestone');
-    });
-
-    // Task Priority Dropdown Filter
-    $('#priority-filter').on('change', function() {
-        changeFilter.call(this, 'priority');
-    });
-
-    // Task Tags Dropdown Filter
-    $('#tags-filter').on('change', function() {
-        changeFilter.call(this, 'tags');
+    // Condition Dropdown Filter
+    $('#condition-filter').on('change', function() {
+        changeFilter.call(this, 'condition_f');
     });
 
     /*
