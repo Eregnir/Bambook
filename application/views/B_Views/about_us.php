@@ -20,7 +20,7 @@
                             </p>
                         </div>
                     </div> -->
-                    <div id="overlay" onclick="off()"></div>
+                    <div id="overlay" onclick="offOverlay()"></div>
                         <div id="overlay-text">We've detected you are not using a mobile device to browse Bambook.</div>
                         <div style="padding:20px">
                         <div id="overlay-text-sml">
@@ -128,25 +128,26 @@
         
     }
 
-    // Overlay effect when desktop deteceted
-    function on() {
-        document.getElementById("overlay").style.display = "block";
-    }
-
-    function off() {
+    function offOverlay() {
         document.getElementById("overlay").style.display = "none";
+        document.getElementById("overlay-text").style.display = "none";
+        document.getElementById("overlay-text-sml").style.display = "none";
     }
 
     function overlayResCheck(x) {
         if (x.matches) { // If media query matches
-           on();
+            document.getElementById("overlay").style.display = "block";
+            document.getElementById("overlay-text").style.display = "block";
+            document.getElementById("overlay-text-sml").style.display = "block";
         } else {
-           off();
+            document.getElementById("overlay").style.display = "none";
+            document.getElementById("overlay-text").style.display = "none";
+            document.getElementById("overlay-text-sml").style.display = "none";
         }
     }
 
     var x = window.matchMedia("(min-width: 961px)")
-    overlayResCheck(x) // Call listener function at run time
+    $(document).ready(overlayResCheck(x)) // Call listener function at run time
     x.addListener(overlayResCheck) // Attach listener function on state changes
     
     </script>
