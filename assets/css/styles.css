@@ -447,6 +447,10 @@ footer {
   background-size: cover;
   /* bottom: 0; */
   width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 /******** MEDIA QUERIES FOR available books ***********/

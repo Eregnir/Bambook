@@ -1,5 +1,5 @@
         </main>
-        <footer class="mdl-mini-footer" style="padding: 15px 15px; z-index: 150;">
+        <footer class="mdl-mini-footer" style="padding: 15px 15px;">
                 <div class="mdl-mini-footer__left-section">
                     <div class="mdl-logo">Bambook - Book Swap</div>
                 </div>
