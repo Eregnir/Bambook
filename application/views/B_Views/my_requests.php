@@ -109,7 +109,25 @@
                                 </td>
                                 <td> <?php echo $req->title ?></td>
                                 <td> <?php echo $req->sent_to_username ?></td>
-                                <td> <?php echo $req->swap_status ?></td>
+                                <td> 
+                                    <?php echo $req->swap_status;
+                                        if ($req->swap_status =="Completed") {
+                                            $color="color:green";
+                                        }
+                                        else if ($req->swap_status =="Cancelled") {
+                                            $color="color:red";
+                                        }
+                                        else if ($req->swap_status =="Started") {
+                                            $color="color:grey";
+                                        }
+                                        else if ($req->swap_status =="To be approved") {
+                                            $color="color:orange";
+                                        }
+                                        else {
+                                            $color="color:black";
+                                        }
+                                    ?>
+                                </td>
                             </tr>
                     <?php endforeach; ?>
                     </tbody>
@@ -186,7 +204,7 @@
     //     });
     // });
 
-    
+    // Change color of book swap status
 
     </script>
 
