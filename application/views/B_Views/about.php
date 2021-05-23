@@ -54,7 +54,7 @@
                             <form method="post" action="<?php echo site_url('Users/update_pref');?>" class="">
                             <!-- Favorite Genre 1 -->
                                 <div class="mdl-checkbox mdl-js-checkbox mdl-checkbox--floating-label">
-                                    <input value="<?php foreach ($profile as $prof){if($prof->genre1!=null){echo $prof->genre1;}}?>" class="mdl-textfield__input" type="checkbox" id="genre1" name="genre1">
+                                    <input value="<?php foreach ($profile as $prof){if($prof->genre1!=null){echo $prof->genre1;}}?>" class="mdl-checkbox__input" type="checkbox" id="genre1" name="genre1">
                                     <label class="mdl-checkbox__label" for="genre1">Fantasy</label>
                                 </div>
                             <!-- Favorite Genre 2 -->
