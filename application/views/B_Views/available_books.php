@@ -27,12 +27,12 @@
                         <div class="form-group" style="display: inline-block; width:30%;">
                             <label for="book_lang" class="bmd-label-floating">Book Language</label>
                                 <select class="form-control" name="book_lang" id="book_lang" >
-                                    <option value="Any" default>Any</option>
+                                    <option value="Any" default <?php echo (isset($_POST['book_lang']) && $_POST['book_lang'] === 'Any') ? 'selected' : ''; ?> >Any</option>
                                     <option value="English" <?php echo (isset($_POST['book_lang']) && $_POST['book_lang'] === 'English') ? 'selected' : ''; ?>  >English</option>
-                                    <option value="Hebrew">Hebrew</option>
-                                    <option value="Arabic">Arabic</option>
-                                    <option value="Russian">Russian</option>
-                                    <option value="Spanish">Spanish</option>
+                                    <option value="Hebrew" <?php echo (isset($_POST['book_lang']) && $_POST['book_lang'] === 'Hebrew') ? 'selected' : ''; ?>>Hebrew</option>
+                                    <option value="Arabic" <?php echo (isset($_POST['book_lang']) && $_POST['book_lang'] === 'Arabic') ? 'selected' : ''; ?>>Arabic</option>
+                                    <option value="Russian" <?php echo (isset($_POST['book_lang']) && $_POST['book_lang'] === 'Russian') ? 'selected' : ''; ?>>Russian</option>
+                                    <option value="Spanish" <?php echo (isset($_POST['book_lang']) && $_POST['book_lang'] === 'Spanish') ? 'selected' : ''; ?>>Spanish</option>
                                 </select>
                         </div>
 
