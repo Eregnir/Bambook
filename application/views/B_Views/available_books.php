@@ -76,7 +76,7 @@
                                     <td> <?php echo $book->title ?></td>
                                     <td> <?php echo $book->author ?></td>
                                     <td> <?php echo $book->cond ?></td>
-                                    <td> <?php echo $book->book_genre ?></td>
+                                    <td class="hidden"> <?php echo $book->book_genre ?></td>
                                 </tr>
                         <?php endforeach; ?>
                         </tbody>
