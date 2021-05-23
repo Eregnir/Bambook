@@ -12,14 +12,14 @@
                         <div class="form-group" style="display: inline-block; width:30%;">
                             <label for="book_genre" class="bmd-label-floating">Genre</label>
                             <select class="form-control" name="book_genre" id="book_genre" name="book_genre">
-                                <option value="Any" default selected>Any</option>
-                                <option value="Fantasy">Fantasy</option>
-                                <option value="Mystery">Mystery</option>
-                                <option value="Romance">Romance</option>
-                                <option value="Thrillers">Thrillers</option>
-                                <option value="Biography">Biography</option>
-                                <option value="Inspirational">Inspirational</option>
-                                <option value="Other">Other</option>
+                                <option value="Any" default <?php echo (isset($_POST['book_genre']) && $_POST['book_genre'] === 'Any') ? 'selected' : ''; ?>>Any</option>
+                                <option value="Fantasy" <?php echo (isset($_POST['book_genre']) && $_POST['book_genre'] === 'Fantasy') ? 'selected' : ''; ?>>Fantasy</option>
+                                <option value="Mystery" <?php echo (isset($_POST['book_genre']) && $_POST['book_genre'] === 'Mystery') ? 'selected' : ''; ?>>Mystery</option>
+                                <option value="Romance" <?php echo (isset($_POST['book_genre']) && $_POST['book_genre'] === 'Romance') ? 'selected' : ''; ?>>Romance</option>
+                                <option value="Thrillers" <?php echo (isset($_POST['book_genre']) && $_POST['book_genre'] === 'Thrillers') ? 'selected' : ''; ?>>Thrillers</option>
+                                <option value="Biography" <?php echo (isset($_POST['book_genre']) && $_POST['book_genre'] === 'Biography') ? 'selected' : ''; ?>>Biography</option>
+                                <option value="Inspirational" <?php echo (isset($_POST['book_genre']) && $_POST['book_genre'] === 'Inspirational') ? 'selected' : ''; ?>>Inspirational</option>
+                                <option value="Other" <?php echo (isset($_POST['book_genre']) && $_POST['book_genre'] === 'Other') ? 'selected' : ''; ?>>Other</option>
                             </select>
                         </div>
 
@@ -40,15 +40,15 @@
                         <div class="form-group" style="display: inline-block; width:30%;">
                             <label for="book_cond" class="bmd-label-floating">Genre</label>
                                 <select class="form-control" name="book_cond" id="book_cond">
-                                    <option value="Any" default selected>Any</option>
-                                    <option value="New">New</option>
-                                    <option value="Like New">Like New</option>
-                                    <option value="Used">Used</option>
+                                    <option value="Any" default <?php echo (isset($_POST['book_cond']) && $_POST['book_cond'] === 'Any') ? 'selected' : ''; ?> >Any</option>
+                                    <option value="New" <?php echo (isset($_POST['book_cond']) && $_POST['book_cond'] === 'New') ? 'selected' : ''; ?>>New</option>
+                                    <option value="Like New" <?php echo (isset($_POST['book_cond']) && $_POST['book_cond'] === 'Like New') ? 'selected' : ''; ?>>Like New</option>
+                                    <option value="Used" <?php echo (isset($_POST['book_cond']) && $_POST['book_cond'] === 'Used') ? 'selected' : ''; ?>>Used</option>
                                 </select>
                         </div>
 
                         <!-- Submit button -->
-                        <button type="submit" class="btn btn-primary" style="display: inline-block; width:25%;">Apply Filters</button>
+                        <button type="submit" class="btn btn-primary" style="display: inline-block; width:25%; margin-bottom:15px;">Apply Filters</button>
                         <br>
 
                         <?php echo form_close(); ?>
