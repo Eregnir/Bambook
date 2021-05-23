@@ -45,7 +45,21 @@
                                 </tr>
                                 </thead>
                             </table>
-
+                            <!-- New dropdown for filtering -->
+                            
+                            <div class="form-group">
+                                <label for="book_genre" class="bmd-label-floating">Genre</label>
+                                <select class="form-control" name="book_genre" id="book_genre" name="book_genre" required="required">
+                                    <option value="" disabled default selected>--Select--</option>
+                                    <option value="fantasy">Fantasy</option>
+                                    <option value="mystery">Mystery</option>
+                                    <option value="romance">Romance</option>
+                                    <option value="thrillers">Thrillers</option>
+                                    <option value="biography">Biography</option>
+                                    <option value="inspirational">Inspirational</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>  
                     <!-- Table Books -->
                     <table class="table table-image" id="myTable">
                         <thead>
