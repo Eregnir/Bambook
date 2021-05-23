@@ -56,6 +56,9 @@
                             <!-- Edit info Form -->
 
                             <form method="post" action="<?php echo site_url('Users/update_pref');?>" class="">
+                                <div>
+                                    <h5><b>Favorite Genres:</b></h5><br>
+                                </div>
                             <!-- Favorite Genre 1 -->
                                 <div>
                                     <input value="<?php foreach ($profile as $prof){if($prof->genre1!=null){echo $prof->genre1;}}?>" class="mdl-checkbox__input" type="checkbox" id="genre1" name="genre1">
