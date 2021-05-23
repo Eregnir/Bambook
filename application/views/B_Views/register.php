@@ -53,7 +53,7 @@
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                 <input required class="mdl-textfield__input" pattern="/^05\d([-]{0,1})\d{7}$/" type="tel" id="phone_num" name="phone_num">
                                 <label class="mdl-textfield__label" for="phone_num">Phone Number...</label>
-                                <span class="mdl-textfield__error">Must contain a valid phone number</span>
+                                <span class="mdl-textfield__error">Must contain a valid Israeli cellphone number</span>
                             </div>
                         <!-- Password -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
