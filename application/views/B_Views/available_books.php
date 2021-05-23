@@ -12,14 +12,14 @@
                         <div class="form-group">
                             <label for="book_genre" class="bmd-label-floating">Genre</label>
                             <select class="form-control" name="book_genre" id="book_genre" name="book_genre">
-                                <option value="any" default selected>Any</option>
-                                <option value="fantasy">Fantasy</option>
-                                <option value="mystery">Mystery</option>
-                                <option value="romance">Romance</option>
-                                <option value="thrillers">Thrillers</option>
-                                <option value="biography">Biography</option>
-                                <option value="inspirational">Inspirational</option>
-                                <option value="other">Other</option>
+                                <option value="Any" default selected>Any</option>
+                                <option value="Fantasy">Fantasy</option>
+                                <option value="Mystery">Mystery</option>
+                                <option value="Romance">Romance</option>
+                                <option value="Thrillers">Thrillers</option>
+                                <option value="Biography">Biography</option>
+                                <option value="Inspirational">Inspirational</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
 
@@ -27,12 +27,12 @@
                         <div class="form-group">
                             <label for="book_lang" class="bmd-label-floating">Book Language</label>
                                 <select class="form-control" name="book_lang" id="book_lang" >
-                                    <option value="any" default selected>Any</option>
-                                    <option>English</option>
-                                    <option>Hebrew</option>
-                                    <option>Arabic</option>
-                                    <option>Russian</option>
-                                    <option>Spanish</option>
+                                    <option value="Any" default selected>Any</option>
+                                    <option value="English">English</option>
+                                    <option value="Hebrew">Hebrew</option>
+                                    <option value="Arabic">Arabic</option>
+                                    <option value="Russian">Russian</option>
+                                    <option value="Spanish">Spanish</option>
                                 </select>
                         </div>
 
@@ -41,10 +41,10 @@
                             <label for="book_cond" class="bmd-label-floating">Genre</label>
                                 <select class="form-control" name="book_cond" id="book_cond">
                                     <option value="any" default selected>Any</option>
-                                    <option>Any</option>
-                                    <option>New</option>
-                                    <option>Like New</option>
-                                    <option>Used</option>
+                                    <option value="Any">Any</option>
+                                    <option value="New">New</option>
+                                    <option value="Like New">Like New</option>
+                                    <option value="Used">Used</option>
                                 </select>
                         </div>
 

@@ -19,13 +19,13 @@
                                             <label for="book_genre" class="bmd-label-floating">Genre</label>
                                             <select class="form-control" name="book_genre" id="book_genre" name="book_genre" required="required">
                                                 <option value="" disabled default selected>--Select--</option>
-                                                <option value="fantasy">Fantasy</option>
-                                                <option value="mystery">Mystery</option>
-                                                <option value="romance">Romance</option>
-                                                <option value="thrillers">Thrillers</option>
-                                                <option value="biography">Biography</option>
-                                                <option value="inspirational">Inspirational</option>
-                                                <option value="other">Other</option>
+                                                <option value="Fantasy">Fantasy</option>
+                                                <option value="Mystery">Mystery</option>
+                                                <option value="Romance">Romance</option>
+                                                <option value="Thrillers">Thrillers</option>
+                                                <option value="Biography">Biography</option>
+                                                <option value="Inspirational">Inspirational</option>
+                                                <option value="Other">Other</option>
                                             </select>
                                         </div>
 
