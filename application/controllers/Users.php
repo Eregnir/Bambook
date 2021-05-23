@@ -205,10 +205,10 @@ class Users extends CI_Controller{
             'genre1'=>$this->input->post('genre1'),
             'genre2'=>$this->input->post('genre2'),
             'genre3'=>$this->input->post('genre3'),
-            'genre3'=>$this->input->post('genre4'),
-            'genre3'=>$this->input->post('genre5'),
-            'genre3'=>$this->input->post('genre6'),
-            'genre3'=>$this->input->post('genre7'),
+            'genre4'=>$this->input->post('genre4'),
+            'genre5'=>$this->input->post('genre5'),
+            'genre6'=>$this->input->post('genre6'),
+            'genre7'=>$this->input->post('genre7'),
             'location'=>$this->input->post('location')
         );
         $this->users_model->update_profile($data);
