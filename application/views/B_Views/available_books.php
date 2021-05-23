@@ -7,18 +7,20 @@
                     <!-- Table Filters -->
                     <div class="container">
                         <div class="row">
+
+
                             <table class="table">
                                 <thead>
                                 <tr class="filters">
                                     <th>Book Genre
                                     <select id="genre-filter" class="form-control">
-                                        <option>Any</option>
+                                        <option style="color:grey;">Any</option>
                                         <option>Fantasy</option>
                                         <option>Mystery</option>
                                         <option>Romance</option>
                                         <option>Thrillers</option>
                                         <option>Biography</option>
-                                        <option>Insiprational</option>
+                                        <option>Inspirational</option>
                                         <option>Other</option>
                                     </select>
                                     </th>
@@ -52,6 +54,7 @@
                                 <th scope="col" id="availableBookTitle">Title</th>
                                 <th scope="col" id="availableBookAuthor">Author</th>
                                 <th scope="col" id="availableBookCond">Condition</th>
+                                <th scope="col" id="availableBookGenre" data-visible="false">Genre</th>
                             </tr>
                         </thead>
                         
@@ -73,6 +76,7 @@
                                     <td> <?php echo $book->title ?></td>
                                     <td> <?php echo $book->author ?></td>
                                     <td> <?php echo $book->cond ?></td>
+                                    <td> <?php echo $book->genre ?></td>
                                 </tr>
                         <?php endforeach; ?>
                         </tbody>
