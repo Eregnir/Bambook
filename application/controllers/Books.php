@@ -308,9 +308,63 @@ class Books extends CI_Controller{
 
     public function available_books_filter(){
         $user=$this->session->all_userdata();
-        if (!isset($user['loggedin'])){$user['loggedin']=null;};
-        if ($user['loggedin']==null){$data['books']=$this->intro_model->get_books_not_loggedin();}
-        else{$data['books']=$this->intro_model->get_books($user);};
+        if (!isset($user['loggedin'])){
+            $user['loggedin']=null;
+            $user['username'] = null;
+        };
+        $data['username'] = $user['username'];
+        // if ($user['loggedin']==null){$data['books']=$this->intro_model->get_books_not_loggedin();}
+        //else{};
+
+        //get the filter data:
+
+        $data = array(
+            'book_genre' => $this->input->post('book_genre'),
+            'lang' => $this->input->post('book_lang'),
+            'cond' => $this->input->post('book_cond')
+            );
+
+        ////DECIDE ON CORRECT FILTERS
+        if ($data['book_genre']!='Any'){ //genre is not any
+            if($data['cond']!='Any'){ //cond is not any
+                if($data['lang']!='Any'){ //lang is not any
+                    $data['books']=$this->books_model->filter_books1($data);
+                }
+                else{ //lang is any
+                    //only genre and cond filters
+                }
+            }
+            else{ //cond is any
+                if($data['lang']!='Any'){ //lang is not any
+                    //only genre and language filters
+                }
+                else{ //lang is also any
+                    //only genre filter
+                }
+
+            }
+            
+        }
+        else{ //genre is "any"
+            if($data['cond']!='Any'){ //cond is not any
+                if($data['lang']!='Any'){ //and also lang is not any
+                    //lang + cond filters apply
+                }
+                else{ //lang is any
+                    //only cond filter applies
+                }
+            }
+            else{ //cond is any (and also genre is any)
+                if($data['lang']!='Any'){ //lang is not any
+                    //only language filter applies
+                }
+                else{
+                    //no filters apply! woohoo
+                }
+            }
+        }
+
+        //load the views
         $data['user']=$user;
         $this->load->view('templates/HeadB',$data);
         $this->load->view('B_Views/available_books',$data);

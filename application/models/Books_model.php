@@ -122,6 +122,19 @@ class books_model extends CI_Model {
         $query=$this->db->query('SELECT * FROM image');
         return $query->result();
     }
+
+    ////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////
+
+    //Filtering books functions start here
+    public function filter_books1($data){
+        $query=$this->db->query('SELECT * FROM `user_books` WHERE `availability`="1" AND `cond` = "'.$data['cond'].'" AND `lang` = "'.$data['lang'].'" AND `book_genre` = "'.$data['book_genre'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
+        return $query->result();
+    }
     
+    ////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////
+
+
 
 }
