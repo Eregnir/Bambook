@@ -5,7 +5,7 @@
                         <h2 class="mdl-card__title-text">Register to Bambook</h2>
                     </div>
                     <div class="mdl-card__media">
-                        <img class="article-image" src="<?php echo base_url('images/mobile-only.png');?>" border="0" alt="">
+                        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=HWvhBy3qrR4&feature=youtu.be" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div class="mdl-card__supporting-text text-center">
                         <p>
