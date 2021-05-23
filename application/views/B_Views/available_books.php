@@ -40,8 +40,7 @@
                         <div class="form-group">
                             <label for="book_cond" class="bmd-label-floating">Genre</label>
                                 <select class="form-control" name="book_cond" id="book_cond">
-                                    <option value="any" default selected>Any</option>
-                                    <option value="Any">Any</option>
+                                    <option value="Any" default selected>Any</option>
                                     <option value="New">New</option>
                                     <option value="Like New">Like New</option>
                                     <option value="Used">Used</option>
