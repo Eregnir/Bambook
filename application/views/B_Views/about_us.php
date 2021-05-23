@@ -78,7 +78,7 @@
                     <div class="center-align">
                         <h3 class="text-center">Sounds interesting? Log in or join us today!</h3><br>
                         <div class="text-center">
-                            <button id="login" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" type="button" name="login">
+                            <button id="login1" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" type="button" name="login">
                                 Login
                             </button> 
                             <button id="register" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="button" name="register">
@@ -104,6 +104,10 @@
         window.location.href="<?php echo site_url('Intro/register');?>";   
     };
     document.getElementById("login").onclick=function()
+    {
+        window.location.href="<?php echo site_url('Intro/login');?>";   
+    };
+    document.getElementById("login1").onclick=function()
     {
         window.location.href="<?php echo site_url('Intro/login');?>";   
     };
