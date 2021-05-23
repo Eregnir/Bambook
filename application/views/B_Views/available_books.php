@@ -25,7 +25,7 @@
 
                         <!-- Book Lang -->
                         <div class="form-group" style="display: inline-block; width:30%;">
-                            <label for="book_lang" class="bmd-label-floating">Book Language</label>
+                            <label for="book_lang" class="bmd-label-floating">Language</label>
                                 <select class="form-control" name="book_lang" id="book_lang" >
                                     <option value="Any" default <?php echo (isset($_POST['book_lang']) && $_POST['book_lang'] === 'Any') ? 'selected' : ''; ?> >Any</option>
                                     <option value="English" <?php echo (isset($_POST['book_lang']) && $_POST['book_lang'] === 'English') ? 'selected' : ''; ?>  >English</option>
@@ -38,7 +38,7 @@
 
                         <!-- Book cond -->
                         <div class="form-group" style="display: inline-block; width:30%;">
-                            <label for="book_cond" class="bmd-label-floating">Genre</label>
+                            <label for="book_cond" class="bmd-label-floating">Condition</label>
                                 <select class="form-control" name="book_cond" id="book_cond">
                                     <option value="Any" default <?php echo (isset($_POST['book_cond']) && $_POST['book_cond'] === 'Any') ? 'selected' : ''; ?> >Any</option>
                                     <option value="New" <?php echo (isset($_POST['book_cond']) && $_POST['book_cond'] === 'New') ? 'selected' : ''; ?>>New</option>
