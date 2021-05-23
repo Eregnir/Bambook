@@ -91,8 +91,8 @@
                         </tbody>
                     </table>
 
-                    <div class="text-center">
-                        <p class="text-center">Can't find what you are looking for? <br>Try resetting your filters.</p>
+                    <div class="">
+                        <h5 class="">Can't find what you are looking for? <br>Try resetting your filters.</h5>
                     </div>
                        
                     <script>
