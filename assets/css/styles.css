@@ -594,5 +594,11 @@ footer {
 }
 
 
-/*********** REGISTER PAGE - YouTube Video *************/ 
+/*********** REGISTER PAGE - Bambook Video *************/ 
 
+@media screen and (max-width: 592px) {
+  .res_vid {
+    width: 530;
+    height: auto;
+  }
+}
