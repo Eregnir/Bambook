@@ -53,13 +53,15 @@
                         
                         <?php echo form_close(); ?>
 
-                    <?php 
-                    foreach ($books as $row){
-                        if (!isset($row)){
-                            echo 'no row';
+                    <p>
+                        <?php 
+                        foreach ($books as $row){
+                            if (!isset($row)){
+                                echo ('no row');
+                            }
                         }
-                    }
-                    ?>
+                        ?>
+                    </p>
                         
                     <!-- Table Books -->
                     <table class="table table-image" id="myTable">
