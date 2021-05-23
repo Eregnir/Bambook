@@ -95,7 +95,7 @@
                     <h3>
                         <?php 
                         
-                            if ($books[0]['UID']==null){
+                            if (isset($books) && $books[0]['UID']==null){
                                 echo ("Looks like we couldn't find any books matching your filters. Too bad! :\ ");
                             }
                         ?>
