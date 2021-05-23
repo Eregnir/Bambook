@@ -53,48 +53,7 @@
 
                         <?php echo form_close(); ?>
 
-                        <table class="table">
-                                <thead>
-                                <tr class="filters">
-                                    <th>Book Genre
-                                    <select id="genre-filter" class="form-control">
-                                        <option>Any</option>
-                                        <option>Fantasy</option>
-                                        <option>Mystery</option>
-                                        <option>Romance</option>
-                                        <option>Thrillers</option>
-                                        <option>Biography</option>
-                                        <option>Insiprational</option>
-                                        <option>Other</option>
-                                    </select>
-                                    </th>
-                                    <th>Book Language
-                                    <select id="language-filter" class="form-control">
-                                        <option>Any</option>
-                                        <option>English</option>
-                                        <option>Hebrew</option>
-                                        <option>Arabic</option>
-                                        <option>Russian</option>
-                                        <option>Spanish</option>
-                                    </select>
-                                    </th>
-                                    <th>Book Condition
-                                    <select id="condition-filter" class="form-control">
-                                        <option>Any</option>
-                                        <option>New</option>
-                                        <option>Like New</option>
-                                        <option>Used</option>
-                                    </select>
-                                    </th>
-                                </tr>
-                                </thead>
-                            </table>
                             
-                            <!-- New dropdown for filtering -->
-                            
-                            <div class="form-group">
-                                
-                            </div>  
                     <!-- Table Books -->
                     <table class="table table-image" id="myTable">
                         <thead>
