@@ -55,6 +55,10 @@
 
                             
                     <!-- Table Books -->
+                    <?php 
+                    $row = $books->row();
+                    echo $row['UID'];
+                    ?>
                     <table class="table table-image" id="myTable">
                         <thead>
                             <tr>
