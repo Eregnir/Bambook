@@ -13,17 +13,16 @@
                                 <thead>
                                 <tr class="filters">
                                     <th>Book Genre
-                                        <!-- <label for="book_genre" class="bmd-label-floating">Genre</label> -->
-                                        <select class="form-control" id="book_genre" name="book_genre">
-                                            <option value="" disabled default selected>--Select--</option>
-                                            <option value="fantasy">Fantasy</option>
-                                            <option value="mystery">Mystery</option>
-                                            <option value="romance">Romance</option>
-                                            <option value="thrillers">Thrillers</option>
-                                            <option value="biography">Biography</option>
-                                            <option value="inspirational">Inspirational</option>
-                                            <option value="other">Other</option>
-                                        </select>
+                                    <select id="genre-filter" class="form-control">
+                                        <option style="color:grey;">Any</option>
+                                        <option>Fantasy</option>
+                                        <option>Mystery</option>
+                                        <option>Romance</option>
+                                        <option>Thrillers</option>
+                                        <option>Biography</option>
+                                        <option>Inspirational</option>
+                                        <option>Other</option>
+                                    </select>
                                     </th>
                                     <th>Book Language
                                     <select id="language-filter" class="form-control">
@@ -98,7 +97,16 @@
                                     });
                                 });
                             });
-                                                        
+
+                        $(document).ready(function(){
+                            $("#book_genre").on("change", function() {
+                                var value = $(this).val().toLowerCase();
+                                $("#myTable tr").filter(function() {
+                                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                    });
+                                });
+                            });
+                            
                         function submitit(id)
                             {
                                 var str1 = id;
