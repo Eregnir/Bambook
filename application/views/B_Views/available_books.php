@@ -50,9 +50,16 @@
                         <!-- Submit button -->
                         <button type="submit" class="btn btn-primary" style="display: inline-block; width:25%; margin-bottom:15px;">Apply Filters</button>
                         <br>
-
+                        
                         <?php echo form_close(); ?>
 
+                    <?php 
+                    $no_books = $books->row();
+                    if (isset($no_books)){
+                        echo 'it is set.';
+                    }
+                    ?>
+                        
                     <!-- Table Books -->
                     <table class="table table-image" id="myTable">
                         <thead>
