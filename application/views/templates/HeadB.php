@@ -34,7 +34,6 @@
                     <a id="blg" class="mdl-navigation__link" href="#"><div class="material-icons mdl-badge mdl-badge--overlap">local_library</div> Library</a>
                     <a class="mdl-navigation__link" href="<?php echo site_url('Intro/my_requests');?>"><div class="material-icons mdl-badge mdl-badge--overlap">menu_book</div> My Swaps </a>
                     <a id="abt" class="mdl-navigation__link" href="#"><div class="material-icons mdl-badge mdl-badge--overlap">face</div> Profile</a>
-                    <a id="cnt" class="mdl-navigation__link" href="#"><div class="material-icons mdl-badge mdl-badge--overlap">email</div> Contact</a>
                     <a id="log" class="mdl-navigation__link" href="<?php echo site_url('Intro/login');?>">
                     <?php
                         if (isset($user['loggedin'])){
@@ -55,9 +54,7 @@
                     <!-- <a class="mdl-navigation__link" href="<?php // echo site_url('Intro/about_us');?>">About Us</a> -->
                     <a class="mdl-navigation__link" href="<?php echo site_url('Intro/available_books');?>"><div class="material-icons mdl-badge mdl-badge--overlap">local_library</div> Library</a>
                     <a class="mdl-navigation__link" href="<?php echo site_url('Intro/my_requests');?>"><div class="material-icons mdl-badge mdl-badge--overlap">menu_book</div> My Swaps</a>
-                    <a class="mdl-navigation__link" href="<?php echo site_url('Intro/about');?>"><div class="material-icons mdl-badge mdl-badge--overlap">face</div> Profile</a>
-                    <a class="mdl-navigation__link" href="<?php echo site_url('Intro/contact');?>"><div class="material-icons mdl-badge mdl-badge--overlap">email</div> Contact</a>
-                    <a class="mdl-navigation__link" href="<?php echo site_url('Intro/login');?>">
+                    <a class="mdl-navigation__link" href="<?php echo site_url('Intro/about');?>"><div class="material-icons mdl-badge mdl-badge--overlap">face</div> Profile</a>                    <a class="mdl-navigation__link" href="<?php echo site_url('Intro/login');?>">
                     <?php
                         if (isset($user['loggedin'])){
                             $out = '<div class="material-icons mdl-badge mdl-badge--overlap">logout</div> Log Out';
@@ -94,8 +91,4 @@
                     window.location.href="<?php echo site_url('Intro/about');?>";   
                 };
 
-                document.getElementById("cnt").onclick=function()
-                {
-                    window.location.href="<?php echo site_url('Intro/contact');?>";   
-                };
         </script>
