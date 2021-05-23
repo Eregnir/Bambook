@@ -39,7 +39,11 @@
                                     <?php foreach ($profile as $prof){
                                         if($prof->genre1!=null){echo $prof->genre1;}
                                         if($prof->genre2!=null){echo ", ".$prof->genre2;}
-                                        if($prof->genre3!=null){echo ", ". $prof->genre3;}
+                                        if($prof->genre3!=null){echo ", ".$prof->genre3;}
+                                        if($prof->genre4!=null){echo ", ".$prof->genre4;}
+                                        if($prof->genre5!=null){echo ", ".$prof->genre5;}
+                                        if($prof->genre6!=null){echo ", ".$prof->genre6;}
+                                        if($prof->genre7!=null){echo ", ".$prof->genre7;}
                                         }?>
                                     <br><br><b>Location:</b> <?php foreach ($profile as $prof){echo $prof->location;}?>
                                 </h5>
