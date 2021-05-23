@@ -8,7 +8,51 @@
                     <div class="container">
                         <div class="row">
 
-                        
+                        <?php echo form_open('Books/browse_books_for_swap'); ?>
+                        <div class="form-group">
+                            <label for="book_genre" class="bmd-label-floating">Genre</label>
+                            <select class="form-control" name="book_genre" id="book_genre" name="book_genre">
+                                <option value="any" default selected>Any</option>
+                                <option value="fantasy">Fantasy</option>
+                                <option value="mystery">Mystery</option>
+                                <option value="romance">Romance</option>
+                                <option value="thrillers">Thrillers</option>
+                                <option value="biography">Biography</option>
+                                <option value="inspirational">Inspirational</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Book Title -->
+                        <div class="form-group">
+                            <label for="book_genre" class="bmd-label-floating">Book Language</label>
+                                <select class="form-control" name="book_lang" id="book_lang" >
+                                    <option value="any" default selected>Any</option>
+                                        <option>English</option>
+                                        <option>Hebrew</option>
+                                        <option>Arabic</option>
+                                        <option>Russian</option>
+                                        <option>Spanish</option>
+                                </select>
+                        </div>
+
+                        <!-- Book Author -->
+                        <div class="form-group">
+                            <label for="book_genre" class="bmd-label-floating">Genre</label>
+                                <select class="form-control" name="book_genre" id="book_genre" name="book_genre" >
+                                    <option value="any" default selected>Any</option>
+                                        <option>Any</option>
+                                        <option>New</option>
+                                        <option>Like New</option>
+                                        <option>Used</option>
+                                </select>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary">Publish a book</button>
+
+                        <?php echo form_close(); ?>
+
                         <table class="table">
                                 <thead>
                                 <tr class="filters">
@@ -45,8 +89,6 @@
                                 </tr>
                                 </thead>
                             </table>
-                        <?php // echo form_open('Books/browse_books_for_swap'); ?>
-                        <?php // echo form_close(); ?>
                             
                             <!-- New dropdown for filtering -->
                             
