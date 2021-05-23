@@ -54,7 +54,7 @@
                         <?php echo form_close(); ?>
 
                     
-                        <?php foreach ($books as $book){if (!isset($book)){echo 'no books matching this query!'; }} ?>
+                        <?php foreach ($books as $book){if (!isset($book['UID'])){echo 'no books matching this query!'; }} ?>
 
                     <!-- Table Books -->
                     <table class="table table-image" id="myTable">
