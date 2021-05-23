@@ -54,7 +54,7 @@
                                 <th scope="col" id="availableBookTitle">Title</th>
                                 <th scope="col" id="availableBookAuthor">Author</th>
                                 <th scope="col" id="availableBookCond">Condition</th>
-                                <th scope="col" id="availableBookGenre" data-visible="false">Genre</th>
+                                <th scope="col" id="availableBookGenre">Genre</th>
                             </tr>
                         </thead>
                         
