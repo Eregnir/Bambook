@@ -8,7 +8,7 @@
                     <div class="container">
                         <div class="row">
 
-                        <?php echo form_open('Books/browse_books_for_swap'); ?>
+                        <?php echo form_open('Books/available_books_filter'); ?>
                         <div class="form-group">
                             <label for="book_genre" class="bmd-label-floating">Genre</label>
                             <select class="form-control" name="book_genre" id="book_genre" name="book_genre">
@@ -23,33 +23,33 @@
                             </select>
                         </div>
 
-                        <!-- Book Title -->
+                        <!-- Book Lang -->
                         <div class="form-group">
-                            <label for="book_genre" class="bmd-label-floating">Book Language</label>
+                            <label for="book_lang" class="bmd-label-floating">Book Language</label>
                                 <select class="form-control" name="book_lang" id="book_lang" >
                                     <option value="any" default selected>Any</option>
-                                        <option>English</option>
-                                        <option>Hebrew</option>
-                                        <option>Arabic</option>
-                                        <option>Russian</option>
-                                        <option>Spanish</option>
+                                    <option>English</option>
+                                    <option>Hebrew</option>
+                                    <option>Arabic</option>
+                                    <option>Russian</option>
+                                    <option>Spanish</option>
                                 </select>
                         </div>
 
-                        <!-- Book Author -->
+                        <!-- Book cond -->
                         <div class="form-group">
-                            <label for="book_genre" class="bmd-label-floating">Genre</label>
-                                <select class="form-control" name="book_genre" id="book_genre" name="book_genre" >
+                            <label for="book_cond" class="bmd-label-floating">Genre</label>
+                                <select class="form-control" name="book_cond" id="book_cond">
                                     <option value="any" default selected>Any</option>
-                                        <option>Any</option>
-                                        <option>New</option>
-                                        <option>Like New</option>
-                                        <option>Used</option>
+                                    <option>Any</option>
+                                    <option>New</option>
+                                    <option>Like New</option>
+                                    <option>Used</option>
                                 </select>
                         </div>
 
                         <!-- Submit button -->
-                        <button type="submit" class="btn btn-primary">Publish a book</button>
+                        <button type="submit" class="btn btn-primary">Apply Filters</button>
 
                         <?php echo form_close(); ?>
 
@@ -100,14 +100,6 @@
                                 });
                             });
 
-                        $(document).ready(function(){
-                            $("#book_genre").on("change", function() {
-                                var value = $(this).val().toLowerCase();
-                                $("#myTable tr").filter(function() {
-                                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                                    });
-                                });
-                            });
                             
                         function submitit(id)
                             {
