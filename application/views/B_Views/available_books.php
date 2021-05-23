@@ -9,7 +9,7 @@
                         <div class="row">
 
                         <?php echo form_open('Books/available_books_filter'); ?>
-                        <div class="form-group" style="display: inline-block; width:10%;">
+                        <div class="form-group" style="display: inline-block; width:30%;">
                             <label for="book_genre" class="bmd-label-floating">Genre</label>
                             <select class="form-control" name="book_genre" id="book_genre" name="book_genre">
                                 <option value="Any" default selected>Any</option>
@@ -24,7 +24,7 @@
                         </div>
 
                         <!-- Book Lang -->
-                        <div class="form-group" style="display: inline-block; width:10%;">
+                        <div class="form-group" style="display: inline-block; width:30%;">
                             <label for="book_lang" class="bmd-label-floating">Book Language</label>
                                 <select class="form-control" name="book_lang" id="book_lang" >
                                     <option value="Any" default selected>Any</option>
@@ -37,7 +37,7 @@
                         </div>
 
                         <!-- Book cond -->
-                        <div class="form-group" style="display: inline-block; width:10%;">
+                        <div class="form-group" style="display: inline-block; width:30%;">
                             <label for="book_cond" class="bmd-label-floating">Genre</label>
                                 <select class="form-control" name="book_cond" id="book_cond">
                                     <option value="Any" default selected>Any</option>
