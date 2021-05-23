@@ -91,15 +91,8 @@
                         </tbody>
                     </table>
 
-                    <div class="text-center" style="margin-top: 20px;">
-                    <h3>
-                        <?php 
-                        
-                            if (isset($books) && $books[0]['UID']==null){
-                                echo ("Looks like we couldn't find any books matching your filters. Too bad! :\ ");
-                            }
-                        ?>
-                    </h3>
+                    <div class="text-center">
+                        <p class="text-center">Can't find what you are looking for? <br>Try resetting your filters.</p>
                     </div>
                        
                     <script>
