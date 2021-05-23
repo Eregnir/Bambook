@@ -594,7 +594,12 @@ footer {
 }
 
 
-/*********** REGISTER PAGE - Bambook Video *************/ 
+/*********** REGISTER PAGE - Bambook Video *************/
+
+video {
+	width: 100%;
+	height: auto;
+}
 
 @media screen and (max-width: 592px) {
   video {
