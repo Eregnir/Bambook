@@ -358,7 +358,10 @@ class Books extends CI_Controller{
                 if($data['lang']!='Any'){ //lang is not any
                     $data['books']=$this->books_model->filter_books7($data); //only language filter applies
                 }
-                //if we want we can add else here.
+                else{
+                    $data['books']=$this->books_model->filter_books8($data); //reset filters
+                }
+                
             }
         }
 

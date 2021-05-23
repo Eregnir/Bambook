@@ -169,6 +169,12 @@ class books_model extends CI_Model {
         return $query->result();
     }
 
+    //reset filters
+    public function filter_books8($data){
+        $query=$this->db->query('SELECT * FROM `user_books` WHERE `availability`="1" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
+        return $query->result();
+    }
+
     ////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////
 
