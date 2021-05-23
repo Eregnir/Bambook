@@ -57,37 +57,37 @@
 
                             <form method="post" action="<?php echo site_url('Users/update_pref');?>" class="">
                             <!-- Favorite Genre 1 -->
-                                <div class="mdl-checkbox mdl-js-checkbox mdl-checkbox--floating-label">
-                                    <input value="<?php foreach ($profile as $prof){if($prof->genre1!=null){echo $prof->genre1;}}?>" class="mdl-js-checkbox" type="checkbox" id="genre1" name="genre1">
+                                <div>
+                                    <input value="<?php foreach ($profile as $prof){if($prof->genre1!=null){echo $prof->genre1;}}?>" class="mdl-checkbox__input" type="checkbox" id="genre1" name="genre1">
                                     <label class="mdl-checkbox__label" for="genre1">Fantasy</label>
                                 </div>
                             <!-- Favorite Genre 2 -->
-                                <div class="mdl-checkbox mdl-js-checkbox mdl-checkbox--floating-label">
+                                <div>
                                     <input value="<?php foreach ($profile as $prof){if($prof->genre2!=null){echo $prof->genre2;}}?>" class="mdl-checkbox__input" type="checkbox" id="genre2" name="genre2">
                                     <label class="mdl-checkbox__label" for="genre2">Mystery</label>
                                 </div>
                             <!-- Favorite Genre 3 -->
-                                <div class="mdl-checkbox mdl-js-checkbox mdl-checkbox--floating-label">
+                                <div>
                                     <input value="<?php foreach ($profile as $prof){if($prof->genre3!=null){echo $prof->genre3;}}?>" class="mdl-checkbox__input" type="checkbox" id="genre3" name="genre3">
                                     <label class="mdl-checkbox__label" for="genre3">Romance</label>
                                 </div>
                             <!-- Favorite Genre 4 -->
-                                <div class="mdl-checkbox mdl-js-checkbox mdl-checkbox--floating-label">
+                                <div>
                                     <input value="<?php foreach ($profile as $prof){if($prof->genre4!=null){echo $prof->genre4;}}?>" class="mdl-checkbox__input" type="checkbox" id="genre4" name="genre4">
                                     <label class="mdl-checkbox__label" for="genre4">Thrillers</label>
                                 </div>
                                 <!-- Favorite Genre 5 -->
-                                <div class="mdl-checkbox mdl-js-checkbox mdl-checkbox--floating-label">
+                                <div>
                                     <input value="<?php foreach ($profile as $prof){if($prof->genre5!=null){echo $prof->genre5;}}?>" class="mdl-checkbox__input" type="checkbox" id="genre5" name="genre5">
                                     <label class="mdl-checkbox__label" for="genre5">Biography</label>
                                 </div>
                                 <!-- Favorite Genre 6 -->
-                                <div class="mdl-checkbox mdl-js-checkbox mdl-checkbox--floating-label">
+                                <div>
                                     <input value="<?php foreach ($profile as $prof){if($prof->genre6!=null){echo $prof->genre6;}}?>" class="mdl-checkbox__input" type="checkbox" id="genre6" name="genre6">
                                     <label class="mdl-checkbox__label" for="genre6">Inspirational</label>
                                 </div>
                                 <!-- Favorite Genre 7 -->
-                                <div class="mdl-checkbox mdl-js-checkbox mdl-checkbox--floating-label">
+                                <div>
                                     <input value="<?php foreach ($profile as $prof){if($prof->genre7!=null){echo $prof->genre7;}}?>" class="mdl-checkbox__input" type="checkbox" id="genre7" name="genre7">
                                     <label class="mdl-checkbox__label" for="genre7">Other</label>
                                 </div>
