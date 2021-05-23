@@ -44,6 +44,9 @@
                             <h5 class="card-title"><?php echo $bi->author ?></h5> 
                         </div>
                         <ul class="list-group list-group-flush">
+                            <!-- Book's owner -->
+                            <li class="list-group-item">Genre: <?php echo $bi->user_username ?></li><!-- to add these details from the DB -->
+                            <!-- Book genre -->
                             <li class="list-group-item">Genre: <?php echo $bi->book_genre ?></li><!-- to add these details from the DB -->
                             <!-- Book Language -->
                             <li class="list-group-item">Language: <?php echo $bi->lang?></li>
