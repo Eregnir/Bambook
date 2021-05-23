@@ -53,9 +53,6 @@
 
                         <?php echo form_close(); ?>
 
-                    
-                        <p><?php foreach ($books as $book){if (!isset($book['UID'])){echo 'no books matching this query!'; }} ?></p>
-
                     <!-- Table Books -->
                     <table class="table table-image" id="myTable">
                         <thead>
