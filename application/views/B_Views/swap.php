@@ -45,7 +45,7 @@
                         </div>
                         <ul class="list-group list-group-flush">
                             <!-- Book's owner -->
-                            <li class="list-group-item">Genre: <?php echo $bi->user_username ?></li><!-- to add these details from the DB -->
+                            <li class="list-group-item">Owner: <?php echo $bi->user_username ?></li><!-- to add these details from the DB -->
                             <!-- Book genre -->
                             <li class="list-group-item">Genre: <?php echo $bi->book_genre ?></li><!-- to add these details from the DB -->
                             <!-- Book Language -->
