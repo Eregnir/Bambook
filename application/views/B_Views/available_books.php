@@ -54,8 +54,8 @@
                         <?php echo form_close(); ?>
 
                     <?php 
-                    $no_books = $books->row();
-                    if (isset($no_books)){
+                    $row = $books->row();
+                    if (!isset($row)){
                         echo 'it is set.';
                     }
                     ?>
