@@ -13,7 +13,7 @@
                                 <thead>
                                 <tr class="filters">
                                     <th>Book Genre
-                                        <label for="book_genre" class="bmd-label-floating">Genre</label>
+                                        <!-- <label for="book_genre" class="bmd-label-floating">Genre</label> -->
                                         <select class="form-control" id="book_genre" name="book_genre">
                                             <option value="" disabled default selected>--Select--</option>
                                             <option value="fantasy">Fantasy</option>
@@ -98,16 +98,7 @@
                                     });
                                 });
                             });
-
-                        $(document).ready(function(){
-                            $("#book_genre").on("change", function() {
-                                var value = $(this).val().toLowerCase();
-                                $("#myTable tr").filter(function() {
-                                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                                    });
-                                });
-                            });
-                            
+                                                        
                         function submitit(id)
                             {
                                 var str1 = id;
