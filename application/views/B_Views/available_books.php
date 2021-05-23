@@ -107,7 +107,7 @@
                             });
 
                         $(document).ready(function(){
-                            $("#book_genre").on("keyup", function() {
+                            $("#book_genre").on("select", function() {
                                 var value = $(this).val().toLowerCase();
                                 $("#myTable tr").filter(function() {
                                     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
