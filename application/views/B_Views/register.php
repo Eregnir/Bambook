@@ -4,11 +4,11 @@
                     <div class="mdl-card__title">
                         <h2 class="mdl-card__title-text">Register to Bambook</h2>
                     </div>
-                    <div class="mdl-card__media">
-                        <iframe width="560" height="315" controls>
+                    <div class="mdl-card__media text-center" style="background-color: grey;">
+                        <video width="560" height="315" controls>
                             <source src="<?php echo base_url('images/bambook-vid.mp4');?>" type="video/mp4">
                             Your browser does not support the video tag.
-                        </iframe>
+                        </video>
                     </div>
                     <div class="mdl-card__supporting-text text-center">
                         <p>
