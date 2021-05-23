@@ -48,7 +48,7 @@
                         </div>
 
                         <!-- Submit button -->
-                        <button type="submit" class="btn btn-primary">Apply Filters</button>
+                        <button type="submit" class="btn btn-primary" style="display: inline-block; width:25%;">Apply Filters</button>
 
                         <?php echo form_close(); ?>
 
