@@ -157,15 +157,15 @@ class books_model extends CI_Model {
         return $query->result();
     }
 
-    //send lang only
+    //send cond only
     public function filter_books6($data){
-        $query=$this->db->query('SELECT * FROM `user_books` WHERE `availability`="1" AND `lang` = "'.$data['lang'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
+        $query=$this->db->query('SELECT * FROM `user_books` WHERE `availability`="1" AND `cond` = "'.$data['cond'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
         return $query->result();
     }
 
-    //send cond only
+    //send lang only
     public function filter_books7($data){
-        $query=$this->db->query('SELECT * FROM `user_books` WHERE `availability`="1" AND `cond` = "'.$data['cond'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
+        $query=$this->db->query('SELECT * FROM `user_books` WHERE `availability`="1" AND `lang` = "'.$data['lang'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
         return $query->result();
     }
 
