@@ -14,13 +14,13 @@
                                 <tr class="filters">
                                     <th>Book Genre
                                     <select id="genre-filter" class="form-control">
-                                        <option style="color:grey;">Any</option>
+                                        <option>Any</option>
                                         <option>Fantasy</option>
                                         <option>Mystery</option>
                                         <option>Romance</option>
                                         <option>Thrillers</option>
                                         <option>Biography</option>
-                                        <option>Inspirational</option>
+                                        <option>Insiprational</option>
                                         <option>Other</option>
                                     </select>
                                     </th>
