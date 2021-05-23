@@ -76,7 +76,7 @@
                                     <td> <?php echo $book->title ?></td>
                                     <td> <?php echo $book->author ?></td>
                                     <td> <?php echo $book->cond ?></td>
-                                    <td class="hidden"> <?php echo $book->book_genre ?></td>
+                                    <td class="hidden" id="b_genre"> <?php echo $book->book_genre ?></td>
                                 </tr>
                         <?php endforeach; ?>
                         </tbody>
@@ -87,6 +87,15 @@
                             $("#myInput").on("keyup", function() {
                                 var value = $(this).val().toLowerCase();
                                 $("#myTable tr").filter(function() {
+                                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                                    });
+                                });
+                            });
+
+                        $(document).ready(function(){
+                            $("#genre-filter").on("keyup", function() {
+                                var value = $(this).val().toLowerCase();
+                                $("#b_genre tr").filter(function() {
                                     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
                                     });
                                 });
