@@ -38,18 +38,18 @@ class intro_model extends CI_Model {
 
     //Get Books from the DB in order to present it in the books library. currently limit is 50, we need pagination or something to deal with large mass of books.
     public function get_books($user){
-        $query=$this->db->query('SELECT * FROM `user_books` WHERE `availability`="1" AND NOT `user_username`= "'.$user['username'].'" ORDER BY `date_added` DESC LIMIT 50;');
+        $query=$this->db->query('SELECT * FROM `user_books` WHERE `availability`="1" AND NOT `user_username`= "'.$user['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
         return $query->result();
     }
 
     public function get_books_not_loggedin(){
-        $query=$this->db->query('SELECT * FROM `user_books` WHERE `availability`="1" ORDER BY `date_added` DESC LIMIT 50;');
+        $query=$this->db->query('SELECT * FROM `user_books` WHERE `availability`="1" ORDER BY `date_added` DESC LIMIT 150;');
         return $query->result();
     }
 
     //function to get my library books:
     public function get_library($user){
-        $query=$this->db->query('SELECT * FROM `user_books` INNER JOIN users ON user_books.user_email=users.email WHERE users.username="'.$user['username'].'";');
+        $query=$this->db->query('SELECT * FROM `user_books` INNER JOIN users ON user_books.user_email=users.email WHERE users.username="'.$user['username'].'"  ORDER BY `date_added` DESC LIMIT 150;');
         return $query->result();
     }
 
