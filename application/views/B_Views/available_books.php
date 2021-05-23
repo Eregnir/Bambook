@@ -55,11 +55,10 @@
 
                     <p>
                         <?php 
-                        foreach ($books as $row){
-                            if (!isset($row)){
+                        
+                            if ($books[0]['UID']==null){
                                 echo ('no row');
                             }
-                        }
                         ?>
                     </p>
                         
