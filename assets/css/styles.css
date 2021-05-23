@@ -600,3 +600,10 @@ video {
 	width: 100%;
 	height: auto;
 }
+
+/************* Error messages *******************/
+
+
+.errros {
+  color: red;
+}
