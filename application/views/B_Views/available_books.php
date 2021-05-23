@@ -27,8 +27,8 @@
                         <div class="form-group" style="display: inline-block; width:30%;">
                             <label for="book_lang" class="bmd-label-floating">Book Language</label>
                                 <select class="form-control" name="book_lang" id="book_lang" >
-                                    <option value="Any" default selected>Any</option>
-                                    <option value="English">English</option>
+                                    <option value="Any" default>Any</option>
+                                    <option value="English" <?php echo (isset($_POST['book_lang']) && $_POST['book_lang'] === 'English') ? 'selected' : ''; ?>  >English</option>
                                     <option value="Hebrew">Hebrew</option>
                                     <option value="Arabic">Arabic</option>
                                     <option value="Russian">Russian</option>
@@ -49,6 +49,7 @@
 
                         <!-- Submit button -->
                         <button type="submit" class="btn btn-primary" style="display: inline-block; width:25%;">Apply Filters</button>
+                        <br>
 
                         <?php echo form_close(); ?>
 
