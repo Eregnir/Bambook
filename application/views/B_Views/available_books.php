@@ -8,7 +8,7 @@
                     <div class="container">
                         <div class="row">
 
-                        <?php echo form_open('Books/browse_books_for_swap'); ?>
+                        
                         <table class="table">
                                 <thead>
                                 <tr class="filters">
@@ -45,7 +45,8 @@
                                 </tr>
                                 </thead>
                             </table>
-                        <?php echo form_close(); ?>
+                        <?php // echo form_open('Books/browse_books_for_swap'); ?>
+                        <?php // echo form_close(); ?>
                             
                             <!-- New dropdown for filtering -->
                             
