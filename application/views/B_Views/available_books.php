@@ -53,14 +53,7 @@
                         
                         <?php echo form_close(); ?>
 
-                    <p>
-                        <?php 
-                        
-                            if ($books[0]['UID']==null){
-                                echo ('no row');
-                            }
-                        ?>
-                    </p>
+                    
                         
                     <!-- Table Books -->
                     <table class="table table-image" id="myTable">
@@ -97,6 +90,17 @@
                         <?php endforeach; ?>
                         </tbody>
                     </table>
+
+                    <div class="text-center">
+                    <h2>
+                        <?php 
+                        
+                            if ($books[0]['UID']==null){
+                                echo ('Looks like there are not any books matching your search or filters.');
+                            }
+                        ?>
+                    </h2>
+                    </div>
                        
                     <script>
                         $(document).ready(function(){
