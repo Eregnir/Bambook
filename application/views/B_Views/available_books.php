@@ -91,15 +91,15 @@
                         </tbody>
                     </table>
 
-                    <div class="text-center">
-                    <h2>
+                    <div class="text-center" style="margin-top: 20px;">
+                    <h3>
                         <?php 
                         
                             if ($books[0]['UID']==null){
-                                echo ('Looks like there are not any books matching your search or filters.');
+                                echo ("Looks like we couldn't find any books matching your filters. Too bad! :\ ");
                             }
                         ?>
-                    </h2>
+                    </h3>
                     </div>
                        
                     <script>
