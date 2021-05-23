@@ -57,7 +57,7 @@
 
                             <form method="post" action="<?php echo site_url('Users/update_pref');?>" class="">
                                 <div>
-                                    <h5><b>Favorite Genres:</b></h5><br>
+                                    <h5><b>Favorite Genres:</b></h5>
                                 </div>
                             <!-- Favorite Genre 1 -->
                                 <div>
