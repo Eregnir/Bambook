@@ -328,18 +328,18 @@ class Books extends CI_Controller{
         if ($data['book_genre']!='Any'){ //genre is not any
             if($data['cond']!='Any'){ //cond is not any
                 if($data['lang']!='Any'){ //lang is not any
-                    $data['books']=$this->books_model->filter_books1($data);
+                    $data['books']=$this->books_model->filter_books1($data); //send all 3 filters
                 }
                 else{ //lang is any
-                    //only genre and cond filters
+                    $data['books']=$this->books_model->filter_books2($data); //only genre and cond filters
                 }
             }
             else{ //cond is any
                 if($data['lang']!='Any'){ //lang is not any
-                    //only genre and language filters
+                    $data['books']=$this->books_model->filter_books3($data); //only genre and language filters
                 }
                 else{ //lang is also any
-                    //only genre filter
+                    $data['books']=$this->books_model->filter_books4($data); //only genre filter
                 }
 
             }
@@ -348,19 +348,17 @@ class Books extends CI_Controller{
         else{ //genre is "any"
             if($data['cond']!='Any'){ //cond is not any
                 if($data['lang']!='Any'){ //and also lang is not any
-                    //lang + cond filters apply
+                    $data['books']=$this->books_model->filter_books5($data); //lang + cond filters apply
                 }
                 else{ //lang is any
-                    //only cond filter applies
+                    $data['books']=$this->books_model->filter_books6($data); //only cond filter applies
                 }
             }
             else{ //cond is any (and also genre is any)
                 if($data['lang']!='Any'){ //lang is not any
-                    //only language filter applies
+                    $data['books']=$this->books_model->filter_books7($data); //only language filter applies
                 }
-                else{
-                    //no filters apply! woohoo
-                }
+                //if we want we can add else here.
             }
         }
 

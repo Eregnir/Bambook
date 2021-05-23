@@ -127,11 +127,48 @@ class books_model extends CI_Model {
     ////////////////////////////////////////////////////////////////
 
     //Filtering books functions start here
+
+    //send all 3 filters
     public function filter_books1($data){
         $query=$this->db->query('SELECT * FROM `user_books` WHERE `availability`="1" AND `cond` = "'.$data['cond'].'" AND `lang` = "'.$data['lang'].'" AND `book_genre` = "'.$data['book_genre'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
         return $query->result();
     }
-    
+    //send genre and lang
+    public function filter_books3($data){
+        $query=$this->db->query('SELECT * FROM `user_books` WHERE `availability`="1" AND `lang` = "'.$data['lang'].'" AND `book_genre` = "'.$data['book_genre'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
+        return $query->result();
+    }
+
+    //send genre and cond
+    public function filter_books2($data){
+        $query=$this->db->query('SELECT * FROM `user_books` WHERE `availability`="1" AND `cond` = "'.$data['cond'].'" AND `book_genre` = "'.$data['book_genre'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
+        return $query->result();
+    }
+
+    //send only genre
+    public function filter_books4($data){
+        $query=$this->db->query('SELECT * FROM `user_books` WHERE `availability`="1" AND `book_genre` = "'.$data['book_genre'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
+        return $query->result();
+    }
+
+    //send lang and cond
+    public function filter_books5($data){
+        $query=$this->db->query('SELECT * FROM `user_books` WHERE `availability`="1" AND `cond` = "'.$data['cond'].'" AND `lang` = "'.$data['lang'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
+        return $query->result();
+    }
+
+    //send lang only
+    public function filter_books6($data){
+        $query=$this->db->query('SELECT * FROM `user_books` WHERE `availability`="1" AND `lang` = "'.$data['lang'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
+        return $query->result();
+    }
+
+    //send cond only
+    public function filter_books7($data){
+        $query=$this->db->query('SELECT * FROM `user_books` WHERE `availability`="1" AND `cond` = "'.$data['cond'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
+        return $query->result();
+    }
+
     ////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////
 
