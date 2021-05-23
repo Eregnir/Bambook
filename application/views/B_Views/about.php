@@ -48,7 +48,7 @@
                                     <br><br><b>Location:</b> <?php foreach ($profile as $prof){echo $prof->location;}?>
                                 </h5>
                             </p>
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">Edit Info</button>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">Edit Preferences</button>
                         </div>
 
                         <div style="display:none;" id="bspe" class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
