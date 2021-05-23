@@ -95,7 +95,7 @@
                         $(document).ready(function(){
                             $("#genre-filter").on("keyup", function() {
                                 var value = $(this).val().toLowerCase();
-                                $("#b_genre tr").filter(function() {
+                                $("#myTable tr").filter(function() {
                                     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
                                     });
                                 });
