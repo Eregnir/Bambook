@@ -27,13 +27,13 @@
                         <form method="post" action="<?php echo site_url('Intro/new_user');?>" class="">
                         <!-- First Name -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input required class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="firstName" name="firstName">
+                                <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="firstName" name="firstName">
                                 <label class="mdl-textfield__label" for="firstName">First Name...</label>
                                 <span class="mdl-textfield__error">Must contain letters and spaces only</span>
                             </div>
                         <!-- Last Name -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input required class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="lastName" name="lastName">
+                                <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="lastName" name="lastName">
                                 <label class="mdl-textfield__label" for="lastName">Last Name...</label>
                                 <span class="mdl-textfield__error">Must contain letters and spaces only</span>
                             </div>
@@ -76,8 +76,22 @@
 
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script>
-    window.onload = function(){
-        var active = document.getElementById("rgs");
-        active.classList.add("is-active");
-        }
+        window.onload = function(){
+            var active = document.getElementById("rgs");
+            active.classList.add("is-active");
+            }
+        
+        //trying to use 'required' only after accessing the element
+        $(function() {
+            $('#firstName').click(function() {
+                $("#firstName").prop('required', true);
+            });
+        });
+
+        $(function() {
+            $('#lastName').click(function() {
+                $("#lastName").prop('required', true);
+            });
+        });
+
     </script>
