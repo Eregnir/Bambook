@@ -29,6 +29,7 @@ class intro_model extends CI_Model {
             $query=$this->db->insert('users', $data);
             $test['loggedin']='1';
             $test['username']=$data['username'];
+
             $this->session->set_userdata($test); 
         }     
     }

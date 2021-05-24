@@ -12,7 +12,7 @@ class Intro extends CI_Controller{
      public function index($new=null){
         // $user['loggedin']=null;
         $user=$this->session->all_userdata();
-        if ($new != null){$data['new']= 'Registered Successfull, Welcome to Bambook!';}
+        if ($new != null){$data['new']= 'Registered Successfully, Welcome to Bambook!';}
         if (isset($user['loggedin'])){
             if ($user['loggedin']!=null){
                 $data['profile']=$this->intro_model->get_profile_info();
@@ -98,9 +98,7 @@ class Intro extends CI_Controller{
             'phone_num' => $this->input->post('phone_num'),
             'password' => $this->input->post('password')
         );
-
         $data['password'] = md5($data['password']);
-
         $data['err'] = $this->intro_model->save_register($data);
         $data['reg'] = 'Registered Successfully! Please Log In to complete the process.';
         if (isset($data['err'])){
@@ -108,7 +106,8 @@ class Intro extends CI_Controller{
         }
         else{
             {
-            $this->login($data);
+            $data['new'] = '1';
+            $this->index($data['new']);
             }
         }   
     }
