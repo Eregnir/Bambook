@@ -2,6 +2,10 @@
             <div class="mdl-grid portfolio-max-width">
                 <!-- Books table Start -->
                     <h2 class="pad5">Available Books</h2>
+                    <span id="tooltip5" class="material-icons">info</span>
+                    <!-- Add tooltip -->
+                        <div class = "mdl-tooltip" for = "tooltip5">Here you can find books that other users list as books for swap. Click a book to view it's full details.<br>
+                        To find your books, choose "My Library" from the Homepage.</div>
                     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for the book or author name..." title="Type in a name">
                     <br>
                     <!-- Table Filters -->
