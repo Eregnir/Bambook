@@ -1,6 +1,7 @@
         <main class="mdl-layout__content">
+        <br>
             <div class="mdl-grid portfolio-max-width">
-                <span style="margin:auto; display:block;">
+                <span class="text-center" style="margin:auto; display:block;">
                 <!-- Welcome, User: -->
                 <h4>
                 <?php
