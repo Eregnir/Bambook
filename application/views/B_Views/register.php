@@ -39,19 +39,19 @@
                             </div>
                         <!-- Username -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input required class="mdl-textfield__input" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{2,15}$" type="text" id="username" name="username">
+                                <input  class="mdl-textfield__input" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{2,15}$" type="text" id="username" name="username">
                                 <label class="mdl-textfield__label" for="username">Username...</label>
                                 <span class="mdl-textfield__error">Must start with a letter and contain 3-20 characters</span>
                             </div>
                         <!-- email address -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input required class="mdl-textfield__input" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" type="text" id="email" name="email">
+                                <input  class="mdl-textfield__input" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" type="text" id="email" name="email">
                                 <label class="mdl-textfield__label" for="email">Email...</label>
                                 <span class="mdl-textfield__error">Must contain a valid email</span>
                             </div>
                         <!-- Phone Number -->
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input required class="mdl-textfield__input" pattern=".{10,15}" type="tel" id="phone_num" name="phone_num">
+                                <input  class="mdl-textfield__input" pattern=".{10,15}" type="tel" id="phone_num" name="phone_num">
                                 <label class="mdl-textfield__label" for="phone_num">Phone Number...</label>
                                 <span class="mdl-textfield__error">Must contain a valid phone number</span>
                             </div>
@@ -64,7 +64,7 @@
                             <br><br>
                             <!-- Need to add password validation -->
                             <p>
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" type="submit" name="submit ">
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" type="submit" name="submit" id="sbm">
                                     Submit
                                 </button>
                             </p>
@@ -83,15 +83,16 @@
         
         //trying to use 'required' only after accessing the element
         $(function() {
-            $('#firstName').click(function() {
+            $('#sbm').click(function() {
                 $("#firstName").prop('required', true);
-            });
-        });
-
-        $(function() {
-            $('#lastName').click(function() {
                 $("#lastName").prop('required', true);
+                $("#username").prop('required', true);
+                $("#email").prop('required', true);
+                $("#phone_num").prop('required', true);
+                $("#password").prop('required', true);
+
             });
         });
+        
 
     </script>
