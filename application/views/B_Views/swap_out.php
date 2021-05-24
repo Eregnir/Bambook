@@ -75,7 +75,7 @@
 
                     <!-- If a book is not picked, write this: -->
 
-                        <center><br><h4 class="<?php if ($flagg !=null){echo 'hidden';} ?>" id="brw">Looks like <?php echo $bi->sent_to_username?> hasn't selected a book yet. Once selected, it will show here."</h4></center>
+                        <center><br><h4 class="<?php if ($flagg !=null){echo 'hidden';} ?>" id="brw">Looks like <?php echo $bi->sent_to_username?> hasn't selected a book yet. Once selected, it will show here.</h4></center>
                  
                     
                      <!-- If a book is picked, write this: -->

@@ -39,25 +39,25 @@
                             </div>
                         <!-- Username -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input  class="mdl-textfield__input" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{2,15}$" type="text" id="username" name="username">
+                                <input class="mdl-textfield__input" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{2,15}$" type="text" id="username" name="username">
                                 <label class="mdl-textfield__label" for="username">Username...</label>
                                 <span class="mdl-textfield__error">Must start with a letter and contain 3-20 characters</span>
                             </div>
                         <!-- email address -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input  class="mdl-textfield__input" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" type="text" id="email" name="email">
+                                <input class="mdl-textfield__input" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" type="text" id="email" name="email">
                                 <label class="mdl-textfield__label" for="email">Email...</label>
                                 <span class="mdl-textfield__error">Must contain a valid email</span>
                             </div>
                         <!-- Phone Number -->
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input  class="mdl-textfield__input" pattern=".{10,15}" type="tel" id="phone_num" name="phone_num">
+                                <input class="mdl-textfield__input" pattern=".{10,15}" type="tel" id="phone_num" name="phone_num">
                                 <label class="mdl-textfield__label" for="phone_num">Phone Number...</label>
                                 <span class="mdl-textfield__error">Must contain a valid phone number</span>
                             </div>
                         <!-- Password -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input required class="mdl-textfield__input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" id="password" name="password">
+                                <input class="mdl-textfield__input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" id="password" name="password">
                                 <label class="mdl-textfield__label" for="password">Password...</label>
                                 <span class="mdl-textfield__error">Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</span>
                             </div>

@@ -9,9 +9,10 @@ class Intro extends CI_Controller{
         $this->load->library('session');     
     }
 //Load the Homescreen view  
-     public function index(){
+     public function index($new=null){
         // $user['loggedin']=null;
         $user=$this->session->all_userdata();
+        if ($new != null){$data['new']= 'Registered Successfull, Welcome to Bambook!';}
         if (isset($user['loggedin'])){
             if ($user['loggedin']!=null){
                 $data['profile']=$this->intro_model->get_profile_info();
