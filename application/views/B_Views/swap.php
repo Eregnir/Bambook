@@ -175,7 +175,10 @@
         
         document.getElementById("img2").onclick=function()
         {
-            document.getElementById("browse").click();
+            var status = <?php echo $bi->swap_status?>;
+            if (status != 'Cancelled' && status != 'Completed'){
+                document.getElementById("browse").click();
+            }
             };
 
     </script>
