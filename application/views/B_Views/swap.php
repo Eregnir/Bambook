@@ -170,6 +170,7 @@
 
         document.getElementById("img1").onclick=function()
         {
+            var status = '<?php echo $bi->swap_status?>';
             if (status != 'Cancelled' && status != 'Completed'){
                 document.getElementById("browse").click();
             }
@@ -177,7 +178,7 @@
         
         document.getElementById("img2").onclick=function()
         {
-            var status = <?php echo $bi->swap_status?>;
+            var status = '<?php echo $bi->swap_status?>';
             if (status != 'Cancelled' && status != 'Completed'){
                 document.getElementById("browse").click();
             }
