@@ -63,6 +63,9 @@
                             <h5 class="card-title"><?php echo $bi->author ?></h5> 
                         </div>
                         <ul class="list-group list-group-flush">
+                            <!-- Book's owner -->
+                            <li class="list-group-item">Owner: <?php echo $bi->user_username ?></li><!-- to add these details from the DB -->
+                            <!-- Book Genre -->
                             <li class="list-group-item">Genre: <?php echo $bi->book_genre ?></li><!-- to add these details from the DB -->
                             <!-- Book Language -->
                             <li class="list-group-item">Language: <?php echo $bi->lang?></li>
@@ -100,6 +103,9 @@
                             
                         </div>
                             <ul class="list-group list-group-flush <?php if ($flagg==null){echo 'hidden';}?>">
+                                <!-- Book's owner -->
+                                <li class="list-group-item">Owner: <?php echo $b2->user_username ?></li><!-- to add these details from the DB -->
+                                <!-- Book Genre -->
                                 <li class="list-group-item">Genre: <?php echo $b2->book_genre ?></li><!-- to add these details from the DB -->
                                 <!-- Book Language -->
                                 <li class="list-group-item">Language: <?php echo $b2->lang?></li>
