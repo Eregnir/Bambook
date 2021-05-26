@@ -4,7 +4,7 @@
                  <?php foreach ($out as $ou){
                      print_r($ou);};
                      echo 'hello';
-                     echo $out;
+                     
                      ?>
                      
                 </div>
