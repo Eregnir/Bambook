@@ -131,7 +131,7 @@
                                 <?php echo form_close(); ?>
     
                                 <!-- Cancel button for canceling the request -->
-                                <?php echo form_open('Books/cancel_swap'); ?>
+                                <?php echo form_open('Books/cancel_swap_in'); ?>
                                 <!-- send the swap ID -->
                                     <input type="hidden" value="<?php echo $bi->swap_UID;?>" name="cancel_swap1" id="cancel_swap1">
                                 <!-- Hidden button to submit the form -->

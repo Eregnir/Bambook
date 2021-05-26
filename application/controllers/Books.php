@@ -106,8 +106,8 @@ class Books extends CI_Controller{
         $this->zoom_swap2($data['swap_UID']);
         }
 
-    //function to cancel a swap, for any reason at all
-    public function cancel_swap($swap_UID=null){
+    //function to cancel an outgoing swap (that I sent to another user), for any reason at all
+    public function cancel_swap_out($swap_UID=null){
         $user=$this->session->all_userdata();
         $data['user']=$user;
         if ($swap_UID == null){
@@ -118,21 +118,27 @@ class Books extends CI_Controller{
         else{
             $data['swap_UID'] = $swap_UID;
         }
-        // $data['username'] = $user['username'];
         $this->books_model->cancel_swap($data['swap_UID']);
-        //check if this is incoming or outgoing request. if true it is an outgoing req.
-        $out=$this->books_model->check_inout($data['swap_UID'],$user['username']);
-        //if the request was initiated by this user, access the outgoing request view.
-        if ($out){
-            $data['out'] = $out;
-            $this->load->view('B_Views/test_page',$data);
-            // $this->zoom_swap_out($data['swap_UID']);
-        }
-        //if it was not, access the incoming request view.
-        else{
-            $this->zoom_swap2($data['swap_UID']);
-        }
+        $this->zoom_swap_out($data['swap_UID']);
     }
+
+     //function to cancel an incoming swap (that I got from another user), for any reason at all
+     public function cancel_swap_in($swap_UID=null){
+        $user=$this->session->all_userdata();
+        $data['user']=$user;
+        if ($swap_UID == null){
+            $data = array(
+                'swap_UID' => $this->input->post('cancel_swap1')
+                );
+        }
+        else{
+            $data['swap_UID'] = $swap_UID;
+        }
+        $this->books_model->cancel_swap($data['swap_UID']);
+        $this->zoom_swap2($data['swap_UID']);
+        
+    }
+
 
     public function approve_swap(){
         $data = array(
