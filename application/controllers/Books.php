@@ -118,12 +118,15 @@ class Books extends CI_Controller{
         else{
             $data['swap_UID'] = $swap_UID;
         }
+        // $data['username'] = $user['username'];
         $this->books_model->cancel_swap($data['swap_UID']);
         //check if this is incoming or outgoing request. if true it is an outgoing req.
         $out=$this->books_model->check_inout($data['swap_UID'],$user['username']);
         //if the request was initiated by this user, access the outgoing request view.
         if (isset($out)){
-            $this->zoom_swap_out($data['swap_UID']);
+            $data['out'] = $out;
+            $this->load->view('B_Views/test_page',$data);
+            // $this->zoom_swap_out($data['swap_UID']);
         }
         //if it was not, access the incoming request view.
         else{
