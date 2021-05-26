@@ -170,7 +170,9 @@
 
         document.getElementById("img1").onclick=function()
         {
-            document.getElementById("browse").click();
+            if (status != 'Cancelled' && status != 'Completed'){
+                document.getElementById("browse").click();
+            }
             };
         
         document.getElementById("img2").onclick=function()
