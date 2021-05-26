@@ -124,9 +124,7 @@ class Books extends CI_Controller{
         $out=$this->books_model->check_inout($data['swap_UID'],$user['username']);
         //if the request was initiated by this user, access the outgoing request view.
         if (isset($out['swap_status'])){
-            $data['out'] = $out;
-            $this->load->view('B_Views/test_page',$data);
-            // $this->zoom_swap_out($data['swap_UID']);
+            $this->zoom_swap_out($data['swap_UID']);
         }
         //if it was not, access the incoming request view.
         else{
