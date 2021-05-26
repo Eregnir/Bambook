@@ -2,7 +2,11 @@
             <div class="mdl-grid portfolio-max-width">
                 <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset"> 
                  <?php foreach ($out as $ou){
-                     print_r($ou);};?>
+                     print_r($ou);};
+                     echo 'hello';
+                     echo $out;
+                     ?>
+                     
                 </div>
             </div>
 
