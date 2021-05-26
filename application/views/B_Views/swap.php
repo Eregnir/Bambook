@@ -58,7 +58,7 @@
                     </div>
                     <!-- If a book is not picked, write this: -->
 
-                        <center><br><h4 class="<?php if ($flagg !=null){echo 'hidden';} ?>" id="brw">Browse <?php echo $bi->sent_by_username?>'s books and choose one you'd like for the swap:"</h4><br></center>
+                        <center><br><h4 class="<?php if ($flagg !=null){echo 'hidden';} ?>" id="brw">Browse <?php echo $bi->sent_by_username?>'s books and choose one you'd like for the swap:</h4><br></center>
                  
                     
                      <!-- If a book is picked, write this: -->
