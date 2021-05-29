@@ -2,6 +2,9 @@
             <div class="mdl-grid portfolio-max-width">
                 <!-- Books table Start -->
                     <h2 class="pad5">My Library</h2>
+                        <span id="tooltip8" class="material-icons">local_library</span>
+                    <!-- Add tooltip -->
+                        <div class = "mdl-tooltip" for = "tooltip8">Here you can find the books that you have uploaded for a swap</div>
 
                     <?php  if (empty($books)): ?>
                         <div class="mdl-cell mdl-cell--12-col mdl-card text-center">
