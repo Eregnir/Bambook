@@ -2,7 +2,7 @@
             <div class="mdl-grid portfolio-max-width">
                 <span id="tooltip6" class="material-icons">mark_email_unread</span><h2 class="pad5">Received Requests</h2>
                     <!-- Add tooltip -->
-                    <div class = "mdl-tooltip" for = "tooltip6">Here you can find the books you own, that were requested by other Bambook's users<br></div>
+                    <div class = "mdl-tooltip" for = "tooltip6">Here you can find the books you own, that were requested by other Bambook's users</div>
                 <!-- Received requests -->
                 <?php 
                 if (empty($requests_in)): ?>
@@ -64,7 +64,7 @@
 
                 <span id="tooltip7" class="material-icons">send</span>&nbsp;<h2 class="pad5">Sent Requests</h2>
                     <!-- Add tooltip -->
-                    <div class = "mdl-tooltip" for = "tooltip7">Here you can find the books that you requested for a swap from other users<br></div>
+                    <div class = "mdl-tooltip" for = "tooltip7">Here you can find the books that you requested for a swap from other users</div>
                 <?php 
                 if (empty($requests_out)): ?>
                         <div class="mdl-cell mdl-cell--12-col mdl-card text-center mdl-shadow--2dp"><br>
