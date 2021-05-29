@@ -112,17 +112,7 @@
                                 </td>
                                 <td> <?php echo $req->title ?></td>
                                 <td> <?php echo $req->sent_to_username ?></td>
-                                <td> 
-                                    <?php 
-                                        $orange = 'Started';
-                                        $green = 'Completed';
-                                        $red = 'Cancelled';
-                                        if ($req->swap_status == $orange) {
-                                            echo "<font-color='orange'> $req->swap_status";
-                                        }
-
-                                    ?>
-                                </td>
+                                <td> <?php echo $req->swap_status ?></td>
                             </tr>
                     <?php endforeach; ?>
                     </tbody>
