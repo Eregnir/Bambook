@@ -62,13 +62,15 @@
     <script type="text/javascript" src="<?php echo base_url('assets/JS/GJS.js');?>"></script>
 
     <script>
-        document.getElementById("swap").onclick=function()
-    {
+        document.getElementById("swap").onclick=function() {
         var x = confirm("Sending a request will notify this book's owner and will allow browsing your available books, in order to complete the swap process. Continue?");
         if (x==true){
             document.getElementById("submit").click();
             };
         };
 
+        
+
+        
 
     </script>
