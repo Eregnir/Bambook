@@ -96,13 +96,8 @@
                                 </div>
                             <!-- User Location -->
                                 <div class="container">
-                                    <div class="demo-card-wide mdl-card mdl-shadow--2dp" id="pac-card">
+                                    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
                                         <div id="map"></div>
-                                        <div id="infowindow-content">
-                                            <img src="" width="16" height="16" id="place-icon">
-                                            <span id="place-name"  class="title"></span><br>
-                                            <span id="place-address"></span>
-                                        </div>
                                         <div class="mdl-card__actions mdl-card--border">
                                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                                 <input value="<?php foreach ($profile as $prof){if($prof->location!=null){echo $prof->location;}}?>" class="mdl-textfield__input" type="text" id="location" name="location" placeholder="Type address...">
@@ -161,102 +156,17 @@
 
     // Google Maps API 
 
-    // var searchInput = 'location';
-    // $(document).ready(function () {
-    //     var autocomplete;
-    //     autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
-    //         types: ['geocode'],
-    //     })
-
-    //     google.maps.event.addListener(autocomplete, 'place_changed', function() {
-    //         var near_place = autocomplete.getPlace();
-    //     });
-    // });
-    
-    // var searchInput = 'location';
-    // $(document).ready(function () {
-    //     var autocomplete;
-    //     autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
-    //         types: ['geocode'],
-    //     })
-
-    //     google.maps.event.addListener(autocomplete, 'place_changed', function() {
-    //         var near_place = autocomplete.getPlace();
-    //     });
-    // });
-
-    function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 32.0853, lng: 34.7818}, // Tel Aviv location
-        zoom: 13
-    });
-    var card = document.getElementById('pac-card');
-    var input = document.getElementById('location');
-
-    map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
-
-    var autocomplete;
-    
-    autocomplete = new google.maps.places.Autocomplete((document.getElementById(input)), {
+    var searchInput = 'location';
+    $(document).ready(function () {
+        var autocomplete;
+        autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
             types: ['geocode'],
         })
 
-    // Bind the map's bounds (viewport) property to the autocomplete object,
-    // so that the autocomplete requests use the current map bounds for the
-    // bounds option in the request.
-    autocomplete.bindTo('bounds', map);
-
-    // Set the data fields to return when the user selects a place.
-    autocomplete.setFields(
-        ['address_components', 'geometry', 'icon', 'name']);
-
-    var infowindow = new google.maps.InfoWindow();
-    var infowindowContent = document.getElementById('infowindow-content');
-    infowindow.setContent(infowindowContent);
-    var marker = new google.maps.Marker({
-        map: map,
-        anchorPoint: new google.maps.Point(0, -29)
+        google.maps.event.addListener(autocomplete, 'place_changed', function() {
+            var near_place = autocomplete.getPlace();
+        });
     });
-
-    autocomplete.addListener('place_changed', function() {
-        infowindow.close();
-        marker.setVisible(false);
-        var place = autocomplete.getPlace();
-        if (!place.geometry) {
-        // User entered the name of a Place that was not suggested and
-        // pressed the Enter key, or the Place Details request failed.
-        window.alert("No details available for input: '" + place.name + "'");
-        return;
-        }
-
-        // If the place has a geometry, then present it on a map.
-        if (place.geometry.viewport) {
-        map.fitBounds(place.geometry.viewport);
-        } else {
-        map.setCenter(place.geometry.location);
-        map.setZoom(17);  // Why 17? Because it looks good.
-        }
-        marker.setPosition(place.geometry.location);
-        marker.setVisible(true);
-
-        var address = '';
-        if (place.address_components) {
-        address = [
-            (place.address_components[0] && place.address_components[0].short_name || ''),
-            (place.address_components[1] && place.address_components[1].short_name || ''),
-            (place.address_components[2] && place.address_components[2].short_name || '')
-            ].join(' ');
-        }
-
-        infowindowContent.children['place-icon'].src = place.icon;
-        infowindowContent.children['place-name'].textContent = place.name;
-        infowindowContent.children['place-address'].textContent = address;
-        infowindowContent.children['coordinates'].textContent = place.geometry.lo
-        infowindow.open(map, marker);
-    });
-
-    }
-
 
 
     </script>
