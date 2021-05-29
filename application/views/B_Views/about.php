@@ -156,17 +156,73 @@
 
     // Google Maps API 
 
-    var searchInput = 'location';
-    $(document).ready(function () {
-        var autocomplete;
-        autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
-            types: ['geocode'],
-        })
+    // var searchInput = 'location';
+    // $(document).ready(function () {
+    //     var autocomplete;
+    //     autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
+    //         types: ['geocode'],
+    //     })
 
-        google.maps.event.addListener(autocomplete, 'place_changed', function() {
-            var near_place = autocomplete.getPlace();
+    //     google.maps.event.addListener(autocomplete, 'place_changed', function() {
+    //         var near_place = autocomplete.getPlace();
+    //     });
+    // });
+
+    function initAutocomplete(bounds) {
+        let options = {
+            bounds
+        };
+
+        let input = document.getElementById('location');
+        let searchBox = new google.maps.places.Autocomplete(input, options);
+        searchBox.addListener('places_changed', function() {
+            let places = searchBox.getPlaces();
+            if (places.length == 0) {
+                return;
+            }
         });
-    });
+    }
 
+    function initSearch(bounds) {
+        initAutocomplete(bounds);
+    }
+
+    function initSearchAustin(bounds) {
+        initAutocomplete(bounds);
+    }
+
+    function getBounds(pos) {
+        let crd = pos.coords;
+        let latlng = new google.maps.LatLng(crd.latitude, crd.longitude); 
+        let bounds = new google.maps.LatLngBounds();
+        bounds.extend(latlng);
+
+        initSearch(bounds);
+    }
+
+    function getBoundsDefault() {
+        let latlng = new google.maps.LatLng(41.06000,28.98700); 
+        let bounds = new google.maps.LatLngBounds();
+        bounds.extend(latlng);
+
+        initSearchAustin(bounds);
+    }
+
+    function disableLocation(e) {
+        alert("Oops! '" + e.message + "'. The default position will be Austin, TX.");
+        getBoundsDefault();
+    }
+
+
+    function getCurrentLocation() {
+        var options = {
+            enableHighAccuracy: true,
+            timeout: 5000,
+            maximumAge: 10000
+        };
+        navigator.geolocation.getCurrentPosition(getBounds, disableLocation, options);
+    }
+
+    getCurrentLocation();
 
     </script>
