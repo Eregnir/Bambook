@@ -95,17 +95,10 @@
                                     <label class="mdl-checkbox__label" for="genre7">Other</label>
                                 </div>
                             <!-- User Location -->
-                                <div class="container">
-                                    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
-                                        <div id="map"></div>
-                                        <div class="mdl-card__actions mdl-card--border">
-                                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                                <input value="<?php foreach ($profile as $prof){if($prof->location!=null){echo $prof->location;}}?>" class="mdl-textfield__input" type="text" id="location" name="location" placeholder="Type address...">
-                                                <label class="mdl-textfield__label" for="location">Location</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input value="<?php foreach ($profile as $prof){if($prof->location!=null){echo $prof->location;}}?>" class="mdl-textfield__input" type="text" id="location" name="location" placeholder="Type address...">
+                                    <label class="mdl-textfield__label" for="location">Location</label>
+                                </div>
                                 <br><br>
                                 <p>
                                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" type="submit" name="submit ">
@@ -130,7 +123,7 @@
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Google Maps JavaScript library -->
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyAA5iKqhOQe2_WiVbY7Z-uCKcJlFYbga3c"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyAA5iKqhOQe2_WiVbY7Z-uCKcJlFYbga3c&region=IL&language=Hebr"></script>
     <script>
     window.onload = function(){
         var active = document.getElementById("abt");
@@ -156,73 +149,17 @@
 
     // Google Maps API 
 
-    // var searchInput = 'location';
-    // $(document).ready(function () {
-    //     var autocomplete;
-    //     autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
-    //         types: ['geocode'],
-    //     })
+    var searchInput = 'location';
+    $(document).ready(function () {
+        var autocomplete;
+        autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
+            types: ['geocode'],
+        })
 
-    //     google.maps.event.addListener(autocomplete, 'place_changed', function() {
-    //         var near_place = autocomplete.getPlace();
-    //     });
-    // });
-
-    function initAutocomplete(bounds) {
-        let options = {
-            bounds
-        };
-
-        let input = document.getElementById('location');
-        let searchBox = new google.maps.places.Autocomplete(input, options);
-        searchBox.addListener('places_changed', function() {
-            let places = searchBox.getPlaces();
-            if (places.length == 0) {
-                return;
-            }
+        google.maps.event.addListener(autocomplete, 'place_changed', function() {
+            var near_place = autocomplete.getPlace();
         });
-    }
+    });
 
-    function initSearch(bounds) {
-        initAutocomplete(bounds);
-    }
-
-    function initSearchAustin(bounds) {
-        initAutocomplete(bounds);
-    }
-
-    function getBounds(pos) {
-        let crd = pos.coords;
-        let latlng = new google.maps.LatLng(crd.latitude, crd.longitude); 
-        let bounds = new google.maps.LatLngBounds();
-        bounds.extend(latlng);
-
-        initSearch(bounds);
-    }
-
-    function getBoundsDefault() {
-        let latlng = new google.maps.LatLng(41.06000,28.98700); 
-        let bounds = new google.maps.LatLngBounds();
-        bounds.extend(latlng);
-
-        initSearchAustin(bounds);
-    }
-
-    function disableLocation(e) {
-        alert("Oops! '" + e.message + "'. The default position will be Austin, TX.");
-        getBoundsDefault();
-    }
-
-
-    function getCurrentLocation() {
-        var options = {
-            enableHighAccuracy: true,
-            timeout: 5000,
-            maximumAge: 10000
-        };
-        navigator.geolocation.getCurrentPosition(getBounds, disableLocation, options);
-    }
-
-    getCurrentLocation();
 
     </script>
