@@ -9,14 +9,16 @@
                     </span>
 
                 <!-- If the status is completed, show contact phone! -->
-                    <span class='<?php if($bi->swap_status != "Completed"){echo "hidden";} ?> '> 
-                        <h3>You completed a swap!</h3>
-                        <h5>You may now reach each other and work out the details!</h5>
-                        <?php foreach ($other_user as $ou): ?>
-                        <a href="https://api.whatsapp.com/send?phone=+972<?php echo $ou->phone_num?>&text=Hi!%20It%27s%20me%20from%20Bambook.%20Lets%20finish%20our%20book%20swap!" target="_blank">
-                        <img style="height:50px; width:50px;" class="card-img-top" alt="Contact" src='<?php echo base_url('images/whatsapp.png');?>' >
-                        </a>
-                        <?php endforeach ?>
+                    <span class='<?php if($bi->swap_status != "Completed"){echo "hidden";} ?> '>
+                        <div class="text-center">
+                            <h3>You completed a swap!</h3>
+                            <h5>You may now reach each other and work out the details!</h5>
+                            <?php foreach ($other_user as $ou): ?>
+                            <a href="https://api.whatsapp.com/send?phone=+972<?php echo $ou->phone_num?>&text=Hi!%20It%27s%20me%20from%20Bambook.%20Lets%20finish%20our%20book%20swap!" target="_blank">
+                            <img style="height:50px; width:50px;" class="card-img-top" alt="Contact" src='<?php echo base_url('images/whatsapp.png');?>' >
+                            </a>
+                            <?php endforeach ?>
+                        </div>
                     </span>
                     <?php 
                     $flagg = $flag[0]->received_book;
