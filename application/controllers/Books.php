@@ -329,11 +329,14 @@ class Books extends CI_Controller{
             $user['loggedin']=null;
             $user['username'] = null;
         };
-        //if user is not loggedin, use regular filters without region filtering
-        if ($user['loggedin'] == null){
+
+        //if user is logged in and also checked "user region", goto advanced region filtering.
+        if ($data['user_region']=='1' && $user['loggedin'] != null){
+            $this->available_books_filter_region($data);
+        }
+        else{
             $this->available_books_filter($data);
         }
-
     }
 
     public function available_books_filter($data){
@@ -342,6 +345,7 @@ class Books extends CI_Controller{
             $user['loggedin']=null;
             $user['username'] = null;
         };
+
         $data['username'] = $user['username'];
         // if ($user['loggedin']==null){$data['books']=$this->intro_model->get_books_not_loggedin();}
         //else{};
@@ -403,8 +407,9 @@ class Books extends CI_Controller{
             $data['username'] = $user['username'];
             // if ($user['loggedin']==null){$data['books']=$this->intro_model->get_books_not_loggedin();}
             //else{};
-
-            ////DECIDE ON CORRECT FILTERS
+            //get the logged in user's region:
+            $data['user_region'] = $this->books_model->get_region($data);
+            ////DECIDE ON CORRECT FILTERS, always send region data.
             if ($data['book_genre']!='Any'){ //genre is not any
                 if($data['cond']!='Any'){ //cond is not any
                     if($data['lang']!='Any'){ //lang is not any
