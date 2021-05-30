@@ -102,7 +102,7 @@
                                 <br>
                                 <div id="books"></div>
                                 <div>
-                                    <span id="btntop" class="material-icons-outlined">arrow_upward</span>
+                                <button onclick="scrollToTop()" id="btntop" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">  <i class="material-icons">arrow_upward</i> </button>
                                 </div>
                             </div>
                         </div>
