@@ -101,7 +101,9 @@
                                 </div>
                                 <br>
                                 <div id="books"></div>
-                                <div hidden> You can't see me!</div>
+                                <div>
+                                    <span id="btntop" class="material-icons-outlined">arrow_upward</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -226,4 +228,8 @@
                                         }
                                         document.getElementById("scrollUpHere").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
                                    }
+
+                                   function scrollToTop(){
+                                    document.getElementById("btntop").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+                                   };
                                 </script>
