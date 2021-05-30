@@ -102,7 +102,7 @@
                                 <br>
                                 <div id="books"></div>
                                 <div>
-                                <button onclick="scrollToTop()" id="btntop" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">  <i class="material-icons">arrow_upward</i> </button>
+                                <button onclick="scrollToTop()" id="btntop" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab text-center">  <i class="material-icons">arrow_upward</i> </button>
                                 </div>
                             </div>
                         </div>
@@ -230,6 +230,6 @@
                                    }
 
                                    function scrollToTop(){
-                                    document.getElementById("btntop").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+                                    document.getElementById("scrollUpHere").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
                                    };
                                 </script>
