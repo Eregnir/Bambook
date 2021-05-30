@@ -1,4 +1,4 @@
-        <main class="mdl-layout__content">
+<main class="mdl-layout__content">
             <div class="mdl-grid portfolio-max-width">
 
                 <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
@@ -160,8 +160,6 @@
         google.maps.event.addListener(autocomplete, 'place_changed', function() {
             var near_place = autocomplete.getPlace();
         });
-
-    var
     });
 
 
