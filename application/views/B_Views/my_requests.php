@@ -112,7 +112,7 @@
                                 </td>
                                 <td> <?php echo $req->title ?></td>
                                 <td> <?php echo $req->sent_to_username ?></td>
-                                <td> <?php echo $req->swap_status ?></td>
+                                <td <?php if($req->swap_status == 'Cancelled') {echo 'style="color:red"';} elseif ($req->swap_status == 'Completed') {echo 'style="color:green"';}?>> <?php echo $req->swap_status ?></td>
                             </tr>
                     <?php endforeach; ?>
                     </tbody>
