@@ -27,25 +27,25 @@
                         <form method="post" action="<?php echo site_url('Intro/new_user');?>" class="">
                         <!-- First Name -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="firstName" name="firstName">
+                                <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="firstName" name="firstName" maxlength="30">
                                 <label class="mdl-textfield__label" for="firstName">First Name...</label>
                                 <span class="mdl-textfield__error">Must contain letters and spaces only</span>
                             </div>
                         <!-- Last Name -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="lastName" name="lastName">
+                                <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="lastName" name="lastName" maxlength="30">
                                 <label class="mdl-textfield__label" for="lastName">Last Name...</label>
                                 <span class="mdl-textfield__error">Must contain letters and spaces only</span>
                             </div>
                         <!-- Username -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{2,15}$" type="text" id="username" name="username">
+                                <input class="mdl-textfield__input" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{2,15}$" type="text" id="username" name="username" maxlength="15">
                                 <label class="mdl-textfield__label" for="username">Username...</label>
-                                <span class="mdl-textfield__error">Must start with a letter and contain 3-20 characters</span>
+                                <span class="mdl-textfield__error">Must start with a letter and contain 3-15 characters</span>
                             </div>
                         <!-- email address -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" type="text" id="email" name="email">
+                                <input class="mdl-textfield__input" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" type="text" id="email" name="email" maxlength="50">
                                 <label class="mdl-textfield__label" for="email">Email...</label>
                                 <span class="mdl-textfield__error">Must contain a valid email</span>
                             </div>
@@ -73,7 +73,7 @@
                         </div>
                         <!-- Password -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" id="password" name="password">
+                                <input class="mdl-textfield__input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" id="password" name="password" maxlength="50">
                                 <label class="mdl-textfield__label" for="password">Password...</label>
                                 <span class="mdl-textfield__error">Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</span>
                             </div>
