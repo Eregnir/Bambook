@@ -61,7 +61,7 @@
                                 </div>
                             <!-- Favorite Genre 1 -->
                                 <div>
-                                    <input value="<?php foreach ($profile as $prof){if($prof->genre1!=null){echo $prof->genre1;}}?>" class="mdl-checkbox__input" type="checkbox" id="genre1" name="genre1">
+                                    <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre1" name="genre1">
                                     <label class="mdl-checkbox__label" for="genre1">Fantasy</label>
                                 </div>
                             <!-- Favorite Genre 2 -->
