@@ -51,7 +51,7 @@
                             </div>
                         <!-- Phone Number -->
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" pattern="/[0][5][0-9]{8}/" type="tel" id="phone_num" name="phone_num">
+                                <input class="mdl-textfield__input" pattern="[0][5][0-9]{8}" type="tel" id="phone_num" name="phone_num">
                                 <label class="mdl-textfield__label" for="phone_num">Phone Number...</label>
                                 <span class="mdl-textfield__error">Must contain a valid phone number</span>
                             </div>
