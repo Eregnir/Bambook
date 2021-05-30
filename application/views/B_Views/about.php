@@ -110,7 +110,7 @@
                                     </button>
                                 </p>
 
-                                </form>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -159,7 +159,7 @@
     });
 
     // Geocode - Google Maps API
-    
+
     // Call Geocode
     geocode();
 
