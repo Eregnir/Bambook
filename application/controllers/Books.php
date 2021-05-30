@@ -408,7 +408,7 @@ class Books extends CI_Controller{
             // if ($user['loggedin']==null){$data['books']=$this->intro_model->get_books_not_loggedin();}
             //else{};
             //get the logged in user's region:
-            $data['user_region'] = $this->books_model->get_region($data);
+            $data['region'] = $this->books_model->get_region($data);
             ////DECIDE ON CORRECT FILTERS, always send region data.
             if ($data['book_genre']!='Any'){ //genre is not any
                 if($data['cond']!='Any'){ //cond is not any
