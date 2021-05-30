@@ -143,6 +143,7 @@
                                             var p_date = "";
                                             var language = "";
                                             var isbn = "";
+                                            var averageRating = "";
 
                                             for (i = 0; i < json.items.length; i++) {
                                                 if (typeof json.items[i].volumeInfo.imageLinks != "undefined") {
@@ -171,6 +172,11 @@
                                                 isbn = json.items[i].volumeInfo.industryIdentifiers[0].identifier;
                                                 }
 
+                                                // Rating
+                                                if (typeof json.items[i].volumeInfo.averageRating != "undefined") {
+                                                averageRating = json.items[i].volumeInfo.averageRating;
+                                                }
+
                                                 htmlcontent +=
                                                 "<div class='thumbs' style='cursor: pointer;' onclick='autoFill("+i+");' return true;'><b>Book Title: </b>" +
                                                 json.items[i].volumeInfo.title +
@@ -188,6 +194,8 @@
                                                 language +
                                                 "<br><b>ISBN_13: </b>" +
                                                 isbn +
+                                                "<br><b>Rating: </b>" +
+                                                averageRating +
                                                 '</div>';
                                             }
                                             document.getElementById("books").innerHTML =
