@@ -47,6 +47,7 @@
                                         if($prof->genre7=='1'){echo 'Other'; $g7 = true;}
                                         }?>
                                     <br><br><b>Location:</b> <?php foreach ($profile as $prof){echo $prof->location;}?>
+                                    <br><br><b>Region:</b> <?php foreach ($profile as $prof){echo $prof->user_region;}?>
                                 </h5>
                             </p>
                             <button id="ep" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">Edit Preferences</button>
@@ -110,6 +111,7 @@
                                     </select>
                                 </div>
                             <!-- User Location -->
+                            <br>
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                     <input value="<?php foreach ($profile as $prof){if($prof->location!=null){echo $prof->location;}}?>" class="mdl-textfield__input" type="text" id="location" name="location" placeholder="Type address...">
                                     <label class="mdl-textfield__label" for="location">Location</label>
