@@ -60,7 +60,7 @@
                             <select class="form-control" name="user_region" id="user_region">
                                 <option value="" disabled selected>--Select Region--</option>
                                 <option value="Tel Aviv">Tel Aviv</option>
-                                <option value="Central Region">Central Region</option>
+                                <option value="Central">Central</option>
                                 <option value="Jerusalem">Jerusalem</option>
                                 <option value="Shfela">Shfela</option>
                                 <option value="Haifa">Beersheba</option>

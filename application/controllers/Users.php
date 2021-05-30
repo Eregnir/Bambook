@@ -210,7 +210,8 @@ class Users extends CI_Controller{
             'genre5'=>$this->input->post('genre5'),
             'genre6'=>$this->input->post('genre6'),
             'genre7'=>$this->input->post('genre7'),
-            'location'=>$this->input->post('location')
+            'location'=>$this->input->post('location'),
+            'user_region'=>$this->input->post('user_region')
         );
         $this->users_model->update_profile($data);
         header('Location: https://assafye.mtacloud.co.il/Bambook/index.php/Intro/about');

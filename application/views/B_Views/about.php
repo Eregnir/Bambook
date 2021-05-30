@@ -101,8 +101,8 @@
                                     <label for="user_region" class="bmd-label-floating">My Region</label>
                                     <select class="form-control" name="user_region" id="user_region">
                                         <option value="Tel Aviv">Tel Aviv</option>
-                                        <option value="Central Region" <?php if ($reg == 'Central Region'){echo 'selected';}?>>Central Region</option>
-                                        <option value="Jerusalem">Jerusalem</option>
+                                        <option value="Central" <?php if ($reg == 'Central'){echo 'selected';}?>>Central</option>
+                                        <option value="Jerusalem" <?php if ($reg == 'Jerusalem'){echo 'selected';}?>>Jerusalem</option>
                                         <option value="Shfela">Shfela</option>
                                         <option value="Haifa">Haifa</option>
                                         <option value="Beersheba">Beersheba</option>
