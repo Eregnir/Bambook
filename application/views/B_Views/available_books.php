@@ -28,7 +28,7 @@
                         </div>
 
                         <!-- Book Lang -->
-                        <div class="form-group" style="display: inline-block; width:31%;">
+                        <div class="form-group" style="display: inline-block; width:30%;">
                             <label for="book_lang" class="bmd-label-floating">Language</label>
                                 <select class="form-control" name="book_lang" id="book_lang" >
                                     <option value="Any" default <?php echo (isset($_POST['book_lang']) && $_POST['book_lang'] === 'Any') ? 'selected' : ''; ?> >Any</option>
@@ -50,15 +50,14 @@
                                     <option value="Used" <?php echo (isset($_POST['book_cond']) && $_POST['book_cond'] === 'Used') ? 'selected' : ''; ?>>Used</option>
                                 </select>
                         </div>
-                            <div>
-                                <!-- region filter checkbox -->
-                                <input type="checkbox" id="user_region" value="1" class="mdl-checkbox" name="user_region" <?php if(isset($_POST['user_region'])) echo "checked='checked'"; ?>>
-                                <!-- <input type="hidden" id="user_region" value="0" class="mdl-checkbox" name="user_region"> -->
-                                <label for="user_region">My Region Only</label>
-                            </div>
-                            <!-- Submit button -->
-                            <button type="submit" class="btn btn-primary" style="width:35%; margin-bottom:15px; margin-right: 15px;">Apply Filters</button>
+                        <div style="display:inline-block;">
+                            <!-- region filter checkbox -->
+                            <input type="checkbox" id="user_region" value="1" class="mdl-checkbox" name="user_region" <?php if(isset($_POST['user_region'])) echo "checked='checked'"; ?>>
+                            <!-- <input type="hidden" id="user_region" value="0" class="mdl-checkbox" name="user_region"> -->
+                            <label for="user_region">My Region Only</label>
                         </div>
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary" style="display: inline-block; width:25%; margin-bottom:15px;">Apply Filters</button>
                         <br>
                         
                         <?php echo form_close(); ?>
