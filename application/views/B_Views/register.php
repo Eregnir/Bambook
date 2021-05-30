@@ -58,7 +58,7 @@
                         <!-- Region -->
                         <div class="form-group">
                             <select class="form-control" name="user_region" id="user_region">
-                                <option value="" disabled>Select Region</option>
+                                <option value="" disabled selected>--Select Region--</option>
                                 <option value="Tel Aviv">Tel Aviv</option>
                                 <option value="Central Region">Central Region</option>
                                 <option value="Jerusalem">Jerusalem</option>
