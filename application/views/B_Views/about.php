@@ -109,6 +109,7 @@
                                         Cancel
                                     </button>
                                 </p>
+
                                 </form>
                         </div>
                     </div>
@@ -157,5 +158,26 @@
         });
     });
 
+    // Geocode - Google Maps API
+    
+    // Call Geocode
+    geocode();
+
+    function geocode() {
+        var userLocation = <?php foreach ($profile as $prof){echo $prof->location;}?>
+        axios.get('https://maps.googleapis.com/maps/api/geocode/json', {
+            params: {
+                address: userLocation,
+                // key
+            }
+        })
+        .then(function(response) {
+            console.log();
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
+
+    }
 
     </script>
