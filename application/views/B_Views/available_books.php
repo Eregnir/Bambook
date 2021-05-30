@@ -57,7 +57,7 @@
                             <label for="user_region">My Region Only</label>
                         </div>
                         <!-- Submit button -->
-                        <button type="submit" class="btn btn-primary" style="display: inline-block; width:25%; margin-bottom:15px;">Apply Filters</button>
+                        <button type="submit" class="btn btn-primary" style="display: flex; width:25%; justify-content: space-between; margin-bottom:15px; margin-right: 15px;">Apply Filters</button>
                         <br>
                         
                         <?php echo form_close(); ?>
