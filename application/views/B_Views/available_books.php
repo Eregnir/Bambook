@@ -50,7 +50,7 @@
                                     <option value="Used" <?php echo (isset($_POST['book_cond']) && $_POST['book_cond'] === 'Used') ? 'selected' : ''; ?>>Used</option>
                                 </select>
                         </div>
-                        <div style="display: flex;">
+                        <div style="display: flex; justify-content: space-between;">
                             <div>
                                 <!-- region filter checkbox -->
                                 <input type="checkbox" id="user_region" value="1" class="mdl-checkbox" name="user_region" <?php if(isset($_POST['user_region'])) echo "checked='checked'"; ?>>
