@@ -58,7 +58,7 @@
                                 <label for="user_region">My Region Only</label>
                             </div>
                             <!-- Submit button -->
-                            <button type="submit" class="btn btn-primary" style="width:25%; margin-bottom:15px; margin-right: 15px;">Apply Filters</button>
+                            <button type="submit" class="btn btn-primary" style="width:35%; margin-bottom:15px; margin-right: 25px;">Apply Filters</button>
                         </div>
                         <br>
                         
