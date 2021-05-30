@@ -101,7 +101,7 @@
                                 </div>
                                 <br>
                                 <div id="books"></div>
-                                <div></div>
+                                <div hidden> You can't see me!</div>
                             </div>
                         </div>
                     </div>
