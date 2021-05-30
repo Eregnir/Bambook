@@ -6,7 +6,7 @@
                 <h4>
                 <?php
                 if (isset($new)){
-                    echo 'Hi there '.$user['username'].'! Your registration was completed successfully. <br> We hope you enjoy Bambook!';
+                    echo 'Hi there '.$user['username'].'! Your registration was completed successfully. <br> We hope you enjoy Bambook! <br> <h6>Do not forget to complete your preferences in the Profile tab.</h6>';
                     foreach ($profile as $prof){echo '<center><img style="max-height:80px; max-width: 100%; margin:auto; display:block;" src="data:image/jpeg;base64,'.base64_encode( $prof->img).'"/>';};    
                 }
                 elseif ($user['username']!=null){
