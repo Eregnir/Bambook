@@ -57,59 +57,59 @@
                             <!-- Edit info Form -->
 
                             <form method="post" action="<?php echo site_url('Users/update_pref');?>" class="">
-                                <div>
-                                    <h5><b>Favorite Genres:</b></h5>
-                                </div>
-                            <!-- Favorite Genre 1 -->
-                                <div>
-                                    <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre1" name="genre1" <?php if($g1==true){echo 'checked';};?>>
-                                    <label class="mdl-checkbox__label" for="genre1">Fantasy</label>
-                                </div>
-                            <!-- Favorite Genre 2 -->
-                                <div>
-                                    <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre2" name="genre2" <?php if($g2==true){echo 'checked';};?>>
-                                    <label class="mdl-checkbox__label" for="genre2">Mystery</label>
-                                </div>
-                            <!-- Favorite Genre 3 -->
-                                <div>
-                                    <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre3" name="genre3" <?php if($g3==true){echo 'checked';};?>>
-                                    <label class="mdl-checkbox__label" for="genre3">Romance</label>
-                                </div>
-                            <!-- Favorite Genre 4 -->
-                                <div>
-                                    <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre4" name="genre4" <?php if($g4==true){echo 'checked';};?>>
-                                    <label class="mdl-checkbox__label" for="genre4">Thriller</label>
-                                </div>
-                                <!-- Favorite Genre 5 -->
-                                <div>
-                                    <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre5" name="genre5" <?php if($g5==true){echo 'checked';};?>>
-                                    <label class="mdl-checkbox__label" for="genre5">Biography</label>
-                                </div>
-                                <!-- Favorite Genre 6 -->
-                                <div>
-                                    <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre6" name="genre6" <?php if($g6==true){echo 'checked';};?>>
-                                    <label class="mdl-checkbox__label" for="genre6">Inspirational</label>
-                                </div>
-                                <!-- Favorite Genre 7 -->
-                                <div>
-                                    <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre7" name="genre7" <?php if($g7==true){echo 'checked';};?>>
-                                    <label class="mdl-checkbox__label" for="genre7">Other</label>
-                                </div>
-                            <!-- User Location -->
-                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                    <input value="<?php foreach ($profile as $prof){if($prof->location!=null){echo $prof->location;}}?>" class="mdl-textfield__input" type="text" id="location" name="location" placeholder="Type address...">
-                                    <label class="mdl-textfield__label" for="location">Location</label>
-                                </div>
-                                <br><br>
-                                <p>
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" type="submit" name="submit ">
-                                        Submit Changes
-                                    </button>
-                                    <button style="margin-left:10px;" id="cancel" class="mdl-button mdl-js-button mdl-button--raised" type="button" name="cancel">
-                                        Cancel
-                                    </button>
-                                </p>
-                            </form>
+                                    <div>
+                                        <h5><b>Favorite Genres:</b></h5>
+                                    </div>
+                                <!-- Favorite Genre 1 -->
+                                    <div>
+                                        <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre1" name="genre1" <?php if($g1==true){echo 'checked';};?>>
+                                        <label class="mdl-checkbox__label" for="genre1">Fantasy</label>
+                                    </div>
+                                <!-- Favorite Genre 2 -->
+                                    <div>
+                                        <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre2" name="genre2" <?php if($g2==true){echo 'checked';};?>>
+                                        <label class="mdl-checkbox__label" for="genre2">Mystery</label>
+                                    </div>
+                                <!-- Favorite Genre 3 -->
+                                    <div>
+                                        <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre3" name="genre3" <?php if($g3==true){echo 'checked';};?>>
+                                        <label class="mdl-checkbox__label" for="genre3">Romance</label>
+                                    </div>
+                                <!-- Favorite Genre 4 -->
+                                    <div>
+                                        <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre4" name="genre4" <?php if($g4==true){echo 'checked';};?>>
+                                        <label class="mdl-checkbox__label" for="genre4">Thriller</label>
+                                    </div>
+                                    <!-- Favorite Genre 5 -->
+                                    <div>
+                                        <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre5" name="genre5" <?php if($g5==true){echo 'checked';};?>>
+                                        <label class="mdl-checkbox__label" for="genre5">Biography</label>
+                                    </div>
+                                    <!-- Favorite Genre 6 -->
+                                    <div>
+                                        <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre6" name="genre6" <?php if($g6==true){echo 'checked';};?>>
+                                        <label class="mdl-checkbox__label" for="genre6">Inspirational</label>
+                                    </div>
+                                    <!-- Favorite Genre 7 -->
+                                    <div>
+                                        <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre7" name="genre7" <?php if($g7==true){echo 'checked';};?>>
+                                        <label class="mdl-checkbox__label" for="genre7">Other</label>
+                                    </div>
+                                <!-- User Location -->
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input value="<?php foreach ($profile as $prof){if($prof->location!=null){echo $prof->location;}}?>" class="mdl-textfield__input" type="text" id="location" name="location" placeholder="Type address...">
+                                        <label class="mdl-textfield__label" for="location">Location</label>
+                                    </div>
+                                    <br><br>
+                                    <p>
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" type="submit" name="submit ">
+                                            Submit Changes
+                                        </button>
+                                        <button style="margin-left:10px;" id="cancel" class="mdl-button mdl-js-button mdl-button--raised" type="button" name="cancel">
+                                            Cancel
+                                        </button>
+                                    </p>
+                                </form>
                             
 
                         </div>
