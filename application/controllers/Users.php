@@ -155,6 +155,7 @@ class Users extends CI_Controller{
             'lname' => $this->input->post('lname'),
             'email' => $this->input->post('email'), 
             'username' => $this->input->post('username'),
+            'user_region' => $this->input->post('user_region'),
             'password' => $this->input->post('password')
          );
         
