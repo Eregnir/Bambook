@@ -35,15 +35,16 @@
                         <div style="display:'';" id="bsp" class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
                             <p>
                                 <h5>
+                                <!--       -->
                                     <b>Favorite Genres:</b> 
                                     <?php foreach ($profile as $prof){
                                         if($prof->genre1=='1'){echo 'Fantasy';}
-                                        if($prof->genre2!=null){echo ", ".$prof->genre2;}
-                                        if($prof->genre3!=null){echo ", ".$prof->genre3;}
-                                        if($prof->genre4!=null){echo ", ".$prof->genre4;}
-                                        if($prof->genre5!=null){echo ", ".$prof->genre5;}
-                                        if($prof->genre6!=null){echo ", ".$prof->genre6;}
-                                        if($prof->genre7!=null){echo ", ".$prof->genre7;}
+                                        if($prof->genre2=='1'){echo 'Mystery' ;}
+                                        if($prof->genre3=='1'){echo 'Romance';}
+                                        if($prof->genre4=='1'){echo 'Thriller';}
+                                        if($prof->genre5=='1'){echo 'Biography';}
+                                        if($prof->genre6=='1'){echo 'Inspirational';}
+                                        if($prof->genre7=='1'){echo 'Other';}
                                         }?>
                                     <br><br><b>Location:</b> <?php foreach ($profile as $prof){echo $prof->location;}?>
                                 </h5>
@@ -77,7 +78,7 @@
                             <!-- Favorite Genre 4 -->
                                 <div>
                                     <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre4" name="genre4">
-                                    <label class="mdl-checkbox__label" for="genre4">Thrillers</label>
+                                    <label class="mdl-checkbox__label" for="genre4">Thriller</label>
                                 </div>
                                 <!-- Favorite Genre 5 -->
                                 <div>
