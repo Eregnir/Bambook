@@ -11,61 +11,58 @@
                     <!-- Table Filters -->
                     <div class="container">
                         <div class="row">
+                            <div style="display: flex; justify-content: space-between;">
+                                <?php echo form_open('Books/filter_control'); ?>
+                                    <div class="form-group" style="display: inline-block; width:30%;">
+                                        <label for="book_genre" class="bmd-label-floating">Genre</label>
+                                        <select class="form-control" name="book_genre" id="book_genre" name="book_genre">
+                                            <option value="Any" default <?php echo (isset($_POST['book_genre']) && $_POST['book_genre'] === 'Any') ? 'selected' : ''; ?>>Any</option>
+                                            <option value="Fantasy" <?php echo (isset($_POST['book_genre']) && $_POST['book_genre'] === 'Fantasy') ? 'selected' : ''; ?>>Fantasy</option>
+                                            <option value="Mystery" <?php echo (isset($_POST['book_genre']) && $_POST['book_genre'] === 'Mystery') ? 'selected' : ''; ?>>Mystery</option>
+                                            <option value="Romance" <?php echo (isset($_POST['book_genre']) && $_POST['book_genre'] === 'Romance') ? 'selected' : ''; ?>>Romance</option>
+                                            <option value="Thrillers" <?php echo (isset($_POST['book_genre']) && $_POST['book_genre'] === 'Thrillers') ? 'selected' : ''; ?>>Thrillers</option>
+                                            <option value="Biography" <?php echo (isset($_POST['book_genre']) && $_POST['book_genre'] === 'Biography') ? 'selected' : ''; ?>>Biography</option>
+                                            <option value="Inspirational" <?php echo (isset($_POST['book_genre']) && $_POST['book_genre'] === 'Inspirational') ? 'selected' : ''; ?>>Inspirational</option>
+                                            <option value="Other" <?php echo (isset($_POST['book_genre']) && $_POST['book_genre'] === 'Other') ? 'selected' : ''; ?>>Other</option>
+                                        </select>
+                                    </div>
 
-                        <?php echo form_open('Books/filter_control'); ?>
-                        <div class="form-group" style="display: inline-block; width:30%;">
-                            <label for="book_genre" class="bmd-label-floating">Genre</label>
-                            <select class="form-control" name="book_genre" id="book_genre" name="book_genre">
-                                <option value="Any" default <?php echo (isset($_POST['book_genre']) && $_POST['book_genre'] === 'Any') ? 'selected' : ''; ?>>Any</option>
-                                <option value="Fantasy" <?php echo (isset($_POST['book_genre']) && $_POST['book_genre'] === 'Fantasy') ? 'selected' : ''; ?>>Fantasy</option>
-                                <option value="Mystery" <?php echo (isset($_POST['book_genre']) && $_POST['book_genre'] === 'Mystery') ? 'selected' : ''; ?>>Mystery</option>
-                                <option value="Romance" <?php echo (isset($_POST['book_genre']) && $_POST['book_genre'] === 'Romance') ? 'selected' : ''; ?>>Romance</option>
-                                <option value="Thrillers" <?php echo (isset($_POST['book_genre']) && $_POST['book_genre'] === 'Thrillers') ? 'selected' : ''; ?>>Thrillers</option>
-                                <option value="Biography" <?php echo (isset($_POST['book_genre']) && $_POST['book_genre'] === 'Biography') ? 'selected' : ''; ?>>Biography</option>
-                                <option value="Inspirational" <?php echo (isset($_POST['book_genre']) && $_POST['book_genre'] === 'Inspirational') ? 'selected' : ''; ?>>Inspirational</option>
-                                <option value="Other" <?php echo (isset($_POST['book_genre']) && $_POST['book_genre'] === 'Other') ? 'selected' : ''; ?>>Other</option>
-                            </select>
-                        </div>
+                                    <!-- Book Lang -->
+                                    <div class="form-group" style="display: inline-block; width:30%;">
+                                        <label for="book_lang" class="bmd-label-floating">Language</label>
+                                            <select class="form-control" name="book_lang" id="book_lang" >
+                                                <option value="Any" default <?php echo (isset($_POST['book_lang']) && $_POST['book_lang'] === 'Any') ? 'selected' : ''; ?> >Any</option>
+                                                <option value="English" <?php echo (isset($_POST['book_lang']) && $_POST['book_lang'] === 'English') ? 'selected' : ''; ?>  >English</option>
+                                                <option value="Hebrew" <?php echo (isset($_POST['book_lang']) && $_POST['book_lang'] === 'Hebrew') ? 'selected' : ''; ?>>Hebrew</option>
+                                                <option value="Arabic" <?php echo (isset($_POST['book_lang']) && $_POST['book_lang'] === 'Arabic') ? 'selected' : ''; ?>>Arabic</option>
+                                                <option value="Russian" <?php echo (isset($_POST['book_lang']) && $_POST['book_lang'] === 'Russian') ? 'selected' : ''; ?>>Russian</option>
+                                                <option value="Spanish" <?php echo (isset($_POST['book_lang']) && $_POST['book_lang'] === 'Spanish') ? 'selected' : ''; ?>>Spanish</option>
+                                            </select>
+                                    </div>
 
-                        <!-- Book Lang -->
-                        <div class="form-group" style="display: inline-block; width:30%;">
-                            <label for="book_lang" class="bmd-label-floating">Language</label>
-                                <select class="form-control" name="book_lang" id="book_lang" >
-                                    <option value="Any" default <?php echo (isset($_POST['book_lang']) && $_POST['book_lang'] === 'Any') ? 'selected' : ''; ?> >Any</option>
-                                    <option value="English" <?php echo (isset($_POST['book_lang']) && $_POST['book_lang'] === 'English') ? 'selected' : ''; ?>  >English</option>
-                                    <option value="Hebrew" <?php echo (isset($_POST['book_lang']) && $_POST['book_lang'] === 'Hebrew') ? 'selected' : ''; ?>>Hebrew</option>
-                                    <option value="Arabic" <?php echo (isset($_POST['book_lang']) && $_POST['book_lang'] === 'Arabic') ? 'selected' : ''; ?>>Arabic</option>
-                                    <option value="Russian" <?php echo (isset($_POST['book_lang']) && $_POST['book_lang'] === 'Russian') ? 'selected' : ''; ?>>Russian</option>
-                                    <option value="Spanish" <?php echo (isset($_POST['book_lang']) && $_POST['book_lang'] === 'Spanish') ? 'selected' : ''; ?>>Spanish</option>
-                                </select>
-                        </div>
-
-                        <!-- Book cond -->
-                        <div class="form-group" style="display: inline-block; width:30%;">
-                            <label for="book_cond" class="bmd-label-floating">Condition</label>
-                                <select class="form-control" name="book_cond" id="book_cond">
-                                    <option value="Any" default <?php echo (isset($_POST['book_cond']) && $_POST['book_cond'] === 'Any') ? 'selected' : ''; ?> >Any</option>
-                                    <option value="New" <?php echo (isset($_POST['book_cond']) && $_POST['book_cond'] === 'New') ? 'selected' : ''; ?>>New</option>
-                                    <option value="Like New" <?php echo (isset($_POST['book_cond']) && $_POST['book_cond'] === 'Like New') ? 'selected' : ''; ?>>Like New</option>
-                                    <option value="Used" <?php echo (isset($_POST['book_cond']) && $_POST['book_cond'] === 'Used') ? 'selected' : ''; ?>>Used</option>
-                                </select>
-                        </div>
-                        <div style="display: flex; justify-content: space-between;">
-                            <div>
-                                <!-- region filter checkbox -->
-                                <input type="checkbox" id="user_region" value="1" class="mdl-checkbox" name="user_region" <?php if(isset($_POST['user_region'])) echo "checked='checked'"; ?>>
-                                <!-- <input type="hidden" id="user_region" value="0" class="mdl-checkbox" name="user_region"> -->
-                                <label for="user_region">My Region Only</label>
+                                    <!-- Book cond -->
+                                    <div class="form-group" style="display: inline-block; width:30%;">
+                                        <label for="book_cond" class="bmd-label-floating">Condition</label>
+                                            <select class="form-control" name="book_cond" id="book_cond">
+                                                <option value="Any" default <?php echo (isset($_POST['book_cond']) && $_POST['book_cond'] === 'Any') ? 'selected' : ''; ?> >Any</option>
+                                                <option value="New" <?php echo (isset($_POST['book_cond']) && $_POST['book_cond'] === 'New') ? 'selected' : ''; ?>>New</option>
+                                                <option value="Like New" <?php echo (isset($_POST['book_cond']) && $_POST['book_cond'] === 'Like New') ? 'selected' : ''; ?>>Like New</option>
+                                                <option value="Used" <?php echo (isset($_POST['book_cond']) && $_POST['book_cond'] === 'Used') ? 'selected' : ''; ?>>Used</option>
+                                            </select>
+                                    </div>
+                                    <div style="display: flex; justify-content: space-between;">
+                                        <div>
+                                            <!-- region filter checkbox -->
+                                            <input type="checkbox" id="user_region" value="1" class="mdl-checkbox" name="user_region" <?php if(isset($_POST['user_region'])) echo "checked='checked'"; ?>>
+                                            <!-- <input type="hidden" id="user_region" value="0" class="mdl-checkbox" name="user_region"> -->
+                                            <label for="user_region">My Region Only</label>
+                                        </div>
+                                        <!-- Submit button -->
+                                        <button type="submit" class="btn btn-primary" style="width:35%; margin-bottom:15px;">Apply Filters</button>
+                                    </div>
+                                    <br>
+                                <?php echo form_close(); ?>
                             </div>
-                            <!-- Submit button -->
-                            <button type="submit" class="btn btn-primary" style="width:35%; margin-bottom:15px;">Apply Filters</button>
-                        </div>
-                        <br>
-                        
-                        <?php echo form_close(); ?>
-
-                    
-                        
                     <!-- Table Books -->
                     <table class="table table-image" id="myTable">
                         <thead>
