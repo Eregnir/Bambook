@@ -101,7 +101,7 @@
                                 </div>
                                 <br>
                                 <div id="books"></div>
-                                <div>Hello!</div>
+                                <div></div>
                             </div>
                         </div>
                     </div>
