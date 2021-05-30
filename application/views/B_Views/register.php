@@ -56,9 +56,9 @@
                                 <span class="mdl-textfield__error">Must contain a valid phone number</span>
                             </div>
                         <!-- Region -->
-                        <div class="form-group"> <!--  style="display: inline-block; width:30%;"-->
-                            <label for="user_region" class="bmd-label-floating">My Region</label>
+                        <div class="form-group">
                             <select class="form-control" name="user_region" id="user_region">
+                                <option value="" disabled>Select Region</option>
                                 <option value="Tel Aviv">Tel Aviv</option>
                                 <option value="Central Region">Central Region</option>
                                 <option value="Jerusalem">Jerusalem</option>
