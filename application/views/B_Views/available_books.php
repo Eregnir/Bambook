@@ -50,14 +50,16 @@
                                     <option value="Used" <?php echo (isset($_POST['book_cond']) && $_POST['book_cond'] === 'Used') ? 'selected' : ''; ?>>Used</option>
                                 </select>
                         </div>
-                        <div style="display:inline-block;">
-                            <!-- region filter checkbox -->
-                            <input type="checkbox" id="user_region" value="1" class="mdl-checkbox" name="user_region" <?php if(isset($_POST['user_region'])) echo "checked='checked'"; ?>>
-                            <!-- <input type="hidden" id="user_region" value="0" class="mdl-checkbox" name="user_region"> -->
-                            <label for="user_region">My Region Only</label>
+                        <div style="display: flex;">
+                            <div style="display:inline-block;">
+                                <!-- region filter checkbox -->
+                                <input type="checkbox" id="user_region" value="1" class="mdl-checkbox" name="user_region" <?php if(isset($_POST['user_region'])) echo "checked='checked'"; ?>>
+                                <!-- <input type="hidden" id="user_region" value="0" class="mdl-checkbox" name="user_region"> -->
+                                <label for="user_region">My Region Only</label>
+                            </div>
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-primary" style="display: inline-block; width:25%; margin-bottom:15px;">Apply Filters</button>
                         </div>
-                        <!-- Submit button -->
-                        <button type="submit" class="btn btn-primary" style="display: inline-block; width:25%; margin-bottom:15px;">Apply Filters</button>
                         <br>
                         
                         <?php echo form_close(); ?>
