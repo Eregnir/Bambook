@@ -100,14 +100,15 @@
                                 <div class="form-group" style="display: inline-block; width:30%;">
                                     <label for="user_region" class="bmd-label-floating">My Region</label>
                                     <select class="form-control" name="user_region" id="user_region">
-                                        <option value="Tel Aviv">Tel Aviv</option>
-                                        <option value="Central Region" <?php if ($reg == 'Central Region'){echo 'selected';}?>>Central Region</option>
-                                        <option value="Jerusalem">Jerusalem</option>
-                                        <option value="Shfela">Shfela</option>
-                                        <option value="Haifa">Haifa</option>
-                                        <option value="Beersheba">Beersheba</option>
-                                        <option value="Eilat">Eilat</option>
-                                        <option value="South">South</option>
+                                        <option value="Central" <?php if ($reg == 'Central'){echo 'selected';}?>>Central</option>
+                                        <option value="Tel Aviv" <?php if ($reg == 'Tel Aviv'){echo 'selected';}?>>Tel Aviv</option>
+                                        <option value="Jerusalem" <?php if ($reg == 'Jerusalem'){echo 'selected';}?>>Jerusalem</option>
+                                        <option value="Shfela" <?php if ($reg == 'Shfela'){echo 'selected';}?>>Shfela</option>
+                                        <option value="North" <?php if ($reg == 'North'){echo 'selected';}?>>North</option>
+                                        <option value="Haifa" <?php if ($reg == 'Haifa'){echo 'selected';}?>>Haifa</option>
+                                        <option value="South" <?php if ($reg == 'South'){echo 'selected';}?>>South</option>
+                                        <option value="Beersheba" <?php if ($reg == 'Beersheba'){echo 'selected';}?>>Beersheba</option>
+                                        <option value="Eilat" <?php if ($reg == 'Eilat'){echo 'selected';}?>>Eilat</option>
                                     </select>
                                 </div>
                             <!-- User Location -->

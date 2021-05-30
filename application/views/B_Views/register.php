@@ -59,13 +59,16 @@
                         <div class="form-group">
                             <select class="form-control" name="user_region" id="user_region">
                                 <option value="" disabled selected>--Select Region--</option>
+                                <option value="Central">Central</option>
                                 <option value="Tel Aviv">Tel Aviv</option>
-                                <option value="Central Region">Central Region</option>
                                 <option value="Jerusalem">Jerusalem</option>
                                 <option value="Shfela">Shfela</option>
+                                <option value="North">North</option>
+                                <option value="Haifa">Haifa</option>
+                                <option value="South">South</option>
                                 <option value="Haifa">Beersheba</option>
                                 <option value="Eilat">Eilat</option>
-                                <option value="South">South</option>
+
                             </select>
                         </div>
                         <!-- Password -->
