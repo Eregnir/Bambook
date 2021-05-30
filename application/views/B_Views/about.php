@@ -100,24 +100,6 @@
                                     <input value="<?php foreach ($profile as $prof){if($prof->location!=null){echo $prof->location;}}?>" class="mdl-textfield__input" type="text" id="location" name="location" placeholder="Type address...">
                                     <label class="mdl-textfield__label" for="location">Location</label>
                                 </div>
-
-                                <div class="container-fluid">
-                                    <form class="form-horizontal" role="form">
-                                        <fieldset class="address">
-                                            <legend>Address</legend>
-
-                                            <div class="form-group">
-                                                <label class="control-label col-sm-2 col-md-3">
-                                                Location
-                                            </label>
-                                                <div class="col-sm-4 col-md-3">
-                                                    <input class="form-control" type="text" id="location2" name="Location2" value="" autocomplete="address-level2">
-                                                </div>
-                                            </div>
-
-                                        </fieldset>
-                                    </form>
-                                </div>
                                 <br><br>
                                 <p>
                                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" type="submit" name="submit ">
@@ -127,13 +109,8 @@
                                         Cancel
                                     </button>
                                 </p>
-                            </form>
-                            
-
+                                </form>
                         </div>
-
-                       
-
                     </div>
                 </div>
 
@@ -179,50 +156,6 @@
             var near_place = autocomplete.getPlace();
         });
     });
-
-    /// Reverse Geo-coding
-
-    (function() {
-        var geocoder = new google.maps.Geocoder(),
-            google_coords;
-
-        navigator.geolocation.getCurrentPosition(function(e) {
-            google_coords = new google.maps.LatLng(
-                e.coords.latitude,
-                e.coords.longitude // current address
-            );
-            geocoder.geocode({ latLng: google_coords }, reverseGeocoderSuccess);
-        });
-
-        function reverseGeocoderSuccess(results, status) {
-            var address;
-            if (status === google.maps.GeocoderStatus.OK) {
-                if (results[0]) {
-                    var address_components = results[0].address_components;				
-                    var locale = address_components[3].short_name +
-                            ", " +
-                            address_components[5].short_name +
-                            " " +
-                            address_components[7].long_name; 
-
-                    address = results[0].formatted_address;	
-                    
-                    document.getElementById("location2").value = locale;
-                    // print desired result to the console:
-                    console.log(
-                        address_components[3].short_name +
-                            ", " +
-                            address_components[5].short_name +
-                            " " +
-                            address_components[7].long_name +
-                            ", " +
-                            address_components[6].long_name
-                    );
-                }
-            }
-        }
-    })();
-
 
 
     </script>
