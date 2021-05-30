@@ -38,12 +38,12 @@
                                 <!--       -->
                                     <b>Favorite Genres:</b> 
                                     <?php foreach ($profile as $prof){
-                                        if($prof->genre1=='1'){echo 'Fantasy';}
-                                        if($prof->genre2=='1'){echo 'Mystery' ;}
-                                        if($prof->genre3=='1'){echo 'Romance';}
-                                        if($prof->genre4=='1'){echo 'Thriller';}
-                                        if($prof->genre5=='1'){echo 'Biography';}
-                                        if($prof->genre6=='1'){echo 'Inspirational';}
+                                        if($prof->genre1=='1'){echo 'Fantasy | ';}
+                                        if($prof->genre2=='1'){echo 'Mystery | ' ;}
+                                        if($prof->genre3=='1'){echo 'Romance | ';}
+                                        if($prof->genre4=='1'){echo 'Thriller | ';}
+                                        if($prof->genre5=='1'){echo 'Biography | ';}
+                                        if($prof->genre6=='1'){echo 'Inspirational | ';}
                                         if($prof->genre7=='1'){echo 'Other';}
                                         }?>
                                     <br><br><b>Location:</b> <?php foreach ($profile as $prof){echo $prof->location;}?>
