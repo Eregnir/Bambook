@@ -12,7 +12,7 @@
                     <div class="container">
                         <div class="row">
 
-                        <?php echo form_open('Books/available_books_filter'); ?>
+                        <?php echo form_open('Books/filter_control'); ?>
                         <div class="form-group" style="display: inline-block; width:30%;">
                             <label for="book_genre" class="bmd-label-floating">Genre</label>
                             <select class="form-control" name="book_genre" id="book_genre" name="book_genre">
@@ -50,7 +50,11 @@
                                     <option value="Used" <?php echo (isset($_POST['book_cond']) && $_POST['book_cond'] === 'Used') ? 'selected' : ''; ?>>Used</option>
                                 </select>
                         </div>
-
+                            <!-- region filter checkbox -->
+                            <input type="checkbox" id="user_region" value="1" class="mdl-checkbox" name="user_region">
+                            <label for="user_region">My Region Only</label>
+                        <div>
+                        </div>
                         <!-- Submit button -->
                         <button type="submit" class="btn btn-primary" style="display: inline-block; width:25%; margin-bottom:15px;">Apply Filters</button>
                         <br>

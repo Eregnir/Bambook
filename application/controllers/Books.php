@@ -315,7 +315,28 @@ class Books extends CI_Controller{
 
     //Function to filter the books on the available books page
 
-    public function available_books_filter(){
+    public function filter_control(){
+        //get the filter data:
+        $data = array(
+            'book_genre' => $this->input->post('book_genre'),
+            'lang' => $this->input->post('book_lang'),
+            'cond' => $this->input->post('book_cond'),
+            'user_region' => $this->input->post('user_region')
+            );
+
+        $user=$this->session->all_userdata();
+        if (!isset($user['loggedin'])){
+            $user['loggedin']=null;
+            $user['username'] = null;
+        };
+        //if user is not loggedin, use regular filters without region filtering
+        if ($user['loggedin'] == null){
+            $this->available_books_filter($data);
+        }
+
+    }
+
+    public function available_books_filter($data){
         $user=$this->session->all_userdata();
         if (!isset($user['loggedin'])){
             $user['loggedin']=null;
@@ -324,14 +345,6 @@ class Books extends CI_Controller{
         $data['username'] = $user['username'];
         // if ($user['loggedin']==null){$data['books']=$this->intro_model->get_books_not_loggedin();}
         //else{};
-
-        //get the filter data:
-
-        $data = array(
-            'book_genre' => $this->input->post('book_genre'),
-            'lang' => $this->input->post('book_lang'),
-            'cond' => $this->input->post('book_cond')
-            );
 
         ////DECIDE ON CORRECT FILTERS
         if ($data['book_genre']!='Any'){ //genre is not any
@@ -381,7 +394,7 @@ class Books extends CI_Controller{
         $this->load->view('templates/FootB');
         }
     
-        public function available_books_filter_region(){
+        public function available_books_filter_region($data){
             $user=$this->session->all_userdata();
             if (!isset($user['loggedin'])){
                 $user['loggedin']=null;
@@ -390,15 +403,7 @@ class Books extends CI_Controller{
             $data['username'] = $user['username'];
             // if ($user['loggedin']==null){$data['books']=$this->intro_model->get_books_not_loggedin();}
             //else{};
-    
-            //get the filter data:
-    
-            $data = array(
-                'book_genre' => $this->input->post('book_genre'),
-                'lang' => $this->input->post('book_lang'),
-                'cond' => $this->input->post('book_cond')
-                );
-    
+
             ////DECIDE ON CORRECT FILTERS
             if ($data['book_genre']!='Any'){ //genre is not any
                 if($data['cond']!='Any'){ //cond is not any
