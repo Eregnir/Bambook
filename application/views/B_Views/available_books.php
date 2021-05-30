@@ -52,7 +52,7 @@
                         </div>
                         <div style="display:inline-block;">
                             <!-- region filter checkbox -->
-                            <input type="checkbox" id="user_region" value="1" class="mdl-checkbox" name="user_region">
+                            <input type="checkbox" id="user_region" value="1" class="mdl-checkbox" name="user_region" <?php if(isset($_POST['user_region'])) echo "checked='checked'"; ?>>
                             <!-- <input type="hidden" id="user_region" value="0" class="mdl-checkbox" name="user_region"> -->
                             <label for="user_region">My Region Only</label>
                         </div>
