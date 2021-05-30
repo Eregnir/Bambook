@@ -95,6 +95,55 @@
                                     <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre7" name="genre7" <?php if($g7==true){echo 'checked';};?>>
                                     <label class="mdl-checkbox__label" for="genre7">Other</label>
                                 </div>
+                                                            <!-- User Region -->
+                                <div>
+                                    <h5><b>My Region:</b></h5>
+                                </div>
+                            <!-- Region 1 -->
+                                <div>
+                                    <input value="1" class="mdl-radio__button" type="radio" id="region1" name="region1" <?php if($reg1==true){echo 'checked';};?>>
+                                    <label class="mdl-radio__label" for="region1">Tel Aviv</label>
+                                </div>
+                            <!-- Region 2 -->
+                                <div>
+                                    <input value="1" class="mdl-radio__button" type="radio" id="region2" name="region2" <?php if($reg2==true){echo 'checked';};?>>
+                                    <label class="mdl-radio__label" for="region2">Central Region</label>
+                                </div>
+                            <!-- Region 3 -->
+                                <div>
+                                    <input value="1" class="mdl-radio__button" type="radio" id="region3" name="region3" <?php if($reg3==true){echo 'checked';};?>>
+                                    <label class="mdl-radio__label" for="region3">Jerusalem</label>
+                                </div>
+                            <!-- Region 4 -->
+                                <div>
+                                    <input value="1" class="mdl-radio__button" type="radio" id="region4" name="region4" <?php if($reg4==true){echo 'checked';};?>>
+                                    <label class="mdl-radio__label" for="region4">Shfela</label>
+                                </div>                            
+                            <!-- Region 5 -->
+                                <div>
+                                    <input value="1" class="mdl-radio__button" type="radio" id="region5" name="region5" <?php if($reg5==true){echo 'checked';};?>>
+                                    <label class="mdl-radio__label" for="region5">Haifa</label>
+                                </div>
+                          <!-- Region 6 -->
+                                <div>
+                                    <input value="1" class="mdl-radio__button" type="radio" id="region6" name="region6" <?php if($reg6==true){echo 'checked';};?>>
+                                    <label class="mdl-radio__label" for="region6">North</label>
+                                </div>                                
+                            <!-- Region 7 -->
+                                <div>
+                                    <input value="1" class="mdl-radio__button" type="radio" id="region7" name="region7" <?php if($reg7==true){echo 'checked';};?>>
+                                    <label class="mdl-radio__label" for="region7">Beersheba</label>
+                                </div>   
+                            <!-- Region 8 -->
+                                <div>
+                                    <input value="1" class="mdl-radio__button" type="radio" id="region8" name="region8" <?php if($reg8==true){echo 'checked';};?>>
+                                    <label class="mdl-radio__label" for="region8">Eilat</label>
+                                </div>
+                            <!-- Region 9 -->
+                                <div>
+                                    <input value="1" class="mdl-radio__button" type="radio" id="region9" name="region9" <?php if($reg9==true){echo 'checked';};?>>
+                                    <label class="mdl-radio__label" for="region9">South</label>
+                                </div> 
                             <!-- User Location -->
                                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                     <input value="<?php foreach ($profile as $prof){if($prof->location!=null){echo $prof->location;}}?>" class="mdl-textfield__input" type="text" id="location" name="location" placeholder="Type address...">
