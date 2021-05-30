@@ -47,7 +47,7 @@
                                         if($prof->genre7=='1'){echo 'Other'; $g7 = true;}
                                         }?>
                                     <br><br><b>Location:</b> <?php foreach ($profile as $prof){echo $prof->location;}?>
-                                    <br><br><b>Region:</b> <?php foreach ($profile as $prof){echo $prof->user_region;}?>
+                                    <br><br><b>Region:</b> <?php foreach ($profile as $prof){echo $prof->user_region; $reg=$prof->user_region;}?>
                                 </h5>
                             </p>
                             <button id="ep" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">Edit Preferences</button>
@@ -100,14 +100,14 @@
                                 <div class="form-group" style="display: inline-block; width:30%;">
                                     <label for="user_region" class="bmd-label-floating">My Region</label>
                                     <select class="form-control" name="user_region" id="user_region">
-                                        <option value="Tel Aviv" <?php echo (isset($_POST['user_region']) && $_POST['user_region'] === 'Tel Aviv') ? 'selected' : ''; ?>>Tel Aviv</option>
-                                        <option value="Central Region" <?php echo (isset($_POST['user_region']) && $_POST['user_region'] === 'Central Region') ? 'selected' : ''; ?>>Central Region</option>
-                                        <option value="Jerusalem" <?php echo (isset($_POST['user_region']) && $_POST['user_region'] === 'Jerusalem') ? 'selected' : ''; ?>>Jerusalem</option>
-                                        <option value="Shfela" <?php echo (isset($_POST['user_region']) && $_POST['user_region'] === 'Shfela') ? 'selected' : ''; ?>>Shfela</option>
-                                        <option value="Haifa" <?php echo (isset($_POST['user_region']) && $_POST['user_region'] === 'Haifa') ? 'selected' : ''; ?>>Haifa</option>
-                                        <option value="Beersheba" <?php echo (isset($_POST['user_region']) && $_POST['user_region'] === 'Beersheba') ? 'selected' : ''; ?>>Beersheba</option>
-                                        <option value="Eilat" <?php echo (isset($_POST['user_region']) && $_POST['user_region'] === 'Eilat') ? 'selected' : ''; ?>>Eilat</option>
-                                        <option value="South" <?php echo (isset($_POST['user_region']) && $_POST['user_region'] === 'South') ? 'selected' : ''; ?>>South</option>
+                                        <option value="Tel Aviv">Tel Aviv</option>
+                                        <option value="Central Region" <?php if ($reg == 'Central Region'){echo 'selected';}?>>Central Region</option>
+                                        <option value="Jerusalem">Jerusalem</option>
+                                        <option value="Shfela">Shfela</option>
+                                        <option value="Haifa">Haifa</option>
+                                        <option value="Beersheba">Beersheba</option>
+                                        <option value="Eilat">Eilat</option>
+                                        <option value="South">South</option>
                                     </select>
                                 </div>
                             <!-- User Location -->
