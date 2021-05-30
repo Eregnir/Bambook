@@ -55,6 +55,19 @@
                                 <label class="mdl-textfield__label" for="phone_num">Phone Number...</label>
                                 <span class="mdl-textfield__error">Must contain a valid phone number</span>
                             </div>
+                        <!-- Region -->
+                        <div class="form-group"> <!--  style="display: inline-block; width:30%;"-->
+                            <label for="user_region" class="bmd-label-floating">My Region</label>
+                            <select class="form-control" name="user_region" id="user_region">
+                                <option value="Tel Aviv">Tel Aviv</option>
+                                <option value="Central Region">Central Region</option>
+                                <option value="Jerusalem">Jerusalem</option>
+                                <option value="Shfela">Shfela</option>
+                                <option value="Haifa">Beersheba</option>
+                                <option value="Eilat">Eilat</option>
+                                <option value="South">South</option>
+                            </select>
+                        </div>
                         <!-- Password -->
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                 <input class="mdl-textfield__input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" id="password" name="password">
@@ -89,8 +102,8 @@
                 $("#username").prop('required', true);
                 $("#email").prop('required', true);
                 $("#phone_num").prop('required', true);
+                $("#user_region").prop('required', true);
                 $("#password").prop('required', true);
-
             });
         });
         

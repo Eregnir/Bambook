@@ -96,6 +96,7 @@ class Intro extends CI_Controller{
             'email' => $this->input->post('email'), 
             'username' => $this->input->post('username'),
             'phone_num' => $this->input->post('phone_num'),
+            'user_region' => $this->input->post('user_region'),
             'password' => $this->input->post('password')
         );
         $data['password'] = md5($data['password']);
