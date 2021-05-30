@@ -38,13 +38,13 @@
                                 <!--       -->
                                     <b>Favorite Genres:</b> 
                                     <?php foreach ($profile as $prof){
-                                        if($prof->genre1=='1'){echo 'Fantasy | ';}
-                                        if($prof->genre2=='1'){echo 'Mystery | ' ;}
-                                        if($prof->genre3=='1'){echo 'Romance | ';}
-                                        if($prof->genre4=='1'){echo 'Thriller | ';}
-                                        if($prof->genre5=='1'){echo 'Biography | ';}
-                                        if($prof->genre6=='1'){echo 'Inspirational | ';}
-                                        if($prof->genre7=='1'){echo 'Other';}
+                                        if($prof->genre1=='1'){echo 'Fantasy | '; $g1 = true;}
+                                        if($prof->genre2=='1'){echo 'Mystery | ' ;$g2 = true;}
+                                        if($prof->genre3=='1'){echo 'Romance | ';$g3 = true;}
+                                        if($prof->genre4=='1'){echo 'Thriller | ';$g4 = true;}
+                                        if($prof->genre5=='1'){echo 'Biography | ';$g5 = true;}
+                                        if($prof->genre6=='1'){echo 'Inspirational | ';$g6 = true;}
+                                        if($prof->genre7=='1'){echo 'Other'; $g7 = true;}
                                         }?>
                                     <br><br><b>Location:</b> <?php foreach ($profile as $prof){echo $prof->location;}?>
                                 </h5>
@@ -62,37 +62,37 @@
                                 </div>
                             <!-- Favorite Genre 1 -->
                                 <div>
-                                    <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre1" name="genre1">
+                                    <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre1" name="genre1" <?php if($g1==true){echo 'checked';};?>>
                                     <label class="mdl-checkbox__label" for="genre1">Fantasy</label>
                                 </div>
                             <!-- Favorite Genre 2 -->
                                 <div>
-                                    <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre2" name="genre2">
+                                    <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre2" name="genre2" <?php if($g2==true){echo 'checked';};?>>
                                     <label class="mdl-checkbox__label" for="genre2">Mystery</label>
                                 </div>
                             <!-- Favorite Genre 3 -->
                                 <div>
-                                    <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre3" name="genre3">
+                                    <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre3" name="genre3" <?php if($g3==true){echo 'checked';};?>>
                                     <label class="mdl-checkbox__label" for="genre3">Romance</label>
                                 </div>
                             <!-- Favorite Genre 4 -->
                                 <div>
-                                    <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre4" name="genre4">
+                                    <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre4" name="genre4" <?php if($g4==true){echo 'checked';};?>>
                                     <label class="mdl-checkbox__label" for="genre4">Thriller</label>
                                 </div>
                                 <!-- Favorite Genre 5 -->
                                 <div>
-                                    <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre5" name="genre5">
+                                    <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre5" name="genre5" <?php if($g5==true){echo 'checked';};?>>
                                     <label class="mdl-checkbox__label" for="genre5">Biography</label>
                                 </div>
                                 <!-- Favorite Genre 6 -->
                                 <div>
-                                    <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre6" name="genre6">
+                                    <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre6" name="genre6" <?php if($g6==true){echo 'checked';};?>>
                                     <label class="mdl-checkbox__label" for="genre6">Inspirational</label>
                                 </div>
                                 <!-- Favorite Genre 7 -->
                                 <div>
-                                    <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre7" name="genre7">
+                                    <input value="1" class="mdl-checkbox__input" type="checkbox" id="genre7" name="genre7" <?php if($g7==true){echo 'checked';};?>>
                                     <label class="mdl-checkbox__label" for="genre7">Other</label>
                                 </div>
                             <!-- User Location -->
