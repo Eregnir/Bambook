@@ -31,8 +31,8 @@
                         <tr>
                             <th scope="col">Requested Book</th>
                             <th scope="col">Title</th>
-                            <th scope="col">Status</th>
                             <th scope="col">Sent By</th>
+                            <th scope="col">Status</th>
                         </tr>
                     </thead>
                     
@@ -53,9 +53,8 @@
                                 <?php echo form_close(); ?>
                                 </td>
                                 <td> <?php echo $req->title ?></td>
-                                <td> <?php echo $req->swap_status ?></td>
-                                
                                 <td> <?php echo $req->sent_by_username?></td>
+                                <td <?php if($req->swap_status == 'Cancelled') {echo 'style="color:red"';} elseif ($req->swap_status == 'Completed') {echo 'style="color:green"';}?>> <?php echo $req->swap_status ?></td>
                             </tr>
                     <?php endforeach; ?>
                     </tbody>
