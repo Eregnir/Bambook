@@ -186,48 +186,48 @@ class books_model extends CI_Model {
 
      //send all 3 filters
      public function filter_books10($data){
-        $query=$this->db->query('SELECT * FROM `user_books` INNER JOIN `users` ON `users`.`username` = `user_book`.`user_username` WHERE `availability`="1" AND `cond` = "'.$data['cond'].'" AND `lang` = "'.$data['lang'].'" AND `book_genre` = "'.$data['book_genre'].'" AND `users`.`user_region` = "'.$data['region'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
+        $query=$this->db->query('SELECT * FROM `user_books` INNER JOIN `users` ON `users`.`username` = `user_books`.`user_username` WHERE `availability`="1" AND `cond` = "'.$data['cond'].'" AND `lang` = "'.$data['lang'].'" AND `book_genre` = "'.$data['book_genre'].'" AND `users`.`user_region` = "'.$data['region'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
         return $query->result();
     }
     //send genre and lang
     public function filter_books30($data){
-        $query=$this->db->query('SELECT * FROM `user_books` INNER JOIN `users` ON `users`.`username` = `user_book`.`user_username` WHERE `availability`="1" AND `lang` = "'.$data['lang'].'" AND `book_genre` = "'.$data['book_genre'].'" AND `users`.`user_region` = "'.$data['region'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
+        $query=$this->db->query('SELECT * FROM `user_books` INNER JOIN `users` ON `users`.`username` = `user_books`.`user_username` WHERE `availability`="1" AND `lang` = "'.$data['lang'].'" AND `book_genre` = "'.$data['book_genre'].'" AND `users`.`user_region` = "'.$data['region'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
         return $query->result();
     }
 
     //send genre and cond
     public function filter_books20($data){
-        $query=$this->db->query('SELECT * FROM `user_books` INNER JOIN `users` ON `users`.`username` = `user_book`.`user_username` WHERE `availability`="1" AND `cond` = "'.$data['cond'].'" AND `book_genre` = "'.$data['book_genre'].'" AND `users`.`user_region` = "'.$data['region'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
+        $query=$this->db->query('SELECT * FROM `user_books` INNER JOIN `users` ON `users`.`username` = `user_books`.`user_username` WHERE `availability`="1" AND `cond` = "'.$data['cond'].'" AND `book_genre` = "'.$data['book_genre'].'" AND `users`.`user_region` = "'.$data['region'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
         return $query->result();
     }
 
     //send only genre
     public function filter_books40($data){
-        $query=$this->db->query('SELECT * FROM `user_books` INNER JOIN `users` ON `users`.`username` = `user_book`.`user_username` WHERE `availability`="1" AND `book_genre` = "'.$data['book_genre'].'" AND `users`.`user_region` = "'.$data['region'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
+        $query=$this->db->query('SELECT * FROM `user_books` INNER JOIN `users` ON `users`.`username` = `user_books`.`user_username` WHERE `availability`="1" AND `book_genre` = "'.$data['book_genre'].'" AND `users`.`user_region` = "'.$data['region'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
         return $query->result();
     }
 
     //send lang and cond
     public function filter_books50($data){
-        $query=$this->db->query('SELECT * FROM `user_books` INNER JOIN `users` ON `users`.`username` = `user_book`.`user_username` WHERE `availability`="1" AND `cond` = "'.$data['cond'].'" AND `lang` = "'.$data['lang'].'" AND `users`.`user_region` = "'.$data['region'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
+        $query=$this->db->query('SELECT * FROM `user_books` INNER JOIN `users` ON `users`.`username` = `user_books`.`user_username` WHERE `availability`="1" AND `cond` = "'.$data['cond'].'" AND `lang` = "'.$data['lang'].'" AND `users`.`user_region` = "'.$data['region'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
         return $query->result();
     }
 
     //send cond only
     public function filter_books60($data){
-        $query=$this->db->query('SELECT * FROM `user_books` INNER JOIN `users` ON `users`.`username` = `user_book`.`user_username` WHERE `availability`="1" AND `cond` = "'.$data['cond'].'" AND `users`.`user_region` = "'.$data['region'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
+        $query=$this->db->query('SELECT * FROM `user_books` INNER JOIN `users` ON `users`.`username` = `user_books`.`user_username` WHERE `availability`="1" AND `cond` = "'.$data['cond'].'" AND `users`.`user_region` = "'.$data['region'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
         return $query->result();
     }
 
     //send lang only
     public function filter_books70($data){
-        $query=$this->db->query('SELECT * FROM `user_books` INNER JOIN `users` ON `users`.`username` = `user_book`.`user_username` WHERE `availability`="1" AND `lang` = "'.$data['lang'].'" AND `users`.`user_region` = "'.$data['region'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
+        $query=$this->db->query('SELECT * FROM `user_books` INNER JOIN `users` ON `users`.`username` = `user_books`.`user_username` WHERE `availability`="1" AND `lang` = "'.$data['lang'].'" AND `users`.`user_region` = "'.$data['region'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
         return $query->result();
     }
 
     //reset filters
     public function filter_books80($data){
-        $query=$this->db->query('SELECT * FROM `user_books` INNER JOIN `users` ON `users`.`username` = `user_book`.`user_username` WHERE `availability`="1" AND `users`.`user_region` = "'.$data['region'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
+        $query=$this->db->query('SELECT * FROM `user_books` INNER JOIN `users` ON `users`.`username` = `user_books`.`user_username` WHERE `availability`="1" AND `users`.`user_region` = "'.$data['region'].'" AND NOT `user_username`= "'.$data['username'].'" ORDER BY `date_added` DESC LIMIT 150;');
         return $query->result();
     }
 
