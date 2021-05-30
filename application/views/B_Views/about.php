@@ -140,8 +140,6 @@
 
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- Google Maps JavaScript library -->
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyAA5iKqhOQe2_WiVbY7Z-uCKcJlFYbga3c&region=IL&language=Hebr"></script>
     <script>
     window.onload = function(){
         var active = document.getElementById("abt");
@@ -164,20 +162,6 @@
     {
         window.location.href="<?php echo site_url('Users/show_avatars');?>";
     };
-
-    // Google Maps API 
-
-    var searchInput = 'location';
-    $(document).ready(function () {
-        var autocomplete;
-        autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
-            types: ['geocode'],
-        })
-
-        google.maps.event.addListener(autocomplete, 'place_changed', function() {
-            var near_place = autocomplete.getPlace();
-        });
-    });
 
 
     </script>
