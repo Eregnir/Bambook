@@ -138,6 +138,7 @@ class Intro extends CI_Controller{
 
         // Function to load the publish book page from the index page
     public function publish_book(){
+        $data['user']=$this->session->all_userdata();
         $this->load->view('templates/HeadB');
         $this->load->view('B_Views/publish_book');
         $this->load->view('templates/FootB');
