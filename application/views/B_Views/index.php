@@ -11,7 +11,7 @@
                 }
                 elseif ($user['username']!=null){
                     echo 'Welcome, '.$user['username'].'!'.'<br>';?></h4>
-                    <?php foreach ($profile as $prof){echo '<center><img id="prfl" onclick="gtprofile" style="max-height:80px; max-width: 100%; margin:auto; display:block;" src="data:image/jpeg;base64,'.base64_encode( $prof->img).'"/>';};?>      
+                    <?php foreach ($profile as $prof){echo '<center><img id="prfl" onclick="gtprofile()" style="cursor:pointer; max-height:80px; max-width: 100%; margin:auto; display:block;" src="data:image/jpeg;base64,'.base64_encode( $prof->img).'"/>';};?>      
                 <?php
                 }
                 ?>
