@@ -55,7 +55,7 @@
                                 <!-- region filter checkbox -->
                                 <input type="checkbox" id="user_region" value="1" class="mdl-checkbox" name="user_region" <?php if(isset($_POST['user_region'])) echo "checked='checked'"; ?>>
                                 <!-- <input type="hidden" id="user_region" value="0" class="mdl-checkbox" name="user_region"> -->
-                                <label for="user_region">My Region Only</label>
+                                <label for="user_region">My Area Only</label>
                             </div>
                             <!-- Submit button -->
                             <button type="submit" class="btn btn-primary" style="width:35%; margin-bottom:15px; margin-right: 25px;">Apply Filters</button>
