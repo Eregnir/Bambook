@@ -42,7 +42,7 @@
 
 
                         <div class="card-body">
-                            <p class="card-text">Upload a book you no longer desire, you can either manually enter the information or scan the book's ISBN number.</p>
+                            <p class="card-text">Upload a book you no longer desire, you can either manually enter the information or search for the book's ISBN number.</p>
                             <!-- <a href="#" class="btn btn-primary">List a book</a> -->
                         </div>
                     </div>
